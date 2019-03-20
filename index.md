@@ -4,7 +4,7 @@ layout: page
 
 <!-- {% include JB/setup %} -->
 
-<img style="float: right;" src="assets/JingjingPic.JPG">
+<img style="float: right;" src="assets/JingjingPic.jpg">
 
 ## Welcome to YangLab Website
 
