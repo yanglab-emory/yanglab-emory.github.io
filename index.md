@@ -8,8 +8,7 @@ layout: page
 
 ## Welcome to YangLab Website
 
-We are located in the third floor of Whitehead Biomedical Research Building at Emory University, and affiliated with the Center for Computational and Quantitative Genetics, Department of Human Genetics, Emory University School of Medicine 
-
+We are located on the third floor of Whitehead Biomedical Research Building at Emory University, and affiliated with the Center for Computational and Quantitative Genetics, Department of Human Genetics, Emory University School of Medicine 
 
 PI: [Jingjing Yang](http://genetics.emory.edu/faculty/primary/yang-jingjing.html), PhD <br>
 Assistant Professor <br>

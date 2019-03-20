@@ -3,7 +3,7 @@ layout: page
 title: "Software"
 ---
 
-### Developed and Maintained by the Love Lab
+### Developed and Maintained by the Yang Lab
 
 <a class="btn btn-primary"
 href="https://github.com/yanglab-emory/TIGAR"
