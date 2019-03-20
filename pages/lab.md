@@ -5,7 +5,6 @@ title: "Lab members"
 
 | Name | Research topic | Photo |
 | :--- | :---- | :---- |
-| Anqi Zhu | Shrinkage estimation for sequence count data. <br> Methods implemented in the [apeglm](http://bioconductor.org/packages/apeglm) Bioconductor package. &nbsp; &nbsp; &nbsp; | <img width="100" src="../assets/anqizhu.png"> |
-| Sean McCabe | Multi 'omics factor analysis and visualization. | <img width="100" src="../assets/seanmccabe.png"> |
-| Arjun Bhattacharya &nbsp; &nbsp; &nbsp; | Variant association in Carolina Breast Cancer Study. | <img width="100" src="../assets/arjunbhattacharya.jpg"> |
-
+| Justin Luningham, PhD | Imputing gene expression levels using genome-wide genotype data.  &nbsp; &nbsp; &nbsp; | <img width="100" src="../assets/JustinL.png"> |
+| Junyu Chen, MPH | Functinal Bayesian GWAS with quantitative annotation data. | <img width="100" src="../assets/Junyu.png"> |
+| Xiaoran Meng (Master student) &nbsp; &nbsp; &nbsp; | GTEx data analysis and tool development of [TIGAR](https://github.com/yanglab-emory/TIGAR). | <img width="100" src="../assets/xiaoran.jpg"> |
