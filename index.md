@@ -32,4 +32,5 @@ Goncalo Abecasis in the Biostatistics Department at the University of Michigan, 
 
 
 
+<img style="float: center;" src="assets/Whitehead.png">
 
