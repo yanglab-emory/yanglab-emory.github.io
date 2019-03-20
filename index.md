@@ -23,7 +23,7 @@ We are interested in developing methods and tools to integrate multi-omics (gene
 
 
 - Postdoctoral Fellow
---Justin Luningham, PhD
+-- Justin Luningham, PhD
 
 - Research Specialist
 
