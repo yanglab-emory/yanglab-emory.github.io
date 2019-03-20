@@ -12,18 +12,6 @@ Assistant Professor
 [Department of Human Genetics](http://genetics.emory.edu/)
 [Emory University School of Medicine](https://med.emory.edu/index.html)
 
-#### Postdoctoral Fellow
-Justin Luningham, PhD
-
-#### Research Specialist
-Junyu Chen, MPH
-
-#### Graduate Student
-Xiaoran Meng, BS
-
-
-#### Undergraduate QTM Student
-Tianhui Mao
 
 
 
