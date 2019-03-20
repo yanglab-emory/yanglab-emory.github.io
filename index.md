@@ -22,13 +22,13 @@ Email: jingjing.yang@emory.edu <br>
 
 
 ### Research
-The Yang Lab are interested in developing methods and tools to integrate multi-omics (genetic, transcriptomic, epigenetic, proteomic, and metabolomic) data for studying complex human diseases, such as Alzheimer's Disease. We use Bayesian statistical methods and machine learning methods with efficient computational algorithms. We are also interested in applied next-generation sequencing analysis with Whole Genomce Sequencing, RNA Sequencing, and ChIP Sequencing data. Programing languages we use include R, Python, C++, Perl, etc.
+The Yang Lab are interested in developing methods and tools to integrate multi-omics (genetic, transcriptomic, epigenetic, proteomic, and metabolomic) data for studying complex human diseases, such as Alzheimer's Disease. We use Bayesian statistical methods and machine learning methods with efficient computational algorithms. We are also interested in applied next-generation sequence analysis with Whole Genome Sequencing, RNA Sequencing, and ChIP Sequencing data. Programming languages we use include R, Python, C++, Perl, etc. Computation environment we use are Linux/Unix computation cluster and Amazon Web Services. 
 
 
 ### PI - Background
 
 I obtained my PhD in Statistics (2014) in the Statistics Department at Rice University, Houston, TX. My PhD work was about developing scalable nonparametric Bayesian model for functional data analysis. After my graduation, I started working on Statistical Genetics as a Postdoctoral Fellow (2014-2017) in the group of
-Goncalo Abecasis in the Biostatistics Department at the University of Michigan, Ann Arbor. Since my postdoc training, I have been very interested in utilizing statistical tools and computational efficient algorithms for genomics data analysis.
+Goncalo Abecasis in the Biostatistics Department at the University of Michigan, Ann Arbor. Since my postdoc training, I have been very interested in utilizing and developing statistical tools and efficient computational algorithms for genomics data analysis.
 
 ### Office Location -- Whitehead Biomedical Research Building
 <img style="float: center;" src="assets/Whitehead.png">
