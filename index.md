@@ -30,7 +30,6 @@ The Yang Lab are interested in developing methods and tools to integrate multi-o
 I obtained my PhD in Statistics (2014) in the Statistics Department at Rice University, Houston, TX. My PhD work was about developing nonparametric Bayesian model for functional data analysis. After my graduation, I started working on Statistical Genetics as a Postdoctoral Fellow (2014-2017) in the group of
 Goncalo Abecasis in the Biostatistics Department at the University of Michigan, Ann Arbor. Since my postdoc training, I have been very interested in utilizing statistical tools and computational efficient algorithms for genomics data analysis.
 
-
-
+### Office Location -- Whitehead Biomedical Research Building
 <img style="float: center;" src="assets/Whitehead.png">
 
