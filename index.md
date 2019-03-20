@@ -22,22 +22,13 @@ We are interested in developing methods and tools to integrate multi-omics (gene
 ### Lab Members
 
 
-- Postdoctoral Fellow
+- Postdoctoral Fellow --- Justin Luningham, PhD
 
--- Justin Luningham, PhD
+- Research Specialist --- Junyu Chen, MPH
 
-- Research Specialist
+- Graduate Student --- Xiaoran Meng, BS
 
-Junyu Chen, MPH
-
-- Graduate Student
-
-Xiaoran Meng, BS
-
-
-- Undergraduate QTM Student
-
-Tianhui Mao
+- Undergraduate QTM Student --- Tianhui Mao
 
 
 
