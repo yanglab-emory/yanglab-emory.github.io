@@ -8,8 +8,6 @@ layout: page
 
 ## Welcome to YangLab Website
 
-
-
 PI: [Jingjing Yang](http://genetics.emory.edu/faculty/primary/yang-jingjing.html), PhD <br>
 Assistant Professor <br>
 Email: jingjing.yang@emory.edu <br>
