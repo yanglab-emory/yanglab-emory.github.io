@@ -19,6 +19,8 @@ Assistant Professor
 We are interested in developing methods and tools to integrate multi-omics (genetic, transcriptomic, epigenetic, proteomic, and metabolomic) data for studying complex human diseases, such as Alzheimer's Disease. We use Bayesian statistic methods and machine learning methods with efficient computational algorithms. Programing languages we use include R, C++, Python, etc.
 
 
+### Lab Members
+
 #### Postdoctoral Fellow
 Justin Luningham, PhD
 
