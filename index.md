@@ -21,7 +21,7 @@ We are interested in developing methods and tools to integrate multi-omics (gene
 
 ### Lab Members
 
-``` markdown
+
 - Postdoctoral Fellow
 Justin Luningham, PhD
 
@@ -34,6 +34,6 @@ Xiaoran Meng, BS
 
 - Undergraduate QTM Student
 Tianhui Mao
-```
+
 
 
