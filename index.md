@@ -11,7 +11,7 @@ layout: page
 We are located in the third floor of Whitehead Biomedical Research Building at Emory University, and affiliated with the Center for Computational and Quantitative Genetics, Department of Human Genetics, Emory University School of Medicine 
 
 
-PI: Jingjing Yang, PhD <br>
+PI: [Jingjing Yang](http://genetics.emory.edu/faculty/primary/yang-jingjing.html), PhD <br>
 Assistant Professor <br>
 Email: jingjing.yang@emory.edu <br>
 [Center for Computational and Quantitative Genetics](http://ccqg.emory.edu/about/index.html) <br>
@@ -19,8 +19,7 @@ Email: jingjing.yang@emory.edu <br>
 [Emory University School of Medicine](https://med.emory.edu/index.html)
 
 
-[Google Scholar](https://scholar.google.com/citations?user=ANXPW-UAAAAJ&hl=en) <br>
-[Department of Human Genetics profile](http://genetics.emory.edu/faculty/primary/yang-jingjing.html)
+[Google Scholar](https://scholar.google.com/citations?user=ANXPW-UAAAAJ&hl=en) 
 
 
 
