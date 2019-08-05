@@ -12,12 +12,12 @@ title: "Lab members"
 | | |  |
 | Junyu Chen, MPH (Research Specialist) | Bioinformatics analysis and functional Bayesian GWAS <br> with quantitative annotation data. | 2018 - Present| 
 | | |  |
-| Shizhen Tang (Master student)  | Novel TWAS methods to account for eQTL uncertainty. |2019 - Present| 
+| Shizhen Tang (Master Student)  | Novel TWAS methods to account for eQTL uncertainty. |2019 - Present| 
 
 
 ### Previous Lab Members
 
-* Sini Nagpal, MS (Summer Intern, 2018). Currently a PhD student at Georgia Tech.
+* Sini Nagpal, MS (Summer Intern, 2018). Nonparametric Bayesian method for TWAS. Currently a PhD student at Georgia Tech.
 
 * Tianhui Mao (Undergraduate Student, 2018-2019), Derive a risk prediction model for Alzheimer's disease. Currently a graduate student at MIT. 
 
@@ -25,4 +25,4 @@ title: "Lab members"
 
 
 ### Yang Lab Members in Summer, 2019
-<img style="float: center;" src="assets/YangLab_2019_resize.JPG">
+<img style="float: center;" src="assets/YangLab_2019_resize.JPG" width = "500" height = "500">
