@@ -12,10 +12,17 @@ title: "Lab members"
 | | |  |
 | Junyu Chen, MPH (Research Specialist) | Bioinformatics analysis and functional Bayesian GWAS <br> with quantitative annotation data. | 2018 - Present| 
 | | |  |
-| Xiaoran Meng (Master student)  | GTEx data analysis and tool development of [TIGAR](https://github.com/yanglab-emory/TIGAR). |2018 - Present| 
+| Shizhen Tang (Master student)  | Novel TWAS methods to account for eQTL uncertainty. |2019 - Present| 
 
 
 ### Previous Lab Members
 
 * Sini Nagpal, MS (Summer Intern, 2018). Currently a PhD student at Georgia Tech.
 
+* Tianhui Mao (Undergraduate Student, 2018-2019), Derive a risk prediction model for Alzheimer's disease. Currently a graduate student at MIT. 
+
+* Xiaoran Meng (Master Student, 2018-2019), GTEx data analysis and tool development of [TIGAR](https://github.com/yanglab-emory/TIGAR). Currently a data scientist in China.
+
+
+### Yang Lab Members in Summer, 2019
+<img style="float: center;" src="assets/YangLab_2019_resize.JPG">
