@@ -25,4 +25,4 @@ title: "Lab members"
 
 
 ### Yang Lab Members in Summer, 2019
-<img style="float: center;" src="../assets/YangLab_2019_resize.jpg" width = "500" height = "500">
+<img style="float: center;" src="../assets/YangLab_2019_resize.JPG" width = "500" height = "500">
