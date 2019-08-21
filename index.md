@@ -24,7 +24,7 @@ Our lab currently has an openning for a self motivated postdoc now. The candidat
 
 The candidate is expected to have a Ph.D. degree in Statistics/Biostatistics, Bioinformatics, Computer Science or other relevant disciplines with interests in statistical genetics and strong quantitative research background; proficiency in one or multiple of the popular programming languages, e.g., C++, Python, Perl, R; experience working with large genetics data and high-performance clusters are desirable.
 
-Interested candidate should submit a Cover Letter, CV, Brief Statement of Research & Interest (less than 2 pages), one Sample Publication and Contacts for 3 references. Please email application to Dr. Jingjing Yang (jingjing.yang@emory.edu), or apply through https://faculty-emory.icims.com/jobs/37626/job. Applications will be reviewed immediately after submission. 
+Interested candidate should submit a Cover Letter, CV, Brief Statement of Research & Interest (less than 2 pages), one Sample Publication and Contacts for 3 references. Please email application to Dr. Jingjing Yang (jingjing.yang@emory.edu), or apply through <https://faculty-emory.icims.com/jobs/37626/job>. Applications will be reviewed immediately after submission. 
 
 
 ### Research
