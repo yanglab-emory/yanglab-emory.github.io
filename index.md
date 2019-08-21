@@ -17,8 +17,14 @@ Email: jingjing.yang@emory.edu <br>
 [Department of Human Genetics](http://genetics.emory.edu/) <br>
 [Emory University School of Medicine](https://med.emory.edu/index.html)
 
-
 [Google Scholar](https://scholar.google.com/citations?user=ANXPW-UAAAAJ&hl=en) 
+
+### Postdoctoral Fellow Position Opening
+Our lab currently has an openning for a self motivated postdoc now. The candidate will be expected to work on statistical/computational method & tool development, real data analysis, and publishing on decent journals. The candidate will have opportunities to collaborate with members of the Center for Computational and Quantitative Genetics, as well as people from diverse departments (e.g., Human Genetics, Neurology, Biostatistics and Bioinformatics, Psychology) at Emory University.
+
+The candidate is expected to have a Ph.D. degree in Statistics/Biostatistics, Bioinformatics, Computer Science or other relevant disciplines with interests in statistical genetics and strong quantitative research background; proficiency in one or multiple of the popular programming languages, e.g., C++, Python, Perl, R; experience working with large genetics data and high-performance clusters are desirable.
+
+Interested candidate should submit a Cover Letter, CV, Brief Statement of Research & Interest (less than 2 pages), one Sample Publication and Contacts for 3 references. Please email application to Dr. Jingjing Yang (jingjing.yang@emory.edu), or apply through https://faculty-emory.icims.com/jobs/37626/job. Applications will be reviewed immediately after submission. 
 
 
 ### Research
