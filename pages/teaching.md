@@ -26,7 +26,7 @@ title: "Teaching and Resources"
 
 ### Other Resources
 
-* [Bioinformatics workshop documentations](https://bioinformatics.ucdavis.edu/training/documentation/) by UCDAVIS Bioinformatics Core. Including past workshop documentations about **Bioinformatics Prerequisites (Command Line and R)**, **Single-Cell RNA-Seq Analysis**, **RNA-seq Analysis**, **Microbial Community Analysis (Amplicon)**, **Variant Analysis (Variant calling with GATK, Variant Annotation)**, etc. 
+* [Bioinformatics workshop documentations](https://bioinformatics.ucdavis.edu/training/documentation/) by UCDAVIS Bioinformatics Core. Including past workshop documentations about **Bioinformatics Prerequisites** (Command Line and R), **Single-Cell RNA-Seq Analysis**, **RNA-seq Analysis**, **Microbial Community Analysis** (Amplicon), **Variant Analysis** (Variant calling with GATK, Variant Annotation), etc. 
 
 * [Cheet sheets](https://infoplatter.wordpress.com/2014/04/06/bioinformaticians-pocket-reference/) about **AWK**, **C++**, **Python**, **R**, **Screen**, **UNIX**, **Vim**, **Git**
 
