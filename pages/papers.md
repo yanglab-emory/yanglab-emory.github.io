@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Papers"
+title: "Papers and Presentations"
 ---
 
 ### Selected Publications and Preprints
@@ -16,7 +16,10 @@ title: "Papers"
 * **Yang J.**, Cox D.D., Lee J.S., Ren P., and Choi T. (2017). Efficient Bayesian Hierarchical Functional Data Analysis with Basis Function Approximations Using Gaussian-Wishart Processes. Biometrics, 73(4): 1082-1091. DOI: <https://doi.org/10.1111/biom.12705>. PMID: 28395117. Method paper for [BFDA](https://github.com/yanglab-emory/BFDA).
 
 
+### Presentations
 
+* **ENAR 2020 Spring Meeting**, Nashville, TN. _TIGAR: An Improved Bayesian Tool for
+Transcriptomic Data Imputation Enhances Gene Mapping of Complex Traits_.
 
 
 
