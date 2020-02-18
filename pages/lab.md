@@ -8,11 +8,11 @@ title: "Lab members"
 
 | Name | Research topic | Year in Lab |
 | :--- | :---- | :--- |
-| Junyu Chen, MPH (Research Specialist) | Bioinformatics analysis and functional Bayesian GWAS <br> with quantitative annotation data. | 2018 - Present| 
+| Junyu Chen, MPH <br> Research Specialist | Bioinformatics analysis and functional Bayesian GWAS <br> with quantitative annotation data. | 2018 - Present| 
 | | |  |
-| Shizhen Tang (Master Student of Biostat) | Novel TWAS methods to account for eQTL uncertainty. |2019 - Present| 
+| Shizhen Tang <br> Master Student of Biostat | Novel TWAS methods to account for eQTL uncertainty. |2019 - Present| 
 | | |  |
-| Randy Parrish (Master Student of Biostat) | Apply TIGAR to GTEx V8 data. | 2020 - Present| 
+| Randy Parrish <br> Master Student of Biostat | Apply TIGAR to GTEx V8 data. | 2020 - Present| 
 
 ### Previous Lab Members
 
@@ -26,9 +26,6 @@ title: "Lab members"
 
 
 * Sini Nagpal, MS (Summer Intern, 2018). Nonparametric Bayesian method for TWAS. PhD student at Georgia Tech.
-
-
-
 
 
 ### Yang Lab Members in Summer, 2019
