@@ -25,9 +25,9 @@ title: "Teaching and Resources"
 
 
 ### Other Resources
-* Cheet sheets about **AWK**, **C++**, **Python**, **R**, **Screen**, **UNIX**, **Vim**, **Git** [Bioinformaticians pocket reference] (https://infoplatter.wordpress.com/2014/04/06/bioinformaticians-pocket-reference/) 
+* Cheet sheets about **AWK**, **C++**, **Python**, **R**, **Screen**, **UNIX**, **Vim**, **Git** [Bioinformaticians pocket reference](https://infoplatter.wordpress.com/2014/04/06/bioinformaticians-pocket-reference/) 
 
-* QuickStart about submiting jobs on [Sun Grid Engine (SGE)] (http://star.mit.edu/cluster/docs/0.92rc2/guides/sge.html)
+* QuickStart about submiting jobs on [Sun Grid Engine (SGE)](http://star.mit.edu/cluster/docs/0.92rc2/guides/sge.html)
 
 * ![Submit Array Jobs for SGE Cluster](../assets/ArrayJob.pdf)
 

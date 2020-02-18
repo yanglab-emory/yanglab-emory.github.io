@@ -7,7 +7,7 @@ title: "Lab members"
 ### Current Lab Members
 
 | Name | Research topic | Year in Lab |
-| :--- | :---- | :--- |
+| :------ | :---------- | :--- |
 | Junyu Chen, MPH <br> Research Specialist | Bioinformatics analysis and functional Bayesian GWAS <br> with quantitative annotation data. | 2018 - Present| 
 | | |  |
 | Shizhen Tang <br> Master Student of Biostat | Novel TWAS methods to account for eQTL uncertainty. |2019 - Present| 
