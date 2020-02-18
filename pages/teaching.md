@@ -11,9 +11,9 @@ title: "Teaching and Resources"
 
 ### Instructions to Human Genetics Compute Cluster (HGCC) with Sun Grid Engine (SGE)
 
-* ![Basics about HGCC](../assets/HGCC.pdf)
+* [Basics about HGCC](https://github.com/yanglab-emory/yanglab-emory.github.io/tree/master/assets/HGCC.pdf)
 
-* ![Introductions to BASH](../assets/BASH.pdf)
+* [Introductions to BASH](https://github.com/yanglab-emory/yanglab-emory.github.io/tree/master/assets/BASH.pdf)
 
 
 
@@ -29,6 +29,6 @@ title: "Teaching and Resources"
 
 * QuickStart about submiting jobs on [Sun Grid Engine (SGE)](http://star.mit.edu/cluster/docs/0.92rc2/guides/sge.html)
 
-* ![Submit Array Jobs for SGE Cluster](../assets/ArrayJob.pdf)
+* [Submit Array Jobs for SGE Cluster](https://github.com/yanglab-emory/yanglab-emory.github.io/tree/master/assets/ArrayJob.pdf)
 
-* Useful tutorial vedios about **R/Rstudio** [Essentials](https://resources.rstudio.com/)
+* [R/Rstudio Tutorial Essential Vedios](https://resources.rstudio.com/)
