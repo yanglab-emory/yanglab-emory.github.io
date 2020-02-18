@@ -9,7 +9,7 @@ title: "Teaching and Resources"
 * IBS-746 - Graduate Human Genetics. Fall 2019. Co-Instructor. 
 
 
-### Instructions to Human Genetics Compute Cluster (HGCC) with Sun Grid Engine (SGE)
+### Instructions to HGCC
 
 * [Basics about HGCC](https://github.com/yanglab-emory/yanglab-emory.github.io/tree/master/assets/HGCC.pdf)
 
@@ -25,10 +25,10 @@ title: "Teaching and Resources"
 
 
 ### Other Resources
-* Cheet sheets about **AWK**, **C++**, **Python**, **R**, **Screen**, **UNIX**, **Vim**, **Git** [Bioinformaticians pocket reference](https://infoplatter.wordpress.com/2014/04/06/bioinformaticians-pocket-reference/) 
+* [Cheet sheets](https://infoplatter.wordpress.com/2014/04/06/bioinformaticians-pocket-reference/) about **AWK**, **C++**, **Python**, **R**, **Screen**, **UNIX**, **Vim**, **Git**
 
-* QuickStart about submiting jobs on [Sun Grid Engine (SGE)](http://star.mit.edu/cluster/docs/0.92rc2/guides/sge.html)
+* [QuickStart](http://star.mit.edu/cluster/docs/0.92rc2/guides/sge.html) about submiting jobs on Sun Grid Engine (SGE)
 
-* [Submit Array Jobs for SGE Cluster](https://github.com/yanglab-emory/yanglab-emory.github.io/tree/master/assets/ArrayJob.pdf)
+* [Instructions](https://github.com/yanglab-emory/yanglab-emory.github.io/tree/master/assets/ArrayJob.pdf) about Submiting Array Jobs for SGE Cluster
 
 * [R/Rstudio Tutorial Essential Vedios](https://resources.rstudio.com/)
