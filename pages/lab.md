@@ -8,20 +8,27 @@ title: "Lab members"
 
 | Name | Research topic | Year in Lab |
 | :--- | :---- | :--- |
-| Justin Luningham, PhD (Postdoc) | Imputing transcriptomic data using <br> genome-wide genotype data. | 2018 - Present| 
-| | |  |
 | Junyu Chen, MPH (Research Specialist) | Bioinformatics analysis and functional Bayesian GWAS <br> with quantitative annotation data. | 2018 - Present| 
 | | |  |
-| Shizhen Tang (Master Student)  | Novel TWAS methods to account for eQTL uncertainty. |2019 - Present| 
-
+| Shizhen Tang (Master Student of Biostat) | Novel TWAS methods to account for eQTL uncertainty. |2019 - Present| 
+| | |  |
+| Randy Parrish (Master Student of Biostat) | Apply TIGAR to GTEx V8 data. | 2020 - Present| 
 
 ### Previous Lab Members
 
-* Sini Nagpal, MS (Summer Intern, 2018). Nonparametric Bayesian method for TWAS. Currently a PhD student at Georgia Tech.
+* Justin Luningham (Postdoc, 2018-2020), Novel Bayesian TWAS method by leveraging both cis- and trans- eQTL information. Currently a Research Assistant Professor at Georgia State University. 
+
 
 * Tianhui Mao (Undergraduate Student, 2018-2019), Derive a risk prediction model for Alzheimer's disease. Currently a graduate student at MIT. 
 
+
 * Xiaoran Meng (Master Student, 2018-2019), GTEx data analysis and tool development of [TIGAR](https://github.com/yanglab-emory/TIGAR). Currently a data scientist in China.
+
+
+* Sini Nagpal, MS (Summer Intern, 2018). Nonparametric Bayesian method for TWAS. Currently a PhD student at Georgia Tech.
+
+
+
 
 
 ### Yang Lab Members in Summer, 2019
