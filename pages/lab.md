@@ -16,16 +16,16 @@ title: "Lab members"
 
 ### Previous Lab Members
 
-* Justin Luningham (Postdoc, 2018-2020), Novel Bayesian TWAS method by leveraging both cis- and trans- eQTL information. Currently a Research Assistant Professor at Georgia State University. 
+* Justin Luningham (Postdoc, 2018-2020), Novel Bayesian TWAS method by leveraging both cis- and trans- eQTL information. Research Assistant Professor at Georgia State University. 
 
 
-* Tianhui Mao (Undergraduate Student, 2018-2019), Derive a risk prediction model for Alzheimer's disease. Currently a graduate student at MIT. 
+* Tianhui Mao (Undergraduate Student, 2018-2019), Derive a risk prediction model for Alzheimer's disease. Graduate student at MIT. 
 
 
-* Xiaoran Meng (Master Student, 2018-2019), GTEx data analysis and tool development of [TIGAR](https://github.com/yanglab-emory/TIGAR). Currently a data scientist in China.
+* Xiaoran Meng (Master Student, 2018-2019), GTEx data analysis and tool development of [TIGAR](https://github.com/yanglab-emory/TIGAR). Data scientist in China.
 
 
-* Sini Nagpal, MS (Summer Intern, 2018). Nonparametric Bayesian method for TWAS. Currently a PhD student at Georgia Tech.
+* Sini Nagpal, MS (Summer Intern, 2018). Nonparametric Bayesian method for TWAS. PhD student at Georgia Tech.
 
 
 
