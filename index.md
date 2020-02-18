@@ -8,7 +8,7 @@ layout: page
 
 ## Welcome to YangLab Website
 
-<img style="float: right;" src="assets/JingjingPic.jpg" width = "200" height = "200">
+<img style="float: right;" src="assets/Jingjing_pic.JPG" width = "200" height = "200">
 
 PI: [Jingjing Yang](http://genetics.emory.edu/faculty/primary/yang-jingjing.html), PhD <br>
 Assistant Professor <br>
