@@ -13,9 +13,9 @@ layout: page
 PI: [Jingjing Yang](http://genetics.emory.edu/faculty/primary/yang-jingjing.html), PhD <br>
 Assistant Professor <br>
 Email: jingjing.yang@emory.edu <br>
-[Center for Computational and Quantitative Genetics](http://ccqg.emory.edu/about/index.html) <br>
+[Center for Computational and Quantitative Genetics](http://ccqg.emory.edu/) <br>
 [Department of Human Genetics](http://genetics.emory.edu/) <br>
-[Emory University School of Medicine](https://med.emory.edu/index.html)
+[Emory University School of Medicine](https://med.emory.edu/)
 
 [Google Scholar](https://scholar.google.com/citations?user=ANXPW-UAAAAJ&hl=en) 
 
@@ -36,6 +36,6 @@ The Yang Lab are interested in developing satistical methods and tools to integr
 I obtained my PhD in Statistics (2014) from the Statistics Department at Rice University, Houston, TX. My PhD work was about developing scalable nonparametric Bayesian model for functional data analysis. After my graduation, I started working on Statistical Genetics as a Postdoctoral Fellow (2014-2017) with
 Goncalo Abecasis in the Biostatistics Department at the University of Michigan, Ann Arbor. Since my postdoc training, I have been working on developing statistical tools and efficient computational algorithms for genomics data analysis, with the goal of illustrating underlying genomic etiology of complex diseases.
 
-### Office Location -- Whitehead Biomedical Research Building
+### Lab Location -- Whitehead Biomedical Research Building
 <img style="float: center;" src="assets/Whitehead.png">
 
