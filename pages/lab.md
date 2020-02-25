@@ -6,13 +6,13 @@ title: "Lab members"
 
 ### Current Lab Members
 
-| Name | Research topic | Year in Lab |
-| ------ | ---------- | ----- |
-| Junyu Chen, MPH <br> Research Specialist    | Bioinformatics analysis and functional Bayesian <br> GWAS  with quantitative annotation data. |    2018 - Present| 
-| | |  |
-| Shizhen Tang <br> Biostat Master Student    | Novel TWAS methods to account for <br> eQTL uncertainty. |    2019 - Present| 
-| | |  |
-| Randy Parrish <br> Biostat Master Student    | Apply TIGAR to GTEx V8 data. |    2020 - Present| 
+| Name || Research topic || Year in Lab |
+| ------ |--| ---------- |--| ----- |
+| Junyu Chen, MPH <br> Research Specialist  |  | Bioinformatics analysis and functional Bayesian <br> GWAS  with quantitative annotation data. |  |  2018 - Present| 
+| | | | |  |
+| Shizhen Tang <br> Biostat Master Student  |  | Novel TWAS methods to account for <br> eQTL uncertainty. | |   2019 - Present| 
+| | | | | |
+| Randy Parrish <br> Biostat Master Student  |  | Apply TIGAR to GTEx V8 data. |  |  2020 - Present| 
 
 ### Previous Lab Members
 
