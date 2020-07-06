@@ -11,7 +11,7 @@ title: "Lab members"
 | | | | |  |
 | Junyu Chen, MPH <br> Research Specialist  |  | Bioinformatics analysis and functional Bayesian <br> GWAS  with quantitative annotation data. |  |  2018 - Present| 
 | | | | |  |
-| Shizhen Tang <br> Biostat Master Student  |  | Novel TWAS methods to account for <br> eQTL uncertainty. | |   2019 - Present| 
+| Shizhen Tang <br> Research Specialist  |  | Novel variance component TWAS methods and genome-wide <br> differential gene expression analysis. | |   2019 - Present| 
 | | | | | |
 | Randy Parrish <br> Biostat Master Student  |  | Apply TIGAR to GTEx V8 data. |  |  2020 - Present| 
 
@@ -32,4 +32,5 @@ title: "Lab members"
 ### Lab Photos 
 
 * Summer, 2019
+
 <img style="float: center;" src="../assets/YangLab_2019_resize.JPG" width = "500" height = "500">
