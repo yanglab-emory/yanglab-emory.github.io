@@ -9,7 +9,7 @@ title: "Lab members"
 | Name |  | Research topic |  | Year in Lab |
 | ------ |--| ---------- |--| ----- |
 | | | | |  |
-| Junyu Chen, MPH <br> Research Specialist  |  | Bioinformatics analysis and functional Bayesian <br> GWAS  with quantitative annotation data. |  |  2018 - Present| 
+| Junyu Chen, MPH <br> Graduate Research Assistant  |  | Bioinformatics analysis and functional Bayesian <br> GWAS  with quantitative annotation data. |  |  2018 - Present| 
 | | | | |  |
 | Shizhen Tang <br> Research Specialist  |  | Novel variance component TWAS methods and genome-wide <br> differential gene expression analysis. | |   2019 - Present| 
 | | | | | |

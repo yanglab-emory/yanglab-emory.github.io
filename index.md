@@ -10,11 +10,11 @@ layout: page
 
 <img style="float: right;" src="assets/JY_pic_2020.JPG" width = "200" height = "200">
 
-PI: [Jingjing Yang](http://genetics.emory.edu/faculty/primary/yang-jingjing.html), PhD <br>
+PI: [Jingjing Yang](https://med.emory.edu/directory/profile/?u=JYANG51), PhD <br>
 Assistant Professor <br>
 Email: jingjing.yang@emory.edu <br>
 [Center for Computational and Quantitative Genetics](http://ccqg.emory.edu/) <br>
-[Department of Human Genetics](http://genetics.emory.edu/) <br>
+[Department of Human Genetics](https://med.emory.edu/departments/human-genetics/index.html) <br>
 [Emory University School of Medicine](https://med.emory.edu/)
 
 [Google Scholar](https://scholar.google.com/citations?user=ANXPW-UAAAAJ&hl=en) 
