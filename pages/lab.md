@@ -31,7 +31,7 @@ title: "Lab members"
 
 ### Lab Photos 
 
-* August, 2020
+* August, 2020 (All working remotely during this pandemic year. Thanks to zoom for the following lab member photo.)
 
 <img style="float: center;" src="../assets/LabMeeting_08_13_2020.png" width = "500" height = "500">
 
