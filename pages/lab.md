@@ -31,6 +31,11 @@ title: "Lab members"
 
 ### Lab Photos 
 
+* August, 2020
+
+<img style="float: center;" src="../assets/LabMeeting_08_13_2020.png" width = "500" height = "500">
+
+
 * Summer, 2019
 
 <img style="float: center;" src="../assets/YangLab_2019_resize.JPG" width = "500" height = "500">
