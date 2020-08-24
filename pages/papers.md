@@ -22,7 +22,7 @@ title: "Papers and Presentations"
 
 ### Upcoming Presentations
 
-* **The 61st McKusick Short Course (Poster)**, Virtual. _Novel Bayesian Genome-wide TWAS method to leverage both cis- and trans- eQTL information through summary statistics_.
+* **ASHG Annual Meeting 2020 (Poster)**, Virtual. _Novel Bayesian Genome-wide TWAS method to leverage both cis- and trans- eQTL information through summary statistics_.
 
 ### Past Presentations
 
@@ -30,3 +30,6 @@ title: "Papers and Presentations"
 
 * **ENAR 2020 Spring Meeting (Invited Oral)**, Nashville, TN. _TIGAR: An Improved Bayesian Tool for
 Transcriptomic Data Imputation Enhances Gene Mapping of Complex Traits_.
+
+* **The 61st McKusick Short Course (Poster)**, Virtual. _Novel Bayesian Genome-wide TWAS method to leverage both cis- and trans- eQTL information through summary statistics_.
+
