@@ -7,7 +7,7 @@ title: "Papers and Presentations"
 
 * **Shizhen Tang**, Aron S Buchman, Philip L De Jager, David A Bennett, Michael P Epstein, **Jingjing Yang**. (2020). Powerful Variance-Component TWAS method identifies novel and known risk genes for clinical and pathologic Alzheimer’s dementia phenotypes. BioRXiv. DOI: <https://doi.org/10.1101/2020.05.26.117515>.
 
-* **Justin M Luningham**, Junyu Chen, Shizhen Tang, Phillip De Jager, David A Bennett, Aron S Buchman, **Jingjing Yang**. (2020). Novel Bayesian transcriptome-wide association study method leveraging both cis-and trans-eQTL information through summary statistics. BioRXiv. DOI: <https://doi.org/10.1101/2020.03.05.979187>.   
+* **Justin M Luningham**, Junyu Chen, Shizhen Tang, Phillip De Jager, David A Bennett, Aron S Buchman, **Jingjing Yang**. (2020). Novel Bayesian transcriptome-wide association study method leveraging both cis-and trans-eQTL information through summary statistics. Accepted by AJHG. BioRXiv. DOI: <https://doi.org/10.1101/2020.03.05.979187>.   
 
 * **Sini Nagpal**, **Xiaoran Meng**, Michael P. Epstein, Lam C. Tsoi, Matthew Patrick, Greg Gibson, Phillip De Jager, David A. Bennett, Aliza P. Wingo, Thomas S. Wingo, **Jingjing Yang**. (2018). TIGAR: An Improved Bayesian Tool for Transcriptomic Data Imputation Enhances Gene Mapping of Complex Traits. The American Journal of Human Genetics. DOI: <https://doi.org/10.1016/j.ajhg.2019.05.018>. Method paper for [TIGAR](https://github.com/yanglab-emory/TIGAR).
 
