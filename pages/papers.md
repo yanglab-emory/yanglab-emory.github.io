@@ -22,7 +22,7 @@ title: "Papers and Presentations"
 
 ### Upcoming Presentations
 
-* **ASHG Annual Meeting 2020 (Poster)**, Virtual. _Novel Bayesian Genome-wide TWAS method to leverage both cis- and trans- eQTL information through summary statistics_.
+* **ASHG Annual Meeting 2020 (Poster, Reviewers' Choice)**, Virtual. _Bayesian Genome-wide TWAS method to leverage both cis- and trans- eQTL information through summary statistics_.
 
 ### Past Presentations
 
