@@ -6,6 +6,13 @@ title: "Software"
 ### Software Developed and Maintained by the Yang Lab
 
 <a class="btn btn-primary"
+href="https://github.com/yanglab-emory/BGW-TWAS"
+role="button">BGW-TWAS</a>
+
+* Bayesian Genome-wide TWAS (BGW-TWAS) method is developed for leveraging both cis- and trans- eQTL through summary statistics for TWAS which is based on the Bayesian variable selection regression (BVSR) model and Expectation Maximization Monte Carlo Markov Chain (EM-MCMC) algorithm. 
+
+
+<a class="btn btn-primary"
 href="https://github.com/yanglab-emory/TIGAR"
 role="button">TIGAR</a>
 
