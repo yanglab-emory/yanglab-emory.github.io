@@ -15,7 +15,8 @@ title: "Teaching and Resources"
 
 * [Introductions to BASH](https://github.com/yanglab-emory/yanglab-emory.github.io/tree/master/assets/BASH.pdf)
 
-
+### Instructions to RHPC
+* [Instructions to RHPC](https://github.com/yanglab-emory/yanglab-emory.github.io/tree/master/assets/RSPH_HPC_StartGuide_Yang.html)
 
 ### Instructions to Emory Amazon Web Service (AWS)
 
