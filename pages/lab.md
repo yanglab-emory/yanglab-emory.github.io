@@ -9,13 +9,13 @@ title: "Lab members"
 | Name |  | Research topic |  | Year in Lab |
 | ------ |--| ---------- |--| ----- |
 | | | | |  |
-| Junyu Chen, MPH <br> Graduate Research Assistant  |  | Functional Bayesian <br> GWAS  with multiple quantitative annotations. |  |  2018 - Present| 
+| Junyu Chen, MPH <br> Graduate Research Assistant  |  | Functional Bayesian GWAS  <br> with multiple quantitative annotations. |  |  2018 - Present| 
 | | | | |  |
-| Shizhen Tang <br> Research Specialist  |  | Novel variance component TWAS methods and genome-wide <br> differential gene expression analysis. | |   2019 - Present| 
+| Shizhen Tang <br> Research Specialist  |  | Variance component TWAS methods and <br> genome-wide  differential gene expression analysis. | |   2019 - Present| 
 | | | | | |
 | Randy Parrish <br> Biostat Master Student  |  | Apply TIGAR to GTEx V8 data. |  |  2020 - Present| 
 | | | | | |
-| Qile Dai <br> Biostat PhD Student  |  | Novel Bayesian TWAS method <br> using only summary-level eQTL and GWAS data |  |  2020 - Present| 
+| Qile Dai <br> Biostat PhD Student  |  | Bayesian TWAS method using only <br> summary-level eQTL and GWAS data |  |  2020 - Present| 
 
 ### Previous Lab Members
 
