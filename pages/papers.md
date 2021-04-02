@@ -5,9 +5,10 @@ title: "Papers and Presentations"
 
 ### Selected Publications and Preprints
 
-* **Shizhen Tang**, Aron S Buchman, Philip L De Jager, David A Bennett, Michael P Epstein, **Jingjing Yang**. (2020). Powerful Variance-Component TWAS method identifies novel and known risk genes for clinical and pathologic Alzheimer’s dementia phenotypes. BioRXiv. DOI: <https://doi.org/10.1101/2020.05.26.117515>.
+* **Shizhen Tang**, Aron S Buchman, Philip L De Jager, David A Bennett, Michael P Epstein, **Jingjing Yang**. (2021). Novel Variance-Component TWAS method for studying complex human diseases with applications to Alzheimer's dementia. Online Print with PLOS Genetics: <https://doi.org/10.1371/journal.pgen.1009482>. Method paper for [VC-TWAS](https://github.com/yanglab-emory/VC_TWAS) implemented in [TIGAR](https://github.com/yanglab-emory/TIGAR).
 
-* **Justin M Luningham**, Junyu Chen, Shizhen Tang, Phillip De Jager, David A Bennett, Aron S Buchman, **Jingjing Yang**. (2020). Novel Bayesian transcriptome-wide association study method leveraging both cis-and trans-eQTL information through summary statistics. Accepted by AJHG. BioRXiv. DOI: <https://doi.org/10.1101/2020.03.05.979187>.   
+* **Justin M Luningham**, Junyu Chen, Shizhen Tang, Phillip De Jager, David A Bennett, Aron S Buchman, **Jingjing Yang**. (2020). Novel Bayesian transcriptome-wide association study method leveraging both cis-and trans-eQTL information through summary statistics. The American Journal of Human Genetics. DOI: <https://doi.org/10.1016/j.ajhg.2020.08.022>. Method paper for [BGW-TWAS](https://github.com/yanglab-emory/BGW-TWAS).
+
 
 * **Sini Nagpal**, **Xiaoran Meng**, Michael P. Epstein, Lam C. Tsoi, Matthew Patrick, Greg Gibson, Phillip De Jager, David A. Bennett, Aliza P. Wingo, Thomas S. Wingo, **Jingjing Yang**. (2018). TIGAR: An Improved Bayesian Tool for Transcriptomic Data Imputation Enhances Gene Mapping of Complex Traits. The American Journal of Human Genetics. DOI: <https://doi.org/10.1016/j.ajhg.2019.05.018>. Method paper for [TIGAR](https://github.com/yanglab-emory/TIGAR).
 
