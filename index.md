@@ -39,7 +39,7 @@ The Yang Lab is interested in developing statistical and computational methods/t
 	* ChIPseq and RNAseq analysis
 	* Single cell RNAseq analysis
 
-Dr. Yang accepts PhD students from the GMB/PBEE graduate programs of the [Graduate Division of Biological and Biomedical Sciences](http://www.biomed.emory.edu/programs/index.html) and the [Department of Biostatistics and Bioinformatics School of Public Health](https://sph.emory.edu/admissions/phd/index.html).
+Dr. Yang accepts PhD students from graduate programs of [Genetics Molecular Biology](http://biomed.emory.edu/PROGRAM_SITES/GMB/) and [Population Biology, Ecology, and Evolution] (http://biomed.emory.edu/PROGRAM_SITES/PBEE/) under the [Graduate Division of Biological and Biomedical Sciences](http://www.biomed.emory.edu/), and Master/PhD students from the graduate program of the [Department of Biostatistics and Bioinformatics School of Public Health](https://sph.emory.edu/admissions/phd/index.html).
 
 ### PI - Background
 * PhD in Statistics, 2009-2014, Department of Statistics, Rice University, Houston, TX, USA
@@ -62,14 +62,14 @@ Yang lab welcomes all levels of Emory Students including Undergraduate, Master, 
 * Master/PhD students of the Department of Biostatistics and Bioinformatics who are looking for thesis mentor and projects
 
 #### Postdoctoral Fellow Position Opening
-Yang lab currently has an opening for Postdoctoral fellow.
+Yang lab currently has an opening for Postdoctoral fellow. Please email application to Dr. Jingjing Yang <jingjing.yang@emory.edu>, or apply through [Emory Careers](https://faculty-emory.icims.com/jobs/59581/post-doctoral-fellow---human-genetics--yang-lab/job?hub=13). Applications will be reviewed immediately after submission.
 
 * The candidate is required to have a Ph.D. degree in Statistics/Biostatistics, Bioinformatics, Computer Science or other relevant disciplines with research interests in statistical genetics and genomics data analysis.
 * The candidate is required to have proficiency in one or multiple of the popular programming languages, R, Python, C++, etc.
 * Experience working with large gnomics data and high-performance computing clusters are desirable.
 * Interested candidate should submit a Cover Letter, CV, Brief Statement of Research & Interest (less than 2 pages), one Sample Publication, and Contacts for 3 references.
 
-Please email application to Dr. Jingjing Yang <jingjing.yang@emory.edu>, or apply through [Emory Careers](https://faculty-emory.icims.com/jobs/59581/post-doctoral-fellow---human-genetics--yang-lab/job?hub=13). Applications will be reviewed immediately after submission.
+
 
 
 ### Lab Location -- Whitehead Biomedical Research Building
