@@ -3,7 +3,7 @@ layout: page
 title: "Teaching and Resources"
 ---
 
-### Classes
+### Recently Taught Courses
 
 * BIOS-770 - Advanced Statistical Genetics. Spring 2019. Co-Instructor.
 * IBS-746 - Graduate Human Genetics. Fall 2019. Co-Instructor. 
@@ -12,8 +12,10 @@ title: "Teaching and Resources"
 ### Instructions to HGCC
 
 * [Basics about HGCC](https://github.com/yanglab-emory/yanglab-emory.github.io/tree/master/assets/HGCC.pdf)
-
 * [Introductions to BASH](https://github.com/yanglab-emory/yanglab-emory.github.io/tree/master/assets/BASH.pdf)
+* [QuickStart](http://star.mit.edu/cluster/docs/0.92rc2/guides/sge.html) about Submiting Jobs on Sun Grid Engine (SGE)
+* [Instructions](https://github.com/yanglab-emory/yanglab-emory.github.io/tree/master/assets/ArrayJob.pdf) about Submiting Array Jobs for SGE Cluster
+
 
 ### Instructions to RHPC
 * [Instructions to RHPC](https://github.com/yanglab-emory/yanglab-emory.github.io/tree/master/assets/RSPH_HPC_StartGuide_Yang.pdf)
@@ -27,12 +29,16 @@ title: "Teaching and Resources"
 
 ### Other Resources
 
-* [Bioinformatics workshop documentations](https://bioinformatics.ucdavis.edu/training/documentation/) by UCDAVIS Bioinformatics Core. Including past workshop documentations about **Bioinformatics Prerequisites** (Command Line and R), **Single-Cell RNA-Seq Analysis**, **RNA-seq Analysis**, **Microbial Community Analysis** (Amplicon), **Variant Analysis** (Variant calling with GATK, Variant Annotation), etc. 
+#### Bioinformatics
 
-* [Cheet sheets](https://infoplatter.wordpress.com/2014/04/06/bioinformaticians-pocket-reference/) about **AWK**, **C++**, **Python**, **R**, **Screen**, **UNIX**, **Vim**, **Git**
+* [Bioinformatics workshop documentations](https://ucdavis-bioinformatics-training.github.io/) by UCDAVIS Bioinformatics Core. Including past workshop documentations about **Bioinformatics Prerequisites** (Command Line and R), **Single-Cell RNA-Seq Analysis**, **RNA-seq Analysis**, **Microbial Community Analysis** (Amplicon), **Variant Analysis** (Variant calling with GATK, Variant Annotation), etc. 
 
-* [QuickStart](http://star.mit.edu/cluster/docs/0.92rc2/guides/sge.html) about Submiting Jobs on Sun Grid Engine (SGE)
+* [Analysis of single cell RNA-seq data](https://scrnaseq-course.cog.sanger.ac.uk/website/index.html) by Hemberg lab, Welcome Sanger Institute, UK
 
-* [Instructions](https://github.com/yanglab-emory/yanglab-emory.github.io/tree/master/assets/ArrayJob.pdf) about Submiting Array Jobs for SGE Cluster
+* [ENAR 2021 short course on single cell RNA-seq analysis](https://www.haowulab.org/teaching/ENAR2021/scRNAseq.html) by Hao Wu, Emory University, and Ziyi Li, MD Anderson Cancer Center
 
+#### Linux
+* [Cheet sheets](https://infoplatter.wordpress.com/2014/04/06/bioinformaticians-pocket-reference/) of **AWK**, **C++**, **Python**, **R**, **Screen**, **UNIX**, **Vim**, **Git**
+
+#### R
 * [R/Rstudio Tutorial Essential Vedios](https://resources.rstudio.com/)

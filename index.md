@@ -4,9 +4,7 @@ layout: page
 
 <!-- {% include JB/setup %} -->
 
-
-
-## Welcome to YangLab Website
+## Welcome to Yang Lab Website
 
 <img style="float: right;" src="assets/JY_pic_2020.JPG" width = "200" height = "200">
 
@@ -14,27 +12,30 @@ PI: [Jingjing Yang](https://med.emory.edu/directory/profile/?u=JYANG51), PhD <br
 Assistant Professor <br>
 Email: jingjing.yang@emory.edu <br>
 [Center for Computational and Quantitative Genetics](http://ccqg.emory.edu/) <br>
-[Department of Human Genetics](https://med.emory.edu/departments/human-genetics/index.html) (Primary Appointment) <br>
+[Department of Human Genetics](https://med.emory.edu/departments/human-genetics/index.html) (Primary) <br>
 [Emory University School of Medicine](https://med.emory.edu/)
 
-[Department of Biostatistics and Bioinformatics](https://sph.emory.edu/faculty/profile/index.php?FID=jingjing-yang-10942) (Secondary Appointment) <br>
+[Department of Biostatistics and Bioinformatics](https://sph.emory.edu/faculty/profile/index.php?FID=jingjing-yang-10942) (Secondary) <br>
 [Emory University School of Public Health](https://sph.emory.edu/)
 
 
 [Google Scholar](https://scholar.google.com/citations?user=ANXPW-UAAAAJ&hl=en)
 
 ### Research
-The Yang Lab is interested in developing statistical and computational methods/tools for quantitative genomics data analysis and biomedical data analysis. Programming languages we use include R, Python, C++, etc. Computation environment we use are Linux/Unix high-performance computing cluster and Amazon Web Services.
+The Yang Lab is interested in developing statistical and computational methods/tools for quantitative genomics data analysis and biomedical data analysis, using programming languages R, Python, C++, Perl, etc., Linux/Unix high-performance computing cluster, and Amazon Web Services.
 
 <ins>Current Research Topics</ins>
 
-* Transcriptome-wide Association Studies (TWAS) method/tool development and applications for studying Alzheimer's dementia related phenotypes, Breast Cancer, and Ovarian Cancer
+* Transcriptome-wide Association Studies (TWAS) 
+	* Method/tool development
+	* Applications for studying Alzheimer's dementia related phenotypes, Breast Cancer, and Ovarian Cancer
 * Machine learning and Deep learning
 	* Biomedical signal/image analysis
 	* Phenotype risk prediction using polygenic risk score and other risk factors
 * Integrative multi-omics analysis including mediation analysis
-* Genome-wide Association Studies (GWAS) method/tool development
-	* Applications for studying post chemotherapy skin toxicity of Breast cancer patients
+* Genome-wide Association Studies (GWAS) 
+	* Method/tool development to account for functional annotations
+	* Applications for studying Alzheimer's dementia related phenotypes, and post chemotherapy skin toxicity of Breast cancer patients
 * Bioinformatics analysis
 	* ChIPseq and RNAseq analysis
 	* Single cell RNAseq analysis
@@ -61,8 +62,8 @@ Yang lab welcomes all levels of Emory Students including Undergraduate, Master, 
 * SPH Master students who are looking for Applied Practice Experience (REAL is accepted but not required)
 * Master/PhD students of the Department of Biostatistics and Bioinformatics who are looking for thesis mentor and projects
 
-#### Postdoctoral Fellow Position Opening
-Yang lab currently has an opening for Postdoctoral fellow. Please email application to Dr. Jingjing Yang <jingjing.yang@emory.edu>, or apply through [Emory Careers](https://faculty-emory.icims.com/jobs/59581/post-doctoral-fellow---human-genetics--yang-lab/job?hub=13). Applications will be reviewed immediately after submission.
+#### Postdoctoral Research Fellow
+Yang lab currently has an opening for Postdoctoral Research Fellow. Please email application to Dr. Jingjing Yang <jingjing.yang@emory.edu>, or apply through [Emory Careers](https://faculty-emory.icims.com/jobs/59581/post-doctoral-fellow---human-genetics--yang-lab/job?hub=13). Applications will be reviewed immediately after submission.
 
 * The candidate is required to have a Ph.D. degree in Statistics/Biostatistics, Bioinformatics, Computer Science or other relevant disciplines with research interests in statistical genetics and genomics data analysis.
 * The candidate is required to have proficiency in one or multiple of the popular programming languages, R, Python, C++, etc.
@@ -72,6 +73,6 @@ Yang lab currently has an opening for Postdoctoral fellow. Please email applicat
 
 
 
-### Lab Location -- Whitehead Biomedical Research Building
+### Lab Location - Whitehead Biomedical Research Building
 <img style="float: center;" src="assets/Whitehead.png">
 
