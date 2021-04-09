@@ -19,6 +19,7 @@ title: "Teaching and Resources"
 
 ### Instructions to RHPC
 * [Instructions to RHPC](https://github.com/yanglab-emory/yanglab-emory.github.io/tree/master/assets/RSPH_HPC_StartGuide_Yang.pdf)
+* <embed src=”../assets/RSPH_HPC_StartGuide_Yang.pdf#page=2" type=”application/pdf” width=”100%” height=”100%”>
 
 ### Instructions to Emory Amazon Web Service (AWS)
 
