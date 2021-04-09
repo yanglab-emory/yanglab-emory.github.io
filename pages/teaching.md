@@ -19,7 +19,9 @@ title: "Teaching and Resources"
 
 ### Instructions to RHPC
 * [Instructions to RHPC](https://github.com/yanglab-emory/yanglab-emory.github.io/tree/master/assets/RSPH_HPC_StartGuide_Yang.pdf)
-* <embed src=”../assets/RSPH_HPC_StartGuide_Yang.pdf#page=2" type=”application/pdf” width=”100%” height=”100%”>
+* <iframe src=”../assets/RSPH_HPC_StartGuide_Yang.pdf#page=2" width=”100%” height=”100%”>
+This browser does not support PDFs. Please download the PDF to view it: Download PDF
+</iframe>
 
 ### Instructions to Emory Amazon Web Service (AWS)
 
@@ -32,7 +34,12 @@ title: "Teaching and Resources"
 
 #### Bioinformatics
 
-* [Bioinformatics workshop documentations](https://ucdavis-bioinformatics-training.github.io/) by UCDAVIS Bioinformatics Core. Including past workshop documentations about **Bioinformatics Prerequisites** (Command Line and R), **Single-Cell RNA-Seq Analysis**, **RNA-seq Analysis**, **Microbial Community Analysis** (Amplicon), **Variant Analysis** (Variant calling with GATK, Variant Annotation), etc. 
+* [Bioinformatics workshop documentations](https://ucdavis-bioinformatics-training.github.io/) by UCDAVIS Bioinformatics Core. Including the following topics: 
+	* **Bioinformatics Prerequisites** (Command Line and R)
+	* **Single-Cell RNA-Seq Analysis**	
+	* **RNA-seq Analysis**
+	* **Microbial Community Analysis** (Amplicon)
+	* **Variant Analysis** (Variant calling with GATK, Variant Annotation)
 
 * [Analysis of single cell RNA-seq data](https://scrnaseq-course.cog.sanger.ac.uk/website/index.html) by Hemberg lab, Welcome Sanger Institute, UK
 
