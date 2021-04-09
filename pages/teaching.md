@@ -11,21 +11,16 @@ title: "Teaching and Resources"
 
 ### Instructions to HGCC
 
-* [Basics about HGCC](https://github.com/yanglab-emory/yanglab-emory.github.io/tree/master/assets/HGCC.pdf)
-* [Introductions to BASH](https://github.com/yanglab-emory/yanglab-emory.github.io/tree/master/assets/BASH.pdf)
+* <p>  <a href="../assets/HGCC.pdf">Basics about HGCC</a>.</p>
+* <p> <a href="../assets/BASH.pdf">Introductions to BASH</a>.</p>
 * [QuickStart](http://star.mit.edu/cluster/docs/0.92rc2/guides/sge.html) about Submiting Jobs on Sun Grid Engine (SGE)
 * [Instructions](https://github.com/yanglab-emory/yanglab-emory.github.io/tree/master/assets/ArrayJob.pdf) about Submiting Array Jobs for SGE Cluster
 
 
 ### Instructions to RHPC
-* [Instructions to RHPC](https://github.com/yanglab-emory/yanglab-emory.github.io/tree/master/assets/RSPH_HPC_StartGuide_Yang.pdf)
 
-* <html>
-  <body>
-    <p>  <a href="../assets/RSPH_HPC_StartGuide_Yang.pdf">Instructions to RHPC</a>.</p>
-    <iframe src="../assets/RSPH_HPC_StartGuide_Yang.pdf" height="200" width="300"></iframe>
-  </body>
-</html>
+* <a href="../html/RSPH_HPC_StartGuide_Yang.html" target="_self"> Instructions to RHPC</a>
+
 
 ### Instructions to Emory Amazon Web Service (AWS)
 
