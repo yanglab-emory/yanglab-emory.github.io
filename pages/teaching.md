@@ -9,20 +9,20 @@ title: "Teaching and Resources"
 * IBS-746 - Graduate Human Genetics. Fall 2019. Co-Instructor. 
 
 
-### Instructions to HGCC
+### HGCC
 
-* <p>  <a href="../assets/HGCC.pdf">Basics about HGCC</a>.</p>
-* <p> <a href="../assets/BASH.pdf">Introductions to BASH</a>.</p>
+* <a href="../assets/HGCC.pdf">Basics about HGCC</a>.
+* <a href="../assets/BASH.pdf">Introductions to BASH</a>.
 * [QuickStart](http://star.mit.edu/cluster/docs/0.92rc2/guides/sge.html) about Submiting Jobs on Sun Grid Engine (SGE)
 * [Instructions](https://github.com/yanglab-emory/yanglab-emory.github.io/tree/master/assets/ArrayJob.pdf) about Submiting Array Jobs for SGE Cluster
 
 
-### Instructions to RHPC
+### RHPC
 
 * <a href="../html/RSPH_HPC_StartGuide_Yang.html" target="_self"> Instructions to RHPC</a>
 
 
-### Instructions to Emory Amazon Web Service (AWS)
+### Emory Amazon Web Service (AWS)
 
 * [Emory AWS](https://aws.emory.edu/)
 

@@ -35,8 +35,9 @@ title: "Lab members"
 
 * August, 2020 (All working remotely during this pandemic year. Thanks to zoom for the following lab member photo.)
 
+<a href="default.asp" title="Lab photo 2020" alt="Lab photo 2020">
 <img style="float: center;" src="../assets/LabMeeting_08_13_2020.png" width = "500" height = "500">
-
+</a>
 
 * Summer, 2019
 
