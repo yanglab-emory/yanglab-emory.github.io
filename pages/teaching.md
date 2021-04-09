@@ -14,7 +14,7 @@ title: "Teaching and Resources"
 * <a href="../assets/HGCC.pdf">Basics about HGCC</a>.
 * <a href="../assets/BASH.pdf">Introductions to BASH</a>.
 * [QuickStart](http://star.mit.edu/cluster/docs/0.92rc2/guides/sge.html) about Submiting Jobs on Sun Grid Engine (SGE)
-* [Instructions](https://github.com/yanglab-emory/yanglab-emory.github.io/tree/master/assets/ArrayJob.pdf) about Submiting Array Jobs for SGE Cluster
+*  <a href="../assets/ArrayJob.pdf" target="_self"> Submit Array Jobs for SGE Cluster</a>
 
 
 ### RHPC
