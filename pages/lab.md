@@ -13,7 +13,7 @@ title: "Lab members"
 | | | | |  |
 | Shizhen Tang <br> Research Specialist  |  | Variance component TWAS methods and <br> genome-wide  differential gene expression analysis. | |   2019 - Present| 
 | | | | | |
-| Randy Parrish <br> Biostat Master Student  |  | Apply TIGAR to GTEx V8 data. |  |  2020 - Present| 
+| Randy Parrish <br> Biostat Master Student  |  | Apply TIGAR to GTEx V8 data and <br> stacked regression TWAS. |  |  2020 - Present| 
 | | | | | |
 | Qile Dai <br> Biostat PhD Student  |  | Bayesian TWAS method using only <br> summary-level eQTL and GWAS data |  |  2020 - Present| 
 
