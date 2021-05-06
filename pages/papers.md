@@ -5,7 +5,7 @@ title: "Papers and Presentations"
 
 ### Selected Publications and Preprints
 
-* **Kuehner JN**, **Chen J**, Bruggeman EC, Wang F, Li Y, Xu C, McEachin ZT, Li Z, Chen L, Hales CM, Wen Z., Yang J., Yao B. (2021) 5-hydroxymethylcytosine is dynamically regulated during forebrain organoid development and aberrantly altered in Alzheimer’s disease. Cell Reports. 2021 Apr 27;35(4):109042. DOI: https://doi.org/10.1016/j.celrep.2021.109042. 
+* **Kuehner JN**, **Chen J**, Bruggeman EC, Wang F, Li Y, Xu C, McEachin ZT, Li Z, Chen L, Hales CM, Wen Z., Yang J., Yao B. (2021) 5-hydroxymethylcytosine is dynamically regulated during forebrain organoid development and aberrantly altered in Alzheimer’s disease. Cell Reports. 2021 Apr 27;35(4):109042. DOI: <https://doi.org/10.1016/j.celrep.2021.109042>. 
 
 * **Shizhen Tang**, Aron S Buchman, Philip L De Jager, David A Bennett, Michael P Epstein, **Jingjing Yang**. (2021). Novel Variance-Component TWAS method for studying complex human diseases with applications to Alzheimer's dementia. Online Print with PLOS Genetics: <https://doi.org/10.1371/journal.pgen.1009482>. Method paper for [VC-TWAS](https://github.com/yanglab-emory/VC_TWAS) implemented in [TIGAR](https://github.com/yanglab-emory/TIGAR).
 
