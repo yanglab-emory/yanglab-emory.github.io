@@ -74,7 +74,7 @@ Yang lab currently has an opening for Research Specialist. Please email applicat
 * Interested candidate should submit CV, Brief Statement of Research Interest (one page), and Contacts for 3 references.
 -->
 
-#### Postdoctoral Research Fellow
+#### [Postdoctoral Research Fellow](https://faculty-emory.icims.com/jobs/59581/post-doctoral-fellow---human-genetics--yang-lab/job?hub=13)
 Yang lab currently has an opening for Postdoctoral Research Fellow. Please email application to Dr. Jingjing Yang <jingjing.yang@emory.edu>, or apply through [Emory Careers](https://faculty-emory.icims.com/jobs/59581/post-doctoral-fellow---human-genetics--yang-lab/job?hub=13). Applications will be reviewed immediately after submission.
 
 * The candidate is required to have a Ph.D. degree in Statistics/Biostatistics, Bioinformatics, Computer Science or other relevant disciplines with research interests in statistical genetics and genomics data analysis.

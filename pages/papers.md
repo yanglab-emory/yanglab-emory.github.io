@@ -5,6 +5,8 @@ title: "Papers and Presentations"
 
 ### Selected Publications and Preprints
 
+* **Kuehner JN**, **Chen J**, Bruggeman EC, Wang F, Li Y, Xu C, McEachin ZT, Li Z, Chen L, Hales CM, Wen Z., Yang J., Yao B. (2021) 5-hydroxymethylcytosine is dynamically regulated during forebrain organoid development and aberrantly altered in Alzheimer’s disease. Cell Reports. 2021 Apr 27;35(4):109042. DOI: https://doi.org/10.1016/j.celrep.2021.109042. 
+
 * **Shizhen Tang**, Aron S Buchman, Philip L De Jager, David A Bennett, Michael P Epstein, **Jingjing Yang**. (2021). Novel Variance-Component TWAS method for studying complex human diseases with applications to Alzheimer's dementia. Online Print with PLOS Genetics: <https://doi.org/10.1371/journal.pgen.1009482>. Method paper for [VC-TWAS](https://github.com/yanglab-emory/VC_TWAS) implemented in [TIGAR](https://github.com/yanglab-emory/TIGAR).
 
 * **Justin M Luningham**, Junyu Chen, Shizhen Tang, Phillip De Jager, David A Bennett, Aron S Buchman, **Jingjing Yang**. (2020). Novel Bayesian transcriptome-wide association study method leveraging both cis-and trans-eQTL information through summary statistics. The American Journal of Human Genetics. DOI: <https://doi.org/10.1016/j.ajhg.2020.08.022>. Method paper for [BGW-TWAS](https://github.com/yanglab-emory/BGW-TWAS).
@@ -26,14 +28,19 @@ title: "Papers and Presentations"
 
 ### Past Presentations
 
-* **ASHG Annual Meeting 2020 (Poster, Reviewers' Choice)**, Virtual. _Bayesian Genome-wide TWAS method to leverage both cis- and trans- eQTL information through summary statistics_.
+* **ASHG Annual Meeting 2020 (Poster, Reviewers' Choice)**, Virtual. _Bayesian Genome-wide TWAS method to leverage both cis- and trans- eQTL information through summary statistics_. <a href="../assets/PresentationSlides/ASHG2020-ePoster_JYang.pdf">Poster</a>.
 
 * **The 61st McKusick Short Course (Poster, 3rd Place Presentation)**, Bar Harbor, Maine (Virtual). _Novel Bayesian Genome-wide TWAS method to leverage both cis- and trans- eQTL information through summary statistics_.
 
 * **ENAR 2020 Spring Meeting (Invited Oral)**, Nashville, TN (Virtual). _TIGAR: An Improved Bayesian Tool for
 Transcriptomic Data Imputation Enhances Gene Mapping of Complex Traits_.
+<a href="../assets/PresentationSlides/ENAR_03_2020.pdf">Slides</a>.
 
-* **IGES 2019 (Oral, Robert C. Elston Best Paper Award)**, Houston, TX. _Improved Score Statistics for Meta-analysis in Single-variant and Gene-level Association Studies_.
+* **IGES 2019 (Oral, Robert C. Elston Best Paper Award)**, Houston, TX. _Improved Score Statistics for Meta-analysis in Single-variant and Gene-level Association Studies_. <a href="../assets/PresentationSlides/Slides_LabMeeting_IGES2019.pdf">Slides</a>.
+
+* **North Texas University Department of Mathematics Seminar (2018)**, Atlanta, GA. _Scalable Bayesian Method for Functional Genome-wide Association Studies_. <a href="../assets/PresentationSlides/bfGWAS_NTU_2018.pdf">Slides</a>.
+
+* **Georgia Tech Center for Integrative Genomics Seminar (2018)**, Atlanta, GA. _Bayesian Approaches to Functional Integration of Genomic Data_. <a href="../assets/PresentationSlides/GATec_02_14_2018.pdf">Slides</a>.
 
 
 
