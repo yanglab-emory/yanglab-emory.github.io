@@ -8,10 +8,10 @@ title: "Teaching and Resources"
 * BIOS-770 - Advanced Statistical Genetics. Spring 2019. Co-Instructor.
 	* <a href="../assets/CourseSlides/BiostatStatisticalGenetics/Lecture_5_FamilyAssoc.pdf">Family-Based Association Analysis</a> 
 	* <a href="../assets/CourseSlides/BiostatStatisticalGenetics/Lecture_6_PopAssoc.pdf">Population-Based Association Analysis</a>  
-	* <a href="../assets/CourseSlides/BiostatStatisticalGenetics/Lecture_7_GWAS.pdf">Genome-wide Association Study</a> 
+	* <a href="../assets/CourseSlides/BiostatStatisticalGenetics/Lecture_7_GWAS.pdf">Genome-wide Association Study (GWAS)</a> 
 	* <a href="../assets/CourseSlides/BiostatStatisticalGenetics/Lecture_8_GWASAdvTopics.pdf">Advanced Topics of GWAS</a>  
 * IBS-746 - Graduate Human Genetics. Fall 2020. Co-Instructor. 
-	* <a href="../assets/CourseSlides/GraduateHumanGenetics/IBS746_Yang_association_2020_1.pdf">Genome-wide Association Study (GWAS)</a>
+	* <a href="../assets/CourseSlides/GraduateHumanGenetics/IBS746_Yang_association_2020_1.pdf">Genome-wide Association Study</a>
 	* <a href="../assets/CourseSlides/GraduateHumanGenetics/IBS746_Yang_association_2020_2.pdf">GWAS Approaches for Cohorts of Different Ancestries</a> 
 
 
