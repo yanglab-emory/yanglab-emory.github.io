@@ -1,9 +1,11 @@
 ---
 layout: page
-title: "Papers and Presentations"
+title: "Publication and Presentation"
 ---
 
-### Selected Publications and Preprints
+## Selected Publication
+
+* **Yan, L., Li, S.**, Guo, Y., Ren, P., Song, H., **Yang, J., & Shen, X.** (2021). Multi-state colposcopy image fusion for cervical precancerous lesion diagnosis using BF-CNN. Biomedical Signal Processing and Control, 68, 102700. DOI: <https://doi.org/10.1016/j.bspc.2021.102700>.
 
 * **Kuehner JN**, **Chen J**, Bruggeman EC, Wang F, Li Y, Xu C, McEachin ZT, Li Z, Chen L, Hales CM, **Wen Z.**, **Yang J.**, **Yao B.** (2021) 5-hydroxymethylcytosine is dynamically regulated during forebrain organoid development and aberrantly altered in Alzheimer’s disease. Cell Reports. 2021 Apr 27;35(4):109042. DOI: <https://doi.org/10.1016/j.celrep.2021.109042>. 
 
@@ -24,25 +26,30 @@ title: "Papers and Presentations"
 
 * **Yang J.**, Cox D.D., Lee J.S., Ren P., and Choi T. (2017). Efficient Bayesian Hierarchical Functional Data Analysis with Basis Function Approximations Using Gaussian-Wishart Processes. Biometrics, 73(4): 1082-1091. DOI: <https://doi.org/10.1111/biom.12705>. PMID: 28395117. Method paper for [BFDA](https://github.com/yanglab-emory/BFDA).
 
+### A complete list of publication can be found at [Google Scholar](https://scholar.google.com/citations?user=ANXPW-UAAAAJ&hl=en).
 
-### Upcoming Presentations
-* **EcoSta 2021 (Invited Oral)**, Virtual. _Scalable Bayesian method to leverage multiple quantitative functional annotations in GWAS of complex traits_.
+## Upcoming Presentation
+* **EcoSta 2021 (Invited Oral)**, Virtual (June 2021). _Scalable Bayesian method to leverage multiple quantitative functional annotations in GWAS of complex traits_.  
 
-### Past Presentations
 
-* **ASHG Annual Meeting 2020 (Poster, Reviewers' Choice)**, Virtual. _Bayesian Genome-wide TWAS method to leverage both cis- and trans- eQTL information through summary statistics_. <a href="../assets/PresentationSlides/ASHG2020-ePoster_JYang.pdf">Poster</a>.
+## Past Presentation
 
-* **The 61st McKusick Short Course (Poster, 3rd Place Presentation)**, Bar Harbor, Maine (Virtual). _Novel Bayesian Genome-wide TWAS method to leverage both cis- and trans- eQTL information through summary statistics_.
-
-* **ENAR 2020 Spring Meeting (Invited Oral)**, Nashville, TN (Virtual). _TIGAR: An Improved Bayesian Tool for
+### Oral Presentation
+* **ROSMAP Annual Meeting 2021**, Chicago, IL (Virtual). _Novel Variance-Component TWAS Method for Studying Alzheimer's Disease Dementia_. <a href="../assets/PresentationSlides/ROSMAP_2021.pdf">Slides</a>.
+ 
+* **ENAR 2020 Spring Meeting (Invited)**, Nashville, TN (Virtual). _TIGAR: An Improved Bayesian Tool for
 Transcriptomic Data Imputation Enhances Gene Mapping of Complex Traits_.
 <a href="../assets/PresentationSlides/ENAR_03_2020.pdf">Slides</a>.
 
-* **IGES 2019 (Oral, Robert C. Elston Best Paper Award)**, Houston, TX. _Improved Score Statistics for Meta-analysis in Single-variant and Gene-level Association Studies_. <a href="../assets/PresentationSlides/Slides_LabMeeting_IGES2019.pdf">Slides</a>.
+* **IGES 2019 (Robert C. Elston Best Paper Award, Invited)**, Houston, TX. _Improved Score Statistics for Meta-analysis in Single-variant and Gene-level Association Studies_. <a href="../assets/PresentationSlides/Slides_LabMeeting_IGES2019.pdf">Slides</a>.
 
-* **North Texas University Department of Mathematics Seminar (2018)**, Atlanta, GA. _Scalable Bayesian Method for Functional Genome-wide Association Studies_. <a href="../assets/PresentationSlides/bfGWAS_NTU_2018.pdf">Slides</a>.
+* **North Texas University Department of Mathematics Seminar, 2018 (Invited)**, Denton, TX. _Scalable Bayesian Method for Functional Genome-wide Association Studies_. <a href="../assets/PresentationSlides/bfGWAS_NTU_2018.pdf">Slides</a>.
 
-* **Georgia Tech Center for Integrative Genomics Seminar (2018)**, Atlanta, GA. _Bayesian Approaches to Functional Integration of Genomic Data_. <a href="../assets/PresentationSlides/GATec_02_14_2018.pdf">Slides</a>.
+* **Georgia Tech Center for Integrative Genomics Seminar, 2018 (Invited)**, Atlanta, GA. _Bayesian Approaches to Functional Integration of Genomic Data_. <a href="../assets/PresentationSlides/GATec_02_14_2018.pdf">Slides</a>.
 
+### Poster Presentation
+* **ASHG Annual Meeting 2020 (Poster, Reviewers' Choice)**, Virtual. _Bayesian Genome-wide TWAS method to leverage both cis- and trans- eQTL information through summary statistics_. <a href="../assets/PresentationSlides/ASHG2020-ePoster_JYang.pdf">Poster</a>.
+
+* **The 61st McKusick Short Course (Poster, 3rd Place Presentation)**, Bar Harbor, Maine (Virtual). _Novel Bayesian Genome-wide TWAS method to leverage both cis- and trans- eQTL information through summary statistics_.
 
 
