@@ -54,15 +54,12 @@ title: "Teaching and Resources"
 
 ### Bioinformatics
 
-1. [Bioinformatics workshop documentations](https://ucdavis-bioinformatics-training.github.io/) by UCDAVIS Bioinformatics Core.
-<details>
-<summary>**Covered Topics**</summary>
+1. [Bioinformatics workshop documentations](https://ucdavis-bioinformatics-training.github.io/) by UCDAVIS Bioinformatics Core with the following **Covered Topics:**
 	* **Bioinformatics Prerequisites** (Command Line and R)
 	* **Single-Cell RNA-Seq Analysis**	
 	* **RNA-seq Analysis**
 	* **Microbial Community Analysis** (Amplicon)
 	* **Variant Analysis** (Variant calling with GATK, Variant Annotation)
-</details>
 
 2. [Analysis of single cell RNA-seq data](https://scrnaseq-course.cog.sanger.ac.uk/website/index.html) by Hemberg lab, Welcome Sanger Institute, UK
 

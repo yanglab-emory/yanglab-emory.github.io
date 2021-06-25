@@ -5,6 +5,7 @@ title: "Publication and Presentation"
 
 ## Selected Publication
 
+### 2019 - Present
 * **Yan, L., Li, S.**, Guo, Y., Ren, P., Song, H., **Yang, J., & Shen, X.** (2021). Multi-state colposcopy image fusion for cervical precancerous lesion diagnosis using BF-CNN. Biomedical Signal Processing and Control, 68, 102700. DOI: <https://doi.org/10.1016/j.bspc.2021.102700>.
 
 * **Kuehner JN**, **Chen J**, Bruggeman EC, Wang F, Li Y, Xu C, McEachin ZT, Li Z, Chen L, Hales CM, **Wen Z.**, **Yang J.**, **Yao B.** (2021) 5-hydroxymethylcytosine is dynamically regulated during forebrain organoid development and aberrantly altered in Alzheimer’s disease. Cell Reports. 2021 Apr 27;35(4):109042. DOI: <https://doi.org/10.1016/j.celrep.2021.109042>. 
@@ -20,8 +21,7 @@ title: "Publication and Presentation"
 
 * **Yang J.** and Ren P. (2019). BFDA: A MATLAB Toolbox for Bayesian Functional Data Analysis. Journal of Statistical Software, [S.l.], v. 89, Issue 2, p. 1 - 21. ISSN 1548-7660. DOI: <http://dx.doi.org/10.18637/jss.v089.i02>. Tool paper for [BFDA](https://github.com/yanglab-emory/BFDA).
 
-<details>
-<summary>As of year 2018</summary>
+### 2017 - 2018
 
 * **Yang J.**, Chen S., and Abecasis G. (2018). Improved Score Statistics for Meta-Analysis in Single-Variant and Gene-Level Association Studies. Genetic Epidemiology, 42(4): 333-343. DOI: <https://doi.org/10.1002/gepi.22123>. PMID: 29696691.
 
@@ -29,12 +29,13 @@ title: "Publication and Presentation"
 
 * **Yang J.**, Cox D.D., Lee J.S., Ren P., and Choi T. (2017). Efficient Bayesian Hierarchical Functional Data Analysis with Basis Function Approximations Using Gaussian-Wishart Processes. Biometrics, 73(4): 1082-1091. DOI: <https://doi.org/10.1111/biom.12705>. PMID: 28395117. Method paper for [BFDA](https://github.com/yanglab-emory/BFDA).
 
-</details>
 
 ### A complete list of publication can be found at [Google Scholar](https://scholar.google.com/citations?user=ANXPW-UAAAAJ&hl=en).
 
 ## Upcoming Presentation
-* **EcoSta 2021 (Invited Oral)**, Virtual (June 2021). _Scalable Bayesian method to leverage multiple quantitative functional annotations in GWAS of complex traits_.  
+* **EcoSta 2021 (Invited Oral)**, Virtual (June 2021). _Scalable Bayesian Functional GWAS Method Accounting for Multiple Quantitative Functional Annotations_.  
+
+* **ICSA 2021 (Invited Oral)**, Virtual (Sep. 2021). _Bayesian Genome-wide TWAS method integrating both cis- and trans- eQTL with GWAS summary statistics_. 
 
 
 ## Past Presentation
