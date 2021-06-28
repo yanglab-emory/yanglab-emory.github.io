@@ -20,7 +20,7 @@ title: "Teaching and Resources"
 
 
 ## High Performance and Cloud Computing Cluster 
-### HGCC
+### [HGCC](https://hgcc.genetics.emory.edu/)
 * <a href="../assets/ComputationSlides/HGCC_StartGuide.html">Introductions to HGCC</a>
 * <a href="../assets/ComputationSlides/BASH.pdf">Introductions to BASH</a>
 * [QuickStart](http://star.mit.edu/cluster/docs/0.92rc2/guides/sge.html) about Submitting Jobs on Sun Grid Engine (SGE)
