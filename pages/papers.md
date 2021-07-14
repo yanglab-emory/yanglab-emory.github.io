@@ -33,7 +33,6 @@ title: "Publication and Presentation"
 ### A complete list of publication can be found at [Google Scholar](https://scholar.google.com/citations?user=ANXPW-UAAAAJ&hl=en).
 
 ## Upcoming Presentation
-* **EcoSta 2021 (Invited Oral)**, Virtual (June 2021). _Scalable Bayesian Functional GWAS Method Accounting for Multiple Quantitative Functional Annotations_.  
 
 * **ICSA 2021 (Invited Oral)**, Virtual (Sep. 2021). _Bayesian Genome-wide TWAS method integrating both cis- and trans- eQTL with GWAS summary statistics_. 
 
@@ -41,7 +40,9 @@ title: "Publication and Presentation"
 ## Past Presentation
 
 ### Oral Presentation
-* **ROSMAP Annual Meeting 2021**, Chicago, IL (Virtual). _Novel Variance-Component TWAS Method for Studying Alzheimer's Disease Dementia_. <a href="../assets/PresentationSlides/ROSMAP_2021.pdf">Slides</a>.
+* **EcoSta 2021 (Invited), June 2021**, Hongkong, China (Virtual). _Scalable Bayesian Functional GWAS Method Accounting for Multiple Quantitative Functional Annotations_.  
+
+* **ROSMAP Annual Meeting, May 2021**, Chicago, IL (Virtual). _Novel Variance-Component TWAS Method for Studying Alzheimer's Disease Dementia_. <a href="../assets/PresentationSlides/ROSMAP_2021.pdf">Slides</a>.
  
 * **ENAR 2020 Spring Meeting (Invited)**, Nashville, TN (Virtual). _TIGAR: An Improved Bayesian Tool for
 Transcriptomic Data Imputation Enhances Gene Mapping of Complex Traits_.

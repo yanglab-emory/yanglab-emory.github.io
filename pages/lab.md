@@ -9,29 +9,37 @@ title: "Lab members"
 | Name |  | Research topic |  | Year in Lab |
 | ------ |--| ---------- |--| ----- |
 | | | | |  |
-| Junyu Chen, MPH <br> Graduate Research Assistant  |  | Functional Bayesian GWAS  <br> with multiple quantitative annotations. |  |  2018 - Present| 
-| | | | |  |
-| Shizhen Tang <br> Research Specialist  |  | Variance component TWAS methods and <br> genome-wide  differential gene expression analysis. | |   2019 - Present| 
+| Shizhen Tang <br> Biostat PhD Student  |  | Quantile regression based test for <br>  differential gene expression analysis. | |   2019 - Present| 
 | | | | | |
-| Randy Parrish <br> Biostat Master Student  |  | Apply TIGAR to GTEx V8 data and <br> stacked regression TWAS. |  |  2020 - Present| 
+| Randy Parrish <br> Research Specialist  |  | Derive [TIGAR-V2](https://github.com/yanglab-emory/TIGAR) and <br> stacked regression TWAS. |  |  2020 - Present| 
 | | | | | |
 | Qile Dai <br> Biostat PhD Student  |  | Bayesian TWAS method using only <br> summary-level eQTL and GWAS data |  |  2020 - Present| 
+| | | | |  |
+| Tingyang Hu <br> Biostat Master Student  |  | Derive Bayesian DPR model based <br> method for PWAS. |  |  2021 - Present| 
+| | | | |  |
+| Lei Wang <br> Biostat Master Student  |  | Derive BFGWAS for using <br> only GWAS summary statistics. |  |  2021 - Present| 
+| | | | |  |
+| Kevin Johnson <br> Epidemiology Master Student  |  | Derive pipeline for  <br> clinic WES data analysis. |  |  2021 - Present| 
+| | | | |  |
+| Emilia Liu <br> QTM Undergraduate Student  |  | Derive ML models for  <br> imputing AD pathology. |  |  2021 - Present| 
+
 
 ### Previous Lab Members
 
+* Junyu Chen (Research Specialist, 2018-2020), Derive functional Bayesian GWAS with multiple quantitative annotations. Currently PhD student at Emory.
+
 * Justin Luningham (Postdoc, 2018-2020), Novel Bayesian TWAS method by leveraging both cis- and trans- eQTL information. Currently research Assistant Professor at Georgia State University. 
 
+* Tianhui Mao (Undergraduate Student, 2018-2019), Derive a risk prediction model for Alzheimer's disease. Currently data scientist. 
 
-* Tianhui Mao (Undergraduate Student, 2018-2019), Derive a risk prediction model for Alzheimer's disease. Currently graduate student at MIT. 
-
-
-* Xiaoran Meng (Master Student, 2018-2019), GTEx data analysis and tool development of [TIGAR](https://github.com/yanglab-emory/TIGAR). Currently data scientist in China.
-
+* Xiaoran Meng (Master Student, 2018-2019), GTEx data analysis and tool development of [TIGAR](https://github.com/yanglab-emory/TIGAR). Currently data scientist.
 
 * Sini Nagpal, MS (Summer Intern, 2018). Nonparametric Bayesian method for TWAS. Currently PhD student at Georgia Tech.
 
 
 ### Lab Photos 
+
+* July, 2021 (To be added)
 
 * August, 2020 (All working remotely during this pandemic year. Thanks to zoom for the following lab member photo.)
 
