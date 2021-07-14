@@ -22,7 +22,8 @@ title: "Lab members"
 | Kevin Johnson <br> Epidemiology Master Student  |  | Derive pipeline for  <br> clinic WES data analysis. |  |  2021 - Present| 
 | | | | |  |
 | Emilia Liu <br> QTM Undergraduate Student  |  | Derive ML models for  <br> imputing AD pathology. |  |  2021 - Present| 
-
+| | | | |  |
+| Rebecca Yu <br> High School Student  |  | Develop TIGAR web tool. |  |  2021 - Present| 
 
 #### <a href="../assets/ComputationSlides/YangLabGuideline_2021.html">*Lab Onboarding Guidelines*</a>
 
