@@ -24,6 +24,10 @@ title: "Lab members"
 | Emilia Liu <br> QTM Undergraduate Student  |  | Derive ML models for  <br> imputing AD pathology. |  |  2021 - Present| 
 
 
+#### <a href="../assets/ComputationSlides/YangLabGuideline_2021.html">*Lab Onboarding Guidelines*</a>
+
+
+
 ### Previous Lab Members
 
 * Junyu Chen (Research Specialist, 2018-2020), Derive functional Bayesian GWAS with multiple quantitative annotations. Currently PhD student at Emory.
@@ -39,14 +43,18 @@ title: "Lab members"
 
 ### Lab Photos 
 
-* July, 2021 (To be added)
-
-* August, 2020 (All working remotely during this pandemic year. Thanks to zoom for the following lab member photo.)
+* July, 2021 (All working remotely through this summer.)
 
 <a href="default.asp" title="Lab photo 2020" alt="Lab photo 2020">
-<img style="float: center;" src="../assets/LabMeeting_08_13_2020.png" width = "500" height = "500">
+<img style="float: center;" src="../assets/LabPhoto2021.png" width = "1000" height = "400">
 </a>
 
-* Summer, 2019
+* August, 2020 (All working remotely during this pandemic year.)
+
+<a href="default.asp" title="Lab photo 2020" alt="Lab photo 2020">
+<img style="float: center;" src="../assets/LabMeeting_08_13_2020.png" width = "600" height = "500">
+</a>
+
+* May, 2019
 
 <img style="float: center;" src="../assets/YangLab_2019_resize.JPG" width = "500" height = "500">
