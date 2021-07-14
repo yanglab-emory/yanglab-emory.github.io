@@ -25,7 +25,9 @@ title: "Lab members"
 | | | | |  |
 | Rebecca Yu <br> High School Student  |  | Develop TIGAR web tool. |  |  2021 - Present| 
 
-#### <a href="../assets/ComputationSlides/YangLabGuideline_2021.html">*Lab Onboarding Guidelines*</a>
+
+
+### <a href="../assets/ComputationSlides/YangLabGuideline_2021.html">*Lab Onboarding Guidelines*</a>
 
 
 
