@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>HGCC_StartGuide_2</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+  body {
+    padding: 2cm; 
+  }
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">Run Computation Tools on HGCC</h1>
+
+<h2 id="toc_1">Run tools on interactive node</h2>
+
+<h3 id="toc_2">Good practice to test your script/code</h3>
+
+<ol>
+<li>Use command <strong><code>qlogin</code></strong> to login to on of the interactive computation node after you login to the gateway <strong>node00</strong></li>
+<li>Check available modules/tools by command <strong><code>module avail</code></strong>
+
+<ul>
+<li>Load the module/tool you want to use, e.g., <strong><code>module load R/4.0.4</code></strong></li>
+<li>Check loaded modules by <strong><code>module list</code></strong></li>
+<li>Unload a software module by example command: <strong><code>module unload R/4.0.4</code></strong></li>
+<li>Unload all software modules by <strong><code>module purge</code></strong></li>
+<li><a href="https://lmod.readthedocs.io/en/latest/010_user.html">Module User Guide</a></li>
+</ul></li>
+<li>Write scripts using text editors like <strong><code>Visual Studio Code</code>, <code>Sublime</code></strong> on your local computer under mounted cluster directories</li>
+</ol>
+
+<h3 id="toc_3">R</h3>
+
+<ul>
+<li>Type <strong><code>R</code></strong> in the interactive session to initiate an R session</li>
+<li><strong>Copy R commands</strong> from your R script and <strong>Paste into the R session</strong></li>
+<li>Simple parallele computation can be enabled by using R packages <strong><code>parallele</code></strong> and <strong><code>foreach</code></strong>, see <strong><a href="https://nceas.github.io/oss-lessons/parallel-computing-in-r/parallel-computing-in-r.html">Quick Instructions of Parallele Computation</a></strong></li>
+<li>Tips
+
+<ul>
+<li>Provide full directory to the data files you want to read or write or plot</li>
+<li>Save figures as pdf into the disk to view your plots by R function <code>ggsave(&quot;temp.pdf&quot;)</code> or </li>
+</ul></li>
+</ul>
+
+<div><pre><code class="language-none">pdf(&quot;temp.pdf&quot;);
+plot(); 
+dev.off()</code></pre></div>
+
+<h3 id="toc_4">Python/Annoconda</h3>
+
+<ul>
+<li>Load Annoconda module, e.g., <strong><code>module load  Anaconda3/5.2.0</code></strong></li>
+<li>Interactive <strong>python</strong> session
+
+<ol>
+<li>Type <strong><code>python</code></strong> in the interactive session to initiate a python session</li>
+<li><strong>Copy python commands</strong> from your python script and <strong>Paste into the python session</strong></li>
+</ol></li>
+<li>Use <strong>Virtual Environment</strong> for access right to install python libraries
+
+<ol>
+<li>Example command to <strong>create</strong> a new virtual envrionment with name <strong>myenv</strong>: <strong><code>conda create --name myenv python=3.5 pandas numpy scipy scikit-learn statsmodels</code></strong></li>
+<li>List available virtual environments, <strong><code>conda env list</code></strong></li>
+<li><strong>Activate</strong> the environment with name <strong>myenv</strong>, <strong><code>conda activate myenv</code></strong></li>
+<li><strong>Install new libraries</strong> in an existing envronment: <strong><code>conda install -n myenv package</code></strong></li>
+<li> Remember to <strong>deactivate</strong> your environment when you are done, <strong><code>conda deactivate</code></strong></li>
+<li><strong>Delete</strong> virtual environment when you no longer need to use it, <strong><code>conda remove -n myenv -all</code></strong></li>
+</ol></li>
+<li>Install python packages locally: <strong><code>pip install --user package</code></strong></li>
+<li>Check your python path which is the directory python use to look for libraries: <strong><code>echo $PYTHONPATH</code></strong></li>
+<li>Add additional directory to your pathon path. The following example command could be added into your <strong><code>~/.bashrc.user</code></strong> file: </li>
+</ul>
+
+<div><pre><code class="language-none">EXPORT PATHONPATH=PYTHONPATH=$PYTHONPATH:/home/jyang/.local/lib/python3.5/site-packages</code></pre></div>
+
+<h3 id="toc_5">PLINK</h3>
+
+<p><strong>PLINK</strong> is a powerful and useful genetic data analysis tool to convert data format, QC, calculate MAF and HWE p-value, calculate kinship matrix, calculate top Principal Components, conduct single variant genetic association studies. Common data format is <code>BED/BIM/FAM</code>.</p>
+
+<ul>
+<li>Load <strong>plink</strong> module, e.g., <strong><code>module load  plink/1.90b53</code></strong></li>
+<li>Quick command to look at plink input arguments: <code>plink -h</code></li>
+<li>See <a href="https://www.cog-genomics.org/plink/">PLINK 1.9 Manual</a></li>
+</ul>
+
+<h3 id="toc_6">BCFTools</h3>
+
+<p><strong>BCFTools</strong> is a fast tool to manipulate <code>sorted/bgzipped/tabixed</code> VCF files of genotype data</p>
+
+<ul>
+<li>Load Tabix module, <strong><code>module load tabix/0.2.6</code></strong></li>
+<li>Load bcftools module, e.g., <strong><code>module load  bcftools/1.9</code></strong></li>
+<li>Quick look at bcftools input arguments, <strong><code>bcftools -h</code></strong></li>
+<li>See <a href="https://samtools.github.io/bcftools/bcftools.html">BCFTools Manual</a></li>
+</ul>
+
+<h3 id="toc_7">BEDTools</h3>
+
+<p><strong>BEDTools</strong> utilities are a swiss-army knife of tools allows one to <strong>intersect, merge, count, complement, and shuffle genomic intervals</strong> from multiple files in widely-used genomic file formats such as <a href="https://genome.ucsc.edu/FAQ/FAQformat.html#format5.1">BAM</a>, <a href="https://genome.ucsc.edu/FAQ/FAQformat.html#format1">BED</a>, <a href="https://genome.ucsc.edu/FAQ/FAQformat.html#format3">GFF</a>/<a href="https://genome.ucsc.edu/FAQ/FAQformat.html#format4">GTF</a>, <a href="https://genome.ucsc.edu/FAQ/FAQformat.html#format10.1">VCF</a>. While each individual tool is designed to do a relatively simple task (e.g., intersect two interval files), quite sophisticated analyses can be conducted by combining multiple bedtools operations on the UNIX command line.</p>
+
+<ul>
+<li>Load bedtools module, e.g., <strong><code>module load bedtools/2.27.0</code></strong></li>
+<li>Quick look at bedtools input arguments, <strong><code>bedtools -h</code></strong></li>
+<li>Bedtools can be used to intersect one SNP file and one annotation file to annotate SNPs with respect to genetic features.</li>
+<li>See <a href="https://bedtools.readthedocs.io/en/latest/">BEDTools Manual</a></li>
+</ul>
+
+<h2 id="toc_8">Submit Jobs by <code>qsub</code></h2>
+
+<h3 id="toc_9">Create a bash script and submit a single job</h3>
+
+<p>Create an example bash script by <code>touch phase.sh</code> and write the following commands into this file (see example shell script in <code>/home/jyang/Scripts/Shell_Scripts/phase.sh</code> on HGCC):</p>
+
+<div><pre><code class="language-none">#!/bin/bash
+
+# setup bash variables to take input argument contents
+vcf_file=$1
+out_prefix=$2
+n_thread=$3
+
+# print out variable contents and log message
+echo vcf file direction $vcf_file
+echo output file prefix $out_prefix
+echo number of threads to run $n_thread
+
+echo Phase a VCF file by eagle v2.3
+
+# command to run the phase tool eagle
+/home/jyang/local/bin/eagle --geneticMapFile=/home/jyang/lib/Eagle_v2.3.5/tables/genetic_map_hg19_withX.txt.gz \
+--vcfOutFormat=z --outPrefix=${out_prefix}.Phased --numThreads ${n_thread} \
+--vcf=${vcf_file} 2&gt;&amp;1 &gt; ${out_prefix}.eagle.out.txt
+
+exit</code></pre></div>
+
+<ol>
+<li>This example bash script will take three input arguments and pass the input contents to variables <code>vcf_file</code>, <code>out_prefix</code>, and <code>n_thread</code> </li>
+<li>The cluster will only run all commands within the submitted shell script. Make sure to write your results into the hard drive. </li>
+<li>Use command <code>echo</code> to print out log messages or variable contents to debug and check the job status.</li>
+<li> Make this shell script executible: <code>chmod 755 phase.sh</code></li>
+<li> Submit this shell script as a job requesting 4 cores with three input arguments: 
+<code>
+qsub -q b.q -cwd -j y -pe smp 4 /home/jyang/Scripts/Shell_Scripts/example_single_job_phase.sh [vcf_file_directory] [output_file_prefix] 4
+</code></li>
+</ol>
+
+<h4 id="toc_10">Remarks</h4>
+
+<p>If one want to use the <code>/scratch</code> space local to each computation node to improve computation efficiency by avoiding heavy I/O, the bash script need to be udpated to include commands creating a temperary directory <code>${TMPDIR}</code> under the <code>/scratch</code> space (<strong>2GB</strong> per node). </p>
+
+<div><pre><code class="language-none">#!/bin/bash
+
+TMP_NAME=`/usr/bin/mktemp -u XXXXXXXX`
+
+# For single job
+TMPDIR=&quot;/scratch/${JOB_ID}_${TMP_NAME}&quot;
+
+if [ -e $TEMPDIR ]; then
+  echo &quot;Error. Scratch dir already exists on `hostname`&quot;
+  exit
+else
+   mkdir $TEMPDIR
+fi
+
+# setup bash variables to take input argument contents
+vcf_file=$1
+out_prefix=$2
+n_thread=$3
+
+# copy input data files into the temperary directory
+cp /home/jyang/lib/Eagle_v2.3.5/tables/genetic_map_hg19_withX.txt.gz ${TEMPDIR}/genetic_map_hg19_withX.txt.gz
+cp ${vcf_file} ${TEMPDIR}/temp.vcf.gz
+
+# Run the phase tool eagle with data files under the temperary directory
+# Write to the temperary directory
+/home/jyang/local/bin/eagle --geneticMapFile=${TEMPDIR}/genetic_map_hg19_withX.txt.gz \
+--vcfOutFormat=z --outPrefix=${TEMPDIR}/Phased --numThreads ${n_thread} \
+--vcf=${TEMPDIR}/temp.vcf.gz 2&gt;&amp;1 &gt; ${TEMPDIR}/eagle.out.txt
+
+# Copy results back to hard disk
+cp ${TEMPDIR}/Phased.vcf.gz ${out_prefix}.Phased.vcf.gz
+cp ${TEMPDIR}/eagle.out.txt ${out_prefix}.eagle.out.txt
+
+# Remove temperary directory
+rm -f -r ${TEMPDIR}
+
+exit</code></pre></div>
+
+<ul>
+<li>After copying data files from hard disk to this temperary directory by <code>cp</code> or <code>rsync</code> 
+
+<ol>
+<li>Run the analysis commands with input data files under the temperary directory</li>
+<li>Write results to this temperary directory </li>
+<li>Copy results back to the hard disk </li>
+<li>Erase the created temperary directory</li>
+</ol></li>
+</ul>
+
+<h3 id="toc_11">Submit Array Jobs</h3>
+
+<p><strong>Array jobs</strong> is a convenient way to submit multiple repetive jobs that only differs by one input variables, e.g., 10000 repetive simulations, association study for all 20K genome-wide genes. </p>
+
+<ul>
+<li>The following example commands to submit an Array job will submit repetive jobs to run the same bash scripts <code>example_array_job_segment_VCF.sh</code> for <code>1703</code> times, with the only difference of <strong>job id <code>${SGE_TASK_ID}</code></strong>. This command will only push <code>100</code> jobs into the job queue at the same time. </li>
+</ul>
+
+<div><pre><code class="language-none"># WGS VCF file directory
+vcf_dir=/mnt/YangFSS/data2/AMP-AD/ROSMAP/WGS_JointCall
+
+# bed file directory
+bed_file=/mnt/YangFSS/data2/AMP-AD/ROSMAP/WGS_JointCall/LDdetect_SegmentedVCF/lddetect_1KG_EUR.bed
+
+# output directory
+out_dir=/mnt/YangFSS/data2/AMP-AD/ROSMAP/WGS_JointCall/LDdetect_SegmentedVCF
+
+# Submit array job
+qsub -q b.q -j y -cwd -N segVCF -t 1-1703 -tc 100 \
+/home/jyang/Scripts/Shell_Scripts/example_array_job_segment_VCF.sh ${vcf_dir} ${bed_file} ${out_dir}
+</code></pre></div>
+
+<ul>
+<li>The shell script has the following contents:</li>
+</ul>
+
+<div><pre><code class="language-none">#!/usr/bin/bash
+
+vcf_dir=$1
+seg_bed=$2
+out_dir=$3
+
+module load tabix/0.2.6
+
+## Obtain the corresponding input filename from ${seg_bed} input file with respect to the Array Job ID: ${SGE_TASK_ID}
+
+line=`head -n ${SGE_TASK_ID} $seg_bed | tail -n1`
+echo Segment VCF for $line
+
+######## Create temp directory
+TMP_NAME=`/usr/bin/mktemp -u XXXXXXXX`
+TEMPDIR=&quot;/scratch/${JOB_ID}_${SGE_TASK_ID}_${TMP_NAME}&quot;
+
+if [ -e $TEMPDIR ]; then
+  echo &quot;Error. Scratch dir already exists on `hostname`&quot;
+  exit
+else
+   mkdir $TEMPDIR
+fi
+
+######### Segment VCFs 
+## Write results to temp directory
+## You may also copy your input data files to temp directory if needed
+
+        chr=$(echo ${line} | awk &#39;{print $1}&#39;)
+        pos_start=$(echo ${line} | awk &#39;{print $2}&#39;)
+        pos_end=$(echo ${line} | awk &#39;{print $3}&#39;)
+        seg_name=$(echo ${line} | awk &#39;{print $4}&#39;)
+        echo $chr $pos_start $pos_end $seg_name
+
+        echo VCF ${vcf_dir}/NIA_JG_1898_samples_GRM_WGS_b37_JointAnalysis01_2017-12-08_${chr}.recalibrated_variants.vcf.gz 
+
+## Grep header
+        tabix -h ${vcf_dir}/NIA_JG_1898_samples_GRM_WGS_b37_JointAnalysis01_2017-12-08_${chr}.recalibrated_variants.vcf.gz | grep &quot;CHROM&quot; &gt; ${TEMPDIR}/${seg_name}.vcf
+
+## Tabix genotype
+        tabix ${vcf_dir}/NIA_JG_1898_samples_GRM_WGS_b37_JointAnalysis01_2017-12-08_${chr}.recalibrated_variants.vcf.gz ${chr}:${pos_start}-${pos_end} &gt;&gt; ${TEMPDIR}/${seg_name}.vcf
+        bgzip -f ${TEMPDIR}/${seg_name}.vcf
+        tabix -f ${TEMPDIR}/${seg_name}.vcf.gz
+
+######## Copy results back to output directory  
+echo copy results back to $out_dir
+cp -f ${TEMPDIR}/${seg_name}.vcf.gz ${out_dir}/
+cp -f ${TEMPDIR}/${seg_name}.vcf.gz.tbi ${out_dir}/
+
+######## REMOVE temperary data directory
+rm -fr ${TEMPDIR}
+
+exit</code></pre></div>
+
+<ul>
+<li>The example bash script is written to select the corresponding VCF segment information from <strong><code>${seg_bed}</code> input file</strong> by the line number given by the <strong>job id <code>${SGE_TASK_ID}</code></strong></li>
+<li>Then subset the corresponding subset from the input VCF file to create a gzipped/tabixed segment VCF file</li>
+<li>This example uses the scratch space for writing outputs and then copy the output files to data drive afterwards. The script can be mdoified to directly write on the data drive.</li>
+</ul>
+
+<h3 id="toc_12">Submit a R job</h3>
+
+<p>HGCC requires wrapping <strong>R scripts</strong> in a <strong>Bash Script</strong> and then submiting the bash script as a job. The following example commands submit a job for a R script wrapped in a bash script.</p>
+
+<div><pre><code class="language-none">qsub -q b.q -cwd -j y -pe smp 1 /home/jyang/Scripts/R_scripts/example_Rjob.sh </code></pre></div>
+
+<ul>
+<li>The executible shell script <code>example_Rjob.sh</code> has the following content </li>
+</ul>
+
+<div><pre><code class="language-none">#!/usr/bin/bash
+
+module load  R/3.4.3
+
+echo Run R script directly
+/home/jyang/Scripts/R_scripts/example_Rjob.r 1 2 3
+
+echo Run R script by Rscript command
+Rscript /home/jyang/Scripts/R_scripts/example_Rjob.r 1 2 3
+
+exit</code></pre></div>
+
+<ul>
+<li>The wrapped R script <code>example_Rjob.r</code> can be run directly if it is made excecutible by <code>chmod 755 example_Rjob.r</code>, or by using the <code>Rscript</code> command tool. </li>
+<li>The wrapped R script <code>example_Rjob.r</code> has the following content</li>
+</ul>
+
+<div><pre><code class="language-none">#!/usr/bin/env Rscript
+
+Sys.setlocale(&quot;LC_ALL&quot;, &quot;C&quot;)
+.libPaths(&quot;/home/jyang/R/x86_64-pc-linux-gnu-library/3.4&quot;)
+options(stringsAsFactors=F)
+
+library(glmnet)
+
+### Load input arguments
+args=(commandArgs(TRUE))
+print(args)
+if(length(args)==0) {
+        stop(&quot;Error: No arguments supplied!&quot;)
+} else {
+        var1 = args[[1]]
+        var2 = args[[2]]
+        var3 = args[[3]]
+}
+
+print(list(var1 = var1, var2 = var2, var3 = var3))</code></pre></div>
+
+<h3 id="toc_13">Submit a Python job</h3>
+
+<ul>
+<li>Similar rules can be followed as submiting the R job. Replace the R script by a Python script <code>example.py</code> with content like</li>
+</ul>
+
+<div><pre><code class="language-none">#! /usr/bin/python
+
+import sys
+import io
+import os
+import pandas as pd
+import numpy as np
+from numpy import *
+from dfply import *
+
+a = 2 + 4
+print(a)
+</code></pre></div>
+
+<ul>
+<li>Use command tool <code>python</code> to run a non-executible python script, <code>python /home/jyang/Scripts/Python_scripts/example.py</code></li>
+</ul>
+
+<h3 id="toc_14">Number of cores to request</h3>
+
+<ul>
+<li>Check current availability of the cluster: <code>qstat -f -u &#39;*&#39;</code></li>
+<li>Choose the number of requested cores to the number of available cores on the nodes, in order to have your job accepted by the scheduler sooner</li>
+<li>Each core has <code>8GB</code> memory. Request an appropriate number of cores to accomodate the memory usage of your job, so that it will not fail in the middle.</li>
+<li>For tools that can enable parallele computation with multiple threads, make sure to change the default number of threads set by the tool to at least the number of cores you request.</li>
+</ul>
+
+<h2 id="toc_15">Additional Resources</h2>
+
+<ul>
+<li>Need help: submit a ticket at <a href="https://hgcc.genetics.emory.edu:8443/">https://hgcc.genetics.emory.edu:8443/</a> after login to Emory VPN.</li>
+<li><a href="https://linuxcommand.org/tlcl.php">The Linux Command Line</a> book is recommended to read ahead</li>
+</ul>
+
+
+
+
+</body>
+
+</html>
