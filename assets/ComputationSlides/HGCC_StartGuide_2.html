@@ -331,7 +331,7 @@ kbd {
 
 <body>
 
-<h1 id="toc_0">Run Computation Tools on HGCC</h1>
+<h1 id="toc_0">Run Computation Tools and Submit Jobs on HGCC</h1>
 
 <h2 id="toc_1">Run tools on interactive node</h2>
 
@@ -356,7 +356,7 @@ kbd {
 <ul>
 <li>Type <strong><code>R</code></strong> in the interactive session to initiate an R session</li>
 <li><strong>Copy R commands</strong> from your R script and <strong>Paste into the R session</strong></li>
-<li>Simple parallele computation can be enabled by using R packages <strong><code>parallele</code></strong> and <strong><code>foreach</code></strong>, see <strong><a href="https://nceas.github.io/oss-lessons/parallel-computing-in-r/parallel-computing-in-r.html">Quick Instructions of Parallele Computation</a></strong></li>
+<li>Simple parallel computation can be enabled by using R packages <strong><code>parallel</code></strong> and <strong><code>foreach</code></strong>, see <strong><a href="https://nceas.github.io/oss-lessons/parallel-computing-in-r/parallel-computing-in-r.html">Quick Instructions of Parallel Computation</a></strong></li>
 <li>Tips
 
 <ul>
@@ -369,7 +369,7 @@ kbd {
 plot(); 
 dev.off()</code></pre></div>
 
-<h3 id="toc_4">Python/Annoconda</h3>
+<h3 id="toc_4">Python/Anaconda</h3>
 
 <ul>
 <li>Load Annoconda module, e.g., <strong><code>module load  Anaconda3/5.2.0</code></strong></li>
@@ -382,16 +382,27 @@ dev.off()</code></pre></div>
 <li>Use <strong>Virtual Environment</strong> for access right to install python libraries
 
 <ol>
-<li>Example command to <strong>create</strong> a new virtual envrionment with name <strong>myenv</strong>: <strong><code>conda create --name myenv python=3.5 pandas numpy scipy scikit-learn statsmodels</code></strong></li>
+<li>Example command to <strong>create</strong> a new virtual environment with name <strong>myenv</strong>: <strong><code>conda create --name myenv python=3.5 pandas numpy scipy scikit-learn statsmodels</code></strong></li>
 <li>List available virtual environments, <strong><code>conda env list</code></strong></li>
 <li><strong>Activate</strong> the environment with name <strong>myenv</strong>, <strong><code>conda activate myenv</code></strong></li>
-<li><strong>Install new libraries</strong> in an existing envronment: <strong><code>conda install -n myenv package</code></strong></li>
+<li><strong>Install new libraries</strong> in an existing environment: <strong><code>conda install -n myenv package</code></strong></li>
 <li> Remember to <strong>deactivate</strong> your environment when you are done, <strong><code>conda deactivate</code></strong></li>
-<li><strong>Delete</strong> virtual environment when you no longer need to use it, <strong><code>conda remove -n myenv -all</code></strong></li>
+<li><strong>Delete</strong> virtual environment when you no longer need to use it, <strong><code>conda remove -n myenv -all</code></strong> </li>
 </ol></li>
 <li>Install python packages locally: <strong><code>pip install --user package</code></strong></li>
+<li>Install python virtual environment by <strong><code>pip</code></strong> and <strong><code>virtualenv</code></strong>
+
+<ol>
+<li>Install <code>pip</code>. Already installed with Anaconda</li>
+<li>Install <code>virtualenv</code>: <code>python3 -m pip install --user virtualenv</code></li>
+<li>Creating a virtual environment <code>myenv</code> under current directory: <code>python3 -m venv myenv</code> </li>
+<li>Activate a virtual environment <code>myenv</code>: <code>source myenv/bin/activate</code></li>
+<li>Confirm you are in the virtual environment by <code>which python</code>. It should be in the <code>myenv</code> directory.</li>
+<li>Deactivate the virtual environment by <code>deactivate</code></li>
+<li>Now that you’re in your virtual environment you have the access right to install packages. <code>python3 -m pip install package</code> </li>
+</ol></li>
 <li>Check your python path which is the directory python use to look for libraries: <strong><code>echo $PYTHONPATH</code></strong></li>
-<li>Add additional directory to your pathon path. The following example command could be added into your <strong><code>~/.bashrc.user</code></strong> file: </li>
+<li>Add additional directory to your python path. The following example command could be added into your <strong><code>~/.bashrc.user</code></strong> file: </li>
 </ul>
 
 <div><pre><code class="language-none">EXPORT PATHONPATH=PYTHONPATH=$PYTHONPATH:/home/jyang/.local/lib/python3.5/site-packages</code></pre></div>
@@ -459,7 +470,7 @@ exit</code></pre></div>
 <li>This example bash script will take three input arguments and pass the input contents to variables <code>vcf_file</code>, <code>out_prefix</code>, and <code>n_thread</code> </li>
 <li>The cluster will only run all commands within the submitted shell script. Make sure to write your results into the hard drive. </li>
 <li>Use command <code>echo</code> to print out log messages or variable contents to debug and check the job status.</li>
-<li> Make this shell script executible: <code>chmod 755 phase.sh</code></li>
+<li> Make this shell script executable: <code>chmod 755 phase.sh</code></li>
 <li> Submit this shell script as a job requesting 4 cores with three input arguments: 
 <code>
 qsub -q b.q -cwd -j y -pe smp 4 /home/jyang/Scripts/Shell_Scripts/example_single_job_phase.sh [vcf_file_directory] [output_file_prefix] 4
@@ -468,7 +479,7 @@ qsub -q b.q -cwd -j y -pe smp 4 /home/jyang/Scripts/Shell_Scripts/example_single
 
 <h4 id="toc_10">Remarks</h4>
 
-<p>If one want to use the <code>/scratch</code> space local to each computation node to improve computation efficiency by avoiding heavy I/O, the bash script need to be udpated to include commands creating a temperary directory <code>${TMPDIR}</code> under the <code>/scratch</code> space (<strong>2GB</strong> per node). </p>
+<p>If one want to use the <code>/scratch</code> space local to each computation node to improve computation efficiency by avoiding heavy I/O, the bash script need to be updated to include commands creating a temporary directory <code>${TMPDIR}</code> under the <code>/scratch</code> space (<strong>2GB</strong> per node). </p>
 
 <div><pre><code class="language-none">#!/bin/bash
 
@@ -489,12 +500,12 @@ vcf_file=$1
 out_prefix=$2
 n_thread=$3
 
-# copy input data files into the temperary directory
+# copy input data files into the temporary directory
 cp /home/jyang/lib/Eagle_v2.3.5/tables/genetic_map_hg19_withX.txt.gz ${TEMPDIR}/genetic_map_hg19_withX.txt.gz
 cp ${vcf_file} ${TEMPDIR}/temp.vcf.gz
 
-# Run the phase tool eagle with data files under the temperary directory
-# Write to the temperary directory
+# Run the phase tool eagle with data files under the temporary directory
+# Write to the temporary directory
 /home/jyang/local/bin/eagle --geneticMapFile=${TEMPDIR}/genetic_map_hg19_withX.txt.gz \
 --vcfOutFormat=z --outPrefix=${TEMPDIR}/Phased --numThreads ${n_thread} \
 --vcf=${TEMPDIR}/temp.vcf.gz 2&gt;&amp;1 &gt; ${TEMPDIR}/eagle.out.txt
@@ -503,28 +514,28 @@ cp ${vcf_file} ${TEMPDIR}/temp.vcf.gz
 cp ${TEMPDIR}/Phased.vcf.gz ${out_prefix}.Phased.vcf.gz
 cp ${TEMPDIR}/eagle.out.txt ${out_prefix}.eagle.out.txt
 
-# Remove temperary directory
+# Remove temporary directory
 rm -f -r ${TEMPDIR}
 
 exit</code></pre></div>
 
 <ul>
-<li>After copying data files from hard disk to this temperary directory by <code>cp</code> or <code>rsync</code> 
+<li>After copying data files from hard disk to this temporary directory by <code>cp</code> or <code>rsync</code> 
 
 <ol>
-<li>Run the analysis commands with input data files under the temperary directory</li>
-<li>Write results to this temperary directory </li>
+<li>Run the analysis commands with input data files under the temporary directory</li>
+<li>Write results to this temporary directory </li>
 <li>Copy results back to the hard disk </li>
-<li>Erase the created temperary directory</li>
+<li>Erase the created temporary directory</li>
 </ol></li>
 </ul>
 
 <h3 id="toc_11">Submit Array Jobs</h3>
 
-<p><strong>Array jobs</strong> is a convenient way to submit multiple repetive jobs that only differs by one input variables, e.g., 10000 repetive simulations, association study for all 20K genome-wide genes. </p>
+<p><strong>Array jobs</strong> is a convenient way to submit multiple repetitive jobs that only differs by one input variables, e.g., 10000 repetitive simulations, association study for all 20K genome-wide genes. </p>
 
 <ul>
-<li>The following example commands to submit an Array job will submit repetive jobs to run the same bash scripts <code>example_array_job_segment_VCF.sh</code> for <code>1703</code> times, with the only difference of <strong>job id <code>${SGE_TASK_ID}</code></strong>. This command will only push <code>100</code> jobs into the job queue at the same time. </li>
+<li>The following example commands to submit an Array job will submit repetitive jobs to run the same bash scripts <code>example_array_job_segment_VCF.sh</code> for <code>1703</code> times, with the only difference of <strong>job id <code>${SGE_TASK_ID}</code></strong>. This command will only push <code>100</code> jobs into the job queue at the same time. </li>
 </ul>
 
 <div><pre><code class="language-none"># WGS VCF file directory
@@ -594,7 +605,7 @@ echo copy results back to $out_dir
 cp -f ${TEMPDIR}/${seg_name}.vcf.gz ${out_dir}/
 cp -f ${TEMPDIR}/${seg_name}.vcf.gz.tbi ${out_dir}/
 
-######## REMOVE temperary data directory
+######## REMOVE temporary data directory
 rm -fr ${TEMPDIR}
 
 exit</code></pre></div>
@@ -602,17 +613,17 @@ exit</code></pre></div>
 <ul>
 <li>The example bash script is written to select the corresponding VCF segment information from <strong><code>${seg_bed}</code> input file</strong> by the line number given by the <strong>job id <code>${SGE_TASK_ID}</code></strong></li>
 <li>Then subset the corresponding subset from the input VCF file to create a gzipped/tabixed segment VCF file</li>
-<li>This example uses the scratch space for writing outputs and then copy the output files to data drive afterwards. The script can be mdoified to directly write on the data drive.</li>
+<li>This example uses the scratch space for writing outputs and then copy the output files to data drive afterwards. The script can be modified to directly write on the data drive.</li>
 </ul>
 
 <h3 id="toc_12">Submit a R job</h3>
 
-<p>HGCC requires wrapping <strong>R scripts</strong> in a <strong>Bash Script</strong> and then submiting the bash script as a job. The following example commands submit a job for a R script wrapped in a bash script.</p>
+<p>HGCC requires wrapping <strong>R scripts</strong> in a <strong>Bash Script</strong> and then submitting the bash script as a job. The following example commands submit a job for a R script wrapped in a bash script.</p>
 
 <div><pre><code class="language-none">qsub -q b.q -cwd -j y -pe smp 1 /home/jyang/Scripts/R_scripts/example_Rjob.sh </code></pre></div>
 
 <ul>
-<li>The executible shell script <code>example_Rjob.sh</code> has the following content </li>
+<li>The executable shell script <code>example_Rjob.sh</code> has the following content </li>
 </ul>
 
 <div><pre><code class="language-none">#!/usr/bin/bash
@@ -628,7 +639,7 @@ Rscript /home/jyang/Scripts/R_scripts/example_Rjob.r 1 2 3
 exit</code></pre></div>
 
 <ul>
-<li>The wrapped R script <code>example_Rjob.r</code> can be run directly if it is made excecutible by <code>chmod 755 example_Rjob.r</code>, or by using the <code>Rscript</code> command tool. </li>
+<li>The wrapped R script <code>example_Rjob.r</code> can be run directly if it is made executable by <code>chmod 755 example_Rjob.r</code>, or by using the <code>Rscript</code> command tool. </li>
 <li>The wrapped R script <code>example_Rjob.r</code> has the following content</li>
 </ul>
 
@@ -656,7 +667,7 @@ print(list(var1 = var1, var2 = var2, var3 = var3))</code></pre></div>
 <h3 id="toc_13">Submit a Python job</h3>
 
 <ul>
-<li>Similar rules can be followed as submiting the R job. Replace the R script by a Python script <code>example.py</code> with content like</li>
+<li>Similar rules can be followed as submitting the R job. Replace the R script by a Python script <code>example.py</code> with content like</li>
 </ul>
 
 <div><pre><code class="language-none">#! /usr/bin/python
@@ -674,7 +685,7 @@ print(a)
 </code></pre></div>
 
 <ul>
-<li>Use command tool <code>python</code> to run a non-executible python script, <code>python /home/jyang/Scripts/Python_scripts/example.py</code></li>
+<li>Use command tool <code>python</code> to run a non-executable python script, <code>python /home/jyang/Scripts/Python_scripts/example.py</code></li>
 </ul>
 
 <h3 id="toc_14">Number of cores to request</h3>
@@ -682,8 +693,8 @@ print(a)
 <ul>
 <li>Check current availability of the cluster: <code>qstat -f -u &#39;*&#39;</code></li>
 <li>Choose the number of requested cores to the number of available cores on the nodes, in order to have your job accepted by the scheduler sooner</li>
-<li>Each core has <code>8GB</code> memory. Request an appropriate number of cores to accomodate the memory usage of your job, so that it will not fail in the middle.</li>
-<li>For tools that can enable parallele computation with multiple threads, make sure to change the default number of threads set by the tool to at least the number of cores you request.</li>
+<li>Each core has <code>8GB</code> memory. Request an appropriate number of cores to accommodate the memory usage of your job, so that it will not fail in the middle.</li>
+<li>For tools that can enable parallel computation with multiple threads, make sure to change the default number of threads set by the tool to at least the number of cores you request.</li>
 </ul>
 
 <h2 id="toc_15">Additional Resources</h2>
