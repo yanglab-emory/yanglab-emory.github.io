@@ -34,7 +34,7 @@ title: "Publication and Presentation"
 
 ## Upcoming Presentation
 
-* **ICSA 2021 (Invited Oral)**, Virtual (Sep. 2021). _Bayesian Genome-wide TWAS method integrating both cis- and trans- eQTL with GWAS summary statistics_. 
+* **ICSA 2021 (Invited Oral)**, Virtual (Sep. 2021). _Bayesian Genome-wide TWAS method integrating both cis- and trans- eQTL with GWAS summary statistics_. <a href="../assets/PresentationSlides/BGW_TWAS_ICSA_Sep2021.pdf">Slides</a>. 
 
 
 ## Past Presentation
