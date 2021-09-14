@@ -34,12 +34,14 @@ title: "Publication and Presentation"
 
 ## Upcoming Presentation
 
-* **ICSA 2021 (Invited Oral)**, Virtual (Sep. 2021). _Bayesian Genome-wide TWAS method integrating both cis- and trans- eQTL with GWAS summary statistics_. <a href="../assets/PresentationSlides/BGW_TWAS_ICSA_Sep2021.pdf">Slides</a>. 
+* **ASHG 2021 (Poster)**, Virtual (Oct. 2021). _TIGAR-V2: Efficient TWAS Tool with Nonparametric Bayesian eQTL Weights of 49 Tissue Types from GTEx V8_. DOI:<https://doi.org/10.1101/2021.07.16.452700>.
 
 
 ## Past Presentation
 
 ### Oral Presentation
+* **ICSA 2021 (Invited)**, Virtual (Sep. 2021). _Bayesian Genome-wide TWAS method integrating both cis- and trans- eQTL with GWAS summary statistics_. <a href="../assets/PresentationSlides/BGW_TWAS_ICSA_Sep2021.pdf">Slides</a>. 
+
 * **EcoSta 2021 (Invited), June 2021**, Hongkong, China (Virtual). _Scalable Bayesian Functional GWAS Method Accounting for Multiple Quantitative Functional Annotations_.  
 
 * **ROSMAP Annual Meeting, May 2021**, Chicago, IL (Virtual). _Novel Variance-Component TWAS Method for Studying Alzheimer's Disease Dementia_. <a href="../assets/PresentationSlides/ROSMAP_2021.pdf">Slides</a>.
