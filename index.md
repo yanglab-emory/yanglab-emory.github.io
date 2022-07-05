@@ -11,6 +11,7 @@ layout: page
 PI: [Jingjing Yang](https://med.emory.edu/directory/profile/?u=JYANG51), PhD <br>
 Assistant Professor <br>
 Email: <jingjing.yang@emory.edu> <br>
+
 [Center for Computational and Quantitative Genetics](http://ccqg.emory.edu/) <br>
 [Department of Human Genetics](https://med.emory.edu/directory/profile/?u=JYANG51) (Primary) <br>
 [Emory University School of Medicine](https://med.emory.edu/)

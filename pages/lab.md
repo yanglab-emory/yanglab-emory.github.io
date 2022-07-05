@@ -8,22 +8,16 @@ title: "Lab members"
 
 | Name |  | Research topic |  | Year in Lab |
 | ------ |--| ---------- |--| ----- |
-| | | | |  |
-| Shizhen Tang <br> Biostat PhD Student  |  | Quantile regression based test for <br>  differential gene expression analysis. | |   2019 - Present| 
-| | | | | |
-| Randy Parrish <br> Research Specialist  |  | Derive [TIGAR-V2](https://github.com/yanglab-emory/TIGAR) and <br> stacked regression TWAS. |  |  2020 - Present| 
 | | | | | |
 | Qile Dai <br> Biostat PhD Student  |  | Bayesian TWAS method using only <br> summary-level eQTL and GWAS data |  |  2020 - Present| 
 | | | | |  |
-| Tingyang Hu <br> Biostat Master Student  |  | Derive Bayesian DPR model based <br> method for PWAS. |  |  2021 - Present| 
+| Shizhen Tang <br> Biostat PhD Student  |  | Quantile regression based test for <br>  differential gene expression analysis. | |   2021 - Present| 
+| | | | | |
+| Randy Parrish <br> Biostat PhD Student  |  | Derive [TIGAR-V2](https://github.com/yanglab-emory/TIGAR) and <br> stacked regression TWAS. |  |  2022 - Present| 
 | | | | |  |
-| Lei Wang <br> Biostat Master Student  |  | Derive BFGWAS for using <br> only GWAS summary statistics. |  |  2021 - Present| 
+| Tingyang Hu <br> Research Specialist  |  | Derive Bayesian DPR model based <br> method for PWAS. |  |  2022 - Present| 
 | | | | |  |
-| Kevin Johnson <br> Epidemiology Master Student  |  | Derive pipeline for  <br> clinic WES data analysis. |  |  2021 - Present| 
-| | | | |  |
-| Emilia Liu <br> QTM Undergraduate Student  |  | Derive ML models for  <br> imputing AD pathology. |  |  2021 - Present| 
-| | | | |  |
-| Rebecca Yu <br> High School Student  |  | Develop TIGAR web tool. |  |  2021 - Present| 
+| Rebecca Yu <br> High School Intern  |  | Develop TIGAR Web Tool. |  |  2021 - Present| 
 
 
 
@@ -31,25 +25,36 @@ title: "Lab members"
 
 
 
-### Previous Lab Members
+### Lab Alumni
+
+* Lei Wang (Biosat Master Student, 2021-2022), Develop BFGWAS for using summary GWAS data. Currently PhD student at  University of Colorado Anschutz Medical Campus. 
+
+* Kevin Johnson (Epidemiology Master Student, 2021-2022), Develop webtool for clinical sequence data analysis.
+
+* Emilia (Xizhu) Liu (QTM Undergraduate Student, 2021-2022), Impute brain pathology using clinical data.  
 
 * Junyu Chen (Research Specialist, 2018-2020), Derive functional Bayesian GWAS with multiple quantitative annotations. Currently PhD student at Emory.
 
 * Justin Luningham (Postdoc, 2018-2020), Novel Bayesian TWAS method by leveraging both cis- and trans- eQTL information. Currently research Assistant Professor at Georgia State University. 
 
-* Tianhui Mao (Undergraduate Student, 2018-2019), Derive a risk prediction model for Alzheimer's disease. Currently data scientist. 
+* Tianhui Mao (QTM Undergraduate Student, 2018-2019), Derive a risk prediction model for Alzheimer's disease. Currently data scientist. 
 
 * Xiaoran Meng (Master Student, 2018-2019), GTEx data analysis and tool development of [TIGAR](https://github.com/yanglab-emory/TIGAR). Currently data scientist.
 
 * Sini Nagpal, MS (Summer Intern, 2018). Nonparametric Bayesian method for TWAS. Currently PhD student at Georgia Tech.
 
 
-### Lab Photos 
+### Lab Photos
+
+* May, 2022 (End-of-Semester Group Lunch) 
+<a href="default.asp" title="Lab photo 2020" alt="Lab photo 2020">
+<img style="float: center;" src="../assets/GroupLunch_2022.jpg" width = "1000" height = "600">
+</a>
 
 * July, 2021 (All working remotely through this summer.)
 
 <a href="default.asp" title="Lab photo 2020" alt="Lab photo 2020">
-<img style="float: center;" src="../assets/LabPhoto2021.png" width = "1000" height = "400">
+<img style="float: center;" src="../assets/LabPhoto2021.png" width = "1000" height = "450">
 </a>
 
 * August, 2020 (All working remotely during this pandemic year.)

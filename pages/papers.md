@@ -5,7 +5,12 @@ title: "Publication and Presentation"
 
 ## Selected Publication
 
-### 2019 - Present
+### 2020 - Present
+
+* **Parrish, R.L.**, Gibson, G.C., Epstein, M.P. and **Yang, J.**, (2022). TIGAR-V2: Efficient TWAS tool with nonparametric Bayesian eQTL weights of 49 tissue types from GTEx V8. Human Genetics and Genomics Advances, 3(1), p.100068. DOI: <https://doi.org/10.1016/j.xhgg.2021.100068>. Paper for update [TIGAR Tool](https://github.com/yanglab-emory/TIGAR).
+
+* **Yan, L., Song, H.**, Guo, Y., Ren, P., Zhou, W., Li, S., **Yang, J., Shen, X.**, (2022). HLDnet: Novel deep learning based Artificial Intelligence tool fuses acetic acid and Lugol’s iodine cervicograms for accurate pre-cancer screening. Biomedical Signal Processing and Control, 71, p.103163. DOI: <https://doi.org/10.1016/j.bspc.2021.103163>.
+
 * **Yan, L., Li, S.**, Guo, Y., Ren, P., Song, H., **Yang, J., & Shen, X.** (2021). Multi-state colposcopy image fusion for cervical precancerous lesion diagnosis using BF-CNN. Biomedical Signal Processing and Control, 68, 102700. DOI: <https://doi.org/10.1016/j.bspc.2021.102700>.
 
 * **Kuehner JN**, **Chen J**, Bruggeman EC, Wang F, Li Y, Xu C, McEachin ZT, Li Z, Chen L, Hales CM, **Wen Z.**, **Yang J.**, **Yao B.** (2021) 5-hydroxymethylcytosine is dynamically regulated during forebrain organoid development and aberrantly altered in Alzheimer’s disease. Cell Reports. 2021 Apr 27;35(4):109042. DOI: <https://doi.org/10.1016/j.celrep.2021.109042>. 
@@ -17,11 +22,11 @@ title: "Publication and Presentation"
 * **Justin M Luningham**, Junyu Chen, Shizhen Tang, Phillip De Jager, David A Bennett, Aron S Buchman, **Jingjing Yang**. (2020). Novel Bayesian transcriptome-wide association study method leveraging both cis-and trans-eQTL information through summary statistics. The American Journal of Human Genetics. DOI: <https://doi.org/10.1016/j.ajhg.2020.08.022>. Method paper for [BGW-TWAS](https://github.com/yanglab-emory/BGW-TWAS).
 
 
+### 2017 - 2019
+
 * **Sini Nagpal**, **Xiaoran Meng**, Michael P. Epstein, Lam C. Tsoi, Matthew Patrick, Greg Gibson, Phillip De Jager, David A. Bennett, Aliza P. Wingo, Thomas S. Wingo, **Jingjing Yang**. (2019). TIGAR: An Improved Bayesian Tool for Transcriptomic Data Imputation Enhances Gene Mapping of Complex Traits. The American Journal of Human Genetics. DOI: <https://doi.org/10.1016/j.ajhg.2019.05.018>. Method paper for [TIGAR](https://github.com/yanglab-emory/TIGAR).
 
 * **Yang J.** and Ren P. (2019). BFDA: A MATLAB Toolbox for Bayesian Functional Data Analysis. Journal of Statistical Software, [S.l.], v. 89, Issue 2, p. 1 - 21. ISSN 1548-7660. DOI: <http://dx.doi.org/10.18637/jss.v089.i02>. Tool paper for [BFDA](https://github.com/yanglab-emory/BFDA).
-
-### 2017 - 2018
 
 * **Yang J.**, Chen S., and Abecasis G. (2018). Improved Score Statistics for Meta-Analysis in Single-Variant and Gene-Level Association Studies. Genetic Epidemiology, 42(4): 333-343. DOI: <https://doi.org/10.1002/gepi.22123>. PMID: 29696691.
 
@@ -34,7 +39,7 @@ title: "Publication and Presentation"
 
 ## Upcoming Presentation
 
-* **ASHG 2021 (Poster)**, Virtual (Oct. 2021). _TIGAR-V2: Efficient TWAS Tool with Nonparametric Bayesian eQTL Weights of 49 Tissue Types from GTEx V8_. DOI:<https://doi.org/10.1101/2021.07.16.452700>.
+* **ENAR 2023 Spring Meeting (Invited)**, Nashville, TN. _SR-TWAS: Leveraging Multiple Reference Panels to Improve TWAS Power by Ensemble Machine Learning_.
 
 
 ## Past Presentation
@@ -57,6 +62,8 @@ Transcriptomic Data Imputation Enhances Gene Mapping of Complex Traits_.
 * **Georgia Tech Center for Integrative Genomics Seminar, 2018 (Invited)**, Atlanta, GA. _Bayesian Approaches to Functional Integration of Genomic Data_. <a href="../assets/PresentationSlides/GATec_02_14_2018.pdf">Slides</a>.
 
 ### Poster Presentation
+
+*  **ASHG 2021 (Poster)**, Virtual (Oct. 2021). _TIGAR-V2: Efficient TWAS Tool with Nonparametric Bayesian eQTL Weights of 49 Tissue Types from GTEx V8_. DOI:<https://doi.org/10.1101/2021.07.16.452700>.
 
 * **ASHG Annual Meeting 2020 (Poster, Reviewers' Choice)**, Virtual. _Bayesian Genome-wide TWAS method to leverage both cis- and trans- eQTL information through summary statistics_. <a href="../assets/PresentationSlides/ASHG2020-ePoster_JYang.pdf">Poster</a>.
 
