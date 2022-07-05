@@ -5,18 +5,18 @@ title: "Teaching and Resources"
 
 ## Recently Taught Courses
 
-### BIOS-770 - Advanced Statistical Genetics. Spring 2019. Co-Instructor.
+### BIOS-770 - Advanced Statistical Genetics. Spring 2022. Co-Director.
 
-1. <a href="../assets/CourseSlides/BiostatStatisticalGenetics/Lecture_5_FamilyAssoc.pdf">Family-Based Association Analysis</a> 
-2. <a href="../assets/CourseSlides/BiostatStatisticalGenetics/Lecture_6_PopAssoc.pdf">Population-Based Association Analysis</a>  
-3. <a href="../assets/CourseSlides/BiostatStatisticalGenetics/Lecture_7_GWAS.pdf">Genome-wide Association Study (GWAS)</a> 
-4. <a href="../assets/CourseSlides/BiostatStatisticalGenetics/Lecture_8_GWASAdvTopics.pdf">Advanced Topics of GWAS</a>  
+1. <a href="../assets/CourseSlides/BiostatStatisticalGenetics/GWAS_Lecture1_GWAS.pdf">Genotype Imputation, Single Variant GWAS</a> 
+2. <a href="../assets/CourseSlides/BiostatStatisticalGenetics/GWAS_Lecture2_GWAS.pdf">QC, Population Stratification, LMM</a>  
+3. <a href="../assets/CourseSlides/BiostatStatisticalGenetics/GWAS_Lecture3_GWAS.pdf">LMM, Finemap, Multivarate GWAS</a> 
+4. <a href="../assets/CourseSlides/BiostatStatisticalGenetics/GWAS_Lecture4_GWAS.pdf">Rare Variant Test, Pleiotropy, Mendelian Randomization</a>  
+5. <a href="../assets/CourseSlides/BiostatStatisticalGenetics/TWAS_Lecture.pdf">TWAS</a>  
 
+### IBS-746 - Graduate Human Genetics. Fall 2021. Co-Instructor. 
 
-### IBS-746 - Graduate Human Genetics. Fall 2020. Co-Instructor. 
-
-1. <a href="../assets/CourseSlides/GraduateHumanGenetics/IBS746_Yang_association_2020_1.pdf">Genome-wide Association Study</a>
-2. <a href="../assets/CourseSlides/GraduateHumanGenetics/IBS746_Yang_association_2020_2.pdf">GWAS Approaches for Cohorts of Different Ancestries</a> 
+1. <a href="../assets/CourseSlides/GraduateHumanGenetics/IBS746_Yang_association_2021_1.pdf">Genome-wide Association Study</a>
+2. <a href="../assets/CourseSlides/GraduateHumanGenetics/IBS746_Yang_association_2021_2.pdf">GWAS Approaches for Cohorts of Different Ancestries</a> 
 
 
 ## High Performance and Cloud Computing Cluster 
@@ -37,9 +37,9 @@ title: "Teaching and Resources"
 * <a href="../assets/ComputationSlides/RSPH_HPC_StartGuide_Yang.html" target="_self"> Instructions to RHPC</a>
 * [Helpful tips from Dr. Hao Wu](https://www.haowulab.org//pages/computing.html)
 
-### Emory Amazon Web Service (AWS)
+### [Emory Amazon Web Service (AWS)](https://aws.emory.edu/)
 
-* [Emory AWS](https://aws.emory.edu/)
+* <a href="../assets/ComputationSlides/EmoryAWS_StartGuide_Yang.html">Introductions to Emory AWS</a>
 
 * [AWS Documentation](https://docs.aws.amazon.com/index.html)
 
@@ -53,6 +53,12 @@ title: "Teaching and Resources"
 * [Me write pretty one day: how to write a good scientific paper](https://doi.org/10.1083/jcb.200403137). Journal of Cell Biology, 2004.
   
 ### Scientific Presentations
+#### Poster Presentations
+* [How to Make An Effective Poster](https://urc.ucdavis.edu/sites/g/files/dgvnsk3561/files/local_resources/documents/pdf_documents/How_To_Make_an_Effective_Poster2.pdf)
+
+#### Oral Scientific Presentations
+* [Scientific Presetnations 101](https://www.med.upenn.edu/mdresearchopps/assets/user-content/Resources/Howtogivepresentations2014.pdf)
+* [Structure of a 10-minute Oral Scientific Presentation](https://dornsife.usc.edu/assets/sites/605/docs/Tips_10_minute_Scientific_PowerPoint_Presentation_Meds_490.pdf)
 
 
 ## Other Resources
