@@ -5,19 +5,21 @@ title: "Teaching and Resources"
 
 ## Recently Taught Courses
 
-### BIOS-770 - Advanced Statistical Genetics. Spring 2022. Co-Director.
-
+### BIOS-770 - Advanced Statistical Genetics.
 1. <a href="../assets/CourseSlides/BiostatStatisticalGenetics/GWAS_Lecture1_GWAS.pdf">Genotype Imputation, Single Variant GWAS</a> 
 2. <a href="../assets/CourseSlides/BiostatStatisticalGenetics/GWAS_Lecture2_GWAS.pdf">QC, Population Stratification, LMM</a>  
 3. <a href="../assets/CourseSlides/BiostatStatisticalGenetics/GWAS_Lecture3_GWAS.pdf">LMM, Finemap, Multivarate GWAS</a> 
 4. <a href="../assets/CourseSlides/BiostatStatisticalGenetics/GWAS_Lecture4_GWAS.pdf">Rare Variant Test, Pleiotropy, Mendelian Randomization</a>  
 5. <a href="../assets/CourseSlides/BiostatStatisticalGenetics/TWAS_Lecture.pdf">TWAS</a>  
 
-### IBS-746 - Graduate Human Genetics. Fall 2021. Co-Instructor. 
-
+### IBS-746 - Graduate Human Genetics.
 1. <a href="../assets/CourseSlides/GraduateHumanGenetics/IBS746_Yang_association_2021_1.pdf">Genome-wide Association Study</a>
 2. <a href="../assets/CourseSlides/GraduateHumanGenetics/IBS746_Yang_association_2021_2.pdf">GWAS Approaches for Cohorts of Different Ancestries</a> 
 
+### IBS-538 - Data Science.
+1. <a href="../assets/CourseSlides/DataScience/PermutationTest.pdf"> Permutation Test</a>  
+2. <a href="../assets/CourseSlides/DataScience/MultivariateAnalysis.pdf"> Multivariate Analysis with Application to RNAseq Differential Gene Expression Analysis</a> 
+3. <a href="../assets/CourseSlides/DataScience/MachineLearning.pdf"> Introductions to Machine Learning</a> 
 
 ## High Performance and Cloud Computing Cluster 
 ### [HGCC](https://hgcc.genetics.emory.edu/)
