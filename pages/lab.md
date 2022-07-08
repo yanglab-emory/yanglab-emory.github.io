@@ -17,6 +17,8 @@ title: "Lab members"
 | | | | |  |
 | Tingyang Hu <br> Research Specialist  |  | Derive Bayesian DPR model based <br> method for PWAS. |  |  2022 - Present| 
 | | | | |  |
+| Shuyi Guo <br> Biostat Master Student  |  | Apply BGW-TWAS to GTEx V8. |  |  2022 - Present| 
+| | | | |  |
 | Rebecca Yu <br> High School Intern  |  | Develop TIGAR Web Tool. |  |  2021 - Present| 
 
 
@@ -31,17 +33,17 @@ title: "Lab members"
 
 * Kevin Johnson (Epidemiology Master Student, 2021-2022), Develop webtool for clinical sequence data analysis.
 
-* Emilia (Xizhu) Liu (QTM Undergraduate Student, 2021-2022), Impute brain pathology using clinical data.  
+* Emilia (Xizhu) Liu (QTM Undergraduate Student, 2021-2022), Impute brain pathology using clinical data. Currently Master student at Yale University School of Public Health. 
 
 * Junyu Chen (Research Specialist, 2018-2020), Derive functional Bayesian GWAS with multiple quantitative annotations. Currently PhD student at Emory.
 
-* Justin Luningham (Postdoc, 2018-2020), Novel Bayesian TWAS method by leveraging both cis- and trans- eQTL information. Currently research Assistant Professor at Georgia State University. 
+* Justin Luningham (Postdoc, 2018-2020), Novel Bayesian TWAS method by leveraging both cis- and trans- eQTL information. Currently Assistant Professor at University of North Texas Health Science Center. 
 
 * Tianhui Mao (QTM Undergraduate Student, 2018-2019), Derive a risk prediction model for Alzheimer's disease. Currently data scientist. 
 
 * Xiaoran Meng (Master Student, 2018-2019), GTEx data analysis and tool development of [TIGAR](https://github.com/yanglab-emory/TIGAR). Currently data scientist.
 
-* Sini Nagpal, MS (Summer Intern, 2018). Nonparametric Bayesian method for TWAS. Currently PhD student at Georgia Tech.
+* Sini Nagpal, MS (Summer Intern, 2018). Nonparametric Bayesian method for TWAS. Currently PostDoc at Georgia Tech.
 
 
 ### Lab Photos
