@@ -63,7 +63,7 @@ Transcriptomic Data Imputation Enhances Gene Mapping of Complex Traits_.
 
 ### Poster Presentation
 
-*  **ASHG 2021 (Poster)**, Virtual (Oct. 2021). _TIGAR-V2: Efficient TWAS Tool with Nonparametric Bayesian eQTL Weights of 49 Tissue Types from GTEx V8_. DOI:<https://doi.org/10.1101/2021.07.16.452700>.
+*  **ASHG 2021 (Poster)**, Virtual (Oct. 2021). _TIGAR-V2: Efficient TWAS Tool with Nonparametric Bayesian eQTL Weights of 49 Tissue Types from GTEx V8_. <a href="../assets/PresentationSlides/TIGAR_V2_ASHG_2021_poster.pdf">Poster</a>.
 
 * **ASHG Annual Meeting 2020 (Poster, Reviewers' Choice)**, Virtual. _Bayesian Genome-wide TWAS method to leverage both cis- and trans- eQTL information through summary statistics_. <a href="../assets/PresentationSlides/ASHG2020-ePoster_JYang.pdf">Poster</a>.
 
