@@ -36,7 +36,7 @@ title: "Teaching and Resources"
 
 ### RHPC
 
-* <a href="../assets/ComputationSlides/RSPH_HPC_StartGuide_Yang.html" target="_self"> Instructions to RHPC</a>
+* <a href="../assets/ComputationSlides/RSPH_HPC_StartGuide_Yang.html" target="_self"> Introductions to RHPC</a>
 * [Helpful tips from Dr. Hao Wu](https://www.haowulab.org//pages/computing.html)
 
 ### [Emory Amazon Web Service (AWS)](https://aws.emory.edu/)
