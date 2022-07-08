@@ -23,7 +23,7 @@ title: "Lab members"
 
 
 
-### <a href="../assets/ComputationSlides/YangLabGuideline_2022.html">*Lab Onboarding Guidelines*</a>
+### <a href="../assets/ComputationSlides/YangLabGuideline_2022.html">*Lab Onboarding Guidelines 2022*</a>
 
 
 
