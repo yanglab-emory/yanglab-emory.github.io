@@ -50,21 +50,21 @@ title: "Lab members"
 
 * May, 2022 (End-of-Semester Group Lunch) 
 <a href="default.asp" title="Lab photo 2020" alt="Lab photo 2020">
-<img style="float: center;" src="../assets/GroupLunch_2022.jpg" width = "1000" height = "600">
+<img style="float: center;" src="../assets/Pictures/GroupLunch_2022.jpg" width = "1000" height = "600">
 </a>
 
 * July, 2021 (All working remotely through this summer.)
 
 <a href="default.asp" title="Lab photo 2020" alt="Lab photo 2020">
-<img style="float: center;" src="../assets/LabPhoto2021.png" width = "1000" height = "450">
+<img style="float: center;" src="../assets/Pictures/LabPhoto2021.png" width = "1000" height = "450">
 </a>
 
 * August, 2020 (All working remotely during this pandemic year.)
 
 <a href="default.asp" title="Lab photo 2020" alt="Lab photo 2020">
-<img style="float: center;" src="../assets/LabMeeting_08_13_2020.png" width = "600" height = "500">
+<img style="float: center;" src="../assets/Pictures/LabMeeting_08_13_2020.png" width = "600" height = "500">
 </a>
 
 * May, 2019
 
-<img style="float: center;" src="../assets/YangLab_2019_resize.JPG" width = "500" height = "500">
+<img style="float: center;" src="../assets/Pictures/YangLab_2019_resize.JPG" width = "500" height = "500">

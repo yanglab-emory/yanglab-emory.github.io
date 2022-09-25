@@ -6,7 +6,7 @@ layout: page
 
 ## Welcome to Yang Lab Website
 
-<img style="float: right;" src="assets/JY_pic_2020.JPG" width = "200" height = "200">
+<img style="float: right;" src="assets/Pictures/JY_pic_2020.JPG" width = "200" height = "200">
 
 PI: [Jingjing Yang](https://med.emory.edu/directory/profile/?u=JYANG51), PhD <br>
 Assistant Professor <br>
@@ -87,5 +87,5 @@ Yang lab currently has an opening for Postdoctoral Research Fellow. Please email
 
 
 ### Lab Location - Whitehead Biomedical Research Building
-<img style="float: center;" src="assets/Whitehead.png">
+<img style="float: center;" src="assets/Pictures/Whitehead.png">
 
