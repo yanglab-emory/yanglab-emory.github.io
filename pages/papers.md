@@ -7,6 +7,11 @@ title: "Publication and Presentation"
 
 ### 2020 - Present
 
+
+* **Chen J**, **Wang L**, De Jager PL, Bennett DA, Buchman AS, **Yang J.** A scalable Bayesian functional GWAS method accounting for multivariate quantitative functional annotations with applications to studying Alzheimer's disease. Human Genetics and Genomics Advances. 2022 Sep 17:100143. DOI: <https://doi.org/10.1016/j.xhgg.2022.100143>. Paper for [BFGWAS_QUANT Tool](https://github.com/yanglab-emory/BFGWAS_QUANT). <a href="../assets/PresentationSlides/BFGWAS_QUANT_2022.pdf"> Presentation Slides</a>. 
+
+* **Yang J**, Oveisgharan S, Liu X, Wilson RS, Bennett DA, Buchman AS. Risk Models Based on Non-Cognitive Measures May Identify Presymptomatic Alzheimer's Disease. J Alzheimers Dis. 2022;89(4):1249-1262. [PMID: 35988224](https://pubmed.ncbi.nlm.nih.gov/35988224/) 
+
 * **Parrish, R.L.**, Gibson, G.C., Epstein, M.P. and **Yang, J.**, (2022). TIGAR-V2: Efficient TWAS tool with nonparametric Bayesian eQTL weights of 49 tissue types from GTEx V8. Human Genetics and Genomics Advances, 3(1), p.100068. DOI: <https://doi.org/10.1016/j.xhgg.2021.100068>. Paper for update [TIGAR Tool](https://github.com/yanglab-emory/TIGAR).
 
 * **Yan, L., Song, H.**, Guo, Y., Ren, P., Zhou, W., Li, S., **Yang, J., Shen, X.**, (2022). HLDnet: Novel deep learning based Artificial Intelligence tool fuses acetic acid and Lugol’s iodine cervicograms for accurate pre-cancer screening. Biomedical Signal Processing and Control, 71, p.103163. DOI: <https://doi.org/10.1016/j.bspc.2021.103163>.
