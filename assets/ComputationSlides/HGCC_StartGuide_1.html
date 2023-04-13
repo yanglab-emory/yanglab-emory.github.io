@@ -5,7 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>HGCC_StartGuide</title>
+<title>HGCC_StartGuide_1</title>
 
 
 <style type="text/css">
@@ -412,9 +412,12 @@ kbd {
 <li>Open gzipped text file by <code>zcat [file_name.gz] | less -S</code></li>
 <li>Command <code>man</code> to see user manual/instructions of Linux tools, e.g., <code>man ls</code> </li>
 <li>Use pipe <code>|</code> to take output from the command before <code>|</code> as the input for the command after <code>|</code></li>
+<li>Create alias by <code>alias</code> to set up your own shortcup of commands. See <a href="https://phoenixnap.com/kb/linux-alias-command">Examples</a>.</li>
 </ol>
 
 <h2 id="toc_8">Strategies for Using HGCC</h2>
+
+<h4 id="toc_9">Command <code>man [command]</code> would give help page for the following commands, e.g., <code>man rsync</code>. Type <code>q</code> to exit from the help page.</h4>
 
 <ol>
 <li>Only use headnode to download/move data and submit jobs (<strong>Never run large computation jobs on headnode</strong>)</li>
@@ -449,16 +452,16 @@ kbd {
 <li>Shared genomic data on hgcc <code>/sw/hgcc/Data</code>. <strong>Do not make another copy of the data unless you need to make changes.</strong></li>
 </ol>
 
-<h2 id="toc_9">Using a Software</h2>
+<h2 id="toc_10">Using a Software</h2>
 
-<h3 id="toc_10">Check if a software is available on the cluster</h3>
+<h3 id="toc_11">Check if a software is available on the cluster</h3>
 
 <ol>
 <li>Logonto interactive node first by <code>qlogin</code> first, and then use command <code>module avail</code> to list all installed software modules on HGCC</li>
 <li>Check if an executible file of an installed or loaded software is available under <code>${PATH}</code> by <code>which [software_name]</code></li>
 </ol>
 
-<h3 id="toc_11">Using a software installed on the cluster</h3>
+<h3 id="toc_12">Using a software installed on the cluster</h3>
 
 <ol>
 <li>Load a software module into the current session by <code>module load [software_name]</code></li>
@@ -477,14 +480,15 @@ kbd {
 <li>Unload all software modules by <code>module purge</code></li>
 </ol>
 
-<h3 id="toc_12">Install a software without root access</h3>
+<h3 id="toc_13">Install a software without root access</h3>
 
 <ol>
 <li>Install software under user home directory, e.g., <code>~/.local/</code></li>
+<li>Install python libraries by <strong><code>pip --user</code></strong>. Or search &quot;install without root access&quot;, &quot;install with specificed installation directory&quot;. The installation directory should be those you have writting access to. </li>
 <li>Install software after login to interactive compute node by <code>qlogin</code>, as many C++ libraries only available on compute nodes</li>
 </ol>
 
-<h3 id="toc_13">Share installed software with the lab</h3>
+<h3 id="toc_14">Share installed software with the lab</h3>
 
 <ol>
 <li>Make a soft link of the executible tool under <code>/mnt/YangFSS/data/bin</code> by the following commands
@@ -497,11 +501,24 @@ ln -s [tool directory]
 <p><code>export PATH=/mnt/YangFSS/data/bin:$PATH</code></p></li>
 </ol>
 
-<h2 id="toc_14">Storage on the Cluster</h2>
+<h3 id="toc_15">Setup one&#39;s <code>.bashrc</code> file</h3>
 
-<h3 id="toc_15">Main HGCC data drive <code>/mnt/icebreaker/data2/</code></h3>
+<ul>
+<li>See <a href="https://www.freecodecamp.org/news/bashrc-customization-guide/">useful things</a> that you can setup your own <code>bashrc</code> file under your home directory to save tying of commands. 
 
-<h3 id="toc_16">Yang lab data drives</h3>
+<ul>
+<li>Set up <code>PATH</code> system variables. See <a href="https://www.baeldung.com/linux/path-variable">example</a>.</li>
+<li>Create alias by <code>alias</code> in <code>.bashrc</code> to set up your own shortcup of commands. See <a href="https://phoenixnap.com/kb/linux-alias-command">Examples</a>.</li>
+<li>Setup environment variables. See <a href="https://www.cyberciti.biz/faq/set-environment-variable-linux/">example</a>.</li>
+<li>Load software modules</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_16">Storage on the Cluster</h2>
+
+<h3 id="toc_17">Main HGCC data drive <code>/mnt/icebreaker/data2/</code></h3>
+
+<h3 id="toc_18">Yang lab data drives</h3>
 
 <ol>
 <li><strong>Data Drive 1</strong> <code>/mnt/YangFSS/data/</code>. All lab member home directories are located in this data drive. Consider using our data drive 2 if you need more storage space.</li>
@@ -518,19 +535,19 @@ cd /mnt/YangFSS/data2/jyang
 ls</code></pre></div></li>
 </ol>
 
-<h3 id="toc_17">Monitoring storage usage</h3>
+<h3 id="toc_19">Monitoring storage usage</h3>
 
 <ol>
 <li>Check storage space for all data drives on HGCC by <code>df -h</code></li>
 <li>Check space used by current working directory by <code>du -h -d1</code></li>
 </ol>
 
-<h3 id="toc_18">All files are not backed up on the cluster</h3>
+<h3 id="toc_20">All files are not backed up on the cluster</h3>
 
-<h2 id="toc_19">Additional Resources</h2>
+<h2 id="toc_21">Additional Resources</h2>
 
 <ul>
-<li>Need help: submit a ticket at <a href="https://hgcc.genetics.emory.edu:8443/">https://hgcc.genetics.emory.edu:8443/</a> after login to Emory VPN.</li>
+<li>Need help: submit a ticket at <a href="https://hgcc.genetics.emory.edu:8443/">https://hgcc.genetics.emory.edu:8443/</a> after login to Emory VPN. Or ask in our Slack channel.</li>
 <li><a href="http://it.emory.edu/vpntools/access.html">Emory VPN</a></li>
 <li><a href="https://lmod.readthedocs.io/en/latest/010_user.html">Module User Guide</a></li>
 <li><a href="https://linuxcommand.org/tlcl.php">The Linux Command Line</a> book is recommended to read ahead</li>

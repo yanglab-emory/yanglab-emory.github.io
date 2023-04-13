@@ -341,15 +341,16 @@ kbd {
 <ul>
 <li>24 of which have 32 cores and 196 GB RAM each</li>
 <li>One &quot;large memory node&quot; with 1.5 TB RAM</li>
-<li>A private node with partition &quot;yanglab&quot; (32 cores, 188GB RAM) available for yang lab members</li>
+<li>Four private nodes with partition &quot;yanglab&quot; (32 cores, 188GB RAM) available for yang lab members</li>
+<li>Other &quot;preemptable&quot; nodes are allocated for other labs, but could be used when they are free</li>
 </ul></li>
 <li>Connected via 25 GB Ethernet network</li>
 <li>1 Petabyte Panasas parallel file system
 
 <ul>
-<li>Extra 10TB storage for yanglab <code>/projects/YangLabData/</code></li>
+<li>Extra 50TB storage for yanglab <code>/projects/YangLabData/</code></li>
 </ul></li>
-<li>Support 800 concurrent running job managed by SLURM</li>
+<li>Support 800 concurrent running job managed by <strong>SLURM</strong></li>
 </ul>
 
 <h2 id="toc_2">Login</h2>
@@ -375,25 +376,57 @@ kbd {
 
 <ol>
 <li>Install <a href="https://github.com/osxfuse/sshfs/releases">SSHFS 2.5.0</a></li>
-<li>Install <a href="https://osxfuse.github.io/">macFUSE 4.1.0</a></li>
-<li>Create a mount point directory on local machine 
-<code>mkdir /Users/jyang51/RHPC</code></li>
+<li>Install <a href="https://osxfuse.github.io/">macFUSE 4.4.2</a></li>
 <li>Mount RHPC server directory to your local mount directory
 Example command to mount remote directory <code>/home/jyang51/</code> to local mount directory <code>/Users/jyang51/RHPC/</code>
 <code>sshfs jyang@clogin01.sph.emory.edu:/home/jyang51/ /Users/jyang51/RHPC/ -o auto_cache -ovolname=RHPC -o follow_symlinks</code> </li>
 </ol></li>
 </ul>
 
-<h2 id="toc_4">Copying Data to the Cluster</h2>
+<h2 id="toc_4">Copying Data to/from the Cluster</h2>
+
+<ol>
+<li><p><strong>Command <code>rsync</code> is recommended</strong></p>
 
 <ul>
-<li>General command by using <code>scp</code> as follows:
-<code>scp &lt;path_to_file&gt; &lt;username&gt;@&lt;remote_system_name&gt;:&lt;destination_path&gt;</code></li>
-</ul>
+<li>Transfer data from local machine to cluster, or from cluster to local machine</li>
+<li>Transfer data within cluster or across clusters </li>
+<li>See <a href="https://phoenixnap.com/kb/rsync-command-linux-examples">Example usage</a></li>
+<li><code>rsync [options] [SOURCE] [DESTINATION]</code></li>
+</ul></li>
+<li><p>General command by using <strong><code>scp</code></strong> as follows:</p>
 
-<h2 id="toc_5">Using a Software</h2>
+<ul>
+<li>See <a href="https://www.hypexr.org/linux_scp_help.php">Example usage</a></li>
+<li><code>scp &lt;path_to_file&gt; &lt;username&gt;@&lt;remote_system_name&gt;:&lt;destination_path&gt;</code></li>
+</ul></li>
+</ol>
 
-<h3 id="toc_6">Check if a software is available on the cluster</h3>
+<h2 id="toc_5">Handle Data Files on Cluster</h2>
+
+<h4 id="toc_6">Command <code>man [command]</code> would give help page for the following commands, e.g., <code>man rsync</code>. Type <code>q</code> to exit from the help page.</h4>
+
+<ol>
+<li>Command <code>rsync</code> is recommended for copying data on cluster</li>
+<li>Command <code>cp</code> also copys data within cluster</li>
+<li>Delete data or directory by <code>rm</code></li>
+<li>Make directories by <code>mkdir</code></li>
+<li>Move a directory by <code>mv</code></li>
+<li>List all files under a directory by <code>ls</code></li>
+<li>List all files with their sizes by <code>ls -l -h</code></li>
+<li>Use <code>vi</code> or <code>nano</code> to edit text files on the cluster<br></li>
+<li>Read text file by <code>less</code>, <code>cat</code></li>
+<li>Consider gzip your text file to save space by <code>gzip</code></li>
+<li>Open gzipped text file by <code>zcat [file_name.gz] | less -S</code></li>
+<li>Command <code>man</code> to see user manual/instructions of Linux tools, e.g., <code>man ls</code> </li>
+<li>Use pipe <code>|</code> to take output from the command before <code>|</code> as the input for the command after <code>|</code></li>
+<li>Command <a href="https://www.geeksforgeeks.org/awk-command-unixlinux-examples/"><code>awk</code></a> is highlly recomended for handling large text files.</li>
+<li>Split your screen by <code>tmux</code>. See <a href="https://tmuxcheatsheet.com/">tmux cheat sheet</a>.</li>
+</ol>
+
+<h2 id="toc_7">Using a Software</h2>
+
+<h3 id="toc_8">Check if a software is available on the cluster</h3>
 
 <ul>
 <li><code>which [software_name]</code></li>
@@ -401,20 +434,40 @@ Example command to mount remote directory <code>/home/jyang51/</code> to local m
 <li><code>module spider [software_name]</code> to find detailed information about the software</li>
 </ul>
 
-<h3 id="toc_7">Using a software installed on the cluster</h3>
+<h3 id="toc_9">Using a software installed on the cluster</h3>
+
+<h4 id="toc_10"><strong>Please never run a software directly on gateway node. First login to a compute node using command <code>srun -p yanglab --pty bash</code>.</strong></h4>
 
 <ul>
-<li><code>module load [software_name]</code> to load the software for using</li>
-<li>For example, type command <code>R</code> to start using R after loading R by <code>module load R/4.0.3</code></li>
+<li><code>module load [software_name]</code> to load the software.</li>
+<li>Use software command to run commands 
+
+<ul>
+<li>Provide full directory to the data files you want to read or write or plot.</li>
+<li>For example, type command <strong><code>R</code></strong> to start using R after loading R by <code>module load R/4.2.2</code>. You may copy and paste your R commands from a text script to the session window on RHPC.</li>
+<li> Save figures as pdf into the disk to view your plots by R function <code>ggsave(&quot;temp.pdf&quot;)</code> or 
+<code>
+pdf(&quot;temp.pdf&quot;);
+plot(); 
+dev.off();
+</code></li>
+<li>Type command <strong><code>python</code></strong>  in the session to start a python session.</li>
+<li>One can open the script on RHPC by local Editor (e.g., <strong><a href="https://www.sublimetext.com/">Sublime</a></strong>, <strong><a href="https://code.visualstudio.com/">Visual Studio Code</a></strong>) after mounting cloud directory to local machine, and just copy/paste command into these <strong>R</strong> or <strong>python</strong> sessions</li>
+<li>Type command <strong><code>/projects/YangLabData/bin/plink -h</code></strong> to see <strong>plink</strong> user mannual.</li>
+</ul></li>
+<li>Command <strong><code>which</code></strong> can also be used to check if a software is available under the <code>${PATH}</code> directory in current session </li>
+<li>Unload a software module by <strong><code>module unload [software_name]</code></strong></li>
+<li>Unload all software modules by <strong><code>module purge</code></strong></li>
 </ul>
 
-<h3 id="toc_8">Install a software without root access</h3>
+<h3 id="toc_11">Install a software without root access</h3>
 
 <ul>
 <li>Install software under <code>~/.local/</code></li>
+<li>Install python libraries by <strong><code>pip install --user [package]</code></strong>. Or search &quot;install without root access&quot;, &quot;install with specificed installation directory&quot;. The installation directory should be those you have writting access to. </li>
 </ul>
 
-<h3 id="toc_9">Share installed software with the lab</h3>
+<h3 id="toc_12">Share installed software with the lab</h3>
 
 <ul>
 <li>Make a soft link of the executible tool directory under <code>/projects/YangLabData/bin</code> by the following commands</li>
@@ -429,9 +482,22 @@ ln -s [tool directory]</code></pre></div>
 
 <div><pre><code class="language-none">export PATH=/projects/YangLabData/bin:$PATH</code></pre></div>
 
-<h2 id="toc_10">Submit Jobs by SLURM</h2>
+<h3 id="toc_13">Setup one&#39;s <code>.bashrc</code> file</h3>
 
-<h3 id="toc_11">Basic SLURM commands</h3>
+<ul>
+<li>See <a href="https://www.freecodecamp.org/news/bashrc-customization-guide/">useful things</a> that you can setup your own <code>bashrc</code> file under your home directory to save tying of commands. 
+
+<ul>
+<li>Set up <code>PATH</code> system variables. See <a href="https://www.baeldung.com/linux/path-variable">example</a>.</li>
+<li>Create alias by <code>alias</code> in <code>.bashrc</code> to set up your own shortcup of commands. See <a href="https://phoenixnap.com/kb/linux-alias-command">Examples</a>.</li>
+<li>Setup environment variables. See <a href="https://www.cyberciti.biz/faq/set-environment-variable-linux/">example</a>.</li>
+<li>Load software modules</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_14">Submit Jobs by SLURM</h2>
+
+<h3 id="toc_15">Basic SLURM commands</h3>
 
 <ul>
 <li><code>sbatch</code> to submit jobs (like <code>qsub</code> in Grid Engine)
@@ -465,14 +531,14 @@ srun /home/&lt;user&gt;/normal.R</code></pre></div>
 <li><code>scontrol show job [jobid]</code> to show system details of a submitted job</li>
 <li><code>scontrol show partition day-long-cpu</code> to show partition configuration</li>
 </ul></li>
-<li><p><code>srun</code> used to run an interactive instance</p>
+<li><p><code>srun</code> used to run an interactive instance: <code>srun --pty bash</code>.</p>
 
 <ul>
 <li>Open an interactive session to test your <em>R</em> code: </li>
 </ul>
 
-<div><pre><code class="language-none">module load R
-srun -p interactive-cpu --pty bash
+<div><pre><code class="language-none">srun -p interactive-cpu --pty bash
+module load R
 R</code></pre></div>
 
 <ul>
@@ -482,9 +548,9 @@ R</code></pre></div>
 <li><p><code>sinfo</code> used to report the state of the cluster partition and nodes</p></li>
 </ul>
 
-<h2 id="toc_12">Storage on the Cluster</h2>
+<h2 id="toc_16">Storage on the Cluster</h2>
 
-<h3 id="toc_13">Sub volumns all mounted across the cluster</h3>
+<h3 id="toc_17">Sub volumns all mounted across the cluster</h3>
 
 <ul>
 <li><code>/home</code> where user home direcotry is located
@@ -502,25 +568,33 @@ R</code></pre></div>
 <li> <code>/projects</code> where groups may store project data and run computations. Requestable in increments of <strong>1TB</strong>, $75 per year 
 
 <ul>
-<li><strong>10TB</strong> storage space is available for yang lab under <code>/projects/YangLabData/</code></li>
-<li>You may creat a directory under this lab storage space for your work</li>
+<li><strong>50TB</strong> storage space is available for yang lab under <code>/projects/YangLabData/</code></li>
+<li>You may creat a working directory under this lab storage space for all of your work</li>
+<li>**Please be mindful with your storage usage. **
+
+<ul>
+<li>Avoid creating duplecates of data files.</li>
+<li>Delete files that you no longer need to use.</li>
+<li><code>gzip</code> large text data files.</li>
+</ul></li>
 </ul></li>
 <li> <code>/apps</code> and <code>/projects/YangLabData/bin</code> where all softwares can be found</li>
 </ul>
 
-<h3 id="toc_14">Monitoring storage usage</h3>
+<h3 id="toc_18">Monitoring storage usage</h3>
 
 <ul>
 <li>With command <code>pan_quota</code></li>
 </ul>
 
-<h3 id="toc_15">All files are not backed up on the cluster</h3>
+<h3 id="toc_19">All files are not backed up on the cluster</h3>
 
-<h2 id="toc_16">Additional Resources</h2>
+<h2 id="toc_20">Additional Resources</h2>
 
 <ul>
-<li>Request cluster assistance or an account: Email <a href="mailto:help@sph.emory.edu">help@sph.emory.edu</a></li>
+<li>Request cluster assistance or an account: Email <a href="mailto:help@sph.emory.edu">help@sph.emory.edu</a>. Or ask in our SLACK channel.</li>
 <li>The <a href="http://it.emory.edu/vpntools/access.html">Emory VPN</a></li>
+<li><a href="https://linuxcommand.org/tlcl.php">The Linux Command Line</a> book is recommended to read ahead</li>
 <li>Software <a href="https://lmod.readthedocs.io/en/latest/010_user.html">Modules</a></li>
 <li>SLURM <a href="https://slurm.schedmd.com/quickstart.html">Quickstart</a></li>
 <li>Linux Commands

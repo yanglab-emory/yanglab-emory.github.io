@@ -16,10 +16,16 @@ title: "Teaching and Resources"
 1. <a href="../assets/CourseSlides/GraduateHumanGenetics/IBS746_Yang_association_2021_1.pdf">Genome-wide Association Study</a>
 2. <a href="../assets/CourseSlides/GraduateHumanGenetics/IBS746_Yang_association_2021_2.pdf">GWAS Approaches for Cohorts of Different Ancestries</a> 
 
+### IBS-519 - Data Analysis using R.
+1. <a href="../assets/CourseSlides/DataScience/Week8_LinearRegression.pdf"> Linear Regression</a>  
+2. <a href="../assets/CourseSlides/DataScience/Week9_ANOVA.pdf"> ANOVA</a>  
+3. <a href="../assets/CourseSlides/DataScience/Week11_PowerAnalysis"> Power Analysis</a>  
+4. <a href="../assets/CourseSlides/DataScience/Week13_PermutationTest.pdf"> Permutation Test</a>  
+5. <a href="../assets/CourseSlides/DataScience/Week14_MachineLearning.pdf"> Introductions to Machine Learning</a> 
+
 ### IBS-538 - Data Science.
-1. <a href="../assets/CourseSlides/DataScience/PermutationTest.pdf"> Permutation Test</a>  
-2. <a href="../assets/CourseSlides/DataScience/MultivariateAnalysis.pdf"> Multivariate Analysis with Application to RNAseq Differential Gene Expression Analysis</a> 
-3. <a href="../assets/CourseSlides/DataScience/MachineLearning.pdf"> Introductions to Machine Learning</a> 
+1. <a href="../assets/CourseSlides/DataScience/MultivariateAnalysis.pdf"> Multivariate Analysis with Application to RNAseq Differential Gene Expression Analysis</a> 
+
 
 ## High Performance and Cloud Computing Cluster 
 ### [HGCC](https://hgcc.genetics.emory.edu/)
