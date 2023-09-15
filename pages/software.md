@@ -6,6 +6,25 @@ title: "Software"
 ### Software Developed and Maintained by the Yang Lab
 
 <a class="btn btn-primary"
+href="https://github.com/yanglab-emory/SR-TWAS"
+role="button">SR-TWAS</a>
+
+* SR-TWAS can leverage base imputation models for molecular traits that are trained with multiple statistical methods, multiple tissues, or multiple cohorts, to learn an optimal imputation model for the follow-up xWAS analysis. 
+
+<a class="btn btn-primary"
+href="https://github.com/daiqile96/OTTERS"
+role="button">OTTERS</a>
+
+* OTTERS is a powerful xWAS tool leveraging summary-level reference molecular QTL data to conduct gene-based association study with GWAS summary data. 
+
+<a class="btn btn-primary"
+href="https://github.com/yanglab-emory/BFGWAS_QUANT"
+role="button">BFGWAS_QUANT</a>
+
+* BFGWAS_QUANT conducts Bayesian functional GWAS using multivariate quantitative functional annotations, which can be applied with both individual-level and summary-level GWAS data. 
+
+
+<a class="btn btn-primary"
 href="https://github.com/yanglab-emory/BGW-TWAS"
 role="button">BGW-TWAS</a>
 

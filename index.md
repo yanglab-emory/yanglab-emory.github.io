@@ -9,7 +9,7 @@ layout: page
 <img style="float: right;" src="assets/Pictures/JY_pic_2020.JPG" width = "200" height = "200">
 
 PI: [Jingjing Yang](https://med.emory.edu/directory/profile/?u=JYANG51), PhD <br>
-Assistant Professor <br>
+Associate Professor <br>
 Email: <jingjing.yang@emory.edu> <br>
 
 [Center for Computational and Quantitative Genetics](http://ccqg.emory.edu/) <br>

@@ -9,18 +9,13 @@ title: "Lab members"
 | Name |  | Research topic |  | Year in Lab |
 | ------ |--| ---------- |--| ----- |
 | | | | | |
-| Qile Dai <br> Biostat PhD Student  |  | Bayesian TWAS method using only <br> summary-level eQTL and GWAS data |  |  2020 - Present| 
+| Qile Dai <br> Biostat PhD Student  |  | Supervised Tensor Decomposition tool for studying Cell-cell Communication. |  |  2020 - Present| 
 | | | | |  |
 | Shizhen Tang <br> Biostat PhD Student  |  | Quantile regression based test for <br>  differential gene expression analysis. | |   2021 - Present| 
 | | | | | |
-| Randy Parrish <br> Biostat PhD Student  |  | Derive [TIGAR-V2](https://github.com/yanglab-emory/TIGAR) and <br> stacked regression TWAS. |  |  2022 - Present| 
-| | | | |  |
-| Tingyang Hu <br> Research Specialist  |  | Derive Bayesian DPR model based <br> method for PWAS. |  |  2022 - Present| 
-| | | | |  |
-| Shuyi Guo <br> Biostat Master Student  |  | Apply BGW-TWAS to GTEx V8. |  |  2022 - Present| 
-| | | | |  |
-| Rebecca Yu <br> High School Intern  |  | Develop TIGAR Web Tool. |  |  2021 - Present| 
-
+| Randy Parrish <br> Biostat PhD Student  |  | Applying Bayesian genome-wide method to PWAS. |  |  2022 - Present| 
+| | | | | |
+| Yingte Liu <br> Biostat MS Student  |  | Using machine learning methods to impute longitudinal AD pathologies. |  |  2023 - Present| 
 
 
 ### <a href="../assets/ComputationSlides/YangLabGuideline_2022.html">*Lab Onboarding Guidelines 2022*</a>
@@ -29,9 +24,15 @@ title: "Lab members"
 
 ### Lab Alumni
 
+* Rebecca Yu (High School Intern, 2021-2023), develop TIGAR Web Tool on AWS. Currently college student at Columnbia University.
+
+* Shuyi Guo (Biosat Master Student, 2022-2023), Apply BGW-TWAS to study AD dementia and extend BGW-TWAS to using only summary eQTL data. Currently PhD student at UTHealth Houston School of Public Health.
+
+* Tingyang Hu (Biosat Master Student, 2021-2023), PWAS of AD dementia. Currently PhD student at Pennsylvania State University College of Medicine.
+
 * Lei Wang (Biosat Master Student, 2021-2022), Develop BFGWAS for using summary GWAS data. Currently PhD student at  University of Colorado Anschutz Medical Campus. 
 
-* Kevin Johnson (Epidemiology Master Student, 2021-2022), Develop webtool for clinical sequence data analysis.
+* Kevin Johnson (Epidemiology Master Student, 2021-2022), Develop webtool for clinical sequence data analysis. Currently work at CDC.
 
 * Emilia (Xizhu) Liu (QTM Undergraduate Student, 2021-2022), Impute brain pathology using clinical data. Currently Master student at Yale University School of Public Health. 
 
@@ -47,6 +48,11 @@ title: "Lab members"
 
 
 ### Lab Photos
+
+* December, 2022 (End-of-Semester Group Lunch)
+<a href="default.asp" title="Lab photo 2020" alt="Lab photo 2020">
+<img style="float: center;" src="../assets/Pictures/Lab_lunch_dec_2022.jpeg" width = "1000" height = "500">
+</a>
 
 * May, 2022 (End-of-Semester Group Lunch) 
 <a href="default.asp" title="Lab photo 2020" alt="Lab photo 2020">
