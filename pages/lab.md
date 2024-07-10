@@ -15,7 +15,9 @@ title: "Lab members"
 | | | | | |
 | Randy Parrish <br> Biostat PhD Student  |  | Applying Bayesian genome-wide method to PWAS. |  |  2022 - Present| 
 | | | | | |
-| Yingte Liu <br> Biostat MS Student  |  | Using machine learning methods to impute longitudinal AD pathologies. |  |  2023 - Present| 
+| Leo Liu <br> Biostat MS Student  |  | TWAS of AD with integrative bulk and single nucleus RNA-seq data. |  |  2023 - Present| 
+| | | | |  |
+| Coco Wu <br> QTM Undergradudate Student |  | Train sex-specific gene expression imputation models. |  |  2024 - Present| 
 
 
 ### <a href="../assets/ComputationSlides/YangLabGuideline_2022.html">*Lab Onboarding Guidelines 2022*</a>
@@ -23,6 +25,8 @@ title: "Lab members"
 
 
 ### Lab Alumni
+
+* Yingte Liu (Biostat Master Student, 2023-2024), RNAseq data analysis and AD pathology imputation.
 
 * Rebecca Yu (High School Intern, 2021-2023), develop TIGAR Web Tool on AWS. Currently college student at Columnbia University.
 

@@ -5,6 +5,13 @@ title: "Teaching and Resources"
 
 ## Recently Taught Courses
 
+### SISG - Gene Regulation
+1. <a href="../assets/CourseSlides/SISG/TWAS_Lecture_1.pdf"> Introduction to TWAS </a> 
+2. <a href="../assets/CourseSlides/SISG/TWAS_Lecture_2.pdf"> TWAS with Summary xQTL Data and Finemapping</a>  
+3. <a href="../assets/CourseSlides/SISG/TWAS_Lecture_3.pdf"> TWAS and Mendelian Randomization</a> 
+4. <a href="../assets/CourseSlides/SISG/TFBS_motif_Lecture_4.pdf"> ChiP-seq Analysis Pipeline</a>  
+5. <a href="../assets/CourseSlides/SISG/Non_coding_func_Lecture_5.pdf">Analysis with Functions of Noncoding Variants</a>  
+
 ### BIOS-770 - Advanced Statistical Genetics.
 1. <a href="../assets/CourseSlides/BiostatStatisticalGenetics/GWAS_Lecture1_GWAS.pdf">Genotype Imputation, Single Variant GWAS</a> 
 2. <a href="../assets/CourseSlides/BiostatStatisticalGenetics/GWAS_Lecture2_GWAS.pdf">QC, Population Stratification, LMM</a>  
