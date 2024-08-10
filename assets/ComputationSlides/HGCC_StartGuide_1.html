@@ -333,53 +333,111 @@ kbd {
 
 <h1 id="toc_0">Introduction to Human Genetics Compute Cluster (HGCC)</h1>
 
-<h2 id="toc_1">Cluster Structure</h2>
+<h2 id="toc_1">HGCC Cluster Structure</h2>
 
 <ul>
-<li><strong>CentOS Linux</strong> using <strong>Sun Grid Engine</strong> to schedule and run jobs</li>
-<li><strong>Head/Gateway Node</strong> <code>node00</code></li>
-<li><strong>Eight Compute nodes</strong> with 8GB RAM per core
+<li><a href="https://hgcc.emory.edu"><strong>HGCC Website</strong></a> : Access within Emory network or VPN</li>
+<li><strong>Operating System:</strong> Red Hat Enterprise Linux 8<br></li>
+<li><strong>Shared Storage (beegfs)</strong> : 1.3 PB (10TB per lab)</li>
+<li><strong>1 Head/Gateway/Login Node <code>head.hgcc</code></strong>; <strong>1 Data Transfer Node (DTN)</strong>
 
 <ul>
-<li>Nodes 1-2 have 60 cores </li>
-<li>Nodes 3-6 have 26 cores</li>
-<li>Nodes 7-8 have 4 cores<br></li>
-<li>Each compute node has 2GB local scratch space <code>/scratch/</code></li>
+<li>No CPU or memory intensive programs are allowed on the headnode and the DTN. </li>
+<li>2CPU and 8G RAM per user</li>
+<li>Scheduler time limit: 30 days</li>
+<li>Default job time: 1 hour</li>
 </ul></li>
-<li><strong>Limited storage</strong></li>
-<li><a href="https://linuxcommand.org/tlcl.php"><strong>The Linux Command Line</strong></a> book is recommended to read ahead</li>
+<li><strong>15 Compute Nodes of the same Partition</strong>:
+
+<ul>
+<li>64 cores per node; 16GB RAM per core</li>
+<li>High-bandwidth: 100Gb/s interconnect fabric. Compute node and storage volumes.<br></li>
+<li>10Gb/s uplinks to the Emory fiber-optic backbone. Between Emory clusters.</li>
+<li>Scheduling system: <a href="https://slurm.schedmd.com/documentation.html">Slurm</a></li>
+</ul></li>
+<li><strong>Shared Fast Scratch Storage</strong>: <code>/scratch/</code>
+
+<ul>
+<li>84 TB, first come first serve</li>
+<li>All files will be deleted after 30 days </li>
+<li>Recomend to use for jobs that need frequent large data file access.</li>
+</ul></li>
+<li><p><strong>Data Drive of YangLab</strong>: <code>/nfs/yangfss2/data/</code></p>
+
+<ul>
+<li>This is our previous data drive 2 (350TB) in the old cluster. Our data drive 1 (45TB) is retired.</li>
+<li>A softlink of the datadrive has been created under your home directory: <code>~/yangfss2/</code></li>
+<li><code>commons/</code> : User work directories. 
+
+<ul>
+<li>All data files under user work directories on our lab data drive 1 and 2 on the old HGCC cluster are copied here. </li>
+<li>All files on the old hgcc main disk <code>icebreaker</code> are not accessible and not coped into this new system.</li>
+</ul></li>
+<li><code>shared/</code> : Shared data files and softwares for the lab.</li>
+<li><code>projects/</code> : Project directories shared by the lab.</li>
+<li><code>public/</code> : Files to be shared with other groups. Public to all users on the cluster.</li>
+</ul></li>
+<li><p><a href="https://linuxcommand.org/tlcl.php"><strong>The Linux Command Line</strong></a> book is recommended to read ahead</p></li>
 </ul>
 
-<h2 id="toc_2">Login</h2>
+<p><img src="./hgcc_structure.png" alt="hgcc_architecture"></p>
+
+<h2 id="toc_2">Login to HGCC</h2>
 
 <ol>
-<li>Login to <a href="https://it.emory.edu/security/vpn.html">Emory VPN</a></li>
-<li><p>Login using <code>ssh</code> by typing the following command in respective terminal
-<code>ssh &lt;hgcc_user_ID&gt;@hgcc.genetics.emory.edu</code></p>
+<li><p>Login to <a href="https://it.emory.edu/security/vpn.html">Emory VPN</a> . </p>
 
 <ul>
-<li><p>Terminal App is available on Mac OS X and Linux system</p></li>
-<li><p>Under Windows 10, open up a Powershell (search for “Powershell” in the search tool next to the Start menu) and type ssh. (Older versions of the operating system may require the installation of a third party ssh client, like <a href="https://www.putty.org/">Putty</a>.)</p></li>
+<li><a href="https://it.emory.edu/security/protecting-data/virus_protection.html"><strong>Anti-virus Software</strong></a> is needed for your local computer. </li>
+<li><a href="https://it.emory.edu/vpntools/index.html"><strong>BIG-IP Edge Client</strong></a> is needed for VPN connection.</li>
+<li>Contact <a href="https://emory.service-now.com/sp?sysparm_stack=no"><strong>Emory IT</strong></a> if further help is needed.</li>
 </ul></li>
-<li><p><a href="http://www.linuxproblem.org/art_9.html">Login without typing password</a> </p></li>
+<li><p><strong>Login using <code>ssh</code></strong> by typing the following command in respective terminal with your Emory Net ID and Emory password:
+<code>ssh &lt;Emory_Net_ID&gt;@hgcc.emory.edu</code></p>
+
+<ul>
+<li>Terminal App is available on Mac OS X and Linux system</li>
+<li>Under Windows 10, open up a Powershell (search for “Powershell” in the search tool next to the Start menu) and type ssh. (Older versions of the operating system may require the installation of a third party ssh client, like <a href="https://www.putty.org/">Putty</a>.)</li>
+</ul></li>
+<li><p><a href="http://www.linuxproblem.org/art_9.html"><strong>SSH login without typing password</strong></a> : repeat this setup for each of your local computer.</p>
+
+<ul>
+<li><p>First, generate a pair of authentication key on your local computer: <code>ssh-keygen -t rsa</code>. </p>
+
+<ul>
+<li> Your identification has been saved in <code>.ssh/id_rsa</code>.</li>
+<li> Your public key has been saved in <code>.ssh/id_rsa.pub</code>. </li>
+</ul></li>
+<li><p>Second, create a directory under your home directory <code>~</code> on the HGCC cluster:</p>
+
+<ul>
+<li>  Login to hgcc cluster: <code>ssh &lt;Emory_Net_ID&gt;@hgcc.emory.edu</code></li>
+<li>  Create <code>~/.ssh</code> directory on hgcc: <code>mkdir -p ~/.ssh</code></li>
+</ul></li>
+<li><p>Last, append your public key on your local computer to HGCC: </p>
+
+<ul>
+<li>  Go to your local computer directory where you created your authentication key. </li>
+<li> Append local public key <code>.ssh/id_rsa.pub</code> to <code>.ssh/authorized_keys</code> on HGCC:  <code>cat .ssh/id_rsa.pub | ssh &lt;Emory_Net_ID&gt;@hgcc.emory.edu &#39;cat &gt;&gt; .ssh/authorized_keys&#39;</code></li>
+</ul></li>
+</ul></li>
 </ol>
 
 <h2 id="toc_3">Mount Remote Cluster Home Directory to Local Computer</h2>
 
 <h3 id="toc_4">Use <a href="https://winscp.net/eng/index.php">WinSCP</a> for Windows system</h3>
 
-<h3 id="toc_5">Use <a href="https://github.com/osxfuse/osxfuse/wiki/SSHFS">sshfs</a> for MAC</h3>
+<h3 id="toc_5">Use <a href="https://github.com/libfuse/sshfs">sshfs</a> for MAC</h3>
 
 <ol>
-<li>Install <a href="https://github.com/osxfuse/sshfs/releases">SSHFS 2.5.0</a></li>
-<li>Install <a href="https://osxfuse.github.io/">macFUSE 4.1.0</a></li>
-<li>Create a mount point directory on local computer 
-<code>mkdir ~/RHPC/</code></li>
-<li>Mount HGCC home directory <code>/home/jyang/</code> to  local mount directory <code>~/RHPC/</code>. Replace <code>jyang</code> by your HGCC user ID.
-<code>sshfs jyang@hgcc.genetics.emory.edu:/home/jyang/ ~/RHPC/ -o auto_cache -ovolname=HGCC -o follow_symlinks</code></li>
+<li>Install the latest <a href="https://github.com/libfuse/sshfs/releases">SSHFS</a>.</li>
+<li>Install the lastest <a href="https://osxfuse.github.io/">macFUSE</a>.</li>
+<li>Mount HGCC home directory <code>/home/jyang51/</code> to  local mount directory <code>~/HGCC/</code>. Replace <code>&lt;jyang51&gt;</code> by your Emory<em>Net</em>ID.
+<code>sshfs &lt;jyang51&gt;@hgcc.emory.edu:/home/&lt;jyang51&gt;/ ~/HGCC/ -o auto_cache -ovolname=HGCC -o follow_symlinks</code></li>
+<li>Now you can access all files on HGCC through the mounted local directory.</li>
 </ol>
 
-<h2 id="toc_6">Copying Data Files to the Cluster</h2>
+<h2 id="toc_6">Transfer Data Files to/from Cluster</h2>
 
 <ol>
 <li><p><strong>Command <code>rsync</code> is recommended</strong></p>
@@ -393,115 +451,120 @@ kbd {
 <p><code>rsync [options] [SOURCE] [DESTINATION]</code></p></li>
 <li><p><strong>Command <code>scp</code> can also do the job</strong></p>
 
-<p><code>scp &lt;path_to_file&gt; &lt;username&gt;@hgcc.genetics.emory.edu:&lt;destination_path_on_hgcc&gt;</code></p></li>
+<ul>
+<li>See <a href="https://www.hypexr.org/linux_scp_help.php">Example usage</a>
+<code>scp &lt;path_to_file&gt; &lt;Emory_Net_ID&gt;@hgcc.emory.edu:&lt;destination_path_on_hgcc&gt;</code></li>
+</ul></li>
 </ol>
 
-<h2 id="toc_7">Handle Data Files on Cluster</h2>
+<h2 id="toc_7">Useful Basic Linux Commands for Handling Data Files on Cluster</h2>
 
 <ol>
-<li>Command <code>rsync</code> is recommended for copying data on cluster</li>
-<li>Command <code>cp</code> also copys data</li>
-<li>Delete data or directory by <code>rm</code></li>
-<li>Make directories by <code>mkdir</code></li>
-<li>Move a directory by <code>mv</code></li>
-<li>List all files under a directory by <code>ls</code></li>
-<li>List all files with their sizes by <code>ls -l -h</code></li>
-<li>Use <code>vi</code> or <code>nano</code> to edit text files on the cluster<br></li>
-<li>Read text file by <code>less</code>, <code>cat</code></li>
-<li>Consider gzip your text file to save space by <code>gzip</code></li>
-<li>Open gzipped text file by <code>zcat [file_name.gz] | less -S</code></li>
-<li>Command <code>man</code> to see user manual/instructions of Linux tools, e.g., <code>man ls</code> </li>
-<li>Use pipe <code>|</code> to take output from the command before <code>|</code> as the input for the command after <code>|</code></li>
-<li>Create alias by <code>alias</code> to set up your own shortcup of commands. See <a href="https://phoenixnap.com/kb/linux-alias-command">Examples</a>.</li>
+<li>Command <code>rsync</code> is recommended for moving data files within the cluster, between local and cluster, between clusters.</li>
+<li>Command <code>cp</code> also copys data.</li>
+<li>Delete data or directory by <code>rm</code>.</li>
+<li>Make directories by <code>mkdir</code>.</li>
+<li>Move a directory by <code>mv</code>.</li>
+<li>List all files under a directory by <code>ls</code>.</li>
+<li>List all files with their sizes by <code>ls -l -h</code>.</li>
+<li>Use <code>vi</code> or <code>nano</code> to edit text files on the cluster. Recomend edit text files through local mounted directory.<br></li>
+<li>Read text file on the cluster by <code>less</code>, <code>cat</code>. <code>less -S</code> is recommended for viewing large text files on cluster.</li>
+<li>Consider gzip your text file to save space by <code>gzip</code>.</li>
+<li>Unzip gzipped text file by <code>gunzip [file_name.gz]</code>.</li>
+<li>Use <code>tar</code> for zipping and unzipping directories.</li>
+<li>Command <code>man</code> to see user manual/instructions of Linux tools, e.g., <code>man ls</code> .</li>
+<li>Use pipe <code>|</code> to take output from the command before <code>|</code> as the input for the command after <code>|</code>. For example, <code>cat xx_file.txt | head</code> will print the top 10 rows of the <code>xx_file.txt</code> file on the bash window.</li>
+<li>Create alias by <code>alias</code> to set up your own shortcup of commands in the <code>~/.bashrc</code> file. See <a href="https://phoenixnap.com/kb/linux-alias-command">Examples</a>. Example alias commands such as <code>alias c=&#39;clear&#39;</code>, can be seen through <code>/home/jyang51/.bashrc</code>. This would set up <code>c</code> as an alias/short-cut for the command <code>clear</code>.</li>
 </ol>
+
+<p><strong>Command <code>man [command]</code> would give help page for Linux commands, e.g., <code>man rsync</code>. Type <code>q</code> to exit from the help page.</strong></p>
 
 <h2 id="toc_8">Strategies for Using HGCC</h2>
 
-<h4 id="toc_9">Command <code>man [command]</code> would give help page for the following commands, e.g., <code>man rsync</code>. Type <code>q</code> to exit from the help page.</h4>
-
 <ol>
 <li>Only use headnode to download/move data and submit jobs (<strong>Never run large computation jobs on headnode</strong>)</li>
-<li>Login to an interactive compute node by command <code>qlogin</code> under headnode or the command <code>qlogin -l h=[node07.local]</code> with specification of interactive compute node. </li>
-<li>Test your code/jobs on interactive compute node.</li>
-<li>Two parallele interactive sessions are allowed per user.</li>
-<li>Wrap your jobs in shell scripts and submit jobs to compute node by <code>qsub</code> under headnode. 
+<li>Login to an interactive compute node by command <code>srun -N 1 -n 1 --pty bash -i</code>.
+
+<ul>
+<li><code>-N</code> is the number of nodes, <code>-n</code> is number of tasks, <code>--pty</code> gives you a pseudo terminal that runs bash, <code>-i</code> gives you interaction. </li>
+<li>Use <strong>Interactive bash session</strong> for testing your jobs.</li>
+<li>Multiple interactive sessions could be opened.</li>
+</ul></li>
+<li>Wrap your jobs in shell scripts and submit jobs to compute node by <code>sbatch</code> under headnode. 
+
+<ul>
+<li><a href="https://slurm.schedmd.com/job_array.html"><strong>Job Array</strong></a> is recommended for a large number of jobs.</li>
+<li>Think about breaking your one big job into multiple small jobs/steps and submit array jobs. Multiple small jobs may be more efficient than a single large job. </li>
+<li>Default running time for a job is up to <strong>30 days</strong></li>
+</ul></li>
+<li>Use scratch space (<strong>84TB</strong>) <code>/scratch/</code> to avoid extensive I/O between compute node memory and storage disks. 
 
 <ol>
-<li>Requesting two cores for a job by <code>-pe smp 2</code>: <code>qsub –q b.q –cwd –j y –N [jobname] –pe smp 2 [job commands]</code>. </li>
-<li>Request an appropriate number of cores based on the memory (8GB per core) and parallele computing ability of your job</li>
-<li><code>qsub</code> is limited up to 500 jobs</li>
-<li>Submit <strong>Array Jobs</strong> for a large number of jobs by <code>qsub -t</code>. Array jobs need to be written to account for the single job ID in an Array job. See <a href="http://wiki.gridengine.info/wiki/index.php/Simple-Job-Array-Howto">Instructions</a>.</li>
-<li>Think about breaking your one big job into multiple small jobs/steps and running those jobs/steps concurrently on multiple nodes. Multiple small jobs may be more efficient than a single large job. </li>
-<li>Default running time for a job is up to <strong>240 hours</strong></li>
+<li>Create temperary working directory under the scratch directory. </li>
+<li>Copy data into temperary working directory in the scratch space. </li>
+<li>Write output files into the temperary working directory. </li>
+<li>Copy output files back to your storage.</li>
+<li>Delete temperary working directory.</li>
+<li>All files in the scratch space will be deleted after 30 days.</li>
 </ol></li>
-<li>Use scratch space (<strong>2GB</strong>) <code>/scratch/</code> on each compute node to avoid extensive I/O between compute node memory and head node storage disks. 
-
-<ol>
-<li>Copy data into scratch space first </li>
-<li>Create temperary working directory under the scratch directory </li>
-<li>Write into the temperary working directory </li>
-<li>Copy results back to hard disk storage </li>
-<li>Delete temperary working directory</li>
-<li>Not suitable if your work require &gt;2GB storage space</li>
-<li>Not needed if you are using our lab data storage spaces, <code>/mnt/YangFSS/data</code>, <code>/mnt/YangFSS/data2</code></li>
-<li>Your home directory <code>/home/[userid]</code> is likely to be located on our lab data storage disks</li>
-</ol></li>
-<li>Check job status and node status by <code>qstat -f</code></li>
-<li>Check the complete job queue by <code>qstat -f -u &#39;*&#39;</code></li>
-<li>Delete a job <code>qdel [jobid]</code> or all of your jobs by <code>qdel -u [userid]</code></li>
-<li>Shared genomic data on hgcc <code>/sw/hgcc/Data</code>. <strong>Do not make another copy of the data unless you need to make changes.</strong></li>
+<li><strong>Do not make another copy of the same data unless you need to make changes.</strong></li>
 </ol>
 
-<h2 id="toc_10">Using a Software</h2>
+<h2 id="toc_9">Using a Software on HGCC</h2>
 
-<h3 id="toc_11">Check if a software is available on the cluster</h3>
+<h3 id="toc_10">Check if a software is available on the cluster</h3>
 
 <ol>
-<li>Logonto interactive node first by <code>qlogin</code> first, and then use command <code>module avail</code> to list all installed software modules on HGCC</li>
-<li>Check if an executible file of an installed or loaded software is available under <code>${PATH}</code> by <code>which [software_name]</code></li>
+<li>Use command <code>module avail</code> or <code>spack list</code> to list all installed software modules on HGCC.</li>
+<li>Check if an executible file of an installed or loaded software is available under <code>${PATH}</code> by <code>which [software_name]</code>.</li>
+<li>Add a symbolic link of the executible file under <code>${PATH}</code> by <code>ln -s [directory_to_executible_file]</code> to avoid typing full directory of the executible file.</li>
 </ol>
 
-<h3 id="toc_12">Using a software installed on the cluster</h3>
+<h3 id="toc_11">Using a software installed on the cluster: either by <code>module</code> or <code>spack</code></h3>
 
 <ol>
-<li>Load a software module into the current session by <code>module load [software_name]</code></li>
-<li>List loaded software modules under the current session by <code>module list</code></li>
-<li>Use software command to run jobs 
+<li>Load a software module into the current session by <code>module load [software_name]</code>, or by <code>spack load [software_name]</code>.</li>
+<li>List loaded software modules under the current session by <code>module list</code>.</li>
+<li>Use software command to run jobs .
 
 <ol>
-<li>Type command <code>R</code> in the current session to start an R session after loading <strong>R</strong> by <code>module load R/4.0.3</code></li>
-<li>Type command <code>python</code>  in the session to start a python session after loading <strong>Anaconda3</strong> by <code>module load Anaconda3/5.2.0</code></li>
-<li>Check which <strong>python</strong> is called by command <code>python</code> with command <code>which python</code> </li>
-<li>One can open the script on HGCC by local Editor (e.g., Sublime, Visual Studio Code) after mounting cloud directory to local machine, and just copy/paste command into these <strong>R</strong> or <strong>python</strong> sessions</li>
-<li>Type command <code>plink -h</code> to see plink user mannual after loading <strong>plink</strong> by <code>module load plink/1.90b53</code></li>
+<li>Type command <code>R</code> in the current session to start an R session after loading <strong>R</strong> by <code>module load R/4.0.3</code>. Save figures as pdf into the disk to view your plots by R function <code>ggsave(&quot;temp.pdf&quot;)</code> or 
+<code>
+pdf(&quot;temp.pdf&quot;);
+plot(); 
+dev.off();
+</code></li>
+<li>Type command <code>python</code>  in the session to start a python session after loading <strong>Anaconda3</strong> by <code>module load Anaconda3/5.2.0</code>.</li>
+<li>Check which <strong>python</strong> is called by command <code>python</code> with command <code>which python</code> .</li>
+<li>One can open the script on HGCC by local Editor (e.g., <strong><a href="https://www.sublimetext.com/">Sublime</a></strong>, <strong><a href="https://code.visualstudio.com/">Visual Studio Code</a></strong>) after mounting cloud directory to local machine, and just copy/paste command into these <strong>R</strong> or <strong>python</strong> sessions.</li>
+<li>Type command <code>plink -h</code> to see plink user mannual after loading <strong>plink</strong> by <code>module load plink/1.90b53</code>.</li>
 </ol></li>
-<li>Command <code>which</code> can also be used to check if a software is available under the <code>${PATH}</code> directory in current session </li>
 <li>Unload a software module by <code>module unload [software_name]</code></li>
 <li>Unload all software modules by <code>module purge</code></li>
 </ol>
 
-<h3 id="toc_13">Install a software without root access</h3>
+<h3 id="toc_12">Install a software without root access</h3>
 
 <ol>
 <li>Install software under user home directory, e.g., <code>~/.local/</code></li>
-<li>Install python libraries by <strong><code>pip --user</code></strong>. Or search &quot;install without root access&quot;, &quot;install with specificed installation directory&quot;. The installation directory should be those you have writting access to. </li>
-<li>Install software after login to interactive compute node by <code>qlogin</code>, as many C++ libraries only available on compute nodes</li>
+<li>Install python libraries by <strong><code>pip --user [package]</code></strong>. Or search &quot;install without root access&quot;, &quot;install with specificed installation directory&quot;. The installation directory should be those you have writting access to. </li>
+<li>Submit a ticket through the HGCC website to request a software to be installed by IT.</li>
 </ol>
 
-<h3 id="toc_14">Share installed software with the lab</h3>
+<h3 id="toc_13">Share installed software with the lab</h3>
 
 <ol>
-<li>Make a soft link of the executible tool under <code>/mnt/YangFSS/data/bin</code> by the following commands
+<li>Make a soft link of the executible tool under <code>/nfs/yangfss2/data/shared/bin</code> by the following commands
 <code>
-cd /mnt/YangFSS/data/bin
-ln -s [tool directory]
+cd /nfs/yangfss2/data/shared/bin
+ln -s [tool_directory]
 </code></li>
-<li><p>Add <code>/mnt/YangFSS/data/bin</code> into the <code>${PATH}</code> environment variable by including the following command line in your <code>~/.bashrc</code> file </p>
+<li><p>Add <code>/nfs/yangfss2/data/shared/bin</code> into the <code>${PATH}</code> environment variable by including the following command line in your <code>~/.bashrc</code> file </p>
 
-<p><code>export PATH=/mnt/YangFSS/data/bin:$PATH</code></p></li>
+<p><code>export PATH=/nfs/yangfss2/data/shared/bin:$PATH</code></p></li>
 </ol>
 
-<h3 id="toc_15">Setup one&#39;s <code>.bashrc</code> file</h3>
+<h2 id="toc_14">Setup one&#39;s <code>.bashrc</code> file</h2>
 
 <ul>
 <li>See <a href="https://www.freecodecamp.org/news/bashrc-customization-guide/">useful things</a> that you can setup your own <code>bashrc</code> file under your home directory to save tying of commands. 
@@ -514,42 +577,72 @@ ln -s [tool directory]
 </ul></li>
 </ul>
 
-<h2 id="toc_16">Storage on the Cluster</h2>
+<h2 id="toc_15">Submit Jobs by SLURM</h2>
 
-<h3 id="toc_17">Main HGCC data drive <code>/mnt/icebreaker/data2/</code></h3>
+<h3 id="toc_16">Basic SLURM commands</h3>
 
-<h3 id="toc_18">Yang lab data drives</h3>
+<ul>
+<li>Use command <code>sbatch</code> to submit jobs
 
-<ol>
-<li><strong>Data Drive 1</strong> <code>/mnt/YangFSS/data/</code>. All lab member home directories are located in this data drive. Consider using our data drive 2 if you need more storage space.</li>
-<li><p><strong>Data Drive 2</strong> <code>/mnt/YangFSS/data2/</code>. </p>
+<ul>
+<li>Set arguments to <code>sbatch</code> in a wrapper shell (job submission) script, for example, you may use <code>sbatch normal.sh</code> with the following <code>normal.sh</code> script:</li>
+</ul></li>
+</ul>
 
-<ol>
-<li>Large data sets are located in this data drive. </li>
-<li>Create a working directory on this data drive for your working directory and organize all of your work under this directory. </li>
-<li>For example,</li>
-</ol>
+<div><pre><code class="language-none">#!/bin/bash
+#SBATCH --job-name=normal.R ## specify job name
+#SBATCH --output=Out/normal.%A_%a.out ## specify output file directory
+#SBATCH —error=Err/normal.%A_%a.err ## specify error file directory
+#SBATCH —array=0-100 ## Submitting 100 instances of srun commands listed below
+#SBATCH —mail-user=&lt;your_email_address&gt;@emory.edu ## For notification purposes. Use your Emory email address only! This is optinal.
+#SBATCH --mail-type=END,FAIL ## Receive email notice is optional.
 
-<div><pre><code class="language-none">mkdir -p /mnt/YangFSS/data2/jyang
-cd /mnt/YangFSS/data2/jyang
-ls</code></pre></div></li>
-</ol>
+module purge
+module load R
 
-<h3 id="toc_19">Monitoring storage usage</h3>
+srun /home/&lt;user&gt;/normal.R</code></pre></div>
+
+<ul>
+<li>Use command <code>squeue</code> to display information about the run queue</li>
+<li>Use command <code>scancel [jobid]</code> used to cancel or kill a job</li>
+<li>Use command <code>scontrol</code> used to show information about running or pending jobs
+
+<ul>
+<li><code>scontrol show job [jobid]</code> to show system details of a submitted job</li>
+</ul></li>
+<li><p><code>srun</code> used to run an interactive instance: <code>srun --pty bash</code>.</p>
+
+<ul>
+<li>Open an interactive session to test your <em>R</em> code: </li>
+</ul>
+
+<div><pre><code class="language-none">srun --pty bash
+module load R
+R</code></pre></div>
+
+<ul>
+<li>Simply exit the interactive session by <code>exit</code></li>
+<li>**Do not test running <em>R</em> scripts on the Gateway/Head/Login node and data transfer node (DTN) **</li>
+</ul></li>
+<li><p><code>sinfo</code> used to report the state of the cluster partition and nodes   </p></li>
+</ul>
+
+<h2 id="toc_17">Monitoring storage usage</h2>
 
 <ol>
 <li>Check storage space for all data drives on HGCC by <code>df -h</code></li>
 <li>Check space used by current working directory by <code>du -h -d1</code></li>
 </ol>
 
-<h3 id="toc_20">All files are not backed up on the cluster</h3>
+<h3 id="toc_18">All files are not backed up on the cluster</h3>
 
-<h2 id="toc_21">Additional Resources</h2>
+<h2 id="toc_19">Additional Resources</h2>
 
 <ul>
-<li>Need help: submit a ticket at <a href="https://hgcc.genetics.emory.edu:8443/">https://hgcc.genetics.emory.edu:8443/</a> after login to Emory VPN. Or ask in our Slack channel.</li>
+<li>Need help: submit a ticket at <a href="https://hgcc.emory.edu/#help">HGCC Website</a> after login to Emory VPN. Or ask in our Slack channel.</li>
 <li><a href="http://it.emory.edu/vpntools/access.html">Emory VPN</a></li>
 <li><a href="https://lmod.readthedocs.io/en/latest/010_user.html">Module User Guide</a></li>
+<li><a href="https://spack.io/">Spack</a></li>
 <li><a href="https://linuxcommand.org/tlcl.php">The Linux Command Line</a> book is recommended to read ahead</li>
 <li>Video training module accessible to all Emory affiliates persons via <a href="http://it.emory.edu/linkedinlearning/help/index.html">LinkedIn learning</a></li>
 </ul>
