@@ -347,13 +347,13 @@ kbd {
 <li>Scheduler time limit: 30 days</li>
 <li>Default job time: 1 hour</li>
 </ul></li>
-<li><strong>15 Compute Nodes of the same Partition</strong>:
+<li><strong>14 Compute Nodes of the same Partition</strong>:
 
 <ul>
 <li>64 cores per node; 16GB RAM per core</li>
 <li>High-bandwidth: 100Gb/s interconnect fabric. Compute node and storage volumes.<br></li>
 <li>10Gb/s uplinks to the Emory fiber-optic backbone. Between Emory clusters.</li>
-<li>Scheduling system: <a href="https://slurm.schedmd.com/documentation.html">Slurm</a></li>
+<li>Scheduling system: <a href="https://slurm.schedmd.com/documentation.html"><strong>Slurm</strong></a></li>
 </ul></li>
 <li><strong>Shared Fast Scratch Storage</strong>: <code>/scratch/</code>
 
@@ -370,7 +370,7 @@ kbd {
 <li><code>commons/</code> : User work directories. 
 
 <ul>
-<li>All data files under user work directories on our lab data drive 1 and 2 on the old HGCC cluster are copied here. </li>
+<li>All data files under your user work directories on our lab data drive 1 and 2 on the old HGCC cluster are copied here. </li>
 <li>All files on the old hgcc main disk <code>icebreaker</code> are not accessible and not coped into this new system.</li>
 </ul></li>
 <li><code>shared/</code> : Shared data files and softwares for the lab.</li>
@@ -385,7 +385,7 @@ kbd {
 <h2 id="toc_2">Login to HGCC</h2>
 
 <ol>
-<li><p>Login to <a href="https://it.emory.edu/security/vpn.html">Emory VPN</a> . </p>
+<li><p>Login to <a href="https://it.emory.edu/security/vpn.html"><strong>Emory VPN</strong></a> . </p>
 
 <ul>
 <li><a href="https://it.emory.edu/security/protecting-data/virus_protection.html"><strong>Anti-virus Software</strong></a> is needed for your local computer. </li>
@@ -402,23 +402,16 @@ kbd {
 <li><p><a href="http://www.linuxproblem.org/art_9.html"><strong>SSH login without typing password</strong></a> : repeat this setup for each of your local computer.</p>
 
 <ul>
-<li><p>First, generate a pair of authentication key on your local computer: <code>ssh-keygen -t rsa</code>. </p>
+<li><p>First, generate a pair of authentication key under the home directory on your local computer: <code>ssh-keygen -t rsa</code>. </p>
 
 <ul>
-<li> Your identification has been saved in <code>.ssh/id_rsa</code>.</li>
-<li> Your public key has been saved in <code>.ssh/id_rsa.pub</code>. </li>
+<li> Your identification has been saved in <code>~/.ssh/id_rsa</code>.</li>
+<li> Your public key has been saved in <code>~/.ssh/id_rsa.pub</code>. </li>
 </ul></li>
-<li><p>Second, create a directory under your home directory <code>~</code> on the HGCC cluster:</p>
+<li><p>Second, run the following command under the home directory on your local computer to create a directory <code>~/.ssh</code> under your home directory on the HGCC cluster and append your local authentication key to <code>~/.ssh/authorized_keys</code> on HGCC:</p>
 
 <ul>
-<li>  Login to hgcc cluster: <code>ssh &lt;Emory_Net_ID&gt;@hgcc.emory.edu</code></li>
-<li>  Create <code>~/.ssh</code> directory on hgcc: <code>mkdir -p ~/.ssh</code></li>
-</ul></li>
-<li><p>Last, append your public key on your local computer to HGCC: </p>
-
-<ul>
-<li>  Go to your local computer directory where you created your authentication key. </li>
-<li> Append local public key <code>.ssh/id_rsa.pub</code> to <code>.ssh/authorized_keys</code> on HGCC:  <code>cat .ssh/id_rsa.pub | ssh &lt;Emory_Net_ID&gt;@hgcc.emory.edu &#39;cat &gt;&gt; .ssh/authorized_keys&#39;</code></li>
+<li>  <code>ssh-copy-id &lt;Emory_Net_ID&gt;@hgcc.emory.edu</code></li>
 </ul></li>
 </ul></li>
 </ol>
@@ -432,7 +425,7 @@ kbd {
 <ol>
 <li>Install the latest <a href="https://github.com/libfuse/sshfs/releases">SSHFS</a>.</li>
 <li>Install the lastest <a href="https://osxfuse.github.io/">macFUSE</a>.</li>
-<li>Mount HGCC home directory <code>/home/jyang51/</code> to  local mount directory <code>~/HGCC/</code>. Replace <code>&lt;jyang51&gt;</code> by your Emory<em>Net</em>ID.
+<li>Mount the remote HGCC home directory <code>/home/&lt;jyang51&gt;/</code> to  local directory <code>~/HGCC/</code>. Replace <code>&lt;jyang51&gt;</code> by your Emory<em>Net</em>ID.
 <code>sshfs &lt;jyang51&gt;@hgcc.emory.edu:/home/&lt;jyang51&gt;/ ~/HGCC/ -o auto_cache -ovolname=HGCC -o follow_symlinks</code></li>
 <li>Now you can access all files on HGCC through the mounted local directory.</li>
 </ol>
@@ -515,32 +508,24 @@ kbd {
 <h3 id="toc_10">Check if a software is available on the cluster</h3>
 
 <ol>
-<li>Use command <code>module avail</code> or <code>spack list</code> to list all installed software modules on HGCC.</li>
+<li>Use command <code>spack find -x</code> to list all installed software modules on HGCC.</li>
 <li>Check if an executible file of an installed or loaded software is available under <code>${PATH}</code> by <code>which [software_name]</code>.</li>
 <li>Add a symbolic link of the executible file under <code>${PATH}</code> by <code>ln -s [directory_to_executible_file]</code> to avoid typing full directory of the executible file.</li>
 </ol>
 
-<h3 id="toc_11">Using a software installed on the cluster: either by <code>module</code> or <code>spack</code></h3>
+<h3 id="toc_11">Using a software installed on the cluster by <code>spack</code></h3>
 
 <ol>
-<li>Load a software module into the current session by <code>module load [software_name]</code>, or by <code>spack load [software_name]</code>.</li>
-<li>List loaded software modules under the current session by <code>module list</code>.</li>
-<li>Use software command to run jobs .
+<li>Load a software module into the current session by <code>spack load [software_name]</code>.
 
-<ol>
-<li>Type command <code>R</code> in the current session to start an R session after loading <strong>R</strong> by <code>module load R/4.0.3</code>. Save figures as pdf into the disk to view your plots by R function <code>ggsave(&quot;temp.pdf&quot;)</code> or 
-<code>
-pdf(&quot;temp.pdf&quot;);
-plot(); 
-dev.off();
-</code></li>
-<li>Type command <code>python</code>  in the session to start a python session after loading <strong>Anaconda3</strong> by <code>module load Anaconda3/5.2.0</code>.</li>
-<li>Check which <strong>python</strong> is called by command <code>python</code> with command <code>which python</code> .</li>
-<li>One can open the script on HGCC by local Editor (e.g., <strong><a href="https://www.sublimetext.com/">Sublime</a></strong>, <strong><a href="https://code.visualstudio.com/">Visual Studio Code</a></strong>) after mounting cloud directory to local machine, and just copy/paste command into these <strong>R</strong> or <strong>python</strong> sessions.</li>
-<li>Type command <code>plink -h</code> to see plink user mannual after loading <strong>plink</strong> by <code>module load plink/1.90b53</code>.</li>
-</ol></li>
-<li>Unload a software module by <code>module unload [software_name]</code></li>
-<li>Unload all software modules by <code>module purge</code></li>
+<ul>
+<li>For example, use command <code>spack load plink2@2.00a4.3</code> to load <strong>plink</strong>.</li>
+<li>Type command <code>plink2 --help</code> to see plink user mannual after loading <strong>plink</strong>.</li>
+<li>Unload <strong>plink</strong> module by <code>spack unload plink2@2.00a4.3</code>.</li>
+</ul></li>
+<li>Type command <code>R</code> in the current session to start an R session after loading <strong>R</strong> by <code>spack load r@4.4.0</code>.<br></li>
+<li>Type command <code>python</code>  in the session to start a python session after loading <strong>Anaconda3</strong> by <code>spack load anaconda3@2023.09-0</code>.</li>
+<li>One can open text scripts on HGCC by local text/script Editor (e.g., <strong><a href="https://www.sublimetext.com/">Sublime</a></strong>, <strong><a href="https://code.visualstudio.com/">Visual Studio Code</a></strong>) after mounting cloud directory to local machine, and just copy/paste command into these <strong>bash</strong>, <strong>R</strong>, or <strong>python</strong> sessions.</li>
 </ol>
 
 <h3 id="toc_12">Install a software without root access</h3>
@@ -553,16 +538,18 @@ dev.off();
 
 <h3 id="toc_13">Share installed software with the lab</h3>
 
-<ol>
-<li>Make a soft link of the executible tool under <code>/nfs/yangfss2/data/shared/bin</code> by the following commands
-<code>
-cd /nfs/yangfss2/data/shared/bin
-ln -s [tool_directory]
-</code></li>
+<ul>
+<li>Make a soft link of the executible tool under <code>/nfs/yangfss2/data/shared/bin</code> by the following commands</li>
+</ul>
+
+<div><pre><code class="language-none">cd /nfs/yangfss2/data/shared/bin
+ln -s [tool_directory]</code></pre></div>
+
+<ul>
 <li><p>Add <code>/nfs/yangfss2/data/shared/bin</code> into the <code>${PATH}</code> environment variable by including the following command line in your <code>~/.bashrc</code> file </p>
 
 <p><code>export PATH=/nfs/yangfss2/data/shared/bin:$PATH</code></p></li>
-</ol>
+</ul>
 
 <h2 id="toc_14">Setup one&#39;s <code>.bashrc</code> file</h2>
 
@@ -622,7 +609,7 @@ R</code></pre></div>
 
 <ul>
 <li>Simply exit the interactive session by <code>exit</code></li>
-<li>**Do not test running <em>R</em> scripts on the Gateway/Head/Login node and data transfer node (DTN) **</li>
+<li><strong>Do not test running <em>R</em> scripts on the Gateway/Head/Login node and data transfer node (DTN)</strong></li>
 </ul></li>
 <li><p><code>sinfo</code> used to report the state of the cluster partition and nodes   </p></li>
 </ul>
