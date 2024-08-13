@@ -509,6 +509,7 @@ kbd {
 
 <ol>
 <li>Use command <code>spack find -x</code> to list all installed software modules on HGCC.</li>
+<li>Use command <code>spack find --loaded</code> to list all loaded software modules.</li>
 <li>Check if an executible file of an installed or loaded software is available under <code>${PATH}</code> by <code>which [software_name]</code>.</li>
 <li>Add a symbolic link of the executible file under <code>${PATH}</code> by <code>ln -s [directory_to_executible_file]</code> to avoid typing full directory of the executible file.</li>
 </ol>
@@ -572,22 +573,28 @@ ln -s [tool_directory]</code></pre></div>
 <li>Use command <code>sbatch</code> to submit jobs
 
 <ul>
-<li>Set arguments to <code>sbatch</code> in a wrapper shell (job submission) script, for example, you may use <code>sbatch normal.sh</code> with the following <code>normal.sh</code> script:</li>
+<li>Set arguments to <code>sbatch</code> in a wrapper shell (job submission) script, for example, you may use <code>sbatch normal.sh</code> with the following <code>normal.sh</code> script.</li>
+<li>Write script for your job in Rscript <code>normal.R</code>.</li>
 </ul></li>
 </ul>
 
 <div><pre><code class="language-none">#!/bin/bash
 #SBATCH --job-name=normal.R ## specify job name
-#SBATCH --output=Out/normal.%A_%a.out ## specify output file directory
-#SBATCH —error=Err/normal.%A_%a.err ## specify error file directory
-#SBATCH —array=0-100 ## Submitting 100 instances of srun commands listed below
+#SBATCH --nodes=1 ## request 1 node 
+#SBATCH --mem=32G ## request 32G memory
+#SBATCH --cpus-per-task=5 ## request 5 cores per job
+#SBATCH --output=~/SLURM_OUT/%x_%A_%a.out ## specify output file directory
+#SBATCH --error=~/SLURM_OUT/%x_%A_%a.err ## specify error file directory
+#SBATCH —array=0-100 ## Submitting 100 instances of commands listed below
 #SBATCH —mail-user=&lt;your_email_address&gt;@emory.edu ## For notification purposes. Use your Emory email address only! This is optinal.
 #SBATCH --mail-type=END,FAIL ## Receive email notice is optional.
 
-module purge
-module load R
+## Use the $SLURM_ARRAY_TASK_ID (1..100) to configue the job
+echo &quot;My SLURM_ARRAY_TASK_ID: &quot; $SLURM_ARRAY_TASK_ID
 
-srun /home/&lt;user&gt;/normal.R</code></pre></div>
+spack load r@4.4.0
+
+Rscript &lt;directory_to_normal.R_script&gt;/normal.R</code></pre></div>
 
 <ul>
 <li>Use command <code>squeue</code> to display information about the run queue</li>
@@ -603,8 +610,8 @@ srun /home/&lt;user&gt;/normal.R</code></pre></div>
 <li>Open an interactive session to test your <em>R</em> code: </li>
 </ul>
 
-<div><pre><code class="language-none">srun --pty bash
-module load R
+<div><pre><code class="language-none">srun -N 1 -n 1 --pty bash -i
+spack load r@4.4.0
 R</code></pre></div>
 
 <ul>
