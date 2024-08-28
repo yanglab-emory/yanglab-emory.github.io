@@ -38,11 +38,9 @@ title: "Teaching and Resources"
 ### [HGCC](https://hgcc.emory.edu/)
 * <a href="../assets/ComputationSlides/HGCC_StartGuide_1.html">Introductions to New HGCC</a>
 
-
-* <a href="../assets/ComputationSlides/BASH.pdf">Introductions to BASH</a>
-
-
 * <a href="../assets/ComputationSlides/HGCC_StartGuide_2.html">Run Computation Tools and Submit Jobs on HGCC</a>
+
+* <a href="../assets/ComputationSlides/Introduction_to_BASH_2024.pdf">Introductions to BASH</a>
 
 
 ### RHPC
