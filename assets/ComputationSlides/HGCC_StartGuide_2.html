@@ -1,1399 +1,590 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>body {
-  max-width: 980px;
-  border: 1px solid #ddd;
-  outline: 1300px solid #fff;
-  margin: 16px auto;
-}
+<!DOCTYPE html>
+<html>
 
-body .markdown-body
-{
-  padding: 45px;
-}
+<head>
 
-@font-face {
-  font-family: fontawesome-mini;
-  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
-}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>HGCC_StartGuide_2</title>
 
-.markdown-body {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  color: #333333;
-  overflow: hidden;
-  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  word-wrap: break-word;
-}
 
-.markdown-body a {
-  background: transparent;
-}
-
-.markdown-body a:active,
-.markdown-body a:hover {
-  outline: 0;
-}
-
-.markdown-body b,
-.markdown-body strong {
-  font-weight: bold;
-}
-
-.markdown-body mark {
-  background: #ff0;
-  color: #000;
-  font-style: italic;
-  font-weight: bold;
-}
-
-.markdown-body sub,
-.markdown-body sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-.markdown-body sup {
-  top: -0.5em;
-}
-.markdown-body sub {
-  bottom: -0.25em;
-}
-
-.markdown-body h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-.markdown-body img {
-  border: 0;
-}
-
-.markdown-body hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;
-}
-
-.markdown-body pre {
-  overflow: auto;
-}
-
-.markdown-body code,
-.markdown-body kbd,
-.markdown-body pre,
-.markdown-body samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
-.markdown-body input {
-  color: inherit;
-  font: inherit;
-  margin: 0;
-}
-
-.markdown-body html input[disabled] {
-  cursor: default;
-}
-
-.markdown-body input {
-  line-height: normal;
-}
-
-.markdown-body input[type="checkbox"] {
-  box-sizing: border-box;
-  padding: 0;
-}
-
-.markdown-body table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-.markdown-body td,
-.markdown-body th {
-  padding: 0;
-}
-
-.markdown-body .codehilitetable,
-.markdown-body .highlighttable {
-  border: 0;
-  border-spacing: 0;
-}
-
-.markdown-body .codehilitetable tr,
-.markdown-body .highlighttable {
-  border: 0;
-}
-
-.markdown-body .codehilitetable pre,
-.markdown-body .codehilitetable div.codehilite,
-.markdown-body .highlighttable pre,
-.markdown-body .highlighttable div.highlight {
-  margin: 0;
-}
-
-.markdown-body .linenos,
-.markdown-body .code,
-.markdown-body .codehilitetable td,
-.markdown-body .highlighttable td {
-  border: 0;
-  padding: 0;
-}
-
-.markdown-body td:not(.linenos) .linenodiv {
-  padding: 0 !important;
-}
-
-.markdown-body .code {
-  width: 100%;
-}
-
-.markdown-body .linenos div pre,
-.markdown-body .linenodiv pre,
-.markdown-body .linenodiv {
-  border: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  -webkit-border-top-left-radius: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  -moz-border-radius-topleft: 3px;
-  -moz-border-radius-bottomleft: 3px;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-}
-
-.markdown-body .code div pre,
-.markdown-body .code div {
-  border: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  -webkit-border-top-right-radius: 3px;
-  -webkit-border-bottom-right-radius: 3px;
-  -moz-border-radius-topright: 3px;
-  -moz-border-radius-bottomright: 3px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-
-.markdown-body * {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.markdown-body input {
-  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
-  line-height: 1.4;
-}
-
-.markdown-body a {
-  color: #4183c4;
-  text-decoration: none;
-}
-
-.markdown-body a:hover,
-.markdown-body a:focus,
-.markdown-body a:active {
-  text-decoration: underline;
-}
-
-.markdown-body hr {
-  height: 0;
-  margin: 15px 0;
-  overflow: hidden;
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid #ddd;
-}
-
-.markdown-body hr:before,
-.markdown-body hr:after {
-  display: table;
-  content: " ";
-}
-
-.markdown-body hr:after {
-  clear: both;
-}
-
-.markdown-body h1,
-.markdown-body h2,
-.markdown-body h3,
-.markdown-body h4,
-.markdown-body h5,
-.markdown-body h6 {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  line-height: 1.1;
-}
-
-.markdown-body h1 {
-  font-size: 30px;
-}
-
-.markdown-body h2 {
-  font-size: 21px;
-}
-
-.markdown-body h3 {
-  font-size: 16px;
-}
-
-.markdown-body h4 {
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
   font-size: 14px;
-}
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
 
-.markdown-body h5 {
-  font-size: 12px;
-}
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
 
-.markdown-body h6 {
-  font-size: 11px;
-}
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
 
-.markdown-body blockquote {
-  margin: 0;
-}
-
-.markdown-body ul,
-.markdown-body ol {
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
   padding: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
 
-.markdown-body ol ol,
-.markdown-body ul ol {
-  list-style-type: lower-roman;
-}
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
 
-.markdown-body ul ul ol,
-.markdown-body ul ol ol,
-.markdown-body ol ul ol,
-.markdown-body ol ol ol {
-  list-style-type: lower-alpha;
-}
+h1 tt, h1 code {
+  font-size: inherit; }
 
-.markdown-body dd {
-  margin-left: 0;
-}
+h2 tt, h2 code {
+  font-size: inherit; }
 
-.markdown-body code,
-.markdown-body pre,
-.markdown-body samp {
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size: 12px;
-}
+h3 tt, h3 code {
+  font-size: inherit; }
 
-.markdown-body pre {
-  margin-top: 0;
-  margin-bottom: 0;
-}
+h4 tt, h4 code {
+  font-size: inherit; }
 
-.markdown-body kbd {
-  background-color: #e7e7e7;
-  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
-  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
-  background-image: linear-gradient(#fefefe, #e7e7e7);
-  background-repeat: repeat-x;
-  border-radius: 2px;
-  border: 1px solid #cfcfcf;
-  color: #000;
-  padding: 3px 5px;
-  line-height: 10px;
-  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  display: inline-block;
-}
+h5 tt, h5 code {
+  font-size: inherit; }
 
-.markdown-body>*:first-child {
-  margin-top: 0 !important;
-}
+h6 tt, h6 code {
+  font-size: inherit; }
 
-.markdown-body>*:last-child {
-  margin-bottom: 0 !important;
-}
+h1 {
+  font-size: 28px;
+  color: black; }
 
-.markdown-body .headerlink {
-  font: normal 400 16px fontawesome-mini;
-  vertical-align: middle;
-  margin-left: -16px;
-  float: left;
-  display: inline-block;
-  text-decoration: none;
-  opacity: 0;
-  color: #333;
-}
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
 
-.markdown-body .headerlink:focus {
-  outline: none;
-}
+h3 {
+  font-size: 18px; }
 
-.markdown-body h1 .headerlink {
-  margin-top: 0.8rem;
-}
+h4 {
+  font-size: 16px; }
 
-.markdown-body h2 .headerlink,
-.markdown-body h3 .headerlink {
-  margin-top: 0.6rem;
-}
+h5 {
+  font-size: 14px; }
 
-.markdown-body h4 .headerlink {
-  margin-top: 0.2rem;
-}
+h6 {
+  color: #777777;
+  font-size: 14px; }
 
-.markdown-body h5 .headerlink,
-.markdown-body h6 .headerlink {
-  margin-top: 0;
-}
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
 
-.markdown-body .headerlink:hover,
-.markdown-body h1:hover .headerlink,
-.markdown-body h2:hover .headerlink,
-.markdown-body h3:hover .headerlink,
-.markdown-body h4:hover .headerlink,
-.markdown-body h5:hover .headerlink,
-.markdown-body h6:hover .headerlink {
-  opacity: 1;
-  text-decoration: none;
-}
-
-.markdown-body h1 {
-  padding-bottom: 0.3em;
-  font-size: 2.25em;
-  line-height: 1.2;
-  border-bottom: 1px solid #eee;
-}
-
-.markdown-body h2 {
-  padding-bottom: 0.3em;
-  font-size: 1.75em;
-  line-height: 1.225;
-  border-bottom: 1px solid #eee;
-}
-
-.markdown-body h3 {
-  font-size: 1.5em;
-  line-height: 1.43;
-}
-
-.markdown-body h4 {
-  font-size: 1.25em;
-}
-
-.markdown-body h5 {
-  font-size: 1em;
-}
-
-.markdown-body h6 {
-  font-size: 1em;
-  color: #777;
-}
-
-.markdown-body p,
-.markdown-body blockquote,
-.markdown-body ul,
-.markdown-body ol,
-.markdown-body dl,
-.markdown-body table,
-.markdown-body pre,
-.markdown-body .admonition {
-  margin-top: 0;
-  margin-bottom: 16px;
-}
-
-.markdown-body hr {
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
   height: 4px;
   padding: 0;
-  margin: 16px 0;
-  background-color: #e7e7e7;
-  border: 0 none;
 }
 
-.markdown-body ul,
-.markdown-body ol {
-  padding-left: 2em;
-}
-
-.markdown-body ul ul,
-.markdown-body ul ol,
-.markdown-body ol ol,
-.markdown-body ol ul {
+body > h2:first-child {
   margin-top: 0;
-  margin-bottom: 0;
-}
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
 
-.markdown-body li>p {
-  margin-top: 16px;
-}
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
 
-.markdown-body dl {
-  padding: 0;
-}
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
 
-.markdown-body dl dt {
-  padding: 0;
-  margin-top: 16px;
-  font-size: 1em;
-  font-style: italic;
-  font-weight: bold;
-}
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
 
-.markdown-body dl dd {
-  padding: 0 16px;
-  margin-bottom: 16px;
-}
+ul :first-child, ol :first-child {
+  margin-top: 0; }
 
-.markdown-body blockquote {
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
   padding: 0 15px;
-  color: #777;
-  border-left: 4px solid #ddd;
-}
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
 
-.markdown-body blockquote>:first-child {
-  margin-top: 0;
-}
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
 
-.markdown-body blockquote>:last-child {
-  margin-bottom: 0;
-}
+img {
+  max-width: 100%; }
 
-.markdown-body table {
+span.frame {
   display: block;
-  width: 100%;
-  overflow: auto;
-  word-break: normal;
-  word-break: keep-all;
-}
-
-.markdown-body table th {
-  font-weight: bold;
-}
-
-.markdown-body table th,
-.markdown-body table td {
-  padding: 6px 13px;
-  border: 1px solid #ddd;
-}
-
-.markdown-body table tr {
-  background-color: #fff;
-  border-top: 1px solid #ccc;
-}
-
-.markdown-body table tr:nth-child(2n) {
-  background-color: #f8f8f8;
-}
-
-.markdown-body img {
-  max-width: 100%;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.markdown-body code,
-.markdown-body samp {
-  padding: 0;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
-  margin: 0;
-  font-size: 85%;
-  background-color: rgba(0,0,0,0.04);
-  border-radius: 3px;
-}
-
-.markdown-body code:before,
-.markdown-body code:after {
-  letter-spacing: -0.2em;
-  content: "\00a0";
-}
-
-.markdown-body pre>code {
-  padding: 0;
-  margin: 0;
-  font-size: 100%;
-  word-break: normal;
-  white-space: pre;
-  background: transparent;
-  border: 0;
-}
-
-.markdown-body .codehilite,
-.markdown-body .highlight {
-  margin-bottom: 16px;
-}
-
-.markdown-body .codehilite pre,
-.markdown-body .highlight pre,
-.markdown-body pre {
-  padding: 16px;
-  overflow: auto;
-  font-size: 85%;
-  line-height: 1.45;
-  background-color: #f7f7f7;
-  border-radius: 3px;
-}
-
-.markdown-body .codehilite pre,
-.markdown-body .highlight pre {
-  margin-bottom: 0;
-  word-break: normal;
-}
-
-.markdown-body pre {
-  word-wrap: normal;
-}
-
-.markdown-body pre code {
-  display: inline;
-  max-width: initial;
-  padding: 0;
-  margin: 0;
-  overflow: initial;
-  line-height: inherit;
-  word-wrap: normal;
-  background-color: transparent;
-  border: 0;
-}
-
-.markdown-body pre code:before,
-.markdown-body pre code:after {
-  content: normal;
-}
-
-/* Admonition */
-.markdown-body .admonition {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  position: relative;
-  border-radius: 3px;
-  border: 1px solid #e0e0e0;
-  border-left: 6px solid #333;
-  padding: 10px 10px 10px 30px;
-}
-
-.markdown-body .admonition table {
-  color: #333;
-}
-
-.markdown-body .admonition p {
-  padding: 0;
-}
-
-.markdown-body .admonition-title {
-  font-weight: bold;
-  margin: 0;
-}
-
-.markdown-body .admonition>.admonition-title {
-  color: #333;
-}
-
-.markdown-body .attention>.admonition-title {
-  color: #a6d796;
-}
-
-.markdown-body .caution>.admonition-title {
-  color: #d7a796;
-}
-
-.markdown-body .hint>.admonition-title {
-  color: #96c6d7;
-}
-
-.markdown-body .danger>.admonition-title {
-  color: #c25f77;
-}
-
-.markdown-body .question>.admonition-title {
-  color: #96a6d7;
-}
-
-.markdown-body .note>.admonition-title {
-  color: #d7c896;
-}
-
-.markdown-body .admonition:before,
-.markdown-body .attention:before,
-.markdown-body .caution:before,
-.markdown-body .hint:before,
-.markdown-body .danger:before,
-.markdown-body .question:before,
-.markdown-body .note:before {
-  font: normal normal 16px fontawesome-mini;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  line-height: 1.5;
-  color: #333;
-  position: absolute;
-  left: 0;
-  top: 0;
-  padding-top: 10px;
-  padding-left: 10px;
-}
-
-.markdown-body .admonition:before {
-  content: "\f056\00a0";
-  color: 333;
-}
-
-.markdown-body .attention:before {
-  content: "\f058\00a0";
-  color: #a6d796;
-}
-
-.markdown-body .caution:before {
-  content: "\f06a\00a0";
-  color: #d7a796;
-}
-
-.markdown-body .hint:before {
-  content: "\f05a\00a0";
-  color: #96c6d7;
-}
-
-.markdown-body .danger:before {
-  content: "\f057\00a0";
-  color: #c25f77;
-}
-
-.markdown-body .question:before {
-  content: "\f059\00a0";
-  color: #96a6d7;
-}
-
-.markdown-body .note:before {
-  content: "\f040\00a0";
-  color: #d7c896;
-}
-
-.markdown-body .admonition::after {
-  content: normal;
-}
-
-.markdown-body .attention {
-  border-left: 6px solid #a6d796;
-}
-
-.markdown-body .caution {
-  border-left: 6px solid #d7a796;
-}
-
-.markdown-body .hint {
-  border-left: 6px solid #96c6d7;
-}
-
-.markdown-body .danger {
-  border-left: 6px solid #c25f77;
-}
-
-.markdown-body .question {
-  border-left: 6px solid #96a6d7;
-}
-
-.markdown-body .note {
-  border-left: 6px solid #d7c896;
-}
-
-.markdown-body .admonition>*:first-child {
-  margin-top: 0 !important;
-}
-
-.markdown-body .admonition>*:last-child {
-  margin-bottom: 0 !important;
-}
-
-/* progress bar*/
-.markdown-body .progress {
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
   display: block;
-  width: 300px;
-  margin: 10px 0;
-  height: 24px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  background-color: #ededed;
-  position: relative;
-  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
-}
-
-.markdown-body .progress-label {
-  position: absolute;
-  text-align: center;
-  font-weight: bold;
-  width: 100%; margin: 0;
-  line-height: 24px;
-  color: #333;
-  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
-  -webkit-font-smoothing: antialiased !important;
-  white-space: nowrap;
   overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
 }
 
-.markdown-body .progress-bar {
-  height: 24px;
-  float: left;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  background-color: #96c6d7;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
-  background-size: 30px 30px;
-  background-image: -webkit-linear-gradient(
-    135deg, rgba(255, 255, 255, .4) 27%,
-    transparent 27%,
-    transparent 52%, rgba(255, 255, 255, .4) 52%,
-    rgba(255, 255, 255, .4) 77%,
-    transparent 77%, transparent
-  );
-  background-image: -moz-linear-gradient(
-    135deg,
-    rgba(255, 255, 255, .4) 27%, transparent 27%,
-    transparent 52%, rgba(255, 255, 255, .4) 52%,
-    rgba(255, 255, 255, .4) 77%, transparent 77%,
-    transparent
-  );
-  background-image: -ms-linear-gradient(
-    135deg,
-    rgba(255, 255, 255, .4) 27%, transparent 27%,
-    transparent 52%, rgba(255, 255, 255, .4) 52%,
-    rgba(255, 255, 255, .4) 77%, transparent 77%,
-    transparent
-  );
-  background-image: -o-linear-gradient(
-    135deg,
-    rgba(255, 255, 255, .4) 27%, transparent 27%,
-    transparent 52%, rgba(255, 255, 255, .4) 52%,
-    rgba(255, 255, 255, .4) 77%, transparent 77%,
-    transparent
-  );
-  background-image: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, .4) 27%, transparent 27%,
-    transparent 52%, rgba(255, 255, 255, .4) 52%,
-    rgba(255, 255, 255, .4) 77%, transparent 77%,
-    transparent
-  );
-}
-
-.markdown-body .progress-100plus .progress-bar {
-  background-color: #a6d796;
-}
-
-.markdown-body .progress-80plus .progress-bar {
-  background-color: #c6d796;
-}
-
-.markdown-body .progress-60plus .progress-bar {
-  background-color: #d7c896;
-}
-
-.markdown-body .progress-40plus .progress-bar {
-  background-color: #d7a796;
-}
-
-.markdown-body .progress-20plus .progress-bar {
-  background-color: #d796a6;
-}
-
-.markdown-body .progress-0plus .progress-bar {
-  background-color: #c25f77;
-}
-
-.markdown-body .candystripe-animate .progress-bar{
-  -webkit-animation: animate-stripes 3s linear infinite;
-  -moz-animation: animate-stripes 3s linear infinite;
-  animation: animate-stripes 3s linear infinite;
-}
-
-@-webkit-keyframes animate-stripes {
-  0% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: 60px 0;
-  }
-}
-
-@-moz-keyframes animate-stripes {
-  0% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: 60px 0;
-  }
-}
-
-@keyframes animate-stripes {
-  0% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: 60px 0;
-  }
-}
-
-.markdown-body .gloss .progress-bar {
-  box-shadow:
-    inset 0 4px 12px rgba(255, 255, 255, .7),
-    inset 0 -12px 0 rgba(0, 0, 0, .05);
-}
-
-/* MultiMarkdown Critic Blocks */
-.markdown-body .critic_mark {
-  background: #ff0;
-}
-
-.markdown-body .critic_delete {
-  color: #c82829;
-  text-decoration: line-through;
-}
-
-.markdown-body .critic_insert {
-  color: #718c00 ;
-  text-decoration: underline;
-}
-
-.markdown-body .critic_comment {
-  color: #8e908c;
-  font-style: italic;
-}
-
-.markdown-body .headeranchor {
-  font: normal normal 16px fontawesome-mini;
-  line-height: 1;
+kbd {
   display: inline-block;
-  text-decoration: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.headeranchor:before {
-  content: '\e157';
-}
-
-.markdown-body .task-list-item {
-  list-style-type: none;
-}
-
-.markdown-body .task-list-item+.task-list-item {
-  margin-top: 3px;
-}
-
-.markdown-body .task-list-item input {
-  margin: 0 4px 0.25em -20px;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
   vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
 }
 
-/* Media */
-@media only screen and (min-width: 480px) {
-  .markdown-body {
-    font-size:14px;
-  }
+* {
+	-webkit-print-color-adjust: exact;
 }
-
-@media only screen and (min-width: 768px) {
-  .markdown-body {
-    font-size:16px;
-  }
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
 }
-
 @media print {
-  .markdown-body * {
-    background: transparent !important;
-    color: black !important;
-    filter:none !important;
-    -ms-filter: none !important;
-  }
-
-  .markdown-body {
-    font-size:12pt;
-    max-width:100%;
-    outline:none;
-    border: 0;
-  }
-
-  .markdown-body a,
-  .markdown-body a:visited {
-    text-decoration: underline;
-  }
-
-  .markdown-body .headeranchor-link {
-    display: none;
-  }
-
-  .markdown-body a[href]:after {
-    content: " (" attr(href) ")";
-  }
-
-  .markdown-body abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-
-  .markdown-body .ir a:after,
-  .markdown-body a[href^="javascript:"]:after,
-  .markdown-body a[href^="#"]:after {
-    content: "";
-  }
-
-  .markdown-body pre {
-    white-space: pre;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-  }
-
-  .markdown-body pre,
-  .markdown-body blockquote {
-    border: 1px solid #999;
-    padding-right: 1em;
-    page-break-inside: avoid;
-  }
-
-  .markdown-body .progress,
-  .markdown-body .progress-bar {
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-
-  .markdown-body .progress {
-    border: 1px solid #ddd;
-  }
-
-  .markdown-body .progress-bar {
-    height: 22px;
-    border-right: 1px solid #ddd;
-  }
-
-  .markdown-body tr,
-  .markdown-body img {
-    page-break-inside: avoid;
-  }
-
-  .markdown-body img {
-    max-width: 100% !important;
-  }
-
-  .markdown-body p,
-  .markdown-body h2,
-  .markdown-body h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  .markdown-body h2,
-  .markdown-body h3 {
-    page-break-after: avoid;
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+  body {
+    padding: 2cm; 
   }
 }
-</style><style>/*GitHub*/
-.highlight {background-color:#fff;color:#333333;}
-.highlight .hll {background-color:#ffffcc;}
-.highlight .c{color:#999988;font-style:italic}
-.highlight .err{color:#a61717;background-color:#e3d2d2}
-.highlight .k{font-weight:bold}
-.highlight .o{font-weight:bold}
-.highlight .cm{color:#999988;font-style:italic}
-.highlight .cp{color:#999999;font-weight:bold}
-.highlight .c1{color:#999988;font-style:italic}
-.highlight .cs{color:#999999;font-weight:bold;font-style:italic}
-.highlight .gd{color:#000000;background-color:#ffdddd}
-.highlight .ge{font-style:italic}
-.highlight .gr{color:#aa0000}
-.highlight .gh{color:#999999}
-.highlight .gi{color:#000000;background-color:#ddffdd}
-.highlight .go{color:#888888}
-.highlight .gp{color:#555555}
-.highlight .gs{font-weight:bold}
-.highlight .gu{color:#800080;font-weight:bold}
-.highlight .gt{color:#aa0000}
-.highlight .kc{font-weight:bold}
-.highlight .kd{font-weight:bold}
-.highlight .kn{font-weight:bold}
-.highlight .kp{font-weight:bold}
-.highlight .kr{font-weight:bold}
-.highlight .kt{color:#445588;font-weight:bold}
-.highlight .m{color:#009999}
-.highlight .s{color:#dd1144}
-.highlight .n{color:#333333}
-.highlight .na{color:teal}
-.highlight .nb{color:#0086b3}
-.highlight .nc{color:#445588;font-weight:bold}
-.highlight .no{color:teal}
-.highlight .ni{color:purple}
-.highlight .ne{color:#990000;font-weight:bold}
-.highlight .nf{color:#990000;font-weight:bold}
-.highlight .nn{color:#555555}
-.highlight .nt{color:navy}
-.highlight .nv{color:teal}
-.highlight .ow{font-weight:bold}
-.highlight .w{color:#bbbbbb}
-.highlight .mf{color:#009999}
-.highlight .mh{color:#009999}
-.highlight .mi{color:#009999}
-.highlight .mo{color:#009999}
-.highlight .sb{color:#dd1144}
-.highlight .sc{color:#dd1144}
-.highlight .sd{color:#dd1144}
-.highlight .s2{color:#dd1144}
-.highlight .se{color:#dd1144}
-.highlight .sh{color:#dd1144}
-.highlight .si{color:#dd1144}
-.highlight .sx{color:#dd1144}
-.highlight .sr{color:#009926}
-.highlight .s1{color:#dd1144}
-.highlight .ss{color:#990073}
-.highlight .bp{color:#999999}
-.highlight .vc{color:teal}
-.highlight .vg{color:teal}
-.highlight .vi{color:teal}
-.highlight .il{color:#009999}
-.highlight .gc{color:#999;background-color:#EAF2F5}
-</style><title>HGCC_StartGuide_2</title></head><body><article class="markdown-body"><h1 id="run-computation-tools-and-submit-jobs-on-hgcc">Run Computation Tools and Submit Jobs on HGCC<a class="headerlink" href="#run-computation-tools-and-submit-jobs-on-hgcc" title="Permanent link"></a></h1>
-<h2 id="run-tools-on-interactive-node">Run tools on interactive node<a class="headerlink" href="#run-tools-on-interactive-node" title="Permanent link"></a></h2>
-<p><strong>Good practice to test your script/code</strong></p>
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">Run Computation Tools and Submit Jobs on HGCC</h1>
+
+<h2 id="toc_1">Test commands in an interactive session on computation node</h2>
+
 <ol>
-<li>Use command <strong><code>qlogin</code></strong> to login to one of the interactive computation nodes after you login to the gateway <strong>node00</strong></li>
-<li>Check available modules/tools by command <strong><code>module avail</code></strong><ul>
-<li>Load the module/tool you want to use, e.g., <strong><code>module load R/4.0.4</code></strong></li>
-<li>Check loaded modules by <strong><code>module list</code></strong></li>
-<li>Unload a software module by example command: <strong><code>module unload R/4.0.4</code></strong></li>
-<li>Unload all software modules by <strong><code>module purge</code></strong></li>
-<li><a href="https://lmod.readthedocs.io/en/latest/010_user.html">Module User Guide</a></li>
-</ul>
-</li>
-<li>Write scripts using text editors like <strong><code>Visual Studio Code</code>, <code>Sublime</code></strong> on your local computer under mounted cluster directories</li>
+<li>Open an interactive bash session on a computation node by <code>srun -N 1 -n 1 --pty bash -i</code>.</li>
+<li>Load required software modules by <code>spack load [software]</code>.</li>
+<li>Mount remote HGCC directory to your local computer.</li>
+<li>Write scripts using local text editors like <strong><code>Visual Studio Code</code>, <code>Sublime</code></strong>.</li>
+<li>Copy and paste to the interactive bash session.</li>
 </ol>
-<h3 id="r">R<a class="headerlink" href="#r" title="Permanent link"></a></h3>
-<ul>
-<li>Type <strong><code>R</code></strong> in the interactive session to initiate an R session</li>
-<li><strong>Copy R commands</strong> from your R script and <strong>Paste into the R session</strong></li>
-<li>Simple parallel computation can be enabled by using R packages <strong><code>parallel</code></strong> and <strong><code>foreach</code></strong>, see <strong><a href="https://nceas.github.io/oss-lessons/parallel-computing-in-r/parallel-computing-in-r.html">Quick Instructions of Parallel Computation</a></strong></li>
-<li>Tips<ul>
-<li>Provide full directory to the data files you want to read or write or plot</li>
-<li>Save figures as pdf into the disk to view your plots by R function <code>ggsave("temp.pdf")</code> or </li>
-</ul>
-</li>
-</ul>
-<div class="highlight"><pre>pdf(&quot;temp.pdf&quot;);
-plot(); 
-dev.off()
-</pre></div>
 
-<h3 id="pythonanaconda">Python/Anaconda<a class="headerlink" href="#pythonanaconda" title="Permanent link"></a></h3>
+<h3 id="toc_2">R</h3>
+
 <ul>
-<li>Load Anaconda module, e.g., <strong><code>module load  Anaconda3/5.2.0</code></strong></li>
-<li>Interactive <strong>python</strong> session<ol>
-<li>Type <strong><code>python</code></strong> in the interactive session to initiate a python session</li>
-<li><strong>Copy python commands</strong> from your python script and <strong>Paste into the python session</strong></li>
-</ol>
-</li>
-<li>Use <strong>Virtual Environment</strong> for access right to install python libraries<ol>
-<li>Example command to <strong>create</strong> a new virtual environment with name <strong>myenv</strong>: <strong><code>conda create --name myenv python=3.5 pandas numpy scipy scikit-learn statsmodels</code></strong></li>
-<li>List available virtual environments, <strong><code>conda env list</code></strong></li>
-<li><strong>Activate</strong> the environment with name <strong>myenv</strong>, <strong><code>conda activate myenv</code></strong></li>
-<li><strong>Install new libraries</strong> in an existing environment: <strong><code>conda install -n myenv package</code></strong></li>
-<li>Remember to <strong>deactivate</strong> your environment when you are done, <strong><code>conda deactivate</code></strong></li>
+<li>Load R module by <code>spack load r@4.4.0</code>.</li>
+<li>Type <strong><code>R</code></strong> in the interactive session to initiate an R session.</li>
+<li><strong>Copy R commands</strong> from your R script and <strong>Paste into the R session</strong>.</li>
+<li>Simple parallel computation can be enabled by using R packages <strong><code>parallel</code></strong> and <strong><code>foreach</code></strong>, see <strong><a href="https://nceas.github.io/oss-lessons/parallel-computing-in-r/parallel-computing-in-r.html">Quick Instructions of Parallel Computation</a></strong>.</li>
+<li>Tips
+
+<ul>
+<li>Provide full directory to the data files you want to read or write or plot.</li>
+<li>Save figures as pdf into the disk to view your plots by R function <code>ggplot2::ggsave(&quot;temp.pdf&quot;)</code>.</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_3">Python/Conda</h3>
+
+<ul>
+<li><strong>Python 3.11.7</strong> is installed on the cluster.</li>
+<li>Interactive <strong>python</strong> session:
+
+<ol>
+<li>Type <strong><code>python</code></strong> in the interactive session to initiate a python session.</li>
+<li><strong>Copy python commands</strong> from your python script and <strong>Paste into the python session</strong>.</li>
+</ol></li>
+<li>Use <strong>Virtual Environment</strong> for access right to install python libraries.
+
+<ol>
+<li>Load miniconda by <code>spack load miniconda3@24.3.0</code>.</li>
+<li>Run <code>conda init; source ~/.bashrc;</code> for once for using <code>conda</code>.</li>
+<li><strong>Create</strong> a new virtual environment with name <strong>myenv</strong>: <strong><code>conda create -n &quot;myenv&quot;</code></strong>.</li>
+<li><strong>List</strong> available virtual environments by <strong><code>conda env list</code></strong>.</li>
+<li><strong>Activate</strong> the environment with name <strong>myenv</strong>, <strong><code>conda activate ~/.conda/envs/myenv</code></strong>.</li>
+<li><strong>Install new libraries</strong> after activating your virtual environment: <strong><code>conda install -n myenv [package]</code></strong>.</li>
+<li> <strong>Deactivate</strong> your environment when you are done, <strong><code>conda deactivate</code></strong></li>
 <li><strong>Delete</strong> virtual environment when you no longer need to use it, <strong><code>conda remove -n myenv -all</code></strong> </li>
-</ol>
-</li>
-<li>Install python packages locally: <strong><code>pip install --user package</code></strong></li>
-<li>Install python virtual environment by <strong><code>pip</code></strong> and <strong><code>virtualenv</code></strong><ol>
-<li>Install <code>pip</code>. Already installed with Anaconda</li>
-<li>Install <code>virtualenv</code>: <code>python3 -m pip install --user virtualenv</code></li>
-<li>Creating a virtual environment <code>myenv</code> under current directory: <code>python3 -m venv myenv</code> </li>
-<li>Activate a virtual environment <code>myenv</code>: <code>source myenv/bin/activate</code></li>
-<li>Confirm you are in the virtual environment by <code>which python</code>. It should be in the <code>myenv</code> directory.</li>
-<li>Deactivate the virtual environment by <code>deactivate</code></li>
-<li>Now that you’re in your virtual environment you have the access right to install packages. <code>python3 -m pip install package</code> </li>
-</ol>
-</li>
-<li>Check your python path which is the directory python use to look for libraries: <strong><code>echo $PYTHONPATH</code></strong></li>
-<li>Add additional directory to your python path. The following example command could be added into your <strong><code>~/.bashrc.user</code></strong> file: </li>
+<li>Get help with <code>conda -h</code>.</li>
+</ol></li>
 </ul>
-<div class="highlight"><pre>EXPORT PATHONPATH=PYTHONPATH=$PYTHONPATH:/home/jyang/.local/lib/python3.5/site-packages
-</pre></div>
 
-<h3 id="plink">PLINK<a class="headerlink" href="#plink" title="Permanent link"></a></h3>
+<h3 id="toc_4">PLINK</h3>
+
 <p><strong>PLINK</strong> is a powerful and useful genetic data analysis tool to convert data format, QC, calculate MAF and HWE p-value, calculate kinship matrix, calculate top Principal Components, conduct single variant genetic association studies. Common data format is <code>BED/BIM/FAM</code>.</p>
+
 <ul>
-<li>Load <strong>plink</strong> module, e.g., <strong><code>module load  plink/1.90b53</code></strong></li>
-<li>Quick command to look at plink input arguments: <code>plink -h</code></li>
-<li>See <a href="https://www.cog-genomics.org/plink/">PLINK 1.9 Manual</a></li>
+<li>Load <strong>plink</strong> module, e.g., <strong><code>spack load plink2@2.00a4.3</code></strong></li>
+<li>Quick command to look at plink input arguments: <code>plink2 -h</code>.</li>
+<li>See <a href="https://www.cog-genomics.org/plink/2.0/">PLINK 2 Website</a>.</li>
+<li>Unload plink module by <code>spack unload plink2@2.00a4.3</code>.</li>
 </ul>
-<h3 id="bcftools">BCFTools<a class="headerlink" href="#bcftools" title="Permanent link"></a></h3>
-<p><strong>BCFTools</strong> is a fast tool to manipulate <code>sorted/bgzipped/tabixed</code> VCF files of genotype data</p>
+
+<h3 id="toc_5">BCFTools</h3>
+
+<p><strong>BCFTools</strong> is a fast tool to manipulate <code>sorted/bgzipped/tabixed</code> VCF files of genotype data.</p>
+
 <ul>
-<li>Load Tabix module, <strong><code>module load tabix/0.2.6</code></strong></li>
-<li>Load bcftools module, e.g., <strong><code>module load  bcftools/1.9</code></strong></li>
-<li>Quick look at bcftools input arguments, <strong><code>bcftools -h</code></strong></li>
-<li>See <a href="https://samtools.github.io/bcftools/bcftools.html">BCFTools Manual</a></li>
+<li>Load Tabix module, <strong><code>spack load tabix@2013-12-16</code></strong>.</li>
+<li>Load bcftools module, <strong><code>spack load bcftools@1.19</code></strong>.</li>
+<li>Quick look at bcftools input arguments, <strong><code>bcftools -h</code></strong>.</li>
+<li>See <a href="https://samtools.github.io/bcftools/bcftools.html">BCFTools Manual</a>.</li>
 </ul>
-<h3 id="bedtools">BEDTools<a class="headerlink" href="#bedtools" title="Permanent link"></a></h3>
+
+<h3 id="toc_6">BEDTools</h3>
+
 <p><strong>BEDTools</strong> utilities are a Swiss-army knife of tools allows one to <strong>intersect, merge, count, complement, and shuffle genomic intervals</strong> from multiple files in widely-used genomic file formats such as <a href="https://genome.ucsc.edu/FAQ/FAQformat.html#format5.1">BAM</a>, <a href="https://genome.ucsc.edu/FAQ/FAQformat.html#format1">BED</a>, <a href="https://genome.ucsc.edu/FAQ/FAQformat.html#format3">GFF</a>/<a href="https://genome.ucsc.edu/FAQ/FAQformat.html#format4">GTF</a>, <a href="https://genome.ucsc.edu/FAQ/FAQformat.html#format10.1">VCF</a>. While each individual tool is designed to do a relatively simple task (e.g., intersect two interval files), quite sophisticated analyses can be conducted by combining multiple bedtools operations on the UNIX command line.</p>
+
 <ul>
-<li>Load bedtools module, e.g., <strong><code>module load bedtools/2.27.0</code></strong></li>
-<li>Quick look at bedtools input arguments, <strong><code>bedtools -h</code></strong></li>
+<li>Load bedtools module, e.g., <strong><code>spack load bedtools2@2.31.1</code></strong>.</li>
+<li>Quick look at bedtools input arguments, <strong><code>bedtools -h</code></strong>.</li>
 <li>Bedtools can be used to intersect one SNP file and one annotation file to annotate SNPs with respect to genetic features.</li>
 <li>See <a href="https://bedtools.readthedocs.io/en/latest/">BEDTools Manual</a></li>
 </ul>
-<h2 id="submit-jobs-by-qsub">Submit Jobs by <code>qsub</code><a class="headerlink" href="#submit-jobs-by-qsub" title="Permanent link"></a></h2>
-<h3 id="create-a-bash-script-and-submit-a-single-job">Create a bash script and submit a single job<a class="headerlink" href="#create-a-bash-script-and-submit-a-single-job" title="Permanent link"></a></h3>
-<p>Create an example bash script by <code>touch phase.sh</code> and write the following commands into this file (see example shell script in <code>/home/jyang/Scripts/Shell_Scripts/phase.sh</code> on HGCC):</p>
-<div class="highlight"><pre>#!/bin/bash
 
-# setup bash variables to take input argument contents
-vcf_file=$1
-out_prefix=$2
-n_thread=$3
+<h2 id="toc_7">Submit Jobs by <code>sbatch</code>.</h2>
 
-# print out variable contents and log message
-echo vcf file direction $vcf_file
-echo output file prefix $out_prefix
-echo number of threads to run $n_thread
+<h3 id="toc_8">Create a bash script and submit a single job</h3>
 
-echo Phase a VCF file by eagle v2.3
+<p>Create an example bash script by <code>touch star_genome_create.sh</code> and write the following commands into this file (see example shell script in <code>/home/jyang51/yangfss2/public/ExampleScripts/star_genome_create.sh</code> on HGCC):</p>
 
-# command to run the phase tool eagle
-/home/jyang/local/bin/eagle --geneticMapFile=/home/jyang/lib/Eagle_v2.3.5/tables/genetic_map_hg19_withX.txt.gz \
---vcfOutFormat=z --outPrefix=${out_prefix}.Phased --numThreads ${n_thread} \
---vcf=${vcf_file} 2&gt;&amp;1 &gt; ${out_prefix}.eagle.out.txt
+<div><pre><code class="language-none">#!/bin/bash
+#SBATCH --job-name=STAR_genomeGenerate
+#SBATCH --nodes=1
+#SBATCH --mem=128G ## request memory
+#SBATCH --cpus-per-task=16 ## request cpu/cores 
+#SBATCH --array=1 ## a single job; or remove this line of specifying an array job
+#SBATCH --time=24:00:00 ## specify job running time for 24 hrs
+#SBATCH --output=./SLURM_OUT/%x_%A_%a.out ## save slurm output 
+#SBATCH --error=./SLURM_OUT/%x_%A_%a.err ## save slurm errors
 
-exit
-</pre></div>
+spack load miniconda3@24.3.0
+conda activate ~/.conda/envs/myenv
+
+### Create genome index
+echo Running STAR genomeGenerate ...
+STAR --runThreadN 16 --runMode genomeGenerate \
+--genomeDir /home/jyang51/yangfss2/public/GenomeIndex/star_indexes/hg38 \
+--genomeFastaFiles /home/jyang51/yangfss2/public/GenomeIndex/iGenome/hg38_2021/genome.fa \
+--sjdbGTFfile /home/jyang51/yangfss2/public/GenomeIndex/iGenome/hg38_2021/gencode.v46.basic.annotation.gtf \
+--sjdbOverhang 150
+
+conda deactivate
+
+exit</code></pre></div>
 
 <ol>
-<li>This example bash script will take three input arguments and pass the input contents to variables <code>vcf_file</code>, <code>out_prefix</code>, and <code>n_thread</code> </li>
-<li>The cluster will only run all commands within the submitted shell script. Make sure to write your results into the hard drive. </li>
+<li>This example bash script will generate genome index of human genome of hg38 assembly for running the alignment tool <code>STAR</code> for mapping RNAseq data. </li>
 <li>Use command <code>echo</code> to print out log messages or variable contents to debug and check the job status.</li>
-<li>Make this shell script executable: <code>chmod 755 phase.sh</code></li>
-<li>Submit this shell script as a job requesting 4 cores with three input arguments: 
-<div class="highlight"><pre>qsub -q b.q -cwd -j y -pe smp 4 /home/jyang/Scripts/Shell_Scripts/example_single_job_phase.sh [vcf_file_directory] [output_file_prefix] 4
-</pre></div></li>
+<li> Make this shell script executable: <code>chmod 755 phase.sh</code>.</li>
+<li> Submit a job to run this shell script: 
+<code>
+sbatch /home/jyang51/yangfss2/public/ExampleScripts/star_genome_create.sh
+</code></li>
 </ol>
-<h4 id="remarks">Remarks<a class="headerlink" href="#remarks" title="Permanent link"></a></h4>
-<p>If one want to use the <code>/scratch</code> space local to each computation node to improve computation efficiency by avoiding heavy I/O, the bash script need to be updated to include commands creating a temporary directory <code>${TMPDIR}</code> under the <code>/scratch</code> space (<strong>2GB</strong> per node). </p>
-<div class="highlight"><pre>#!/bin/bash
 
+<h4 id="toc_9">Remarks about using the <code>/scratch</code> space for I/O intensive jobs</h4>
+
+<p>If one want to use the <code>/scratch</code> space to improve computation efficiency by avoiding heavy I/O, the bash script need to be updated to include commands creating a temporary directory <code>${TMPDIR}</code> under the <code>/scratch</code> space (84TB shared). </p>
+
+<div><pre><code class="language-none">#!/bin/bash
+
+# Generate tmp directory name
 TMP_NAME=`/usr/bin/mktemp -u XXXXXXXX`
 
-# For single job
-TMPDIR=&quot;/scratch/${JOB_ID}_${TMP_NAME}&quot;
+# Create tmp directory
+# TMPDIR=&quot;/scratch/${SLURM_JOB_ID}_${TMP_NAME}&quot; # include slurm job id in the name
+TMPDIR=&quot;/scratch/${TMP_NAME}&quot;
+echo $TMPDIR
+mkdir -p &quot;$TMPDIR&quot;
 
-if [ -e $TEMPDIR ]; then
-  echo &quot;Error. Scratch dir already exists on `hostname`&quot;
-  exit
-else
-   mkdir $TEMPDIR
-fi
+# Copy input data files into the temporary directory
+rsync /home/jyang51/yangfss2/public/ExampleData/Sample_ID.txt ${TMPDIR}/
 
-# setup bash variables to take input argument contents
-vcf_file=$1
-out_prefix=$2
-n_thread=$3
-
-# copy input data files into the temporary directory
-cp /home/jyang/lib/Eagle_v2.3.5/tables/genetic_map_hg19_withX.txt.gz ${TEMPDIR}/genetic_map_hg19_withX.txt.gz
-cp ${vcf_file} ${TEMPDIR}/temp.vcf.gz
-
-# Run the phase tool eagle with data files under the temporary directory
-# Write to the temporary directory
-/home/jyang/local/bin/eagle --geneticMapFile=${TEMPDIR}/genetic_map_hg19_withX.txt.gz \
---vcfOutFormat=z --outPrefix=${TEMPDIR}/Phased --numThreads ${n_thread} \
---vcf=${TEMPDIR}/temp.vcf.gz 2&gt;&amp;1 &gt; ${TEMPDIR}/eagle.out.txt
+# Run the following command under the temporary directory
+cd ${TMPDIR}/
+paste Sample_ID.txt Sample_ID.txt  &gt; output_sample_ID_2.txt
 
 # Copy results back to hard disk
-cp ${TEMPDIR}/Phased.vcf.gz ${out_prefix}.Phased.vcf.gz
-cp ${TEMPDIR}/eagle.out.txt ${out_prefix}.eagle.out.txt
+rsync ${TMPDIR}/output_sample_ID_2.txt /home/jyang51/yangfss2/public/ExampleData/
 
 # Remove temporary directory
-rm -f -r ${TEMPDIR}
+rm -f -r ${TMPDIR}
 
-exit
-</pre></div>
+exit</code></pre></div>
 
-<ul>
-<li>After copying data files from hard disk to this temporary directory by <code>cp</code> or <code>rsync</code> <ol>
-<li>Run the analysis commands with input data files under the temporary directory</li>
-<li>Write results to this temporary directory </li>
-<li>Copy results back to the hard disk </li>
-<li>Erase the created temporary directory</li>
+<ol>
+<li>Copying data files from your data drive to this temporary directory by <code>rsync</code>.Run the analysis commands with input data files under the temporary directory.</li>
+<li>Write results to this temporary directory.</li>
+<li>Copy results back to your data drive.</li>
+<li>Erase the created temporary directory.</li>
 </ol>
-</li>
-</ul>
-<h3 id="submit-array-jobs">Submit Array Jobs<a class="headerlink" href="#submit-array-jobs" title="Permanent link"></a></h3>
+
+<h3 id="toc_10">Submit Array Jobs</h3>
+
 <p><strong>Array jobs</strong> is a convenient way to submit multiple repetitive jobs that only differs by one input variables, e.g., 10000 repetitive simulations, association study for all 20K genome-wide genes. </p>
-<ul>
-<li>The following example commands to submit an Array job will submit repetitive jobs to run the same bash scripts <code>example_array_job_segment_VCF.sh</code> for <code>1703</code> times, with the only difference of <strong>job id <code>${SGE_TASK_ID}</code></strong>. This command will only push <code>100</code> jobs into the job queue at the same time. </li>
-</ul>
-<div class="highlight"><pre># WGS VCF file directory
-vcf_dir=/mnt/YangFSS/data2/AMP-AD/ROSMAP/WGS_JointCall
-
-# bed file directory
-bed_file=/mnt/YangFSS/data2/AMP-AD/ROSMAP/WGS_JointCall/LDdetect_SegmentedVCF/lddetect_1KG_EUR.bed
-
-# output directory
-out_dir=/mnt/YangFSS/data2/AMP-AD/ROSMAP/WGS_JointCall/LDdetect_SegmentedVCF
-
-# Submit array job
-qsub -q b.q -j y -cwd -N segVCF -t 1-1703 -tc 100 \
-/home/jyang/Scripts/Shell_Scripts/example_array_job_segment_VCF.sh ${vcf_dir} ${bed_file} ${out_dir}
-</pre></div>
 
 <ul>
-<li>The shell script has the following contents:</li>
+<li>The following example commands to submit an Array job will submit repetitive jobs to run the same bash scripts <code>star_sbatch.sh</code> for <code>52</code> times, with the only difference of <strong>slurm job id <code>$SLURM_ARRAY_TASK_ID</code></strong> for getting the corresponding sample ID.</li>
 </ul>
-<div class="highlight"><pre>#!/usr/bin/bash
 
-vcf_dir=$1
-seg_bed=$2
-out_dir=$3
+<div><pre><code class="language-none">sbatch /home/jyang51/yangfss2/public/ExampleScripts/star_sbatch.sh /home/jyang51/yangfss2/public/ExampleData</code></pre></div>
 
-module load tabix/0.2.6
+<ul>
+<li>The shell script <code>star_sbatch.sh</code> has the following contents:</li>
+</ul>
 
-## Obtain the corresponding input filename from ${seg_bed} input file with respect to the Array Job ID: ${SGE_TASK_ID}
+<div><pre><code class="language-none">#!/bin/bash
+#SBATCH --job-name=MAP_STAR
+#SBATCH --nodes=1
+#SBATCH --mem=64G
+#SBATCH --cpus-per-task=8
+#SBATCH --array=1-52
+#SBATCH --time=24:00:00
+#SBATCH --output=./SLURM_OUT/%x_%A_%a.out
+#SBATCH --error=./SLURM_OUT/%x_%A_%a.err
 
-line=`head -n ${SGE_TASK_ID} $seg_bed | tail -n1`
-echo Segment VCF for $line
+#### Print the task id.
+echo &quot;My SLURM_ARRAY_TASK_ID: &quot; $SLURM_ARRAY_TASK_ID
 
-######## Create temp directory
+output_dir=$1
+echo &quot;Output file directory: $output_dir&quot;.
+
+##
+data_dir=/home/jyang51/yangfss2/projects/Bill_Li_RNAseq/BC_Biomarker_Normal_Biopsy/LBI13454-118133
+
+# Generate tmp directory name
 TMP_NAME=`/usr/bin/mktemp -u XXXXXXXX`
-TEMPDIR=&quot;/scratch/${JOB_ID}_${SGE_TASK_ID}_${TMP_NAME}&quot;
 
-if [ -e $TEMPDIR ]; then
-  echo &quot;Error. Scratch dir already exists on `hostname`&quot;
-  exit
-else
-   mkdir $TEMPDIR
-fi
+# Create tmp directory
+# TMPDIR=&quot;/scratch/${SLURM_JOB_ID}_${TMP_NAME}&quot; # include slurm job id in the name
+TMPDIR=&quot;/scratch/${TMP_NAME}&quot;
+echo $TMPDIR
+mkdir -p &quot;$TMPDIR&quot;
+cd $TMPDIR
 
-######### Segment VCFs 
-## Write results to temp directory
-## You may also copy your input data files to temp directory if needed
+## Determine sample ID
+sample=$(head -n ${SLURM_ARRAY_TASK_ID} /home/jyang51/yangfss2/public/ExampleData/Sample_ID.txt | tail -n1)
 
-        chr=$(echo ${line} | awk &#39;{print $1}&#39;)
-        pos_start=$(echo ${line} | awk &#39;{print $2}&#39;)
-        pos_end=$(echo ${line} | awk &#39;{print $3}&#39;)
-        seg_name=$(echo ${line} | awk &#39;{print $4}&#39;)
-        echo $chr $pos_start $pos_end $seg_name
+## Copy raw fastq files to temp idrectory under /scratch
+rsync ${data_dir}/RawData/H7JNJDSXC_s1_1_SM_${sample}.fastq.gz ${TMPDIR}/
+rsync ${data_dir}/RawData/H7JNJDSXC_s1_2_SM_${sample}.fastq.gz ${TMPDIR}/
 
-        echo VCF ${vcf_dir}/NIA_JG_1898_samples_GRM_WGS_b37_JointAnalysis01_2017-12-08_${chr}.recalibrated_variants.vcf.gz 
+###### Scripts that will be run for 52 times to Map 52 samples
+## The sample ID will be determined with the given Array_Task_ID from 1 to 52;
+## Three input variables are taken by the star_map.sh script;
+### Use STAR 2.7.11a
+spack load miniconda3@24.3.0
+conda activate ~/.conda/envs/myenv
 
-## Grep header
-        tabix -h ${vcf_dir}/NIA_JG_1898_samples_GRM_WGS_b37_JointAnalysis01_2017-12-08_${chr}.recalibrated_variants.vcf.gz | grep &quot;CHROM&quot; &gt; ${TEMPDIR}/${seg_name}.vcf
+## create temp directory to save map output files
+mkdir -p ${TMPDIR}/MAP_OUT/
 
-## Tabix genotype
-        tabix ${vcf_dir}/NIA_JG_1898_samples_GRM_WGS_b37_JointAnalysis01_2017-12-08_${chr}.recalibrated_variants.vcf.gz ${chr}:${pos_start}-${pos_end} &gt;&gt; ${TEMPDIR}/${seg_name}.vcf
-        bgzip -f ${TEMPDIR}/${seg_name}.vcf
-        tabix -f ${TEMPDIR}/${seg_name}.vcf.gz
+# Allow use 64GB memory
+STAR --genomeDir /home/jyang51/yangfss2/public/GenomeIndex/star_indexes/hg38/ \
+--runThreadN ${n_threads} \
+--limitBAMsortRAM  64000000000 --genomeLoad NoSharedMemory \
+--readFilesIn ${TMPDIR}/H7JNJDSXC_s1_1_SM_${sample}.fastq.gz  ${TMPDIR}/H7JNJDSXC_s1_2_SM_${sample}.fastq.gz  \
+--outFileNamePrefix ${TMPDIR}/MAP_OUT/${sample}. \
+--readFilesCommand zcat \
+--sjdbInsertSave All \
+--quantMode TranscriptomeSAM GeneCounts \
+--outSAMtype BAM SortedByCoordinate \
+--outSAMunmapped None \
+--outSAMattributes Standard
 
-######## Copy results back to output directory  
-echo copy results back to $out_dir
-cp -f ${TEMPDIR}/${seg_name}.vcf.gz ${out_dir}/
-cp -f ${TEMPDIR}/${seg_name}.vcf.gz.tbi ${out_dir}/
+## Copy output files to the output directory
+rsync ${TMPDIR}/MAP_OUT/ ${output_dir}/
 
-######## REMOVE temporary data directory
-rm -fr ${TEMPDIR}
+conda deactivate
 
-exit
-</pre></div>
+exit</code></pre></div>
 
 <ul>
-<li>The example bash script is written to select the corresponding VCF segment information from <strong><code>${seg_bed}</code> input file</strong> by the line number given by the <strong>job id <code>${SGE_TASK_ID}</code></strong></li>
-<li>Then subset the corresponding subset from the input VCF file to create a gzipped/tabixed segment VCF file</li>
-<li>This example uses the scratch space for writing outputs and then copy the output files to data drive afterwards. The script can be modified to directly write on the data drive.</li>
+<li>The example bash script is written to select the corresponding sample ID from <strong><code>/home/jyang51/yangfss2/public/ExampleData/Sample_ID.txt</code></strong> by the <strong>slurm job id <code>$SLURM_ARRAY_TASK_ID</code></strong>.</li>
+<li>Copy raw fastq data to temporary directry under <code>/scratch/</code>.</li>
+<li>Write outputs to the temporary directory.</li>
+<li>Copy the output files to data drive afterwards, with output file directory given by the first input argument. </li>
+<li>Delete temporary directory.</li>
 </ul>
-<h3 id="submit-a-r-job">Submit a R job<a class="headerlink" href="#submit-a-r-job" title="Permanent link"></a></h3>
-<p>HGCC requires wrapping <strong>R scripts</strong> in a <strong>Bash Script</strong> and then submitting the bash script as a job. The following example commands submit a job for a R script wrapped in a bash script.</p>
-<div class="highlight"><pre>qsub -q b.q -cwd -j y -pe smp 1 /home/jyang/Scripts/R_scripts/example_Rjob.sh 
-</pre></div>
 
-<ul>
-<li>The executable shell script <code>example_Rjob.sh</code> has the following content </li>
-</ul>
-<div class="highlight"><pre>#!/usr/bin/bash
 
-module load  R/3.4.3
 
-echo Run R script directly
-/home/jyang/Scripts/R_scripts/example_Rjob.r 1 2 3
 
-echo Run R script by Rscript command
-Rscript /home/jyang/Scripts/R_scripts/example_Rjob.r 1 2 3
+</body>
 
-exit
-</pre></div>
-
-<ul>
-<li>The wrapped R script <code>example_Rjob.r</code> can be run directly if it is made executable by <code>chmod 755 example_Rjob.r</code>, or by using the <code>Rscript</code> command tool. </li>
-<li>The wrapped R script <code>example_Rjob.r</code> has the following content</li>
-</ul>
-<div class="highlight"><pre>#!/usr/bin/env Rscript
-
-Sys.setlocale(&quot;LC_ALL&quot;, &quot;C&quot;)
-.libPaths(&quot;/home/jyang/R/x86_64-pc-linux-gnu-library/3.4&quot;)
-options(stringsAsFactors=F)
-
-library(glmnet)
-
-### Load input arguments
-args=(commandArgs(TRUE))
-print(args)
-if(length(args)==0) {
-        stop(&quot;Error: No arguments supplied!&quot;)
-} else {
-        var1 = args[[1]]
-        var2 = args[[2]]
-        var3 = args[[3]]
-}
-
-print(list(var1 = var1, var2 = var2, var3 = var3))
-</pre></div>
-
-<h3 id="submit-a-python-job">Submit a Python job<a class="headerlink" href="#submit-a-python-job" title="Permanent link"></a></h3>
-<ul>
-<li>Similar rules can be followed as submitting the R job. Replace the R script by a Python script <code>example.py</code> with content like</li>
-</ul>
-<div class="highlight"><pre>#! /usr/bin/python
-
-import sys
-import io
-import os
-import pandas as pd
-import numpy as np
-from numpy import *
-from dfply import *
-
-a = 2 + 4
-print(a)
-</pre></div>
-
-<ul>
-<li>Use command tool <code>python</code> to run a non-executable python script, <code>python /home/jyang/Scripts/Python_scripts/example.py</code></li>
-</ul>
-<h3 id="number-of-cores-to-request">Number of cores to request<a class="headerlink" href="#number-of-cores-to-request" title="Permanent link"></a></h3>
-<ul>
-<li>Check current availability of the cluster: <code>qstat -f -u '*'</code></li>
-<li>Choose the number of requested cores to the number of available cores on the nodes, in order to have your job accepted by the scheduler sooner</li>
-<li>Each core has <code>8GB</code> memory. Request an appropriate number of cores to accommodate the memory usage of your job, so that it will not fail in the middle.</li>
-<li>For tools that can enable parallel computation with multiple threads, make sure to change the default number of threads set by the tool to at least the number of cores you request.</li>
-</ul>
-<h2 id="additional-resources">Additional Resources<a class="headerlink" href="#additional-resources" title="Permanent link"></a></h2>
-<ul>
-<li>Need help: submit a ticket at <a href="https://hgcc.genetics.emory.edu:8443/">https://hgcc.genetics.emory.edu:8443/</a> after login to Emory VPN.</li>
-<li><a href="https://linuxcommand.org/tlcl.php">The Linux Command Line</a> book is recommended to read ahead</li>
-</ul></article></body></html>
+</html>

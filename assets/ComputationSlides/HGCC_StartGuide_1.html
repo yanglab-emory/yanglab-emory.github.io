@@ -331,12 +331,12 @@ kbd {
 
 <body>
 
-<h1 id="toc_0">Introduction to Human Genetics Compute Cluster (HGCC)</h1>
+<h1 id="toc_0">Introduction to New Human Genetics Compute Cluster (HGCC)</h1>
 
 <h2 id="toc_1">HGCC Cluster Structure</h2>
 
 <ul>
-<li><a href="https://hgcc.emory.edu"><strong>HGCC Website</strong></a> : Access within Emory network or VPN</li>
+<li><a href="https://hgcc.emory.edu"><strong>New HGCC Website</strong></a> : Access within Emory network or after login to Emory VPN.</li>
 <li><strong>Operating System:</strong> Red Hat Enterprise Linux 8<br></li>
 <li><strong>Shared Storage (beegfs)</strong> : 1.3 PB (10TB per lab)</li>
 <li><strong>1 Head/Gateway/Login Node <code>head.hgcc</code></strong>; <strong>1 Data Transfer Node (DTN)</strong>
@@ -344,8 +344,7 @@ kbd {
 <ul>
 <li>No CPU or memory intensive programs are allowed on the headnode and the DTN. </li>
 <li>2CPU and 8G RAM per user</li>
-<li>Scheduler time limit: 30 days</li>
-<li>Default job time: 1 hour</li>
+<li>Default interactive job time: 1 hour</li>
 </ul></li>
 <li><strong>14 Compute Nodes of the same Partition</strong>:
 
@@ -360,24 +359,24 @@ kbd {
 <ul>
 <li>84 TB, first come first serve</li>
 <li>All files will be deleted after 30 days </li>
-<li>Recomend to use for jobs that need frequent large data file access.</li>
+<li>Recomend to use for jobs that need frequent large data file access, I-O intensive jobs.</li>
 </ul></li>
-<li><p><strong>Data Drive of YangLab</strong>: <code>/nfs/yangfss2/data/</code></p>
+<li><strong>Data Drive of YangLab</strong>: <code>/nfs/yangfss2/data/</code>
 
 <ul>
 <li>This is our previous data drive 2 (350TB) in the old cluster. Our data drive 1 (45TB) is retired.</li>
 <li>A softlink of the datadrive has been created under your home directory: <code>~/yangfss2/</code></li>
-<li><code>commons/</code> : User work directories. 
+<li><code>commons/[user]</code> : User work directories. 
 
 <ul>
 <li>All data files under your user work directories on our lab data drive 1 and 2 on the old HGCC cluster are copied here. </li>
 <li>All files on the old hgcc main disk <code>icebreaker</code> are not accessible and not coped into this new system.</li>
 </ul></li>
-<li><code>shared/</code> : Shared data files and softwares for the lab.</li>
+<li><code>shared/**</code> : Shared data directories and software directory <code>shared/Software/</code> for the lab.</li>
 <li><code>projects/</code> : Project directories shared by the lab.</li>
-<li><code>public/</code> : Files to be shared with other groups. Public to all users on the cluster.</li>
+<li><code>public/</code> : Files to be shared with other groups. Public to be viewed by all users on the cluster.</li>
 </ul></li>
-<li><p><a href="https://linuxcommand.org/tlcl.php"><strong>The Linux Command Line</strong></a> book is recommended to read ahead</p></li>
+<li><strong>All files are not backed up on the cluster.</strong></li>
 </ul>
 
 <p><img src="./hgcc_structure.png" alt="hgcc_architecture"></p>
@@ -392,7 +391,7 @@ kbd {
 <li><a href="https://it.emory.edu/vpntools/index.html"><strong>BIG-IP Edge Client</strong></a> is needed for VPN connection.</li>
 <li>Contact <a href="https://emory.service-now.com/sp?sysparm_stack=no"><strong>Emory IT</strong></a> if further help is needed.</li>
 </ul></li>
-<li><p><strong>Login using <code>ssh</code></strong> by typing the following command in respective terminal with your Emory Net ID and Emory password:
+<li><p><strong>Login using <code>ssh</code></strong> by typing the following command in the terminal with your Emory Net ID and Emory password:
 <code>ssh &lt;Emory_Net_ID&gt;@hgcc.emory.edu</code></p>
 
 <ul>
@@ -446,7 +445,7 @@ kbd {
 
 <ul>
 <li>See <a href="https://www.hypexr.org/linux_scp_help.php">Example usage</a>
-<code>scp &lt;path_to_file&gt; &lt;Emory_Net_ID&gt;@hgcc.emory.edu:&lt;destination_path_on_hgcc&gt;</code></li>
+<code>scp &lt;path_to_local_file&gt; &lt;Emory_Net_ID&gt;@hgcc.emory.edu:&lt;destination_remote_path_on_hgcc&gt;</code></li>
 </ul></li>
 </ol>
 
@@ -475,32 +474,35 @@ kbd {
 <h2 id="toc_8">Strategies for Using HGCC</h2>
 
 <ol>
-<li>Only use headnode to download/move data and submit jobs (<strong>Never run large computation jobs on headnode</strong>)</li>
-<li>Login to an interactive compute node by command <code>srun -N 1 -n 1 --pty bash -i</code>.
+<li><strong>Only use headnode to download/move data and submit jobs. Never run large computation jobs on headnode.</strong></li>
+<li><strong>Login to an interactive compute node by command <code>srun -N 1 -n 1 --pty bash -i</code>.</strong>
 
 <ul>
 <li><code>-N</code> is the number of nodes, <code>-n</code> is number of tasks, <code>--pty</code> gives you a pseudo terminal that runs bash, <code>-i</code> gives you interaction. </li>
 <li>Use <strong>Interactive bash session</strong> for testing your jobs.</li>
 <li>Multiple interactive sessions could be opened.</li>
 </ul></li>
-<li>Wrap your jobs in shell scripts and submit jobs to compute node by <code>sbatch</code> under headnode. 
+<li><strong>Wrap your jobs in shell scripts and submit jobs to compute node by <code>sbatch</code> under headnode.</strong>
 
 <ul>
-<li><a href="https://slurm.schedmd.com/job_array.html"><strong>Job Array</strong></a> is recommended for a large number of jobs.</li>
+<li><a href="https://slurm.schedmd.com/job_array.html"><strong>Job Array</strong></a> is recommended for a large number of jobs of the same function.</li>
 <li>Think about breaking your one big job into multiple small jobs/steps and submit array jobs. Multiple small jobs may be more efficient than a single large job. </li>
 <li>Default running time for a job is up to <strong>30 days</strong></li>
 </ul></li>
-<li>Use scratch space (<strong>84TB</strong>) <code>/scratch/</code> to avoid extensive I/O between compute node memory and storage disks. 
+<li><strong>Use scratch space (</strong>84TB<strong>) <code>/scratch/</code> to avoid extensive I/O between compute node memory and storage disks.</strong> 
 
 <ol>
-<li>Create temperary working directory under the scratch directory. </li>
-<li>Copy data into temperary working directory in the scratch space. </li>
-<li>Write output files into the temperary working directory. </li>
-<li>Copy output files back to your storage.</li>
-<li>Delete temperary working directory.</li>
+<li>Create temperary working directory under the scratch directory, <code>mkdir -p /scratch/tmp_jyang51/</code>, with a unique directory name <code>tmp_jyang51</code>. </li>
+<li>Copy data into temperary working directory in the scratch space, <code>rsync [path_to_data_file]/[data_file_name] /scratch/tmp_jyang51/</code>. </li>
+<li>Write output files into the temperary working directory, <code>/scratch/tmp_jyang51/</code>. </li>
+<li>Copy output files back to your storage, <code>rsync /scratch/tmp_jyang51/ [path_to_output_files]/</code>.</li>
+<li>Delete temperary working directory, <code>rm -rf /scratch/tmp_jyang51</code>.</li>
 <li>All files in the scratch space will be deleted after 30 days.</li>
 </ol></li>
 <li><strong>Do not make another copy of the same data unless you need to make changes.</strong></li>
+<li><strong>Delete files that you will no longer to use.</strong></li>
+<li><strong>Keep your working directoreis organized and cleaned.</strong></li>
+<li><strong>Write <code>README.md</code> file for each data directory.</strong></li>
 </ol>
 
 <h2 id="toc_9">Using a Software on HGCC</h2>
@@ -511,8 +513,13 @@ kbd {
 <li>Use command <code>spack find -x</code> to list all installed software modules on HGCC.</li>
 <li>Use command <code>spack find --loaded</code> to list all loaded software modules.</li>
 <li>Check if an executible file of an installed or loaded software is available under <code>${PATH}</code> by <code>which [software_name]</code>.</li>
-<li>Add a symbolic link of the executible file under <code>${PATH}</code> by <code>ln -s [directory_to_executible_file]</code> to avoid typing full directory of the executible file.</li>
+<li>Add a symbolic link of the executible file under <code>${PATH}</code> to avoid typing full directory of the executible file. </li>
 </ol>
+
+<div><pre><code class="language-none">export PATH=&quot;~/.local/bin:$PATH&quot; # add local directory to PATH. add this to ~/.bashrc file to avoid running this for each session.
+echo $PATH; # show current PATH directories
+cd ~/.local/bin; #
+ln -s [directory_to_executible_file]; # create symbolic link to the software</code></pre></div>
 
 <h3 id="toc_11">Using a software installed on the cluster by <code>spack</code></h3>
 
@@ -532,36 +539,31 @@ kbd {
 <h3 id="toc_12">Install a software without root access</h3>
 
 <ol>
-<li>Install software under user home directory, e.g., <code>~/.local/</code></li>
-<li>Install python libraries by <strong><code>pip --user [package]</code></strong>. Or search &quot;install without root access&quot;, &quot;install with specificed installation directory&quot;. The installation directory should be those you have writting access to. </li>
+<li>Install software under user home directory, e.g., <code>~/.local/</code>. Include <code>~/.local/bin/</code> in the <code>$PATH</code> environment variable. Create a symbolic link to software executible file under <code>~/.local/bin/</code>.</li>
+<li>Create a virtual python environment by <code>conda</code> to install python libraries under your virtual python environment. </li>
 <li>Submit a ticket through the HGCC website to request a software to be installed by IT.</li>
 </ol>
 
 <h3 id="toc_13">Share installed software with the lab</h3>
 
 <ul>
-<li>Make a soft link of the executible tool under <code>/nfs/yangfss2/data/shared/bin</code> by the following commands</li>
+<li>Make a soft link of the executible tool under <code>/nfs/yangfss2/data/shared/bin</code> by the following commands:</li>
 </ul>
 
-<div><pre><code class="language-none">cd /nfs/yangfss2/data/shared/bin
+<div><pre><code class="language-none">export PATH=&quot;/nfs/yangfss2/data/shared/bin:$PATH&quot;; # include this line of command in your `~/.bashrc` file to automatically run this for each session.
+cd /nfs/yangfss2/data/shared/bin
 ln -s [tool_directory]</code></pre></div>
 
-<ul>
-<li><p>Add <code>/nfs/yangfss2/data/shared/bin</code> into the <code>${PATH}</code> environment variable by including the following command line in your <code>~/.bashrc</code> file </p>
-
-<p><code>export PATH=/nfs/yangfss2/data/shared/bin:$PATH</code></p></li>
-</ul>
-
-<h2 id="toc_14">Setup one&#39;s <code>.bashrc</code> file</h2>
+<h2 id="toc_14">Setup one&#39;s <code>~/.bashrc</code> file</h2>
 
 <ul>
-<li>See <a href="https://www.freecodecamp.org/news/bashrc-customization-guide/">useful things</a> that you can setup your own <code>bashrc</code> file under your home directory to save tying of commands. 
+<li>See <a href="https://www.freecodecamp.org/news/bashrc-customization-guide/">useful things</a> that you can setup your own <code>~/.bashrc</code> file under your home directory to automaticlly run commands for each session. 
 
 <ul>
-<li>Set up <code>PATH</code> system variables. See <a href="https://www.baeldung.com/linux/path-variable">example</a>.</li>
-<li>Create alias by <code>alias</code> in <code>.bashrc</code> to set up your own shortcup of commands. See <a href="https://phoenixnap.com/kb/linux-alias-command">Examples</a>.</li>
+<li>Set up <code>$PATH</code> system variables. See <a href="https://www.baeldung.com/linux/path-variable">example</a>.</li>
+<li>Create alias by <code>alias</code> in <code>~/.bashrc</code> to set up your own shortcup of commands. See <a href="https://phoenixnap.com/kb/linux-alias-command">Examples</a>.</li>
 <li>Setup environment variables. See <a href="https://www.cyberciti.biz/faq/set-environment-variable-linux/">example</a>.</li>
-<li>Load software modules</li>
+<li>Load software modules.</li>
 </ul></li>
 </ul>
 
@@ -570,41 +572,81 @@ ln -s [tool_directory]</code></pre></div>
 <h3 id="toc_16">Basic SLURM commands</h3>
 
 <ul>
-<li>Use command <code>sbatch</code> to submit jobs
-
-<ul>
-<li>Set arguments to <code>sbatch</code> in a wrapper shell (job submission) script, for example, you may use <code>sbatch normal.sh</code> with the following <code>normal.sh</code> script.</li>
-<li>Write script for your job in Rscript <code>normal.R</code>.</li>
-</ul></li>
+<li><strong>Use command <code>sbatch</code> to submit jobs</strong>. Set arguments to <code>sbatch</code> in a wrapper shell (job submission) script, for example, you may use command <code>sbatch norm_sim.sh</code> to submit an array job to run 10 times of simulations, with <code>norm_sim.sh</code> given as follows: </li>
 </ul>
 
 <div><pre><code class="language-none">#!/bin/bash
-#SBATCH --job-name=normal.R ## specify job name
+#SBATCH --job-name=normal_sim ## specify job name
 #SBATCH --nodes=1 ## request 1 node 
-#SBATCH --mem=32G ## request 32G memory
-#SBATCH --cpus-per-task=5 ## request 5 cores per job
-#SBATCH --output=~/SLURM_OUT/%x_%A_%a.out ## specify output file directory
-#SBATCH --error=~/SLURM_OUT/%x_%A_%a.err ## specify error file directory
-#SBATCH —array=0-100 ## Submitting 100 instances of commands listed below
-#SBATCH —mail-user=&lt;your_email_address&gt;@emory.edu ## For notification purposes. Use your Emory email address only! This is optinal.
-#SBATCH --mail-type=END,FAIL ## Receive email notice is optional.
+#SBATCH --mem=8G ## request 8G memory
+#SBATCH --cpus-per-task=4 ## request 4 cpus/cores per job
+#SBATCH --time=24:00:00 ## specify job running time for 24 hrs
+#SBATCH --output=./SLURM_OUT/%x_%A_%a.out ## specify slurm output file directory
+#SBATCH --error=./SLURM_OUT/%x_%A_%a.err ## specify slurm error file directory
+#SBATCH --array=0-10 ## Submitting 10 instances of commands listed below
 
-## Use the $SLURM_ARRAY_TASK_ID (1..100) to configue the job
+
+## The following commands will be run for 10 times by 10 jobs under the specified array. Each with their unique task ID given by $SLURM_ARRAY_TASK_ID, in {1..10}.
+
+## Change working directory
+cd /home/jyang51/yangfss2/public/ExampleData
+
+## Create SLURM_OUT/ under the current working directory to save slurm output and error files
+mkdir -p ./SLURM_OUT/
+
+
+## Print SLURM array task ID $SLURM_ARRAY_TASK_ID (1..10)
 echo &quot;My SLURM_ARRAY_TASK_ID: &quot; $SLURM_ARRAY_TASK_ID
 
+
+## Load R software
 spack load r@4.4.0
 
-Rscript &lt;directory_to_normal.R_script&gt;/normal.R</code></pre></div>
+
+## Using the Rscript to simulate a vector x from standard normal distribution and write x to a text data file under /home/jyang51/yangfss2/public/ExampleData/
+## Use the SLURM array task ID to save unique output data files, or configue the job.
+Rscript /home/jyang51/yangfss2/public/ExampleScripts/norm_sim.R /home/jyang51/yangfss2/public/ExampleData/ $SLURM_ARRAY_TASK_ID</code></pre></div>
 
 <ul>
-<li>Use command <code>squeue</code> to display information about the run queue</li>
-<li>Use command <code>scancel [jobid]</code> used to cancel or kill a job</li>
-<li>Use command <code>scontrol</code> used to show information about running or pending jobs
+<li>And example <code>norm_sim.R</code> script given as follows:</li>
+</ul>
+
+<div><pre><code class="language-none">#!/usr/bin/env Rscript
+Sys.setlocale(&#39;LC_ALL&#39;, &#39;C&#39;)
+
+###############
+options(stringsAsFactors=F)
+
+
+###############
+args=(commandArgs(TRUE))
+print(args)
+if(length(args)==0) {
+  stop(&quot;Error: No arguments supplied!&quot;)
+} else {
+  out_prefix = args[[1]]
+  n_sim = args[[2]]
+}
+
+x = rnorm(100, mean = 0, sd = 1)
+
+print(paste(&quot;mean of simulated data =&quot;, mean(x)))
+
+print(paste(&quot;standard deviation of simulated data =&quot;, sd(x)))
+
+print(&quot;Write simulated data to a text file:&quot;)
+
+write.table(data.frame(x = x), file = paste0(out_prefix, &quot;sim_&quot;, n_sim, &quot;.txt&quot;), quote = FALSE, sep = &quot;\t&quot;, row.names = FALSE)</code></pre></div>
 
 <ul>
-<li><code>scontrol show job [jobid]</code> to show system details of a submitted job</li>
+<li><strong>Use command <code>squeue</code> to display current slurm job queue</strong>.</li>
+<li><strong>Use command <code>scancel [jobid]</code> used to cancel/kill a job</strong>.</li>
+<li><strong>Use command <code>scontrol</code> used to show information about running or pending jobs</strong>.
+
+<ul>
+<li><code>scontrol show job [jobid]</code> to show system details of a submitted job.</li>
 </ul></li>
-<li><p><code>srun</code> used to run an interactive instance: <code>srun --pty bash</code>.</p>
+<li><p><strong>Use command <code>srun</code> to run an interactive instance: <code>srun --pty bash</code>.</strong></p>
 
 <ul>
 <li>Open an interactive session to test your <em>R</em> code: </li>
@@ -615,10 +657,9 @@ spack load r@4.4.0
 R</code></pre></div>
 
 <ul>
-<li>Simply exit the interactive session by <code>exit</code></li>
-<li><strong>Do not test running <em>R</em> scripts on the Gateway/Head/Login node and data transfer node (DTN)</strong></li>
+<li>Simply exit the interactive session by <code>exit</code>.</li>
 </ul></li>
-<li><p><code>sinfo</code> used to report the state of the cluster partition and nodes   </p></li>
+<li><p><strong>Use command <code>sinfo</code> to report the state of the cluster partition and nodes</strong>.   </p></li>
 </ul>
 
 <h2 id="toc_17">Monitoring storage usage</h2>
@@ -628,17 +669,12 @@ R</code></pre></div>
 <li>Check space used by current working directory by <code>du -h -d1</code></li>
 </ol>
 
-<h3 id="toc_18">All files are not backed up on the cluster</h3>
-
-<h2 id="toc_19">Additional Resources</h2>
+<h2 id="toc_18">Additional Resources</h2>
 
 <ul>
-<li>Need help: submit a ticket at <a href="https://hgcc.emory.edu/#help">HGCC Website</a> after login to Emory VPN. Or ask in our Slack channel.</li>
-<li><a href="http://it.emory.edu/vpntools/access.html">Emory VPN</a></li>
-<li><a href="https://lmod.readthedocs.io/en/latest/010_user.html">Module User Guide</a></li>
-<li><a href="https://spack.io/">Spack</a></li>
-<li><a href="https://linuxcommand.org/tlcl.php">The Linux Command Line</a> book is recommended to read ahead</li>
-<li>Video training module accessible to all Emory affiliates persons via <a href="http://it.emory.edu/linkedinlearning/help/index.html">LinkedIn learning</a></li>
+<li><a href="https://hgcc.emory.edu/#help">New HGCC Website</a>. Need to be in Emory network or Emory VPN to access.</li>
+<li><a href="https://spack.io/">Spack website</a>.</li>
+<li><a href="https://linuxcommand.org/tlcl.php">The Linux Command Line</a> book.</li>
 </ul>
 
 
