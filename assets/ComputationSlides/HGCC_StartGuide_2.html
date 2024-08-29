@@ -496,16 +496,15 @@ exit</code></pre></div>
 
 <h3 id="toc_10">Submit Array Jobs</h3>
 
-<p><strong>Array jobs</strong> is a convenient way to submit multiple repetitive jobs that only differs by one input variables, e.g., 10000 repetitive simulations, association study for all 20K genome-wide genes. </p>
-
 <ul>
-<li>The following example commands to submit an Array job will submit repetitive jobs to run the same bash scripts <code>star_sbatch.sh</code> for <code>52</code> times, with the only difference of <strong>slurm job id <code>$SLURM_ARRAY_TASK_ID</code></strong> for getting the corresponding sample ID.</li>
+<li><p><strong>Array jobs</strong> is a convenient way to submit multiple repetitive jobs that only differs by one input variables, e.g., 10000 repetitive simulations, association study for all 20K genome-wide genes. </p></li>
+<li><p>The following example commands to submit an Array job will submit repetitive jobs to run the same bash scripts <code>star_sbatch.sh</code> for <code>52</code> times, with the only difference of <strong>slurm job id <code>$SLURM_ARRAY_TASK_ID</code></strong> for getting the corresponding sample ID.</p></li>
 </ul>
 
 <div><pre><code class="language-none">sbatch /home/jyang51/yangfss2/public/ExampleScripts/star_sbatch.sh /home/jyang51/yangfss2/public/ExampleData</code></pre></div>
 
 <ul>
-<li>The shell script <code>star_sbatch.sh</code> has the following contents:</li>
+<li><strong>The shell script <code>star_sbatch.sh</code> has the following contents:</strong></li>
 </ul>
 
 <div><pre><code class="language-none">#!/bin/bash
@@ -521,10 +520,11 @@ exit</code></pre></div>
 #### Print the task id.
 echo &quot;My SLURM_ARRAY_TASK_ID: &quot; $SLURM_ARRAY_TASK_ID
 
+#### Take output directory from first input argument
 output_dir=$1
 echo &quot;Output file directory: $output_dir&quot;.
 
-##
+## define data directory
 data_dir=/home/jyang51/yangfss2/projects/Bill_Li_RNAseq/BC_Biomarker_Normal_Biopsy/LBI13454-118133
 
 # Generate tmp directory name
@@ -547,9 +547,13 @@ rsync ${data_dir}/RawData/H7JNJDSXC_s1_2_SM_${sample}.fastq.gz ${TMPDIR}/
 ###### Scripts that will be run for 52 times to Map 52 samples
 ## The sample ID will be determined with the given Array_Task_ID from 1 to 52;
 ## Three input variables are taken by the star_map.sh script;
-### Use STAR 2.7.11a
+
+### Use STAR 2.7.11a: either load STAR module by spack 
+# spack load star@2.7.11a
+### Or install spack by `conda install bioconda::bioconductor-starr` under your virtual environment. And activiate your virtual python environment.
 spack load miniconda3@24.3.0
 conda activate ~/.conda/envs/myenv
+
 
 ## create temp directory to save map output files
 mkdir -p ${TMPDIR}/MAP_OUT/
@@ -572,14 +576,20 @@ rsync ${TMPDIR}/MAP_OUT/ ${output_dir}/
 
 conda deactivate
 
+rm -fr ${TMPDIR}/
+
 exit</code></pre></div>
 
 <ul>
-<li>The example bash script is written to select the corresponding sample ID from <strong><code>/home/jyang51/yangfss2/public/ExampleData/Sample_ID.txt</code></strong> by the <strong>slurm job id <code>$SLURM_ARRAY_TASK_ID</code></strong>.</li>
+<li><strong>The above example bash script is written to map multiple RNAseq samples through the following steps</strong>
+
+<ol>
+<li>Select the corresponding sample ID from <strong><code>/home/jyang51/yangfss2/public/ExampleData/Sample_ID.txt</code></strong> by the <strong>slurm job id <code>$SLURM_ARRAY_TASK_ID</code></strong>.</li>
 <li>Copy raw fastq data to temporary directry under <code>/scratch/</code>.</li>
 <li>Write outputs to the temporary directory.</li>
-<li>Copy the output files to data drive afterwards, with output file directory given by the first input argument. </li>
+<li>Copy the output files to data drive, with output file directory given by the first input argument. </li>
 <li>Delete temporary directory.</li>
+</ol></li>
 </ul>
 
 
