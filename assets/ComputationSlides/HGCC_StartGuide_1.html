@@ -475,10 +475,10 @@ kbd {
 
 <ol>
 <li><strong>Only use headnode to download/move data and submit jobs. Never run large computation jobs on headnode.</strong></li>
-<li><strong>Login to an interactive compute node by command <code>srun -N 1 -n 1 --pty bash -i</code>.</strong>
+<li><strong>Login to an interactive compute node by command <code>srun -N 1 -n 1 --pty bash</code>.</strong>
 
 <ul>
-<li><code>-N</code> is the number of nodes, <code>-n</code> is number of tasks, <code>--pty</code> gives you a pseudo terminal that runs bash, <code>-i</code> gives you interaction. </li>
+<li><code>-N</code> is the number of nodes, <code>-n</code> is number of tasks, <code>--pty</code> gives you a pseudo terminal that runs bash. </li>
 <li>Use <strong>Interactive bash session</strong> for testing your jobs.</li>
 <li>Multiple interactive sessions could be opened.</li>
 </ul></li>
@@ -652,7 +652,7 @@ write.table(data.frame(x = x), file = paste0(out_prefix, &quot;sim_&quot;, n_sim
 <li>Open an interactive session to test your <em>R</em> code: </li>
 </ul>
 
-<div><pre><code class="language-none">srun -N 1 -n 1 --pty bash -i
+<div><pre><code class="language-none">srun -N 1 -n 1 --pty bash
 spack load r@4.4.0
 R</code></pre></div>
 
