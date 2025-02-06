@@ -27,21 +27,22 @@ The Yang Lab is interested in developing statistical and computational methods/t
 
 <ins>Current Research Topics</ins>
 
-* Transcriptome-wide Association Studies (TWAS) 
+* Transcriptome-wide Association Studies (TWAS) and Proteome-wide Association Studies (PWAS)
 	* Method/tool development
-	* Applications for studying Alzheimer's dementia related phenotypes, Breast Cancer, and Ovarian Cancer
+	* Integrative multi-omics analysis including mediation analysis, Mendelian Randomization, causal inference
+	* Applications for studying Alzheimer's dementia related phenotypes, Parkinson disease, motor functions
 * Machine learning and Deep learning
 	* Biomedical signal/image analysis
-	* Phenotype risk prediction using polygenic risk score and other risk factors
-* Integrative multi-omics analysis including mediation analysis
+	* Phenotype prediction using longitudinal clinical data and omics data
 * Genome-wide Association Studies (GWAS) 
 	* Method/tool development to account for functional annotations
 	* Applications for studying Alzheimer's dementia related phenotypes, and post chemotherapy skin toxicity of Breast cancer patients
 * Bioinformatics analysis
+	* WGS/WES
 	* ChIPseq and RNAseq analysis
-	* Single cell RNAseq analysis
+	* Single cell omics sequencing data analysis
 
-Dr. Yang accepts PhD students from graduate programs of [Genetics Molecular Biology](http://biomed.emory.edu/PROGRAM_SITES/GMB/) and [Population Biology, Ecology, and Evolution](http://biomed.emory.edu/PROGRAM_SITES/PBEE/) under the [Graduate Division of Biological and Biomedical Sciences](http://www.biomed.emory.edu/), and Master/PhD students from the graduate program of the [Department of Biostatistics and Bioinformatics School of Public Health](https://sph.emory.edu/admissions/phd/index.html).
+Dr. Yang accepts PhD students from graduate programs of [Genetics Molecular Biology](http://biomed.emory.edu/PROGRAM_SITES/GMB/) and [Population Biology, Ecology, and Evolution](http://biomed.emory.edu/PROGRAM_SITES/PBEE/) under the [Graduate Division of Biological and Biomedical Sciences](http://www.biomed.emory.edu/), and Master/PhD students from the graduate program of the [Department of Biostatistics and Bioinformatics School of Public Health](https://sph.emory.edu/admissions/phd/index.html). Master students are recommended to reach out in your year 1. 
 
 ### PI - Background
 * PhD in Statistics, 2009-2014, Department of Statistics, Rice University, Houston, TX, USA
@@ -75,8 +76,8 @@ Yang lab currently has an opening for Research Specialist. Please email applicat
 * Interested candidate should submit CV, Brief Statement of Research Interest (one page), and Contacts for 3 references.
 -->
 
-#### [Postdoctoral Research Fellow](https://faculty-emory.icims.com/jobs/59581/post-doctoral-fellow---human-genetics--yang-lab/job?hub=13)
-Yang lab currently has an opening for Postdoctoral Research Fellow. Please email application to Dr. Jingjing Yang <jingjing.yang@emory.edu>, or apply through [Emory Careers](https://faculty-emory.icims.com/jobs/59581/post-doctoral-fellow---human-genetics--yang-lab/job?hub=13). Applications will be reviewed immediately after submission.
+#### [Postdoctoral Research Fellow](https://faculty-emory.icims.com/jobs/141931/post-doctoral-fellow/job?mode=view&mobile=false&width=1140&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240)
+Yang lab currently has an opening for Postdoctoral Research Fellow. Please email application to Dr. Jingjing Yang <jingjing.yang@emory.edu>, or apply through [Emory Careers Job Number 141931](https://faculty-emory.icims.com/jobs/141931/post-doctoral-fellow/job?mode=view&mobile=false&width=1140&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240). Applications will be reviewed immediately after submission.
 
 * The candidate is required to have a Ph.D. degree in Statistics/Biostatistics, Bioinformatics, Computer Science or other relevant disciplines with research interests in statistical genetics and genomics data analysis.
 * The candidate is required to have proficiency in one or multiple of the popular programming languages, R, Python, C++, etc.
