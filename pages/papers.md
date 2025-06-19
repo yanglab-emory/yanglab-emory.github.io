@@ -5,7 +5,10 @@ title: "Publication and Presentation"
 
 ## Selected Publication
 
-### 2022 - Present
+### 2023 - Present
+* **Hu T\+, Liu Q\+, Dai Q, Parrish RL,** Buchman AS, Tasaki S, Seyfried NT, Wang Y, Bennett DA, De Jager PL, Epstein MP, **Yang J.\***. Proteome-wide association studies using summary pQTL data of brain, CSF, and plasma identify 30 risk genes of Alzheimer’s disease dementia. Alz Res Therapy 17, 135 (2025). DOI: <https://doi.org/10.1186/s13195-025-01774-y>
+
+* **Tang S**, Liu S, Buchman AS, Bennett DA, De Jager PL, **Yang J.\*** , Hu J.\* Integrating spatial transcriptomics and snRNA-seq data enhances differential gene expression analysis results of AD-related phenotypes. Human Genetics and Genomics Advances. 2025 Jul 10;6(3). DOI:<https://doi.org/10.1016/j.xhgg.2025.100447>
 
 * **Hu T, Parrish RL, Dai Q**, Buchman AS, Tasaki S, Bennett DA, Seyfried NT, Epstein MP, **Yang J.\*** Omnibus proteome-wide association study identifies 43 risk genes for Alzheimer disease dementia. The American Journal of Human Genetics. 2024 Sep 5;111(9):1848-63. DOI:<https://doi.org/10.1016/j.ajhg.2024.07.001>
 
@@ -13,18 +16,17 @@ title: "Publication and Presentation"
 
 * **Guo S, Yang J\***. Bayesian genome-wide TWAS with reference transcriptomic data of brain and blood tissues identified 141 risk genes for Alzheimer’s disease dementia. Alzheimer's Research & Therapy. 2024 Jun 1;16(1):120. DOI:<https://doi.org/10.1186/s13195-024-01488-7>
 
-* **Yang J.\*, Liu, X.**, Oveisgharan, S., Zammit, A. R., Nag, S., Bennett, D. A., & Buchman, A. S. (2023). Inferring Alzheimer’s disease pathologic traits from clinical measures in living adults. Journal of Alzheimer's Disease, (Preprint), 1-13. DOI: <https://doi.org/10.3233/jad-230639>
+* **Yang J.\*, Liu, X.**, Oveisgharan, S., Zammit, A. R., Nag, S., Bennett, D. A., & Buchman, A. S. (2024). Inferring Alzheimer’s disease pathologic traits from clinical measures in living adults. Journal of Alzheimer's Disease, 98 (1), 95-107, DOI: <https://doi.org/10.3233/jad-230639>
 
 * **Tang, S.**, Buchman, A.S., Wang, Y., ..., **Yang J.\*** Differential gene expression analysis based on linear mixed model corrects false positive inflation for studying quantitative traits. Sci Rep 13, 16570 (2023). DOI: <https://doi.org/10.1038/s41598-023-43686-7>
 
 * **Dai, Q.**, Zhou, G., Zhao, H., Võsa, U., Franke, L., Battle, A., Teumer, A., Lehtimäki, T., Raitakari, O.T., Esko, T., eQTLGen Consortium, **Epstein, P.M.\***, **Yang, J.\***, (2023). OTTERS: a powerful TWAS framework leveraging summary-level reference data. Nature Communications, 14(1), p.1271. DOI: <https://doi.org/10.1038/s41467-023-36862-w>.
 
+
+### 2019 - 2022
 * **Chen J**, **Wang L**, De Jager PL, Bennett DA, Buchman AS, **Yang J.\*** A scalable Bayesian functional GWAS method accounting for multivariate quantitative functional annotations with applications to studying Alzheimer's disease. Human Genetics and Genomics Advances. 2022 Sep 17:100143. DOI: <https://doi.org/10.1016/j.xhgg.2022.100143>. Featured with [Inside HGG Advances: A Chat with Jingjing Yang](https://www.ashg.org/hgga/inside-hgg-advances-with-jingjing-yang/). Paper for [BFGWAS_QUANT Tool](https://github.com/yanglab-emory/BFGWAS_QUANT). <a href="../assets/PresentationSlides/BFGWAS_QUANT_2022.pdf"> Presentation Slides</a>. 
 
 * **Yang J\***, Oveisgharan S, Liu X, Wilson RS, Bennett DA, Buchman AS. Risk Models Based on Non-Cognitive Measures May Identify Presymptomatic Alzheimer's Disease. J Alzheimers Dis. 2022; 89(4):1249-1262. [PMID: 35988224](https://pubmed.ncbi.nlm.nih.gov/35988224/). 
-
-
-### 2019 - 2022
 
 * **Parrish, R.L.**, Gibson, G.C., Epstein, M.P. and **Yang, J.\***, (2022). TIGAR-V2: Efficient TWAS tool with nonparametric Bayesian eQTL weights of 49 tissue types from GTEx V8. Human Genetics and Genomics Advances, 3(1), p.100068. DOI: <https://doi.org/10.1016/j.xhgg.2021.100068>. Paper for update [TIGAR Tool](https://github.com/yanglab-emory/TIGAR).
 
@@ -43,15 +45,19 @@ title: "Publication and Presentation"
 
 ## Upcoming Presentation
 
-* **MCBIOS, March 2025**, Salt Lake City, Utah.
-
-* **The 10th Workshop on Biostatistics and Bioinformatics, May 2025**, Atlanta, Georgia.
-
+* **Lecture at Novartis (Invited)**, virtual. 
 
 ## Past Presentation
 
 ### Oral Presentation
-* **BIRS 5-day workshop, July, 2024.** Banff, Canada
+
+* **MCBIOS (Invited), March 2025**, Salt Lake City, Utah.
+
+* **The 10th Workshop on Biostatistics and Bioinformatics (Invited), May 2025**, Atlanta, Georgia.
+
+* **FunGen-xQTL Sympothium (Invited), April, 2025**, virtual.
+
+* **BIRS 5-day workshop (Invited), July, 2024.** Banff, Canada. 
 
 * **JSM 2023 (Invited)**, Toronto, Canada. _A scalable Bayesian functional GWAS method accounting for multivariate quantitative functional annotations_.
 

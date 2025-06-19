@@ -5,33 +5,28 @@ title: "Teaching and Resources"
 
 ## Recently Taught Courses
 
-### SISG - Gene Regulation
+### SISG 2025 - Gene Regulation Moduls: TWAS, ChiP-seq Analysis, Functional Noncoding Variants
 1. <a href="../assets/CourseSlides/SISG/TWAS_Lecture_1.pdf"> Introduction to TWAS </a> 
 2. <a href="../assets/CourseSlides/SISG/TWAS_Lecture_2.pdf"> TWAS with Summary xQTL Data and Finemapping</a>  
 3. <a href="../assets/CourseSlides/SISG/TWAS_Lecture_3.pdf"> TWAS and Mendelian Randomization</a> 
-4. <a href="../assets/CourseSlides/SISG/TFBS_motif_Lecture_4.pdf"> ChiP-seq Analysis Pipeline</a>  
+4. <a href="../assets/CourseSlides/SISG/ChiP-Seq_Analysis_Lecture_4.pdf"> ChiP-seq Analysis Pipeline</a>  
 5. <a href="../assets/CourseSlides/SISG/Non_coding_func_Lecture_5.pdf">Analysis with Functions of Noncoding Variants</a>  
 
-### BIOS-770 - Advanced Statistical Genetics.
-1. <a href="../assets/CourseSlides/BiostatStatisticalGenetics/GWAS_Lecture1_GWAS.pdf">Genotype Imputation, Single Variant GWAS</a> 
-2. <a href="../assets/CourseSlides/BiostatStatisticalGenetics/GWAS_Lecture2_GWAS.pdf">QC, Population Stratification, LMM</a>  
-3. <a href="../assets/CourseSlides/BiostatStatisticalGenetics/GWAS_Lecture3_GWAS.pdf">LMM, Finemap, Multivarate GWAS</a> 
-4. <a href="../assets/CourseSlides/BiostatStatisticalGenetics/GWAS_Lecture4_GWAS.pdf">Rare Variant Test, Pleiotropy, Mendelian Randomization</a>  
-5. <a href="../assets/CourseSlides/BiostatStatisticalGenetics/TWAS_Lecture.pdf">TWAS</a>  
+### BIOS-770 - Advanced Statistical Genetics: GWAS
+1. <a href="../assets/CourseSlides/BiostatStatisticalGenetics/GWAS_Lecture1.pdf">Genotype Imputation, Single Variant GWAS</a> 
+2. <a href="../assets/CourseSlides/BiostatStatisticalGenetics/GWAS_Lecture2.pdf">QC, Population Stratification, LMM</a>  
+3. <a href="../assets/CourseSlides/BiostatStatisticalGenetics/GWAS_Lecture3.pdf">Finemap, Bayesian Functional GWAS</a> 
+4. <a href="../assets/CourseSlides/BiostatStatisticalGenetics/GWAS_Lecture4.pdf">Rare Variant Test, Pleiotropy, Mendelian Randomization</a>  
 
-### IBS-746 - Graduate Human Genetics.
-1. <a href="../assets/CourseSlides/GraduateHumanGenetics/IBS746_Yang_association_2021_1.pdf">Genome-wide Association Study</a>
-2. <a href="../assets/CourseSlides/GraduateHumanGenetics/IBS746_Yang_association_2021_2.pdf">GWAS Approaches for Cohorts of Different Ancestries</a> 
+### IBS-519 - Data Analysis using R
+1. <a href="../assets/CourseSlides/DataScience/LinearRegression.pdf"> Linear Regression</a>  
+2. <a href="../assets/CourseSlides/DataScience/ANOVA.pdf"> ANOVA</a>  
+3. <a href="../assets/CourseSlides/DataScience/PowerAnalysis"> Power Analysis</a>  
+4. <a href="../assets/CourseSlides/DataScience/PermutationTest.pdf"> Permutation Test</a>  
+5. <a href="../assets/CourseSlides/DataScience/MachineLearning.pdf"> Introductions to Machine Learning</a> 
 
-### IBS-519 - Data Analysis using R.
-1. <a href="../assets/CourseSlides/DataScience/Week8_LinearRegression.pdf"> Linear Regression</a>  
-2. <a href="../assets/CourseSlides/DataScience/Week9_ANOVA.pdf"> ANOVA</a>  
-3. <a href="../assets/CourseSlides/DataScience/Week11_PowerAnalysis"> Power Analysis</a>  
-4. <a href="../assets/CourseSlides/DataScience/Week13_PermutationTest.pdf"> Permutation Test</a>  
-5. <a href="../assets/CourseSlides/DataScience/Week14_MachineLearning.pdf"> Introductions to Machine Learning</a> 
-
-### IBS-538 - Data Science.
-1. <a href="../assets/CourseSlides/DataScience/MultivariateAnalysis.pdf"> Multivariate Analysis with Application to RNAseq Differential Gene Expression Analysis</a> 
+### IBS-538 - Data Science
+1. <a href="../assets/CourseSlides/DataScience/MultivariateAnalysis_DGE.pdf"> Multivariate Analysis with Application to RNAseq Differential Gene Expression Analysis</a> 
 
 
 ## High Performance and Cloud Computing Cluster 
@@ -46,6 +41,7 @@ title: "Teaching and Resources"
 ### RHPC
 
 * <a href="../assets/ComputationSlides/RSPH_HPC_StartGuide_Yang.html" target="_self"> Introductions to RHPC</a>
+* [RSPH High Performance Computing Github](https://github.com/RSPH-HPC) : [Starting guides](https://github.com/RSPH-HPC/Documentation/blob/master/HPC%20Getting%20Started%20Guide%20V.2.0.pdf) are provided. 
 * [Helpful tips from Dr. Hao Wu](https://www.haowulab.org//pages/computing.html)
 
 ### [Emory Amazon Web Service (AWS)](https://aws.emory.edu/)
@@ -70,6 +66,7 @@ title: "Teaching and Resources"
 #### Oral Scientific Presentations
 * [Scientific Presetnations 101](https://www.med.upenn.edu/mdresearchopps/assets/user-content/Resources/Howtogivepresentations2014.pdf)
 * [Structure of a 10-minute Oral Scientific Presentation](https://dornsife.usc.edu/assets/sites/605/docs/Tips_10_minute_Scientific_PowerPoint_Presentation_Meds_490.pdf)
+* [The Art of Great Talks](https://www.med.upenn.edu/mdresearchopps/assets/user-content/Resources/Howtogivepresentations2014.pdf)
 
 
 ## Other Resources

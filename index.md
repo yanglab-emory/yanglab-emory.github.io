@@ -76,15 +76,13 @@ Yang lab currently has an opening for Research Specialist. Please email applicat
 * Interested candidate should submit CV, Brief Statement of Research Interest (one page), and Contacts for 3 references.
 -->
 
-#### [Postdoctoral Research Fellow](https://faculty-emory.icims.com/jobs/141931/post-doctoral-fellow/job?mode=view&mobile=false&width=1140&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240)
-Yang lab currently has an opening for Postdoctoral Research Fellow. Please email application to Dr. Jingjing Yang <jingjing.yang@emory.edu>, or apply through [Emory Careers Job Number 141931](https://faculty-emory.icims.com/jobs/141931/post-doctoral-fellow/job?mode=view&mobile=false&width=1140&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240). Applications will be reviewed immediately after submission.
+#### Postdoctoral Research Fellow
+Yang lab currently has an opening for Postdoctoral Research Fellow. Please email application directly to PI Dr. Jingjing Yang <jingjing.yang@emory.edu>. Applications will be reviewed immediately after submission.
 
 * The candidate is required to have a Ph.D. degree in Statistics/Biostatistics, Bioinformatics, Computer Science or other relevant disciplines with research interests in statistical genetics and genomics data analysis.
 * The candidate is required to have proficiency in one or multiple of the popular programming languages, R, Python, C++, etc.
 * Experience working with large gnomics data and high-performance computing clusters are desirable.
 * Interested candidate should submit a Cover Letter, CV, Brief Statement of Research Interest (less than 2 pages), one Sample Publication, and Contacts for 3 references.
-
-
 
 
 ### Lab Location - Whitehead Biomedical Research Building
