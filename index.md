@@ -42,7 +42,7 @@ The Yang Lab is interested in developing statistical and computational methods/t
 	* ChIPseq and RNAseq analysis
 	* Single cell omics sequencing data analysis
 
-Dr. Yang accepts PhD students from graduate programs of [Genetics Molecular Biology](http://biomed.emory.edu/PROGRAM_SITES/GMB/) and [Population Biology, Ecology, and Evolution](http://biomed.emory.edu/PROGRAM_SITES/PBEE/) under the [Graduate Division of Biological and Biomedical Sciences](http://www.biomed.emory.edu/), and Master/PhD students from the graduate program of the [Department of Biostatistics and Bioinformatics School of Public Health](https://sph.emory.edu/admissions/phd/index.html). Master students are recommended to reach out in your year 1. 
+Dr. Yang accepts PhD students from graduate programs of [Genetics Molecular Biology (GMB)](http://biomed.emory.edu/PROGRAM_SITES/GMB/) and [Population Biology, Ecology, and Evolution (PBEE)](http://biomed.emory.edu/PROGRAM_SITES/PBEE/) under the [Graduate Division of Biological and Biomedical Sciences (GDBBS)](http://www.biomed.emory.edu/), and Master/PhD students from the graduate program of the [Department of Biostatistics and Bioinformatics School of Public Health](https://sph.emory.edu/admissions/phd/index.html). Master students are recommended to reach out in your year 1. 
 
 ### PI - Background
 * PhD in Statistics, 2009-2014, Department of Statistics, Rice University, Houston, TX, USA
