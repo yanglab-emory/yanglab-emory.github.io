@@ -4,7 +4,7 @@ title: "Lab members"
 ---
 
 
-### Current Lab Members
+### Current Lab Members (updated June 2025)
 
 | Name |  | Research topic |  | Year in Lab |
 | ------ |--| ---------- |--| ----- |
