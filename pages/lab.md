@@ -8,20 +8,27 @@ title: "Lab members"
 
 | Name |  | Research topic |  | Year in Lab |
 | ------ |--| ---------- |--| ----- |
-| | | | |  |
+
 | Shizhen Tang <br> Biostat PhD Student  |  | Quantile regression based test for <br>  differential gene expression analysis. | |   2021 - Present| 
 | | | | | |
+
 | Randy Parrish <br> Biostat PhD Student  |  | Applying Bayesian genome-wide method to PWAS. |  |  2022 - Present| 
 | | | | | |
+
 | Leo Liu <br> Biostat PhD Student  |  | Integrating multi-omics with GWAS summary stat. |  |  2025 - Present| 
 | | | | |  |
+
 | Bo Shen <br> Biostat MS Student  |  | TWAS method for correcting bias due to imputed gene expression. |  |  2024 - Present| 
 | | | | |  |
+
 | Conglin Bao <br> Biostat MS Student  |  | Predicting AD pathologies from longitudinal clinic data using deep learning model. |  |  2024 - Present| 
 | | | | |  |
+
 | Arpit Ramani <br> Wheeler High School Student  |  | BGW-TWAS/PWAS study of AD dementia. |  |  2024 - Present| 
 | | | | |  |
+
 | Ruilong Chen <br> Biostat MS Student  |  | Studying omics data by tensor regression model. |  |  2025 - Present| 
+
 ### <a href="../assets/ComputationSlides/YangLabGuideline.html">*Lab Onboarding Guidelines*</a>
 
 
