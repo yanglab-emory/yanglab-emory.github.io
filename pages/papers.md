@@ -45,23 +45,23 @@ title: "Publication and Presentation"
 
 ## Upcoming Presentation
 
-* **Lecture at Novartis (Invited)**, virtual. 
+* **Lecture at Novartis (Invited)**, virtual. _Advanced TWAS/PWAS Tools Improve Gene Mapping in Alzheimer's Disease Dementia._
 
 ## Past Presentation
 
 ### Oral Presentation
 
-* **MCBIOS (Invited), March 2025**, Salt Lake City, Utah.
+* **The 10th Workshop on Biostatistics and Bioinformatics (Invited), May 2025**, Atlanta, Georgia. _x.	Unveiling Cell-type-specific Risk Genes for Alzheimer’s Disease Dementia by Integrating Large-scale snRNA-Seq Data from Prefrontal Cortex Tissue with GWAS Summary Data._
 
-* **The 10th Workshop on Biostatistics and Bioinformatics (Invited), May 2025**, Atlanta, Georgia.
+* **FunGen-xQTL Sympothium (Invited), May 2025**, virtual. _Cell-type-specific Transcriptomic-wid eAssociation Studies Detected 80 Independent Risk Genes for Alzheimer’s Disease Dimentia._
 
-* **FunGen-xQTL Sympothium (Invited), April, 2025**, virtual.
+* **MCBIOS (Invited), March 2025**, Salt Lake City, Utah. _Integrating Spatial Transcriptomics and snRNA-seq Data Enhances Studies of Alzheimer’s Disease._
 
-* **BIRS 5-day workshop (Invited), July, 2024.** Banff, Canada. 
+* **BIRS 5-day workshop (Invited), July, 2024.** Banff, Canada. _SR-TWAS: Leveraging Multiple Reference Panels to Improve TWAS Power by Ensemble Machine Learning._
 
 * **JSM 2023 (Invited)**, Toronto, Canada. _A scalable Bayesian functional GWAS method accounting for multivariate quantitative functional annotations_.
 
-* **ENAR 2023 Spring Meeting (Invited)**, Nashville, TN. _SR-TWAS: Leveraging Multiple Reference Panels to Improve TWAS Power by Ensemble Machine Learning_.
+* **ENAR 2023 Spring Meeting (Invited)**, Nashville, TN.
 
 * **ICSA 2021 (Invited)**, Virtual (Sep. 2021). _Bayesian Genome-wide TWAS method integrating both cis- and trans- eQTL with GWAS summary statistics_. <a href="../assets/PresentationSlides/BGW_TWAS_ICSA_Sep2021.pdf">Slides</a>. 
 
