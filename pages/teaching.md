@@ -73,19 +73,28 @@ title: "Teaching and Resources"
 
 ### Bioinformatics
 
-1. [Bioinformatics workshop documentations](https://ucdavis-bioinformatics-training.github.io/) by UCDAVIS Bioinformatics Core with the following **Covered Topics:**
+1. [**Bioinformatics workshop documentations**](https://ucdavis-bioinformatics-training.github.io/) by UCDAVIS Bioinformatics Core with the following **Covered Topics:**
 	* **Bioinformatics Prerequisites** (Command Line and R)
 	* **Single-Cell RNA-Seq Analysis**	
 	* **RNA-seq Analysis**
 	* **Microbial Community Analysis** (Amplicon)
 	* **Variant Analysis** (Variant calling with GATK, Variant Annotation)
 
-2. [Analysis of single cell RNA-seq data](https://scrnaseq-course.cog.sanger.ac.uk/website/index.html) by Hemberg lab, Welcome Sanger Institute, UK
+2. [**Analysis of single cell RNA-seq data**](https://scrnaseq-course.cog.sanger.ac.uk/website/index.html) by Hemberg lab, Welcome Sanger Institute, UK
 
-3. [ENAR 2021 short course on single cell RNA-seq analysis](https://www.haowulab.org/teaching/ENAR2021/scRNAseq.html) by Hao Wu, Emory University, and Ziyi Li, MD Anderson Cancer Center
+3. [**ENAR 2021 short course on single cell RNA-seq analysis**](https://www.haowulab.org/teaching/ENAR2021/scRNAseq.html) by Hao Wu, Emory University, and Ziyi Li, MD Anderson Cancer Center
+
+4. [**Bioinformatics Training at the Harvard Chan Bioinformatics Core**](https://hbctraining.github.io/main/)
 
 ### Linux
-* [Cheat sheets](https://infoplatter.wordpress.com/2014/04/06/bioinformaticians-pocket-reference/) of **AWK**, **C++**, **Python**, **R**, **Screen**, **UNIX**, **Vim**, **Git**
+* **[Beginner's Guide for Linux](https://www.tecmint.com/free-online-linux-learning-guide-for-beginners/)**
+* [**Essential Linux Commands**](https://www.tecmint.com/essential-linux-commands/)
+* **[Tutorial of AWK](https://www.tutorialspoint.com/awk/index.htm)**: AWK is a powerful tool for handling large text files in Linux system.
+* **[Tmux Cheat Sheet](https://tmuxcheatsheet.com/)**: Tmux is a useful tool to split terminal screens.
+* **[Learn VIM](https://github.com/iggredible/Learn-Vim)** : Vim is a useful text editor tool in Linux.
+* **[Get started with GitHub](https://docs.github.com/en/get-started)** : GitHub is a cloud-based platform where you can store, share, and work together with others to write code.
+* [**Cheat Sheets**](https://infoplatter.wordpress.com/2014/04/06/bioinformaticians-pocket-reference/) of **AWK**, **C++**, **Python**, **R**, **Vim**, **Git**, etc.
+
 
 ### R
 * [R/Rstudio Tutorial Essential Videos](https://resources.rstudio.com/)
