@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>HyPER_C3_StartGuide_Yang</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+  body {
+    padding: 2cm; 
+  }
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">Introduction to <a href="https://emory.sharepoint.com/sites/HyPER/SitePages/Community-Cloud-Cluster-Cirrostratus.aspx">HyPER-C3</a></h1>
+
+<h2 id="toc_1">Cluster Structure</h2>
+
+<p>The <strong>Emory Hybrid High-Performance Computing Platform for Education and
+Research Community Cloud Custer (HyPER C3)</strong> is a distributed computing system hosted on AWS at Emory. The cluster is designed to provide researchers with the computational resources they need to conduct research. HyperC3 cluster is HIPAA compliant. This means that the cluster is designed to protect the privacy and security of patient health information.</p>
+
+<p><img title="HyPer-C3 Structure" alt="HyPer-C3 Structure" src="HyPER_C3.png"></p>
+
+<h3 id="toc_2">Account</h3>
+
+<ul>
+<li><p>PI can request new user account through the <a href="https://redcap.emory.edu/surveys/?s=YNM3LND7LKNFAMNL">Application Form</a>.</p></li>
+<li><p>Once granted access to a cluster, <strong>a user must log in within 60 days</strong>, or their account will be automatically inactivated. </p></li>
+<li><p>There is a 30-day grace period before automatic deactivation. Account data for inactive users is automatically deleted 90 days from their last login. This represents the 60-day account expiration plus the 30-day grace period. The account Sponsor will be notified before this happens.</p></li>
+</ul>
+
+<h3 id="toc_3">Node</h3>
+
+<ul>
+<li><p><strong>Includes both CPU and GPU nodes. Currently has 11 partitions (OnDemand + Reserved).</strong> All compute partitions have a wall time setting of 7 days. Default job length is 3 days.</p></li>
+<li><p><strong>LoginNode:</strong> The login node is the node where cluster users will be logged into and submit jobs from.</p></li>
+<li><p><strong>GPU requirements:</strong> Users must specify the number of GPUs, CPU cores, and
+memory required for their jobs. This information is used by Slurm to schedule jobs and ensure that they do not exceed the available resources. Default partition: If a user does not specify a partition, their job will be submitted to the default partition <strong>“c64-m512&quot;</strong>. <strong>This partition is a general-purpose partition that is suitable for most jobs.</strong></p></li>
+<li><p><strong>GPU partition:</strong> The GPU partition is only available for jobs that require GPUs. Jobs submitted to this partition will be scheduled on nodes that have GPUs available. Jobs that require GPUs cannot be submitted to non-GPU partitions.</p></li>
+<li><p><strong>GPU hours:</strong> The maximum number of GPU hours per user is <strong>500 for A100, L40s partitions</strong>. This limit is in place to ensure that all users have fair access to the GPU resources.</p></li>
+<li><p><strong>Head node:</strong> The head node is the main node of the cluster. It is not intended for running jobs and can only be accessed by cluster admins.</p></li>
+</ul>
+
+<h3 id="toc_4">Storages</h3>
+
+<ul>
+<li><strong><code>/users</code></strong> : Default home directory. This is a personal
+directory used to store user-specific files such as configuration files, login scripts, and personal data.  <strong>Limited to 50GB, and is purged when the user account becomes inactive and deactivated. Backed up nightly.</strong>.</li>
+<li><strong><code>/scratch</code></strong> : Uses FSx for Lustre storage. Users should use for input/output data storage. <strong>Permanent directory, limited to 1TB per user. Contents of this directory are purged after 60 days, but it is strongly recommended to remove unused data after 30 days.</strong> Note that contents in /scratch directories are not backed up and cannot be restored administratively so should only be used to hold data that can be easily re-created or backed up someplace else.</li>
+<li><strong><code>/group</code></strong> : Shared storage accessible to all group members. It is
+used to store files used by multiple users, such as data sets, software libraries, and documentation. <strong>This directory is permanent and has 1TB storage provided for free per group. Not backed up.</strong> Excess storage will be billed to the sponsor of the group. Users have read and write access to their own files unless otherwise specified. Users also have read-only access to their groups’ files unless given specific permission.</li>
+<li><strong>Recommend running Python codes under the <code>/users</code> and not the
+<code>/group</code> directory for security purposes.</strong></li>
+<li><strong>Email to request mounting AWS S3 bucket to the login node.</strong> </li>
+<li><strong>Check remaining storage:</strong>
+
+<ul>
+<li><code>/users</code> directory: <code>du -sh</code></li>
+<li><code>/scratch</code> directory: <code>lfs quota -u netID /scratch</code></li>
+<li><code>/group</code> directory: <code>du -sh /group/[group directory]</code></li>
+</ul></li>
+</ul>
+
+<h3 id="toc_5">Job managed by <strong>SLURM</strong></h3>
+
+<h3 id="toc_6">Cost</h3>
+
+<p>The use of the community compute partitions, the home storage and scratch storage are at no cost to the users. Group share over 1TB per Sponsor User (i.e. PI) will be charged at <code>$0.3 per GB-mo</code>.  </p>
+
+<h3 id="toc_7">Eailing <a href="mailto:hpc.help@emory.edu">hpc.help@emory.edu</a> for more help.</h3>
+
+<h2 id="toc_8">Login</h2>
+
+<ul>
+<li>First login to Emory VPN if you are outside of Emory network</li>
+<li>Login using <code>ssh</code> by typing the following command in respective terminal
+<code>ssh &lt;your_Emory_NetID&gt;@cirrostratus.it.emory.edu</code> or <code>ssh &lt;your_Emory_NetID&gt;@ondemand.it.emory.edu</code>.
+
+<ol>
+<li>On Mac OS X system, open a terminal app and type ssh</li>
+<li>Under Linux, open a terminal and type ssh</li>
+<li>Under Windows 10, open up a Powershell (search for “Powershell” in the search tool next to the Start menu) and type ssh. (Older versions of the operating system may require the installation of a third party ssh client, like Putty.)</li>
+</ol></li>
+<li><a href="http://www.linuxproblem.org/art_9.html">Login without password</a> </li>
+</ul>
+
+<h2 id="toc_9">Mount Remote Directory to Local Computer</h2>
+
+<ul>
+<li>Use <a href="https://winscp.net/eng/index.php">WinSCP</a> for Windows system</li>
+<li>Use <a href="https://github.com/osxfuse/osxfuse/wiki/SSHFS">sshfs</a> for MAC
+
+<ol>
+<li>Install <a href="https://github.com/osxfuse/sshfs/releases">SSHFS 2.5.0</a></li>
+<li>Install <a href="https://osxfuse.github.io/">macFUSE 4.4.2</a>
+<!-- 3. Mount RHPC server directory to your local mount directory
+Example command to mount remote directory `/users/jyang51` to local mount directory `/Users/jyang51/HyPERC3`
+`sshfs jyang@cirrostratus.it.emory.edu:/home/jyang51/ /Users/jyang51/HyPERC3/ -o auto_cache -ovolname=HyPERC3 -o follow_symlinks` --></li>
+</ol></li>
+</ul>
+
+<h2 id="toc_10">Copying Data to/from the Cluster</h2>
+
+<ol>
+<li><p><strong>Command <code>rsync</code> is recommended</strong></p>
+
+<ul>
+<li>Transfer data from local machine to cluster, or from cluster to local machine</li>
+<li>Transfer data within cluster or across clusters </li>
+<li>See <a href="https://phoenixnap.com/kb/rsync-command-linux-examples">Example usage</a></li>
+<li><code>rsync [options] [SOURCE] [DESTINATION]</code></li>
+</ul></li>
+<li><p>General command by using <strong><code>scp</code></strong> as follows:</p>
+
+<ul>
+<li>See <a href="https://www.hypexr.org/linux_scp_help.php">Example usage</a></li>
+<li><code>scp &lt;path_to_file&gt; &lt;username&gt;@&lt;remote_system_name&gt;:&lt;destination_path&gt;</code></li>
+</ul></li>
+<li><p><strong>SFTP</strong> </p>
+
+<ul>
+<li>Secure File Transfer Protocol (SFTP) allows you to navigate and copy files interactively.</li>
+<li>Initiate an SFTP session: <code>sftp [netid]@cirrostratus.it.emory.edu</code>.</li>
+<li>Navigate to the share directory: <code>cd /scratch/[netid]</code></li>
+<li>Local to Cirrostratus: <code>put [filename]</code></li>
+<li>Cirrostratus to local: <code>get [filename]</code></li>
+</ul></li>
+<li><p><strong>Globus Data Transfer</strong>. To gain access to Globus / HySci, please email the Network Team at <a href="mailto:hysci.help@emory.edu">hysci.help@emory.edu</a>.</p></li>
+<li><p><strong>AWS CLI2</strong></p>
+
+<ul>
+<li><code>aws s3 cp [filename] s3://mybucket/[filename]</code></li>
+<li><code>aws s3 cp s3://mybucket/[filename] [filename]</code> </li>
+</ul></li>
+</ol>
+
+<h2 id="toc_11">Handle Data Files on Linux Cluster</h2>
+
+<h4 id="toc_12">Command <code>man [command]</code> would give help page for the following commands, e.g., <code>man rsync</code>. Type <code>q</code> to exit from the help page.</h4>
+
+<ol>
+<li>Command <code>rsync</code> is recommended for copying data on cluster</li>
+<li>Command <code>cp</code> also copys data within cluster</li>
+<li>Delete data or directory by <code>rm</code></li>
+<li>Make directories by <code>mkdir</code></li>
+<li>Move a directory by <code>mv</code></li>
+<li>List all files under a directory by <code>ls</code></li>
+<li>List all files with their sizes by <code>ls -l -h</code></li>
+<li>Use <code>vi</code> or <code>nano</code> to edit text files on the cluster<br></li>
+<li>Read text file by <code>less</code>, <code>cat</code></li>
+<li>Consider gzip your text file to save space by <code>gzip</code></li>
+<li>Open gzipped text file by <code>zcat [file_name.gz] | less -S</code></li>
+<li>Command <code>man</code> to see user manual/instructions of Linux tools, e.g., <code>man ls</code> </li>
+<li>Use pipe <code>|</code> to take output from the command before <code>|</code> as the input for the command after <code>|</code></li>
+<li>Command <a href="https://www.geeksforgeeks.org/awk-command-unixlinux-examples/"><code>awk</code></a> is highlly recomended for handling large text files.</li>
+<li>Split your screen by <code>tmux</code>. See <a href="https://tmuxcheatsheet.com/">tmux cheat sheet</a>.</li>
+</ol>
+
+<h2 id="toc_13">Software Management</h2>
+
+<h3 id="toc_14"><code>Anaconda (Conda), Spack, Singularity</code> have been installed in the <code>/users</code> directory.</h3>
+
+<h3 id="toc_15">Available software: <code>R, Python, TensorFlow, PyTorch, Go, Apache MXNet, Nvidia CUDA 11</code></h3>
+
+<h3 id="toc_16">Check if a software is available on the cluster</h3>
+
+<ul>
+<li><code>which [software_name]</code></li>
+</ul>
+
+<h3 id="toc_17">Conda</h3>
+
+<ul>
+<li>Create a conda environment named myenv: <code>conda create -n myenv</code> </li>
+<li>List conda environments : <code>conda env list</code> </li>
+<li>Remove conda environment : <code>conda env remove --name myenv</code></li>
+<li>Activate conda environment: <code>conda activate myenv</code></li>
+<li>Deactivatae: <code>conda deactivate</code></li>
+<li>Delete a virtual environment: <code>conda env remove -n myenv</code></li>
+</ul>
+
+<h3 id="toc_18">Using a software installed on the cluster</h3>
+
+<ul>
+<li><p>Use software command to run commands </p>
+
+<ul>
+<li>Provide full directory to the data files you want to read or write or plot.</li>
+<li>For example, type command <strong><code>R</code></strong> to start using R. You may copy and paste your R commands from a text script to the session window.</li>
+<li> Save figures as pdf into the disk to view your plots by R function <code>ggsave(&quot;temp.pdf&quot;)</code> or </li>
+<li><div><pre><code class="language-none">pdf(&quot;temp.pdf&quot;);
+plot(); 
+dev.off();</code></pre></div></li>
+<li><p>Type command <strong><code>python</code></strong>  in the session to start a python session.</p></li>
+<li><p>One can open the script on cluster by local Editor (e.g., <strong><a href="https://www.sublimetext.com/">Sublime</a></strong>, <strong><a href="https://code.visualstudio.com/">Visual Studio Code</a></strong>) after mounting cloud directory to local machine, and just copy/paste command into these <strong>R</strong> or <strong>python</strong> sessions</p></li>
+</ul></li>
+<li><p>Command <strong><code>which</code></strong> can also be used to check if a software is available under the <code>${PATH}</code> directory in current session </p></li>
+</ul>
+
+<h3 id="toc_19"><strong><a href="https://docs.sylabs.io/guides/3.10/user-guide/">Singularity</a></strong>: A container platform for HPC.</h3>
+
+<h3 id="toc_20">Install a software without root access</h3>
+
+<ul>
+<li>Install software under <code>~/.local/</code>.</li>
+<li>Install python libraries by <code>conda</code> under virtual environment.</li>
+</ul>
+
+<h3 id="toc_21">Setup one&#39;s <code>.bashrc</code> file</h3>
+
+<ul>
+<li>See <a href="https://www.freecodecamp.org/news/bashrc-customization-guide/">useful things</a> that you can setup your own <code>bashrc</code> file under your home directory to save tying of commands. 
+
+<ul>
+<li>Set up <code>PATH</code> system variables. See <a href="https://www.baeldung.com/linux/path-variable">example</a>.</li>
+<li>Create alias by <code>alias</code> in <code>.bashrc</code> to set up your own shortcup of commands. See <a href="https://phoenixnap.com/kb/linux-alias-command">Examples</a>.</li>
+<li>Setup environment variables. See <a href="https://www.cyberciti.biz/faq/set-environment-variable-linux/">example</a>.</li>
+<li>Load software modules</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_22">General Job Workflow</h2>
+
+<h3 id="toc_23">Small analysis that does not require large data input/output</h3>
+
+<ul>
+<li>Use <code>/users</code> as data input/output directories</li>
+</ul>
+
+<h3 id="toc_24">Analysis that requires larger data</h3>
+
+<ul>
+<li>Use <code>/scratch</code> as temperary space for input/output data files.</li>
+</ul>
+
+<h2 id="toc_25">Submit Jobs by <a href="https://slurm.schedmd.com/">SLURM</a></h2>
+
+<h3 id="toc_26">Basic SLURM commands</h3>
+
+<ul>
+<li><strong><code>sbatch</code></strong> to submit jobs
+
+<ul>
+<li>Set arguments to <code>sbatch</code> in a wrapper shell (job submission) script, for example, you may use <code>sbatch normal.sh</code> with the following <code>normal.sh</code> script:</li>
+</ul></li>
+</ul>
+
+<div><pre><code class="language-none">#!/bin/bash
+#SBATCH --job-name=normal.R
+#SBATCH -–account=general # Use account=’a100v100’ for a100 gpus
+#SBATCH --nodes=1 # Number of nodes requested
+#SBATCH --ntasks=1 # Number of tasks
+SBATCH --partition=a10g-1-gm24-c32-m128 # Name of the partition
+#SBATCH --time=4:00:00 # set 4hrs of running time. default time is 7-00:00:00
+
+## This puts all output files in a separate directory.
+#SBATCH --output=Out/normal.%A_%a.out
+#SBATCH —error=Err/normal.%A_%a.err
+--gpus=1 # Enter no.of gpus needed
+#SBATCH --mem=8G # Memory Needed
+#SBATCH --mail-type=begin # send mail when job begins
+#SBATCH --mail-type=end # send mail when job ends
+#SBATCH --mail-type=fail # send mail if job fails
+#SBATCH --mail-user=[netid]@emory.edu # Replace with your mailid
+
+## Submitting 10 instances of the bash commands listed below
+#SBATCH —array=0-10
+
+## For notification purposes. Use your Emory email address only!
+#SBATCH —mail-user=&lt;your_email_address&gt;@emory.edu
+#SBATCH --mail-type=END,FAIL
+
+## The following are your commands
+conda init bash &gt; /dev/null 2&gt;&amp;1 #initializes Conda for Bash shell
+source ~/.bashrc 
+conda activate myenv
+python example.py
+Rscript /home/&lt;user&gt;/normal.R</code></pre></div>
+
+<ul>
+<li><p><strong><code>squeue</code></strong> to display information about the run queue. </p>
+
+<ul>
+<li><code>-a</code> : Displays jobs in all partitions.</li>
+<li><code>--help</code>: Displays help message.</li>
+<li><code>-l</code> : Reports more of the available information for the selected jobs.</li>
+<li><code>-u netid</code> : Displays only jobs by the specified user. </li>
+</ul></li>
+<li><p><strong><code>scancel [jobid]</code></strong> used to cancel or kill a job.</p></li>
+<li><p><strong><code>scontrol</code></strong> used to show information about running or pending jobs</p>
+
+<ul>
+<li><code>scontrol show job [jobid]</code> to show system details of a submitted job</li>
+<li><code>scontrol show node [node_name]</code> to show node information</li>
+<li><code>scontrol show partition [partition_name]</code> to show partition configuration</li>
+</ul></li>
+<li><p><strong><code>srun</code></strong> runs a parallel job on cluster managed by SLURM.</p>
+
+<ul>
+<li>Can be used to login to the compute nodes using your jobid: <code>srun --jobid [jobid] --pty --preserve-env bash</code>.</li>
+<li>Use <code>nividia-smi</code> to track gpu utilization after login to the ocmpute node.</li>
+<li>* Simply exit the interactive session by <code>exit</code>.</li>
+</ul></li>
+<li><p><strong><code>sinfo</code></strong> used to report the state of the cluster partition and nodes.</p>
+
+<ul>
+<li>Naming convention of the non-GPU partitions: <code>c&lt;no. of vCPU cores&gt;-m&lt;amount of memory&gt;</code></li>
+<li>Naming convention of the GPU partition: <code>&lt;name of the GPU&gt;-&lt;no. of GPUs&gt;-gm&lt;amount of GPU memory&gt;-c&lt;no. of vCPU cores&gt;-m&lt;amount of memory&gt;</code></li>
+</ul></li>
+</ul>
+
+<h2 id="toc_27">Best Practices and Limitations for Environment Setup</h2>
+
+<ul>
+<li><p><strong>Avoid installing Jupyter Notebook</strong>: Installing Jupyter Notebook has been restricted in the current upgrade.</p></li>
+<li><p><strong>Using <a href="https://code.visualstudio.com/Download">VSCode</a> only for Editing Purpose</strong>: VSCode can be installed on the login node for accessing the files and also users can use the VScode terminal to submit jobs.</p></li>
+<li><p><strong>Avoid running jobs on Login Node</strong>. </p></li>
+</ul>
+
+<h2 id="toc_28">Additional Resources</h2>
+
+<ul>
+<li><a href="http://it.emory.edu/vpntools/access.html">Emory VPN</a></li>
+<li><a href="https://linuxcommand.org/tlcl.php">The Linux Command Line</a> book is recommended to read ahead</li>
+<li><a href="https://slurm.schedmd.com/quickstart.html">SLURM Quickstart</a></li>
+<li><a href="https://emory.sharepoint.com/sites/HyPER/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FHyPER%2FShared%20Documents%2FHyPER%20C3%20Cirrostratus%20User%20Guide%20V3%2Epdf&amp;parent=%2Fsites%2FHyPER%2FShared%20Documents">Cirrostratus User Guide</a></li>
+<li><a href="https://emory.sharepoint.com/sites/HyPER/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FHyPER%2FShared%20Documents%2FOpen%20OnDemand%2Epdf&amp;parent=%2Fsites%2FHyPER%2FShared%20Documents">Open OnDemand Overview</a></li>
+</ul>
+
+
+
+
+</body>
+
+</html>

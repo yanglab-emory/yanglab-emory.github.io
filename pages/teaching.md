@@ -32,22 +32,21 @@ title: "Teaching and Resources"
 ## High Performance and Cloud Computing Cluster 
 ### [HGCC](https://hgcc.emory.edu/)
 * <a href="../assets/ComputationSlides/HGCC_StartGuide_1.html">Introductions to New HGCC</a>
-
 * <a href="../assets/ComputationSlides/HGCC_StartGuide_2.html">Run Computation Tools and Submit Jobs on HGCC</a>
-
 * <a href="../assets/ComputationSlides/Introduction_to_BASH_2024.pdf">Introductions to BASH</a>
 
 
 ### RHPC
-
 * <a href="../assets/ComputationSlides/RSPH_HPC_StartGuide_Yang.html" target="_self"> Introductions to RHPC</a>
 * [RSPH High Performance Computing Github](https://github.com/RSPH-HPC) : [Starting guides](https://github.com/RSPH-HPC/Documentation/blob/master/HPC%20Getting%20Started%20Guide%20V.2.0.pdf) are provided. 
 * [Helpful tips from Dr. Hao Wu](https://www.haowulab.org//pages/computing.html)
 
+### [HyPER-C3](https://emory.sharepoint.com/sites/HyPER/SitePages/Community-Cloud-Cluster-Cirrostratus.aspx)
+* <a href="../assets/ComputationSlides/HyPER_C3_StartGuide.html">Start Guide for using HyPER-C3 HPC</a>
+
+
 ### [Emory Amazon Web Service (AWS)](https://aws.emory.edu/)
-
 * <a href="../assets/ComputationSlides/EmoryAWS_StartGuide_Yang.html">Introductions to Emory AWS</a>
-
 * [AWS Documentation](https://docs.aws.amazon.com/index.html)
 
 
