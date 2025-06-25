@@ -5,7 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>HyPER_C3_StartGuide_Yang</title>
+<title>HyPER_C3_StartGuide</title>
 
 
 <style type="text/css">
@@ -348,7 +348,43 @@ Research Community Cloud Custer (HyPER C3)</strong> is a distributed computing s
 <li><p>There is a 30-day grace period before automatic deactivation. Account data for inactive users is automatically deleted 90 days from their last login. This represents the 60-day account expiration plus the 30-day grace period. The account Sponsor will be notified before this happens.</p></li>
 </ul>
 
-<h3 id="toc_3">Node</h3>
+<h3 id="toc_3">Login</h3>
+
+<ul>
+<li><p><strong>First login to Emory VPN even if you are inside of Emory network.</strong></p></li>
+<li><p><strong>Use CA-Signed Host Key (only need to set up for once)</strong></p>
+
+<ol>
+<li><p>Download the CA Public Key: Download the <a href="https://emory.sharepoint.com/sites/HyPER/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FHyPER%2FShared%20Documents%2FPublic%5FKeys%2Fssh%5Fca%2Epub&amp;parent=%2Fsites%2FHyPER%2FShared%20Documents%2FPublic%5FKeys">ssh_ca.pub</a> file, and save it to your home directory.</p></li>
+<li><p>Add the CA Key to Your Known Hosts. Please follow the instructions based on your operating system:</p></li>
+</ol></li>
+</ul>
+
+<p>🔹 For Windows Users:
+Open Command Prompt and run the following commands (adjust the path as needed):</p>
+
+<div><pre><code class="language-none">type C:\Users\YourUsername\ssh_ca.pub &gt;&gt; %USERPROFILE%\.ssh\known_hosts
+echo @cert-authority cirrostratus.it.emory.edu &gt;&gt; %USERPROFILE%\.ssh\known_hosts
+echo @cert-authority ondemand.it.emory.edu &gt;&gt; %USERPROFILE%\.ssh\known_hosts</code></pre></div>
+
+<p>🔹 For Mac/Linux Users:
+Open a terminal and run the following commands (adjust the path as needed):</p>
+
+<div><pre><code class="language-none">echo &quot;@cert-authority cirrostratus.it.emory.edu $(cat /path/to/ssh_ca.pub)&quot; &gt;&gt; ~/.ssh/known_hosts
+echo &quot;@cert-authority ondemand.it.emory.edu $(cat /path/to/ssh_ca.pub)&quot; &gt;&gt; ~/.ssh/known_hosts</code></pre></div>
+
+<ul>
+<li><p><strong>Login using <code>ssh</code></strong> by typing the following command in respective terminal
+<code>ssh &lt;your_Emory_NetID&gt;@cirrostratus.it.emory.edu</code> or <code>ssh &lt;your_Emory_NetID&gt;@ondemand.it.emory.edu</code>.</p>
+
+<ol>
+<li>On Mac/Linux system, open a terminal and type ssh</li>
+<li>Under Windows 10, open up a Powershell (search for “Powershell” in the search tool next to the Start menu) and type ssh. (Older versions of the operating system may require the installation of a third party ssh client, like Putty.)</li>
+</ol></li>
+<li><p><a href="http://www.linuxproblem.org/art_9.html">SSH login without password</a></p></li>
+</ul>
+
+<h3 id="toc_4">Node</h3>
 
 <ul>
 <li><p><strong>Includes both CPU and GPU nodes. Currently has 11 partitions (OnDemand + Reserved).</strong> All compute partitions have a wall time setting of 7 days. Default job length is 3 days.</p></li>
@@ -358,9 +394,10 @@ memory required for their jobs. This information is used by Slurm to schedule jo
 <li><p><strong>GPU partition:</strong> The GPU partition is only available for jobs that require GPUs. Jobs submitted to this partition will be scheduled on nodes that have GPUs available. Jobs that require GPUs cannot be submitted to non-GPU partitions.</p></li>
 <li><p><strong>GPU hours:</strong> The maximum number of GPU hours per user is <strong>500 for A100, L40s partitions</strong>. This limit is in place to ensure that all users have fair access to the GPU resources.</p></li>
 <li><p><strong>Head node:</strong> The head node is the main node of the cluster. It is not intended for running jobs and can only be accessed by cluster admins.</p></li>
+<li><p><strong>Job managed by SLURM</strong></p></li>
 </ul>
 
-<h3 id="toc_4">Storages</h3>
+<h3 id="toc_5">Storages</h3>
 
 <ul>
 <li><strong><code>/users</code></strong> : Default home directory. This is a personal
@@ -380,29 +417,13 @@ used to store files used by multiple users, such as data sets, software librarie
 </ul></li>
 </ul>
 
-<h3 id="toc_5">Job managed by <strong>SLURM</strong></h3>
-
 <h3 id="toc_6">Cost</h3>
 
 <p>The use of the community compute partitions, the home storage and scratch storage are at no cost to the users. Group share over 1TB per Sponsor User (i.e. PI) will be charged at <code>$0.3 per GB-mo</code>.  </p>
 
-<h3 id="toc_7">Eailing <a href="mailto:hpc.help@emory.edu">hpc.help@emory.edu</a> for more help.</h3>
+<h3 id="toc_7">Need help: <a href="mailto:hpc.help@emory.edu">hpc.help@emory.edu</a></h3>
 
-<h2 id="toc_8">Login</h2>
-
-<ul>
-<li>First login to Emory VPN if you are outside of Emory network</li>
-<li>Login using <code>ssh</code> by typing the following command in respective terminal
-<code>ssh &lt;your_Emory_NetID&gt;@cirrostratus.it.emory.edu</code> or <code>ssh &lt;your_Emory_NetID&gt;@ondemand.it.emory.edu</code>.
-
-<ol>
-<li>On Mac OS X system, open a terminal app and type ssh</li>
-<li>Under Linux, open a terminal and type ssh</li>
-<li>Under Windows 10, open up a Powershell (search for “Powershell” in the search tool next to the Start menu) and type ssh. (Older versions of the operating system may require the installation of a third party ssh client, like Putty.)</li>
-</ol></li>
-</ul>
-
-<h2 id="toc_9">Mount Remote Directory to Local Computer</h2>
+<h2 id="toc_8">Mount Remote Directory to Local Computer</h2>
 
 <ul>
 <li>Use <a href="https://winscp.net/eng/index.php">WinSCP</a> for Windows system</li>
@@ -410,14 +431,16 @@ used to store files used by multiple users, such as data sets, software librarie
 
 <ol>
 <li>Install <a href="https://github.com/osxfuse/sshfs/releases">SSHFS 2.5.0</a></li>
-<li>Install <a href="https://osxfuse.github.io/">macFUSE 4.4.2</a>
-<!-- 3. Mount RHPC server directory to your local mount directory
-Example command to mount remote directory `/users/jyang51` to local mount directory `/Users/jyang51/HyPERC3`
-`sshfs jyang@cirrostratus.it.emory.edu:/home/jyang51/ /Users/jyang51/HyPERC3/ -o auto_cache -ovolname=HyPERC3 -o follow_symlinks` --></li>
+<li>Install <a href="https://osxfuse.github.io/">macFUSE 4.4.2</a></li>
+<li>Mount HyPER-C3 server directory to your local mount directory
+Example command to mount remote directory <code>/users/jyang51/</code> to local mount directory <code>/Users/jyang51/HYPERC3/</code>:</li>
 </ol></li>
 </ul>
 
-<h2 id="toc_10">Copying Data to/from the Cluster</h2>
+<div><pre><code class="language-none">mkdir -p /Users/jyang51/HYPERC3/ # create directory on local computer
+sshfs jyang51@cirrostratus.it.emory.edu:/users/jyang51/ /Users/jyang51/HYPERC3/ -o auto_cache -ovolname=HYPERC3 -o follow_symlinks</code></pre></div>
+
+<h2 id="toc_9">Copying Data to/from the Cluster</h2>
 
 <ol>
 <li><p><strong>Command <code>rsync</code> is recommended</strong></p>
@@ -452,9 +475,9 @@ Example command to mount remote directory `/users/jyang51` to local mount direct
 </ul></li>
 </ol>
 
-<h2 id="toc_11">Handle Data Files on Linux Cluster</h2>
+<h2 id="toc_10">Handle Data Files on Linux Cluster</h2>
 
-<h4 id="toc_12">Command <code>man [command]</code> would give help page for the following commands, e.g., <code>man rsync</code>. Type <code>q</code> to exit from the help page.</h4>
+<h4 id="toc_11">Command <code>man [command]</code> would give help page for the following commands, e.g., <code>man rsync</code>. Type <code>q</code> to exit from the help page.</h4>
 
 <ol>
 <li>Command <code>rsync</code> is recommended for copying data on cluster</li>
@@ -474,19 +497,16 @@ Example command to mount remote directory `/users/jyang51` to local mount direct
 <li>Split your screen by <code>tmux</code>. See <a href="https://tmuxcheatsheet.com/">tmux cheat sheet</a>.</li>
 </ol>
 
-<h2 id="toc_13">Software Management</h2>
+<h2 id="toc_12">Software Management</h2>
 
-<h3 id="toc_14"><code>Anaconda (Conda), Spack, Singularity</code> have been installed in the <code>/users</code> directory.</h3>
-
-<h3 id="toc_15">Available software: <code>R, Python, TensorFlow, PyTorch, Go, Apache MXNet, Nvidia CUDA 11</code></h3>
-
-<h3 id="toc_16">Check if a software is available on the cluster</h3>
+<h3 id="toc_13">Available software</h3>
 
 <ul>
-<li><code>which [software_name]</code></li>
+<li><strong><code>Anaconda (Conda), Spack, Singularity, R, Python, TensorFlow, PyTorch, Go, Apache MXNet, Nvidia CUDA 11</code></strong></li>
+<li>Check if a software is available on the cluster <code>which [software_executible_name]</code></li>
 </ul>
 
-<h3 id="toc_17">Conda</h3>
+<h3 id="toc_14">Conda</h3>
 
 <ul>
 <li>Create a conda environment named myenv: <code>conda create -n myenv</code> </li>
@@ -497,7 +517,7 @@ Example command to mount remote directory `/users/jyang51` to local mount direct
 <li>Delete a virtual environment: <code>conda env remove -n myenv</code></li>
 </ul>
 
-<h3 id="toc_18">Using a software installed on the cluster</h3>
+<h3 id="toc_15">Using a software installed on the cluster</h3>
 
 <ul>
 <li><p>Use software command to run commands </p>
@@ -512,19 +532,18 @@ dev.off();</code></pre></div></li>
 <li><p>Type command <strong><code>python</code></strong>  in the session to start a python session.</p></li>
 <li><p>One can open the script on cluster by local Editor (e.g., <strong><a href="https://www.sublimetext.com/">Sublime</a></strong>, <strong><a href="https://code.visualstudio.com/">Visual Studio Code</a></strong>) after mounting cloud directory to local machine, and just copy/paste command into these <strong>R</strong> or <strong>python</strong> sessions</p></li>
 </ul></li>
-<li><p>Command <strong><code>which</code></strong> can also be used to check if a software is available under the <code>${PATH}</code> directory in current session </p></li>
 </ul>
 
-<h3 id="toc_19"><strong><a href="https://docs.sylabs.io/guides/3.10/user-guide/">Singularity</a></strong>: A container platform for HPC.</h3>
+<h3 id="toc_16"><strong><a href="https://docs.sylabs.io/guides/3.10/user-guide/">Singularity</a></strong>: A container platform for HPC.</h3>
 
-<h3 id="toc_20">Install a software without root access</h3>
+<h3 id="toc_17">Install a software without root access</h3>
 
 <ul>
 <li>Install software under <code>~/.local/</code>.</li>
 <li>Install python libraries by <code>conda</code> under virtual environment.</li>
 </ul>
 
-<h3 id="toc_21">Setup one&#39;s <code>.bashrc</code> file</h3>
+<h3 id="toc_18">Setup one&#39;s <code>.bashrc</code> file</h3>
 
 <ul>
 <li>See <a href="https://www.freecodecamp.org/news/bashrc-customization-guide/">useful things</a> that you can setup your own <code>bashrc</code> file under your home directory to save tying of commands. 
@@ -537,23 +556,23 @@ dev.off();</code></pre></div></li>
 </ul></li>
 </ul>
 
-<h2 id="toc_22">General Job Workflow</h2>
+<h2 id="toc_19">General Job Workflow</h2>
 
-<h3 id="toc_23">Small analysis that does not require large data input/output</h3>
+<h3 id="toc_20">Small analysis that does not require large data input/output</h3>
 
 <ul>
 <li>Use <code>/users</code> as data input/output directories</li>
 </ul>
 
-<h3 id="toc_24">Analysis that requires larger data</h3>
+<h3 id="toc_21">Analysis that requires larger data</h3>
 
 <ul>
 <li>Use <code>/scratch</code> as temperary space for input/output data files.</li>
 </ul>
 
-<h2 id="toc_25">Submit Jobs by <a href="https://slurm.schedmd.com/">SLURM</a></h2>
+<h2 id="toc_22">Submit Jobs by <a href="https://slurm.schedmd.com/">SLURM</a></h2>
 
-<h3 id="toc_26">Basic SLURM commands</h3>
+<h3 id="toc_23">Basic SLURM commands</h3>
 
 <ul>
 <li><strong><code>sbatch</code></strong> to submit jobs
@@ -627,7 +646,7 @@ Rscript /home/&lt;user&gt;/normal.R</code></pre></div>
 </ul></li>
 </ul>
 
-<h2 id="toc_27">Best Practices and Limitations for Environment Setup</h2>
+<h2 id="toc_24">Best Practices and Limitations for Environment Setup</h2>
 
 <ul>
 <li><p><strong>Avoid installing Jupyter Notebook</strong>: Installing Jupyter Notebook has been restricted in the current upgrade.</p></li>
@@ -635,7 +654,7 @@ Rscript /home/&lt;user&gt;/normal.R</code></pre></div>
 <li><p><strong>Avoid running jobs on Login Node</strong>. </p></li>
 </ul>
 
-<h2 id="toc_28">Additional Resources</h2>
+<h2 id="toc_25">Additional Resources</h2>
 
 <ul>
 <li><a href="http://it.emory.edu/vpntools/access.html">Emory VPN</a></li>
