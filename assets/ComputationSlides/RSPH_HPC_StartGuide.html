@@ -5,7 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>RSPH_HPC_StartGuide_Yang</title>
+<title>RSPH_HPC_StartGuide</title>
 
 
 <style type="text/css">
@@ -331,29 +331,27 @@ kbd {
 
 <body>
 
-<h1 id="toc_0">Introduction to RSPH HPC Cluster</h1>
+<h1 id="toc_0">Introduction to RSPH Compute Cluster</h1>
 
 <h2 id="toc_1">Cluster Structure</h2>
 
-<ul>
-<li>25 Compute nodes
+<h3 id="toc_2">120+ compute nodes</h3>
 
 <ul>
-<li>24 of which have 32 cores and 196 GB RAM each</li>
-<li>One &quot;large memory node&quot; with 1.5 TB RAM</li>
-<li>Four private nodes with partition &quot;yanglab&quot; (32 cores, 188GB RAM) available for yang lab members</li>
-<li>Other &quot;preemptable&quot; nodes are allocated for other labs, but could be used when they are free</li>
-</ul></li>
-<li>Connected via 25 GB Ethernet network</li>
-<li>1 Petabyte Panasas parallel file system
+<li><strong>24 nodes have 32 cores and 196 GB RAM each</strong></li>
+<li><strong>1 &quot;large memory node&quot; with 1.5 TB RAM</strong></li>
+<li>The other cluster systems consist of <strong>70+</strong> reserved use faculty nodes, which are also available for general, preemptive use when they are not in active use by their research groups.</li>
+<li><strong>4</strong> private nodes with partition &quot;yanglab&quot; (32 cores, 188GB RAM) available for yang lab members</li>
+<li>These systems are all connected together via 25GB Ethernet high-speed network, and all have access to a shared 1.2 Petabyte Panasas parallel ﬁle system.
 
 <ul>
-<li>Extra 50TB storage for yanglab <code>/projects/YangLabData/</code></li>
+<li>Extra 20TB storage for yanglab <code>/projects/YangLabData/</code></li>
 </ul></li>
-<li>Support 800 concurrent running job managed by <strong>SLURM</strong></li>
+<li>Support thousands of concurrent running job managed by <strong>SLURM</strong></li>
+<li>IT help: <a href="mailto:help@sph.emory.edu">help@sph.emory.edu</a></li>
 </ul>
 
-<h2 id="toc_2">Login</h2>
+<h3 id="toc_3">Login</h3>
 
 <ul>
 <li>First login to Emory VPN</li>
@@ -368,43 +366,61 @@ kbd {
 <li><a href="http://www.linuxproblem.org/art_9.html">Login without password</a> </li>
 </ul>
 
-<h2 id="toc_3">Mount Remote Directory to Local Computer</h2>
+<h3 id="toc_4">Mount Remote Directory to Local Computer</h3>
 
 <ul>
 <li>Use <a href="https://winscp.net/eng/index.php">WinSCP</a> for Windows system</li>
-<li>Use <a href="https://github.com/osxfuse/osxfuse/wiki/SSHFS">sshfs</a> for MAC
+<li>Use <a href="https://github.com/macfuse/macfuse/wiki/File-Systems-%E2%80%90-SSHFS">macFUSE/SSHFS</a> for MAC
 
 <ol>
-<li>Install <a href="https://github.com/osxfuse/sshfs/releases">SSHFS 2.5.0</a></li>
-<li>Install <a href="https://osxfuse.github.io/">macFUSE 4.4.2</a></li>
+<li>Install <a href="https://github.com/libfuse/sshfs">SSHFS</a></li>
+<li>Install <a href="https://osxfuse.github.io/">macFUSE</a></li>
 <li>Mount RHPC server directory to your local mount directory
 Example command to mount remote directory <code>/home/jyang51/</code> to local mount directory <code>/Users/jyang51/RHPC/</code>
 <code>sshfs jyang@clogin01.sph.emory.edu:/home/jyang51/ /Users/jyang51/RHPC/ -o auto_cache -ovolname=RHPC -o follow_symlinks</code> </li>
 </ol></li>
 </ul>
 
-<h2 id="toc_4">Copying Data to/from the Cluster</h2>
+<h2 id="toc_5">Storage on the Cluster</h2>
 
-<ol>
-<li><p><strong>Command <code>rsync</code> is recommended</strong></p>
-
-<ul>
-<li>Transfer data from local machine to cluster, or from cluster to local machine</li>
-<li>Transfer data within cluster or across clusters </li>
-<li>See <a href="https://phoenixnap.com/kb/rsync-command-linux-examples">Example usage</a></li>
-<li><code>rsync [options] [SOURCE] [DESTINATION]</code></li>
-</ul></li>
-<li><p>General command by using <strong><code>scp</code></strong> as follows:</p>
+<h3 id="toc_6">Sub volumns all mounted across the cluster</h3>
 
 <ul>
-<li>See <a href="https://www.hypexr.org/linux_scp_help.php">Example usage</a></li>
-<li><code>scp &lt;path_to_file&gt; &lt;username&gt;@&lt;remote_system_name&gt;:&lt;destination_path&gt;</code></li>
+<li><code>/home</code> where user home direcotry is located
+
+<ul>
+<li>Each user have a <strong>25GB</strong> quota for home directory, suitable for running computations </li>
+<li>Retains two snapshots of data at <code>/home/.snapshot</code>. If a user accidentally deletes a file, one of two possible copies of the file can be restored from the snapshot directory</li>
 </ul></li>
-</ol>
+<li> <code>/scratch</code> where user may load data for immediate computation
 
-<h2 id="toc_5">Handle Data Files on Cluster</h2>
+<ul>
+<li>Usable for large computations with the <strong>two-week maximum retention policy</strong> </li>
+<li><strong>100GB/user</strong></li>
+</ul></li>
+<li> <code>/projects</code> where groups may store project data and run computations. Requestable in increments of <strong>1TB</strong>, $75 per year 
 
-<h4 id="toc_6">Command <code>man [command]</code> would give help page for the following commands, e.g., <code>man rsync</code>. Type <code>q</code> to exit from the help page.</h4>
+<ul>
+<li><strong>20TB</strong> storage space is available for yang lab under <code>/projects/YangLabData/</code></li>
+<li>You may creat a working directory under this lab storage space for all of your work</li>
+<li>**Please be mindful with your storage usage. **
+
+<ul>
+<li>Avoid creating duplecates of data files.</li>
+<li>Delete files that you no longer need to use.</li>
+<li><code>gzip</code> large text data files.</li>
+</ul></li>
+</ul></li>
+<li> <code>/apps</code> and <code>/projects/YangLabData/bin</code> where all softwares can be found</li>
+</ul>
+
+<h3 id="toc_7">Monitoring storage usage With command <code>pan_quota</code></h3>
+
+<h3 id="toc_8">All files are not backed up on the cluster</h3>
+
+<h2 id="toc_9">Handle Data Files on Linux Cluster</h2>
+
+<h4 id="toc_10">Command <code>man [command]</code> would give help page for the following commands, e.g., <code>man rsync</code>. Type <code>q</code> to exit from the help page.</h4>
 
 <ol>
 <li>Command <code>rsync</code> is recommended for copying data on cluster</li>
@@ -424,9 +440,28 @@ Example command to mount remote directory <code>/home/jyang51/</code> to local m
 <li>Split your screen by <code>tmux</code>. See <a href="https://tmuxcheatsheet.com/">tmux cheat sheet</a>.</li>
 </ol>
 
-<h2 id="toc_7">Using a Software</h2>
+<h3 id="toc_11">Copying Data to/from the Cluster</h3>
 
-<h3 id="toc_8">Check if a software is available on the cluster</h3>
+<ol>
+<li><p><strong>Command <code>rsync</code> is recommended</strong></p>
+
+<ul>
+<li>Transfer data from local machine to cluster, or from cluster to local machine</li>
+<li>Transfer data within cluster or across clusters </li>
+<li>See <a href="https://phoenixnap.com/kb/rsync-command-linux-examples">Example usage</a></li>
+<li><code>rsync [options] [SOURCE] [DESTINATION]</code></li>
+</ul></li>
+<li><p>General command by using <strong><code>scp</code></strong> as follows:</p>
+
+<ul>
+<li>See <a href="https://www.hypexr.org/linux_scp_help.php">Example usage</a></li>
+<li><code>scp &lt;path_to_file&gt; &lt;username&gt;@&lt;remote_system_name&gt;:&lt;destination_path&gt;</code></li>
+</ul></li>
+</ol>
+
+<h2 id="toc_12">Using a Software</h2>
+
+<h3 id="toc_13">Check if a software is available on the cluster</h3>
 
 <ul>
 <li><code>which [software_name]</code></li>
@@ -434,9 +469,9 @@ Example command to mount remote directory <code>/home/jyang51/</code> to local m
 <li><code>module spider [software_name]</code> to find detailed information about the software</li>
 </ul>
 
-<h3 id="toc_9">Using a software installed on the cluster</h3>
+<h3 id="toc_14">Using a software installed on the cluster</h3>
 
-<h4 id="toc_10"><strong>Please never run a software directly on gateway node. First login to a compute node using command <code>srun -p yanglab --pty bash</code>.</strong></h4>
+<h4 id="toc_15"><strong>Please never run a software directly on gateway node. First login to a compute node using command <code>srun -p yanglab --pty --preserve-env bash</code>.</strong></h4>
 
 <ul>
 <li><code>module load [software_name]</code> to load the software.</li>
@@ -460,14 +495,15 @@ dev.off();
 <li>Unload all software modules by <strong><code>module purge</code></strong></li>
 </ul>
 
-<h3 id="toc_11">Install a software without root access</h3>
+<h3 id="toc_16">Install a software without root access</h3>
 
 <ul>
 <li>Install software under <code>~/.local/</code></li>
 <li>Install python libraries by <strong><code>pip install --user [package]</code></strong>. Or search &quot;install without root access&quot;, &quot;install with specificed installation directory&quot;. The installation directory should be those you have writting access to. </li>
+<li>Install python libraries under virtual environment.</li>
 </ul>
 
-<h3 id="toc_12">Share installed software with the lab</h3>
+<h3 id="toc_17">Share installed software with the lab</h3>
 
 <ul>
 <li>Make a soft link of the executible tool directory under <code>/projects/YangLabData/bin</code> by the following commands</li>
@@ -482,7 +518,7 @@ ln -s [tool directory]</code></pre></div>
 
 <div><pre><code class="language-none">export PATH=/projects/YangLabData/bin:$PATH</code></pre></div>
 
-<h3 id="toc_13">Setup one&#39;s <code>.bashrc</code> file</h3>
+<h3 id="toc_18">Setup one&#39;s <code>.bashrc</code> file</h3>
 
 <ul>
 <li>See <a href="https://www.freecodecamp.org/news/bashrc-customization-guide/">useful things</a> that you can setup your own <code>bashrc</code> file under your home directory to save tying of commands. 
@@ -495,9 +531,9 @@ ln -s [tool directory]</code></pre></div>
 </ul></li>
 </ul>
 
-<h2 id="toc_14">Submit Jobs by SLURM</h2>
+<h2 id="toc_19">Submit Jobs by SLURM</h2>
 
-<h3 id="toc_15">Basic SLURM commands</h3>
+<h3 id="toc_20">Basic SLURM commands</h3>
 
 <ul>
 <li><code>sbatch</code> to submit jobs (like <code>qsub</code> in Grid Engine)
@@ -548,57 +584,13 @@ R</code></pre></div>
 <li><p><code>sinfo</code> used to report the state of the cluster partition and nodes</p></li>
 </ul>
 
-<h2 id="toc_16">Storage on the Cluster</h2>
-
-<h3 id="toc_17">Sub volumns all mounted across the cluster</h3>
+<h2 id="toc_21">Additional Resources</h2>
 
 <ul>
-<li><code>/home</code> where user home direcotry is located
-
-<ul>
-<li>Each user have a <strong>25GB</strong> quota for home directory, suitable for running computations </li>
-<li>Retains two snapshots of data at <code>/home/.snapshot</code>. If a user accidentally deletes a file, one of two possible copies of the file can be restored from the snapshot directory</li>
-</ul></li>
-<li> <code>/scratch</code> where user may load data for immediate computation
-
-<ul>
-<li>Usable for large computations with the <strong>two-week maximum retention policy</strong> </li>
-<li><strong>100GB/user</strong></li>
-</ul></li>
-<li> <code>/projects</code> where groups may store project data and run computations. Requestable in increments of <strong>1TB</strong>, $75 per year 
-
-<ul>
-<li><strong>50TB</strong> storage space is available for yang lab under <code>/projects/YangLabData/</code></li>
-<li>You may creat a working directory under this lab storage space for all of your work</li>
-<li>**Please be mindful with your storage usage. **
-
-<ul>
-<li>Avoid creating duplecates of data files.</li>
-<li>Delete files that you no longer need to use.</li>
-<li><code>gzip</code> large text data files.</li>
-</ul></li>
-</ul></li>
-<li> <code>/apps</code> and <code>/projects/YangLabData/bin</code> where all softwares can be found</li>
-</ul>
-
-<h3 id="toc_18">Monitoring storage usage</h3>
-
-<ul>
-<li>With command <code>pan_quota</code></li>
-</ul>
-
-<h3 id="toc_19">All files are not backed up on the cluster</h3>
-
-<h2 id="toc_20">Additional Resources</h2>
-
-<ul>
-<li>Request cluster assistance or an account: Email <a href="mailto:help@sph.emory.edu">help@sph.emory.edu</a>. Or ask in our SLACK channel.</li>
-<li>The <a href="http://it.emory.edu/vpntools/access.html">Emory VPN</a></li>
+<li><a href="http://it.emory.edu/vpntools/access.html">Emory VPN</a></li>
 <li><a href="https://linuxcommand.org/tlcl.php">The Linux Command Line</a> book is recommended to read ahead</li>
-<li>Software <a href="https://lmod.readthedocs.io/en/latest/010_user.html">Modules</a></li>
-<li>SLURM <a href="https://slurm.schedmd.com/quickstart.html">Quickstart</a></li>
-<li>Linux Commands
-Video training module accessible to all Emory affiliates persons via <a href="http://it.emory.edu/linkedinlearning/help/index.html">LinkedIn learning</a></li>
+<li>Documents about <a href="https://lmod.readthedocs.io/en/latest/010_user.html">Modules</a></li>
+<li><a href="https://slurm.schedmd.com/quickstart.html">SLURM Quickstart</a></li>
 </ul>
 
 

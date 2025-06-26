@@ -336,7 +336,7 @@ kbd {
 <h2 id="toc_1">HGCC Cluster Structure</h2>
 
 <ul>
-<li><a href="https://hgcc.emory.edu"><strong>New HGCC Website</strong></a> : Access within Emory network or after login to Emory VPN.</li>
+<li><a href="https://hgcc.emory.edu"><strong>New HGCC Website</strong></a> : Access within Emory network or after login to Emory VPN. Submit a ticket on the HGCC wewbsite if IT help is needed.</li>
 <li><strong>Operating System:</strong> Red Hat Enterprise Linux 8<br></li>
 <li><strong>Shared Storage (beegfs)</strong> : 1.3 PB (10TB per lab)</li>
 <li><strong>1 Head/Gateway/Login Node <code>head.hgcc</code></strong>; <strong>1 Data Transfer Node (DTN)</strong>
@@ -381,7 +381,7 @@ kbd {
 
 <p><img src="./hgcc_structure.png" alt="hgcc_architecture"></p>
 
-<h2 id="toc_2">Login to HGCC</h2>
+<h3 id="toc_2">Login to HGCC</h3>
 
 <ol>
 <li><p>Login to <a href="https://it.emory.edu/security/vpn.html"><strong>Emory VPN</strong></a> . </p>
@@ -415,21 +415,34 @@ kbd {
 </ul></li>
 </ol>
 
-<h2 id="toc_3">Mount Remote Cluster Home Directory to Local Computer</h2>
+<h3 id="toc_3">Setup one&#39;s <code>~/.bashrc</code> file</h3>
 
-<h3 id="toc_4">Use <a href="https://winscp.net/eng/index.php">WinSCP</a> for Windows system</h3>
+<ul>
+<li>See <a href="https://www.freecodecamp.org/news/bashrc-customization-guide/">useful things</a> that you can setup your own <code>~/.bashrc</code> file under your home directory to automaticlly run commands for each session. 
 
-<h3 id="toc_5">Use <a href="https://github.com/libfuse/sshfs">sshfs</a> for MAC</h3>
+<ul>
+<li>Set up <code>$PATH</code> system variables. See <a href="https://www.baeldung.com/linux/path-variable">example</a>.</li>
+<li>Create alias by <code>alias</code> in <code>~/.bashrc</code> to set up your own shortcup of commands. See <a href="https://phoenixnap.com/kb/linux-alias-command">Examples</a>.</li>
+<li>Setup environment variables. See <a href="https://www.cyberciti.biz/faq/set-environment-variable-linux/">example</a>.</li>
+<li>Load software modules.</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_4">Mount Remote Cluster Home Directory to Local Computer</h2>
+
+<h3 id="toc_5">Use <a href="https://winscp.net/eng/index.php">WinSCP</a> for Windows system</h3>
+
+<h3 id="toc_6">Use <a href="https://github.com/macfuse/macfuse/wiki/File-Systems-%E2%80%90-SSHFS">macFUSE/SSHFS</a> for MAC</h3>
 
 <ol>
-<li>Install the latest <a href="https://github.com/libfuse/sshfs/releases">SSHFS</a>.</li>
-<li>Install the lastest <a href="https://osxfuse.github.io/">macFUSE</a>.</li>
+<li>Install <a href="https://github.com/libfuse/sshfs">SSHFS</a></li>
+<li>Install <a href="https://osxfuse.github.io/">macFUSE</a></li>
 <li>Mount the remote HGCC home directory <code>/home/&lt;jyang51&gt;/</code> to  local directory <code>~/HGCC/</code>. Replace <code>&lt;jyang51&gt;</code> by your Emory<em>Net</em>ID.
 <code>sshfs &lt;jyang51&gt;@hgcc.emory.edu:/home/&lt;jyang51&gt;/ ~/HGCC/ -o auto_cache -ovolname=HGCC -o follow_symlinks</code></li>
 <li>Now you can access all files on HGCC through the mounted local directory.</li>
 </ol>
 
-<h2 id="toc_6">Transfer Data Files to/from Cluster</h2>
+<h2 id="toc_7">Transfer Data Files to/from Cluster</h2>
 
 <ol>
 <li><p><strong>Command <code>rsync</code> is recommended</strong></p>
@@ -449,7 +462,7 @@ kbd {
 </ul></li>
 </ol>
 
-<h2 id="toc_7">Useful Basic Linux Commands for Handling Data Files on Cluster</h2>
+<h2 id="toc_8">Useful Basic Linux Commands for Handling Data Files on Cluster</h2>
 
 <ol>
 <li>Command <code>rsync</code> is recommended for moving data files within the cluster, between local and cluster, between clusters.</li>
@@ -471,11 +484,12 @@ kbd {
 
 <p><strong>Command <code>man [command]</code> would give help page for Linux commands, e.g., <code>man rsync</code>. Type <code>q</code> to exit from the help page.</strong></p>
 
-<h2 id="toc_8">Strategies for Using HGCC</h2>
+<h2 id="toc_9">Strategies for Using HGCC</h2>
 
 <ol>
-<li><strong>Only use headnode to download/move data and submit jobs. Never run large computation jobs on headnode.</strong></li>
-<li><strong>Login to an interactive compute node by command <code>srun -N 1 -n 1 --pty bash</code>.</strong>
+<li><strong>Only use headnode to login and submit jobs. Never run large computation jobs on headnode.</strong></li>
+<li><strong>Login to the data transfer node by <code>ssh dtn01</code> with your emory NetID and emory passowrd for large data transfers.</strong></li>
+<li><strong>Login to an interactive compute node by command <code>srun -N 1 -n 1 --pty --preserve-env bash</code>.</strong>
 
 <ul>
 <li><code>-N</code> is the number of nodes, <code>-n</code> is number of tasks, <code>--pty</code> gives you a pseudo terminal that runs bash. </li>
@@ -505,9 +519,9 @@ kbd {
 <li><strong>Write <code>README.md</code> file for each data directory.</strong></li>
 </ol>
 
-<h2 id="toc_9">Using a Software on HGCC</h2>
+<h2 id="toc_10">Using a Software on HGCC</h2>
 
-<h3 id="toc_10">Check if a software is available on the cluster</h3>
+<h3 id="toc_11">Check if a software is available on the cluster</h3>
 
 <ol>
 <li>Use command <code>spack find -x</code> to list all installed software modules on HGCC.</li>
@@ -521,7 +535,7 @@ echo $PATH; # show current PATH directories
 cd ~/.local/bin; #
 ln -s [directory_to_executible_file]; # create symbolic link to the software</code></pre></div>
 
-<h3 id="toc_11">Using a software installed on the cluster by <code>spack</code></h3>
+<h3 id="toc_12">Using a software installed on the cluster by <code>spack</code></h3>
 
 <ol>
 <li>Load a software module into the current session by <code>spack load [software_name]</code>.
@@ -536,7 +550,7 @@ ln -s [directory_to_executible_file]; # create symbolic link to the software</co
 <li>One can open text scripts on HGCC by local text/script Editor (e.g., <strong><a href="https://www.sublimetext.com/">Sublime</a></strong>, <strong><a href="https://code.visualstudio.com/">Visual Studio Code</a></strong>) after mounting cloud directory to local machine, and just copy/paste command into these <strong>bash</strong>, <strong>R</strong>, or <strong>python</strong> sessions.</li>
 </ol>
 
-<h3 id="toc_12">Install a software without root access</h3>
+<h3 id="toc_13">Install a software without root access</h3>
 
 <ol>
 <li>Install software under user home directory, e.g., <code>~/.local/</code>. Include <code>~/.local/bin/</code> in the <code>$PATH</code> environment variable. Create a symbolic link to software executible file under <code>~/.local/bin/</code>.</li>
@@ -544,7 +558,7 @@ ln -s [directory_to_executible_file]; # create symbolic link to the software</co
 <li>Submit a ticket through the HGCC website to request a software to be installed by IT.</li>
 </ol>
 
-<h3 id="toc_13">Share installed software with the lab</h3>
+<h3 id="toc_14">Share installed software with the lab</h3>
 
 <ul>
 <li>Make a soft link of the executible tool under <code>/nfs/yangfss2/data/shared/bin</code> by the following commands:</li>
@@ -553,19 +567,6 @@ ln -s [directory_to_executible_file]; # create symbolic link to the software</co
 <div><pre><code class="language-none">export PATH=&quot;/nfs/yangfss2/data/shared/bin:$PATH&quot;; # include this line of command in your `~/.bashrc` file to automatically run this for each session.
 cd /nfs/yangfss2/data/shared/bin
 ln -s [tool_directory]</code></pre></div>
-
-<h2 id="toc_14">Setup one&#39;s <code>~/.bashrc</code> file</h2>
-
-<ul>
-<li>See <a href="https://www.freecodecamp.org/news/bashrc-customization-guide/">useful things</a> that you can setup your own <code>~/.bashrc</code> file under your home directory to automaticlly run commands for each session. 
-
-<ul>
-<li>Set up <code>$PATH</code> system variables. See <a href="https://www.baeldung.com/linux/path-variable">example</a>.</li>
-<li>Create alias by <code>alias</code> in <code>~/.bashrc</code> to set up your own shortcup of commands. See <a href="https://phoenixnap.com/kb/linux-alias-command">Examples</a>.</li>
-<li>Setup environment variables. See <a href="https://www.cyberciti.biz/faq/set-environment-variable-linux/">example</a>.</li>
-<li>Load software modules.</li>
-</ul></li>
-</ul>
 
 <h2 id="toc_15">Submit Jobs by SLURM</h2>
 
