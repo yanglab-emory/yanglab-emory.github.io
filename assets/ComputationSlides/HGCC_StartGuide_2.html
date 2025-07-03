@@ -336,10 +336,10 @@ kbd {
 <h2 id="toc_1">Test commands in an interactive session on computation node</h2>
 
 <ol>
-<li>Open an interactive bash session on a computation node by <code>srun -N 1 -n 1 --pty bash -i</code>.</li>
+<li>Open an interactive bash session on a computation node by <code>srun -N 1 -n 1 --pty --preserve-env bash</code>.</li>
 <li>Load required software modules by <code>spack load [software]</code>.</li>
 <li>Mount remote HGCC directory to your local computer.</li>
-<li>Write scripts using local text editors like <strong><code>Visual Studio Code</code>, <code>Sublime</code></strong>.</li>
+<li>Write scripts using local text editors like <strong><a href="https://code.visualstudio.com/"><code>Visual Studio Code</code></a>, <a href="https://www.sublimetext.com/"><code>Sublime</code></a></strong>.</li>
 <li>Copy and paste to the interactive bash session.</li>
 </ol>
 

@@ -517,6 +517,7 @@ kbd {
 <li><strong>Delete files that you will no longer to use.</strong></li>
 <li><strong>Keep your working directoreis organized and cleaned.</strong></li>
 <li><strong>Write <code>README.md</code> file for each data directory.</strong></li>
+<li><strong>Only request up to 7 nodes if you are submiting a large number of jobs, by specifying the requested node list <code>sbatch --nodelist node[01-07]</code></strong></li>
 </ol>
 
 <h2 id="toc_10">Using a Software on HGCC</h2>
@@ -573,7 +574,7 @@ ln -s [tool_directory]</code></pre></div>
 <h3 id="toc_16">Basic SLURM commands</h3>
 
 <ul>
-<li><strong>Use command <code>sbatch</code> to submit jobs</strong>. Set arguments to <code>sbatch</code> in a wrapper shell (job submission) script, for example, you may use command <code>sbatch norm_sim.sh</code> to submit an array job to run 10 times of simulations, with <code>norm_sim.sh</code> given as follows: </li>
+<li><strong>Use command <code>sbatch</code> to submit jobs. See more instructions at <a href="https://slurm.schedmd.com/sbatch.html">https://slurm.schedmd.com/sbatch.html</a></strong>. Set arguments to <code>sbatch</code> in a wrapper shell (job submission) script.  For example, you may use command <code>sbatch norm_sim.sh</code> to submit an array job to run 10 times of simulations, with <code>norm_sim.sh</code> given as follows: </li>
 </ul>
 
 <div><pre><code class="language-none">#!/bin/bash
