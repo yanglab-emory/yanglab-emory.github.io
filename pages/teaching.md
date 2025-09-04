@@ -33,7 +33,9 @@ title: "Teaching and Resources"
 ### [HGCC](https://hgcc.emory.edu/)
 * <a href="../assets/ComputationSlides/HGCC_StartGuide_1.html">Introductions to New HGCC</a>
 * <a href="../assets/ComputationSlides/HGCC_StartGuide_2.html">Run Computation Tools and Submit Jobs on HGCC</a>
-* <a href="../assets/ComputationSlides/Introduction_to_BASH_2024.pdf">Introductions to BASH</a>
+	* [**Slurm User Guide from University of Michigan**](https://documentation.its.umich.edu/arc-hpc/slurm-user-guide)
+* <a href="../assets/ComputationSlides/Introduction_to_BASH_2024.pdf">Introductions to BASH</a>. 
+	* [**Bash Scripting Tutorial**](https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/)
 
 
 ### RHPC
@@ -49,23 +51,6 @@ title: "Teaching and Resources"
 * <a href="../assets/ComputationSlides/EmoryAWS_StartGuide_Yang.html">Introductions to Emory AWS</a>
 * [AWS Documentation](https://docs.aws.amazon.com/index.html)
 
-
-## Scientific Writing and Presentations
-### Scientific Writing
-* <a href="../assets/ComputationSlides/Write_ASHG_Abstract.html" target="_self"> Write ASHG Abstract</a>
-* [Ten simple rules for structuring papers](https://doi.org/10.1371/journal.pcbi.1005619). PLOS Computational Biology, 2017.
-* [Ten simple rules for writing a response to reviewers](https://doi.org/10.1371/journal.pcbi.1005730). PLOS Computational Biology, 2017. 
-  * [Example peer review process for PLOS Genetics with reviewers' comments and response letters](https://doi.org/10.1371/journal.pgen.1009482.r002).
-* [Me write pretty one day: how to write a good scientific paper](https://doi.org/10.1083/jcb.200403137). Journal of Cell Biology, 2004.
-  
-### Scientific Presentations
-#### Poster Presentations
-* [How to Make An Effective Poster](https://urc.ucdavis.edu/sites/g/files/dgvnsk3561/files/local_resources/documents/pdf_documents/How_To_Make_an_Effective_Poster2.pdf)
-
-#### Oral Scientific Presentations
-* [Scientific Presetnations 101](https://www.med.upenn.edu/mdresearchopps/assets/user-content/Resources/Howtogivepresentations2014.pdf)
-* [Structure of a 10-minute Oral Scientific Presentation](https://dornsife.usc.edu/assets/sites/605/docs/Tips_10_minute_Scientific_PowerPoint_Presentation_Meds_490.pdf)
-* [The Art of Great Talks](https://www.med.upenn.edu/mdresearchopps/assets/user-content/Resources/Howtogivepresentations2014.pdf)
 
 
 ## Other Resources
@@ -86,12 +71,26 @@ title: "Teaching and Resources"
 4. [**Bioinformatics Training at the Harvard Chan Bioinformatics Core**](https://hbctraining.github.io/main/)
 
 ### Linux
-* **[Beginner's Guide for Linux](https://www.tecmint.com/free-online-linux-learning-guide-for-beginners/)**
-* [**Essential Linux Commands**](https://www.tecmint.com/essential-linux-commands/)
-* **[Tutorial of AWK](https://www.tutorialspoint.com/awk/index.htm)**: AWK is a powerful tool for handling large text files in Linux system.
-* **[Tmux Cheat Sheet](https://tmuxcheatsheet.com/)**: Tmux is a useful tool to split terminal screens.
-* **[Learn VIM](https://github.com/iggredible/Learn-Vim)** : Vim is a useful text editor tool in Linux.
+* **[Beginner's Guide for Linux (long version)](https://www.tecmint.com/free-online-linux-learning-guide-for-beginners/)**
+
+	* [**bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners (short version)**](https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/)
+	
+	* [**Essential Linux Commands**](https://www.tecmint.com/essential-linux-commands/)
+
+	* **[Tutorial of AWK](https://www.tutorialspoint.com/awk/index.htm)**: AWK is a powerful tool for handling large text files in Linux system.
+
+	* **[Tmux Cheat Sheet](https://tmuxcheatsheet.com/)**: Tmux is a useful tool to split terminal screens.
+
+	* **[Learn VIM](https://github.com/iggredible/Learn-Vim)** : Vim is a useful text editor tool in Linux.
+
+* [**Visual Studio Code**](https://code.visualstudio.com/) is recommend for connecting to clusters and editing scripts on clusters.
+	* [**YouTub Instructions about Connecting VS Code to HPC**](https://www.youtube.com/watch?v=1B0hiWaVcHY)
+	* [**VS Code Instructions by NYU**](https://sites.google.com/nyu.edu/nyu-hpc/training-support/general-hpc-topics/vs-code)
+
+	
 * **[Get started with GitHub](https://docs.github.com/en/get-started)** : GitHub is a cloud-based platform where you can store, share, and work together with others to write code.
+
+
 * [**Cheat Sheets**](https://infoplatter.wordpress.com/2014/04/06/bioinformaticians-pocket-reference/) of **AWK**, **C++**, **Python**, **R**, **Vim**, **Git**, etc.
 
 
@@ -105,3 +104,21 @@ title: "Teaching and Resources"
 ### Jupyter Notebook (Recommended for Programing with Python)
 * [Introduction to Jupyter Notebooks](https://programminghistorian.org/en/lessons/jupyter-notebooks)
 * [Jupyter Kernels](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels)
+
+
+## Scientific Writing and Presentations
+### Scientific Writing
+* <a href="../assets/ComputationSlides/Write_ASHG_Abstract.html" target="_self"> Write ASHG Abstract</a>
+* [Ten simple rules for structuring papers](https://doi.org/10.1371/journal.pcbi.1005619). PLOS Computational Biology, 2017.
+* [Ten simple rules for writing a response to reviewers](https://doi.org/10.1371/journal.pcbi.1005730). PLOS Computational Biology, 2017. 
+  * [Example peer review process for PLOS Genetics with reviewers' comments and response letters](https://doi.org/10.1371/journal.pgen.1009482.r002).
+* [Me write pretty one day: how to write a good scientific paper](https://doi.org/10.1083/jcb.200403137). Journal of Cell Biology, 2004.
+  
+### Scientific Presentations
+#### Poster Presentations
+* [How to Make An Effective Poster](https://urc.ucdavis.edu/sites/g/files/dgvnsk3561/files/local_resources/documents/pdf_documents/How_To_Make_an_Effective_Poster2.pdf)
+
+#### Oral Scientific Presentations
+* [Scientific Presetnations 101](https://www.med.upenn.edu/mdresearchopps/assets/user-content/Resources/Howtogivepresentations2014.pdf)
+* [Structure of a 10-minute Oral Scientific Presentation](https://dornsife.usc.edu/assets/sites/605/docs/Tips_10_minute_Scientific_PowerPoint_Presentation_Meds_490.pdf)
+* [The Art of Great Talks](https://www.med.upenn.edu/mdresearchopps/assets/user-content/Resources/Howtogivepresentations2014.pdf)
