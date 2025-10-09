@@ -38,7 +38,7 @@ title: "Teaching and Resources"
 	* [**Bash Scripting Tutorial**](https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/)
 
 
-### RHPC
+### [RHPC](https://github.com/RSPH-HPC)
 * <a href="../assets/ComputationSlides/RSPH_HPC_StartGuide.html" target="_self"> Introductions to RHPC</a>
 * [RSPH High Performance Computing Github](https://github.com/RSPH-HPC) : [Starting guides](https://github.com/RSPH-HPC/Documentation/blob/master/HPC%20Getting%20Started%20Guide%20V.2.0.pdf) are provided. 
 * [Helpful tips from Dr. Hao Wu](https://www.haowulab.org//pages/computing.html)

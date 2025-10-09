@@ -338,15 +338,15 @@ kbd {
 <ul>
 <li><a href="https://hgcc.emory.edu"><strong>New HGCC Website</strong></a> : Accessible within Emory network or after login to Emory VPN. Submit a ticket on the HGCC wewbsite if IT help is needed.</li>
 <li><strong>Operating System:</strong> Red Hat Enterprise Linux 8.10 (Ootpa)<br></li>
-<li><strong>Shared Storage (beegfs)</strong> : 1.3 PB (10TB per lab; 1,000,000 files per lab). All user home directories <code>/home/[userid]/</code> are hosted on <code>beegfs</code>. </li>
-<li><strong>1 Head/Gateway/Login Node <code>head.hgcc</code></strong>; 
+<li><strong>Shared Storage (beegfs)</strong> : 1.3 PB (10TB per lab; 1,000,000 files per lab). All user home directories <code>/home/[userid]/</code> are hosted on <code>/beegfs</code>. </li>
+<li><strong>Head/Gateway/Login Node <code>head.hgcc</code></strong>; 
 
 <ul>
 <li>No CPU or memory intensive programs are allowed on the headnode and the DTN. </li>
 <li>2CPU and 8G RAM per user</li>
 <li>Default interactive job time: 1 hour</li>
 </ul></li>
-<li><strong>1 Data Transfer Node (DTN)</strong>
+<li><strong>Data Transfer Node (DTN)</strong>
 
 <ul>
 <li>Use DTN for data transfers. </li>
@@ -358,7 +358,7 @@ kbd {
 <li>64 cores per node; 16GB RAM per core</li>
 <li>High-bandwidth: 100Gb/s interconnect fabric. Compute node and storage volumes.<br></li>
 <li>10Gb/s uplinks to the Emory fiber-optic backbone. Between Emory clusters.</li>
-<li>Scheduling system: <a href="https://slurm.schedmd.com/documentation.html"><strong>Slurm</strong></a></li>
+<li>Scheduling system: <a href="https://slurm.schedmd.com/documentation.html"><strong>SLURM</strong></a></li>
 </ul></li>
 <li><strong>Shared Fast Scratch Storage</strong>: <code>/scratch/</code>
 
@@ -367,11 +367,10 @@ kbd {
 <li>All files will be deleted after 30 days </li>
 <li>Recomend to use for jobs that need frequent large data file access, I-O intensive jobs.</li>
 </ul></li>
-<li><strong>Data Drive of YangLab</strong>: <code>/nfs/yangfss2/data/</code>
+<li><strong>Data Drive of YangLab (350TB)</strong>: <code>/nfs/yangfss2/data/</code>
 
 <ul>
-<li>This is our previous data drive 2 (350TB) in the old cluster. Our data drive 1 (45TB) is retired.</li>
-<li>The total number of file limit dose not apply to lab data drives.</li>
+<li>The total number of file limit of <code>1,000,000</code> dose not apply to lab data drives, only apply to user home directories under <code>/home/[userid]</code>.</li>
 <li>A softlink of the datadrive has been created under your home directory: <code>/home/[userid]/yangfss2/</code></li>
 <li><code>/nfs/yangfss2/data/commons/[userid]</code> : User work directories on lab data drive. 
 
@@ -410,26 +409,26 @@ kbd {
 </ul></li>
 <li><p><a href="http://www.linuxproblem.org/art_9.html"><strong>Setup SSH login without typing password</strong></a> : repeat this setup for each of your local computer. Highly recomend to set this up first. It will save you tons of effort.</p>
 
-<ul>
-<li><p>First, generate a pair of authentication key under the home directory on your local computer: <code>ssh-keygen -t rsa</code>. </p>
+<ol>
+<li><p>Generate a pair of authentication key under the home directory on your local computer: <code>ssh-keygen -t rsa</code>. </p>
 
 <ul>
 <li> Your identification has been saved in <code>~/.ssh/id_rsa</code>.</li>
 <li> Your public key has been saved in <code>~/.ssh/id_rsa.pub</code>. </li>
 </ul></li>
-<li><p>Second, run the following command on remote HGCC create a directory <code>~/.ssh</code> under your HGCC home directory </p>
+<li><p>Run the following command on remote HGCC create a directory <code>~/.ssh</code> under your HGCC home directory </p>
 
 <ul>
-<li><code>makdir ~/.ssh</code></li>
+<li><code>makdir -p ~/.ssh</code></li>
 </ul></li>
-<li><p>Third, now run the following command on your local computer to append your local authentication key to HGCC <code>~/.ssh/authorized_keys</code> :</p>
+<li><p>Now run the following command on your local computer to append your local authentication key to HGCC <code>~/.ssh/authorized_keys</code> :</p>
 
 <ul>
 <li><code>ssh-copy-id &lt;Emory_NetID&gt;@hgcc.emory.edu</code></li>
 <li>If <code>ssh-copy-id</code> dose not work, just run the following command on your local computer: <code>cat ~/.ssh/id_rsa.pub | ssh &lt;Emory_NetID&gt;@hgcc.emory.edu &#39;cat &gt;&gt; ~/.ssh/authorized_keys</code>. </li>
 <li>Input your Emory password if you are prompted for.</li>
 </ul></li>
-</ul></li>
+</ol></li>
 </ol>
 
 <h3 id="toc_3">Setup one&#39;s <code>~/.bashrc</code> file</h3>
@@ -616,12 +615,18 @@ ln -s [directory_to_executible_file]; # create symbolic link to the software</co
 <h3 id="toc_13">Install a software without root access</h3>
 
 <ol>
-<li>Install software under user home directory, e.g., <code>~/.local/</code>. Include <code>~/.local/bin/</code> in the <code>$PATH</code> environment variable. Create a symbolic link to software executible file under <code>~/.local/bin/</code>.</li>
+<li>Install software under user&#39;s home directory, e.g., <code>~/.local/</code>, or work directory on lab data drive. 
+
+<ul>
+<li>Create a symbolic link to software executible file under <code>~/.local/bin/</code>.</li>
+<li>Need to include <code>~/.local/bin/</code> in the <code>$PATH</code> environment variable, so that the system can find the executible files. </li>
+</ul></li>
 <li>Create a virtual python environment by <code>conda</code> to install python libraries under your virtual python environment. </li>
-<li><strong>It is recommended to create python environment on your lab data drive and install software to your lab data drive.</strong> </li>
 <li>The total number of files is limited to <code>1,000,000</code> per group. Python libraries, environment files, and R library files can easily exceed the limit for a group. Once the limit is reached, the logins of all members might fail and experience lags.<br></li>
 <li>Submit a ticket through the HGCC website to request a software to be installed by IT.</li>
 </ol>
+
+<p><strong>It is recommended to create python environment on your lab data drive and install software to your lab data drive.</strong> </p>
 
 <h3 id="toc_14">Share installed software with the lab</h3>
 
@@ -629,106 +634,14 @@ ln -s [directory_to_executible_file]; # create symbolic link to the software</co
 <li>Make a soft link of the executible tool under <code>/nfs/yangfss2/data/shared/bin</code> by the following commands:</li>
 </ul>
 
-<div><pre><code class="language-none">export PATH=&quot;/nfs/yangfss2/data/shared/bin:$PATH&quot;; # include this line of command in your `~/.bashrc` file to automatically run this for each session.
-cd /nfs/yangfss2/data/shared/bin
+<div><pre><code class="language-none">cd /nfs/yangfss2/data/shared/bin
 ln -s [tool_directory]</code></pre></div>
 
-<h2 id="toc_15">Submit Jobs by SLURM</h2>
-
-<h3 id="toc_16">Basic SLURM commands</h3>
-
 <ul>
-<li><strong>Use command <code>sbatch</code> to submit jobs. See more instructions at <a href="https://slurm.schedmd.com/sbatch.html">https://slurm.schedmd.com/sbatch.html</a></strong>. Set arguments to <code>sbatch</code> in a wrapper shell (job submission) script.  For example, you may use command <code>sbatch norm_sim.sh</code> to submit an array job to run 10 times of simulations, with <code>norm_sim.sh</code> given as follows: </li>
+<li> Include the following command in your <code>~/.bashrc</code> file to automatically run this for each bash session, so that the system can find the executible file: <code>export PATH=&quot;/nfs/yangfss2/data/shared/bin:$PATH&quot;</code></li>
 </ul>
 
-<div><pre><code class="language-none">#!/bin/bash
-#SBATCH --job-name=normal_sim ## specify job name
-#SBATCH --nodes=1 ## request 1 node 
-#SBATCH --mem=8G ## request 8G memory
-#SBATCH --cpus-per-task=4 ## request 4 cpus/cores per job
-#SBATCH --time=24:00:00 ## specify job running time for 24 hrs
-#SBATCH --output=./SLURM_OUT/%x_%A_%a.out ## specify slurm output file directory
-#SBATCH --error=./SLURM_OUT/%x_%A_%a.err ## specify slurm error file directory
-#SBATCH --array=0-10 ## Submitting 10 instances of commands listed below
-
-
-## The following commands will be run for 10 times by 10 jobs under the specified array. Each with their unique task ID given by $SLURM_ARRAY_TASK_ID, in {1..10}.
-
-## Change working directory
-cd /home/jyang51/yangfss2/public/ExampleData
-
-## Create SLURM_OUT/ under the current working directory to save slurm output and error files
-mkdir -p ./SLURM_OUT/
-
-
-## Print SLURM array task ID $SLURM_ARRAY_TASK_ID (1..10)
-echo &quot;My SLURM_ARRAY_TASK_ID: &quot; $SLURM_ARRAY_TASK_ID
-
-
-## Load R software
-spack load r@4.4.0
-
-
-## Using the Rscript to simulate a vector x from standard normal distribution and write x to a text data file under /home/jyang51/yangfss2/public/ExampleData/
-## Use the SLURM array task ID to save unique output data files, or configue the job.
-Rscript /home/jyang51/yangfss2/public/ExampleScripts/norm_sim.R /home/jyang51/yangfss2/public/ExampleData/ $SLURM_ARRAY_TASK_ID</code></pre></div>
-
-<ul>
-<li>And example <code>norm_sim.R</code> script given as follows:</li>
-</ul>
-
-<div><pre><code class="language-none">#!/usr/bin/env Rscript
-Sys.setlocale(&#39;LC_ALL&#39;, &#39;C&#39;)
-
-###############
-options(stringsAsFactors=F)
-
-
-###############
-args=(commandArgs(TRUE))
-print(args)
-if(length(args)==0) {
-  stop(&quot;Error: No arguments supplied!&quot;)
-} else {
-  out_prefix = args[[1]]
-  n_sim = args[[2]]
-}
-
-x = rnorm(100, mean = 0, sd = 1)
-
-print(paste(&quot;mean of simulated data =&quot;, mean(x)))
-
-print(paste(&quot;standard deviation of simulated data =&quot;, sd(x)))
-
-print(&quot;Write simulated data to a text file:&quot;)
-
-write.table(data.frame(x = x), file = paste0(out_prefix, &quot;sim_&quot;, n_sim, &quot;.txt&quot;), quote = FALSE, sep = &quot;\t&quot;, row.names = FALSE)</code></pre></div>
-
-<ul>
-<li><strong>Use command <code>squeue</code> to display current slurm job queue</strong>.</li>
-<li><strong>Use command <code>scancel [jobid]</code> used to cancel/kill a job</strong>.</li>
-<li><strong>Use command <code>scontrol</code> used to show information about running or pending jobs</strong>.
-
-<ul>
-<li><code>scontrol show job [jobid]</code> to show system details of a submitted job.</li>
-</ul></li>
-<li><p><strong>Use command <code>srun</code> to run an interactive instance: <code>srun --pty bash</code>.</strong></p>
-
-<ul>
-<li>Open an interactive session to test your <em>R</em> code: </li>
-</ul>
-
-<div><pre><code class="language-none">srun -N 1 -n 1 --pty bash
-spack load r@4.4.0
-R</code></pre></div>
-
-<ul>
-<li>Simply exit the interactive session by <code>exit</code>.</li>
-</ul></li>
-<li><p><strong>Use command <code>sinfo</code> to report the state of the cluster partition and nodes</strong>.   </p></li>
-</ul>
-
-<h2 id="toc_17">Monitoring storage usage</h2>
+<h2 id="toc_15">Monitoring storage usage</h2>
 
 <ol>
 <li>Check storage space for all data drives on HGCC by <code>df -h</code></li>
@@ -736,7 +649,7 @@ R</code></pre></div>
 <li>Check number of files of a directory by <code>find [directory_path] --type f | wc -l</code>.</li>
 </ol>
 
-<h2 id="toc_18">Additional Resources</h2>
+<h2 id="toc_16">Additional Resources</h2>
 
 <ul>
 <li><a href="https://hgcc.emory.edu/#help">New HGCC Website</a>. Need to be in Emory network or Emory VPN to access.</li>

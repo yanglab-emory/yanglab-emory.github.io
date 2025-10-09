@@ -338,16 +338,16 @@ kbd {
 <ol>
 <li>Open an interactive bash session on a computation node by <code>srun -N 1 -n 1 --pty --preserve-env bash</code>.</li>
 <li>Load required software modules by <code>spack load [software]</code>.</li>
-<li>Mount remote HGCC directory to your local computer.</li>
-<li>Write scripts using local text editors like <strong><a href="https://code.visualstudio.com/"><code>Visual Studio Code</code></a>, <a href="https://www.sublimetext.com/"><code>Sublime</code></a></strong>.</li>
+<li>Mount remote HGCC directory to your local computer. Highly recommend to use <strong><a href="https://code.visualstudio.com/"><code>Visual Studio Code</code></a></strong>. See instructions in <strong><a href="https://yanglab-emory.github.io/assets/ComputationSlides/HGCC_StartGuide_1.html">Introductions to HGCC</a></strong>.</li>
+<li>Write scripts using local text editors like <strong><a href="https://code.visualstudio.com/">Visual Studio Code</a></strong>, <strong><a href="https://www.sublimetext.com/">Sublime</a></strong>.</li>
 <li>Copy and paste to the interactive bash session, or open the terminal in the bottom of your VSCode window. </li>
 </ol>
 
-<h3 id="toc_2">R</h3>
+<h2 id="toc_2">R</h2>
 
 <ul>
-<li>Load R module by <code>spack load r@4.4.0</code>.</li>
-<li>Type <strong><code>R</code></strong> in the interactive session to initiate an R session.
+<li><p>Load R module by <code>spack load r@4.4.0</code>.</p></li>
+<li><p>Type <strong><code>R</code></strong> in the interactive session to initiate an R session.</p>
 
 <ul>
 <li><strong>Copy R commands</strong> from your R script and <strong>Paste into the R session</strong>.</li>
@@ -362,13 +362,34 @@ kbd {
 <li>Recommend to set default R library path to your lab directory. The R library path can be used by all lab members.
 
 <ul>
-<li>Either use <code>.libPaths()</code> function commands in R session</li>
-<li>Or add <code>.libPaths()</code> commands in your <code>~/.Rprofile</code> file</li>
-<li>Or add setup command <code>export R_LIBS=/nfs/yangfss2/data/shared/Rlibs</code> to your <code>~/.bashrc</code> file. </li>
-<li>Or add <code>R_LIBS_USER=/nfs/yangfss2/data/shared/Rlibs:/beegfs/nvme/hpc/software/spack/opt/spack/linux-rhel8-sapphirerapids/gcc-13.2.0/r-4.4.0-3qdtah7ohyy5fcynygnvrlxyfx462lpy/rlib/R/library:/nfs/yaofss2/data/shared/Software/R_libs/4.4</code> to your <code>~/.Renviron</code> file to setup multiple R library paths that are seperated by <code>:</code>.</li>
+<li>Either use <code>.libPaths()</code> function commands in every new R session
+
+<ul>
+<li><code>.libPaths(c(&quot;/nfs/yangfss2/data/shared/Rlibs&quot;, .libPaths()))</code></li>
+</ul></li>
+<li>Or add the <code>.libPaths()</code> command in your <code>~/.Rprofile</code> file, to automatically setup when start a new R session.</li>
+<li>Or add setup command <code>export R_LIBS_USER=/nfs/yangfss2/data/shared/Rlibs:${R_LIBS}</code> to your <code>~/.bashrc</code> file, to setup in every new bash session. </li>
+<li>Or add <code>R_LIBS_USER=/nfs/yangfss2/data/shared/Rlibs:${R_LIBS}</code> to your <code>~/.Renviron</code> file. This will also allow automatically setup when start a new R session.</li>
+<li>Multiple R library paths that are seperated by <code>:</code> in the bash commands. The one in the front will be the first choice by the system for installing libraries. </li>
 </ul></li>
 </ul></li>
-<li>Tips
+<li><p>Connect to HGCC on <strong><a href="https://code.visualstudio.com/"><code>Visual Studio Code</code></a></strong> and open your Rscript in the VSCode window. </p>
+
+<ul>
+<li>Install VSCode extensions <code>R Tools, R, R Extension Pack</code>. Setup auto-login using identify file without the need of typing password. </li>
+<li>Open R scripts in VSCode</li>
+<li>Open the terminal in the bottom of VSCode.</li>
+<li>Click <code>R</code> in the bottom right of VSCode window to attach a remote R session. By default this R session is lauched on the gatway admin node. Install any extension or R libraries you are prompted to for using this function. 
+
+<ul>
+<li>You can view the current system information by <code>Sys.info()</code> in the current R session. </li>
+<li>You will see the current node information under the <code>nodename</code>. </li>
+</ul></li>
+<li>Now you can see multiple session in the bottom of your VSCode. You can select from the right hand side of the terminal to switch.</li>
+<li>Now you can press <code>command + enter</code> on mac to sent your R commands in the editor to the bottom R session. </li>
+<li>Click the <code>R</code> sign on the left side of VSCode window to view current R environment information.</li>
+</ul></li>
+<li><p>Tips</p>
 
 <ul>
 <li>Provide full directory to the data files you want to read or write or plot.</li>
@@ -376,29 +397,39 @@ kbd {
 </ul></li>
 </ul>
 
-<h3 id="toc_3">Python/Conda</h3>
+<h2 id="toc_3">Python/Conda</h2>
 
 <ul>
-<li><strong>Python 3.11.7</strong> is installed on the cluster.</li>
-<li>Interactive <strong>python</strong> session:
+<li><p><strong>Python 3.11.7, anaconda3@2023.09-0, miniconda3@24.3.0</strong> are installed on the cluster. First load one of these modules.</p></li>
+<li><p>Interactive <strong>python</strong> session:</p>
 
 <ol>
+<li>Load miniconda by <code>spack load miniconda3@24.3.0</code>. <code>Python 3.12.2</code> comes with the <code>miniconda3@24.3.0</code> module.</li>
+<li>Run <code>conda init; source ~/.bashrc;</code> for once for using <code>conda</code>.</li>
 <li>Type <strong><code>python</code></strong> in the interactive session to initiate a python session.</li>
 <li><strong>Copy python commands</strong> from your python script and <strong>Paste into the python session</strong>.</li>
 </ol></li>
-<li>Use <strong>Virtual Environment</strong> for access right to install python libraries.
+<li><p>Use <strong>Virtual Environment</strong> for access right to install python libraries. </p>
 
 <ol>
-<li>Load miniconda by <code>spack load miniconda3@24.3.0</code>.</li>
-<li>Run <code>conda init; source ~/.bashrc;</code> for once for using <code>conda</code>.</li>
-<li><strong>Create</strong> a new virtual environment with name <strong>myenv</strong>: <strong><code>conda create -n &quot;myenv&quot;</code></strong>.</li>
+<li><strong>Create</strong> a new virtual environment with name <strong>myenv</strong> to a specific directory <code>/home/jyang51/jyang51/local/</code>: <strong><code>conda create --prefix conda create --prefix /home/jyang51/jyang51/local/myenv numpy pandas</code></strong>. Now <code>Python 3.14.0</code> comes with this virtual environment by default.</li>
 <li><strong>List</strong> available virtual environments by <strong><code>conda env list</code></strong>.</li>
-<li><strong>Activate</strong> the environment with name <strong>myenv</strong>, <strong><code>conda activate ~/.conda/envs/myenv</code></strong>.</li>
+<li><strong>Activate</strong> the environment with name <strong>myenv</strong>, <strong><code>conda activate /home/jyang51/jyang51/local/myenv</code></strong>.</li>
 <li><strong>Install new libraries</strong> after activating your virtual environment: <strong><code>conda install -n myenv [package]</code></strong>.</li>
 <li> <strong>Deactivate</strong> your environment when you are done, <strong><code>conda deactivate</code></strong></li>
 <li><strong>Delete</strong> virtual environment when you no longer need to use it, <strong><code>conda remove -n myenv -all</code></strong> </li>
 <li>Get help with <code>conda -h</code>.</li>
 </ol></li>
+<li><p>Use <strong><a href="https://code.visualstudio.com/"><code>Visual Studio Code</code></a></strong> to edit and test python code on HGCC.</p>
+
+<ul>
+<li>Install VSCode extension <code>Python</code>. Setup auto-login using identify file without the need of typing password. </li>
+<li>Open python scripts (end with <code>.py</code>) in VSCode</li>
+<li>Open the terminal in the bottom of VSCode.</li>
+<li>Click <code>python xx.xx</code> in the bottom right of VSCode window to select the python version that you want to use. Prefer to select the virtual environment you setup for yourself. By default, system <code>python3.11.7</code> is lauched. Install any extension or python libraries you are prompted to for using this function. </li>
+<li>Now you can see multiple session in the bottom of your VSCode. You can select from the right hand side of the terminal to switch.</li>
+<li>Now you can press <code>shift + enter</code> on mac to sent your python commands in the editor to the bottom python session in the terminal. </li>
+</ul></li>
 </ul>
 
 <h3 id="toc_4">PLINK</h3>
@@ -434,9 +465,78 @@ kbd {
 <li>See <a href="https://bedtools.readthedocs.io/en/latest/">BEDTools Manual</a></li>
 </ul>
 
-<h2 id="toc_7">Submit Jobs by <code>sbatch</code>.</h2>
+<h2 id="toc_7">Submit Jobs by SLURM</h2>
 
-<h3 id="toc_8">Create a bash script and submit a single job</h3>
+<h3 id="toc_8">Basic SLURM commands</h3>
+
+<ul>
+<li><strong>Use command <code>sbatch</code> to submit jobs. See more instructions at <a href="https://slurm.schedmd.com/sbatch.html">https://slurm.schedmd.com/sbatch.html</a></strong>. Set arguments to <code>sbatch</code> in a wrapper shell (job submission) script.  For example, you may use command <code>sbatch norm_sim.sh</code> to submit an array job to run 10 times of simulations, with <code>norm_sim.sh</code> given as follows: </li>
+</ul>
+
+<div><pre><code class="language-none">#!/bin/bash
+#SBATCH --job-name=normal_sim ## specify job name
+#SBATCH --nodes=1 ## request 1 node 
+#SBATCH --mem=8G ## request 8G memory
+#SBATCH --cpus-per-task=4 ## request 4 cpus/cores per job
+#SBATCH --time=24:00:00 ## specify job running time for 24 hrs
+#SBATCH --output=./SLURM_OUT/%x_%A_%a.out ## specify slurm output file directory
+#SBATCH --error=./SLURM_OUT/%x_%A_%a.err ## specify slurm error file directory
+#SBATCH --array=0-10 ## Submitting 10 instances of commands listed below
+
+## The following commands will be run for 10 times by 10 jobs under the specified array. Each with their unique task ID given by $SLURM_ARRAY_TASK_ID, in {1..10}.
+
+## Change working directory
+cd /home/jyang51/yangfss2/public/ExampleData
+
+## Create SLURM_OUT/ under the current working directory to save slurm output and error files
+mkdir -p ./SLURM_OUT/
+
+## Print SLURM array task ID $SLURM_ARRAY_TASK_ID (1..10)
+echo &quot;My SLURM_ARRAY_TASK_ID: &quot; $SLURM_ARRAY_TASK_ID
+
+## Load R software
+spack load r@4.4.0
+
+## Using the Rscript to simulate a vector x from standard normal distribution and write x to a text data file under /home/jyang51/yangfss2/public/ExampleData/
+## Use the SLURM array task ID to save unique output data files, or configue the job.
+Rscript /home/jyang51/yangfss2/public/ExampleScripts/norm_sim.R /home/jyang51/yangfss2/public/ExampleData/ $SLURM_ARRAY_TASK_ID</code></pre></div>
+
+<ul>
+<li>And example <code>norm_sim.R</code> script given as follows:</li>
+</ul>
+
+<div><pre><code class="language-none">#!/usr/bin/env Rscript
+Sys.setlocale(&#39;LC_ALL&#39;, &#39;C&#39;)
+options(stringsAsFactors=F)
+
+###############
+args=(commandArgs(TRUE))
+print(args)
+if(length(args)==0) {
+  stop(&quot;Error: No arguments supplied!&quot;)
+} else {
+  out_prefix = args[[1]]
+  n_sim = args[[2]]
+}
+
+x = rnorm(100, mean = 0, sd = 1)
+print(paste(&quot;mean of simulated data =&quot;, mean(x)))
+print(paste(&quot;standard deviation of simulated data =&quot;, sd(x)))
+print(&quot;Write simulated data to a text file:&quot;)
+write.table(data.frame(x = x), file = paste0(out_prefix, &quot;sim_&quot;, n_sim, &quot;.txt&quot;), quote = FALSE, sep = &quot;\t&quot;, row.names = FALSE)</code></pre></div>
+
+<ul>
+<li><strong>Use command <code>squeue</code> to display current slurm job queue</strong>.</li>
+<li><strong>Use command <code>scancel [jobid]</code> used to cancel/kill a job</strong>.</li>
+<li><strong>Use command <code>scontrol</code> used to show information about running or pending jobs</strong>.
+
+<ul>
+<li><code>scontrol show job [jobid]</code> to show system details of a submitted job.</li>
+</ul></li>
+<li><strong>Use command <code>sinfo</code> to report the state of the cluster partition and nodes</strong>.<br></li>
+</ul>
+
+<h3 id="toc_9">Another example of submitting a job to map raw RNAseq data by STAR</h3>
 
 <p>Create an example bash script by <code>touch star_genome_create.sh</code> and write the following commands into this file (see example shell script in <code>/home/jyang51/yangfss2/public/ExampleScripts/star_genome_create.sh</code> on HGCC):</p>
 
@@ -451,7 +551,8 @@ kbd {
 #SBATCH --error=./SLURM_OUT/%x_%A_%a.err ## save slurm errors
 
 spack load miniconda3@24.3.0
-conda activate ~/.conda/envs/myenv
+conda activate /home/jyang51/jyang51/local/myenv # assume the STAR is installed under your virtual environment
+## Or load the STAR module
 
 ### Create genome index
 echo Running STAR genomeGenerate ...
@@ -462,20 +563,19 @@ STAR --runThreadN 16 --runMode genomeGenerate \
 --sjdbOverhang 150
 
 conda deactivate
-
 exit</code></pre></div>
 
-<ol>
-<li>This example bash script will generate genome index of human genome of hg38 assembly for running the alignment tool <code>STAR</code> for mapping RNAseq data. </li>
+<ul>
+<li>This example bash script will generate genome index of human genome of hg38 assembly for running the alignment tool <code>STAR</code>. </li>
 <li>Use command <code>echo</code> to print out log messages or variable contents to debug and check the job status.</li>
-<li> Make this shell script executable: <code>chmod 755 phase.sh</code>.</li>
+<li> Make this shell script executable: <code>chmod 755 star_genome_create.sh</code>.</li>
 <li> Submit a job to run this shell script: 
 <code>
 sbatch /home/jyang51/yangfss2/public/ExampleScripts/star_genome_create.sh
 </code></li>
-</ol>
+</ul>
 
-<h4 id="toc_9">Remarks about using the <code>/scratch</code> space for I/O intensive jobs</h4>
+<h4 id="toc_10">Remarks about using the <code>/scratch</code> space for I/O intensive jobs</h4>
 
 <p>If one want to use the <code>/scratch</code> space to improve computation efficiency by avoiding heavy I/O, the bash script need to be updated to include commands creating a temporary directory <code>${TMPDIR}</code> under the <code>/scratch</code> space (84TB shared). </p>
 
@@ -502,7 +602,6 @@ rsync ${TMPDIR}/output_sample_ID_2.txt /home/jyang51/yangfss2/public/ExampleData
 
 # Remove temporary directory
 rm -f -r ${TMPDIR}
-
 exit</code></pre></div>
 
 <ol>
@@ -512,7 +611,7 @@ exit</code></pre></div>
 <li>Erase the created temporary directory.</li>
 </ol>
 
-<h3 id="toc_10">Submit Array Jobs</h3>
+<h2 id="toc_11">Submit Array Jobs</h2>
 
 <ul>
 <li><p><strong>Array jobs</strong> is a convenient way to submit multiple repetitive jobs that only differs by one input variables, e.g., 10000 repetitive simulations, association study for all 20K genome-wide genes. </p></li>
