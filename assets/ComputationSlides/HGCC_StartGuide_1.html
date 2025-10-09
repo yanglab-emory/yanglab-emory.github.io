@@ -336,15 +336,21 @@ kbd {
 <h2 id="toc_1">HGCC Cluster Structure</h2>
 
 <ul>
-<li><a href="https://hgcc.emory.edu"><strong>New HGCC Website</strong></a> : Access within Emory network or after login to Emory VPN. Submit a ticket on the HGCC wewbsite if IT help is needed.</li>
-<li><strong>Operating System:</strong> Red Hat Enterprise Linux 8<br></li>
-<li><strong>Shared Storage (beegfs)</strong> : 1.3 PB (10TB per lab)</li>
-<li><strong>1 Head/Gateway/Login Node <code>head.hgcc</code></strong>; <strong>1 Data Transfer Node (DTN)</strong>
+<li><a href="https://hgcc.emory.edu"><strong>New HGCC Website</strong></a> : Accessible within Emory network or after login to Emory VPN. Submit a ticket on the HGCC wewbsite if IT help is needed.</li>
+<li><strong>Operating System:</strong> Red Hat Enterprise Linux 8.10 (Ootpa)<br></li>
+<li><strong>Shared Storage (beegfs)</strong> : 1.3 PB (10TB per lab; 1,000,000 files per lab). All user home directories <code>/home/[userid]/</code> are hosted on <code>beegfs</code>. </li>
+<li><strong>1 Head/Gateway/Login Node <code>head.hgcc</code></strong>; 
 
 <ul>
 <li>No CPU or memory intensive programs are allowed on the headnode and the DTN. </li>
 <li>2CPU and 8G RAM per user</li>
 <li>Default interactive job time: 1 hour</li>
+</ul></li>
+<li><strong>1 Data Transfer Node (DTN)</strong>
+
+<ul>
+<li>Use DTN for data transfers. </li>
+<li>Login to DTN by <code>ssh dtn01</code> with your Emory NetID password.</li>
 </ul></li>
 <li><strong>14 Compute Nodes of the same Partition</strong>:
 
@@ -365,16 +371,20 @@ kbd {
 
 <ul>
 <li>This is our previous data drive 2 (350TB) in the old cluster. Our data drive 1 (45TB) is retired.</li>
-<li>A softlink of the datadrive has been created under your home directory: <code>~/yangfss2/</code></li>
-<li><code>commons/[user]</code> : User work directories. 
+<li>The total number of file limit dose not apply to lab data drives.</li>
+<li>A softlink of the datadrive has been created under your home directory: <code>/home/[userid]/yangfss2/</code></li>
+<li><code>/nfs/yangfss2/data/commons/[userid]</code> : User work directories on lab data drive. 
 
 <ul>
-<li>All data files under your user work directories on our lab data drive 1 and 2 on the old HGCC cluster are copied here. </li>
-<li>All files on the old hgcc main disk <code>icebreaker</code> are not accessible and not coped into this new system.</li>
+<li>Use this space for your data files, creating python virtual environment, and installing R libraries</li>
 </ul></li>
-<li><code>shared/**</code> : Shared data directories and software directory <code>shared/Software/</code> for the lab.</li>
-<li><code>projects/</code> : Project directories shared by the lab.</li>
-<li><code>public/</code> : Files to be shared with other groups. Public to be viewed by all users on the cluster.</li>
+<li><code>/nfs/yangfss2/data/shared/**</code> : Shared data directories 
+
+<ul>
+<li>Shared software directory <code>/nfs/yangfss2/data/shared/Software/</code>.</li>
+</ul></li>
+<li><code>/nfs/yangfss2/data/projects/</code> : Project directories shared by the lab.</li>
+<li><code>/nfs/yangfss2/data/public/</code> : Files to be shared with other groups. Public to be viewed by all users on the cluster.</li>
 </ul></li>
 <li><strong>All files are not backed up on the cluster.</strong></li>
 </ul>
@@ -391,14 +401,14 @@ kbd {
 <li><a href="https://it.emory.edu/vpntools/index.html"><strong>BIG-IP Edge Client</strong></a> is needed for VPN connection.</li>
 <li>Contact <a href="https://emory.service-now.com/sp?sysparm_stack=no"><strong>Emory IT</strong></a> if further help is needed.</li>
 </ul></li>
-<li><p><strong>Login using <code>ssh</code></strong> by typing the following command in the terminal with your Emory Net ID and Emory password:
-<code>ssh &lt;Emory_Net_ID&gt;@hgcc.emory.edu</code></p>
+<li><p><strong>Login using <code>ssh</code></strong> by typing the following command in the bash shell terminal with your Emory NetID and Emory passworbash shell. Replace <code>&lt;Emory_NetID&gt;</code> by your Emory NetID. </p>
 
 <ul>
+<li><code>ssh &lt;Emory_NetID&gt;@hgcc.emory.edu</code></li>
 <li>Terminal App is available on Mac OS X and Linux system</li>
-<li>Under Windows 10, open up a Powershell (search for “Powershell” in the search tool next to the Start menu) and type ssh. (Older versions of the operating system may require the installation of a third party ssh client, like <a href="https://www.putty.org/">Putty</a>.)</li>
+<li>Under Windows 10, open up a <strong>Powershell</strong> (search for “Powershell” in the search tool next to the Start menu) and type ssh. (Older versions of the operating system may require the installation of a third party ssh client, like <a href="https://www.putty.org/">Putty</a>.)</li>
 </ul></li>
-<li><p><a href="http://www.linuxproblem.org/art_9.html"><strong>SSH login without typing password</strong></a> : repeat this setup for each of your local computer.</p>
+<li><p><a href="http://www.linuxproblem.org/art_9.html"><strong>Setup SSH login without typing password</strong></a> : repeat this setup for each of your local computer. Highly recomend to set this up first. It will save you tons of effort.</p>
 
 <ul>
 <li><p>First, generate a pair of authentication key under the home directory on your local computer: <code>ssh-keygen -t rsa</code>. </p>
@@ -407,10 +417,17 @@ kbd {
 <li> Your identification has been saved in <code>~/.ssh/id_rsa</code>.</li>
 <li> Your public key has been saved in <code>~/.ssh/id_rsa.pub</code>. </li>
 </ul></li>
-<li><p>Second, run the following command under the home directory on your local computer to create a directory <code>~/.ssh</code> under your home directory on the HGCC cluster and append your local authentication key to <code>~/.ssh/authorized_keys</code> on HGCC:</p>
+<li><p>Second, run the following command on remote HGCC create a directory <code>~/.ssh</code> under your HGCC home directory </p>
 
 <ul>
-<li>  <code>ssh-copy-id &lt;Emory_Net_ID&gt;@hgcc.emory.edu</code></li>
+<li><code>makdir ~/.ssh</code></li>
+</ul></li>
+<li><p>Third, now run the following command on your local computer to append your local authentication key to HGCC <code>~/.ssh/authorized_keys</code> :</p>
+
+<ul>
+<li><code>ssh-copy-id &lt;Emory_NetID&gt;@hgcc.emory.edu</code></li>
+<li>If <code>ssh-copy-id</code> dose not work, just run the following command on your local computer: <code>cat ~/.ssh/id_rsa.pub | ssh &lt;Emory_NetID&gt;@hgcc.emory.edu &#39;cat &gt;&gt; ~/.ssh/authorized_keys</code>. </li>
+<li>Input your Emory password if you are prompted for.</li>
 </ul></li>
 </ul></li>
 </ol>
@@ -418,29 +435,71 @@ kbd {
 <h3 id="toc_3">Setup one&#39;s <code>~/.bashrc</code> file</h3>
 
 <ul>
-<li>See <a href="https://www.freecodecamp.org/news/bashrc-customization-guide/">useful things</a> that you can setup your own <code>~/.bashrc</code> file under your home directory to automaticlly run commands for each session. 
+<li><p>The <code>~/.bashrc</code> file  will be sourced automatically every time when you logged in to the system, or open a new interactive shell session. This is the place for your to setup global environment that you want to work in.</p></li>
+<li><p>See <a href="https://www.freecodecamp.org/news/bashrc-customization-guide/">useful things</a> that you can setup your own <code>~/.bashrc</code> file under your home directory to automaticlly run commands for each session. </p>
 
 <ul>
-<li>Set up <code>$PATH</code> system variables. See <a href="https://www.baeldung.com/linux/path-variable">example</a>.</li>
-<li>Create alias by <code>alias</code> in <code>~/.bashrc</code> to set up your own shortcup of commands. See <a href="https://phoenixnap.com/kb/linux-alias-command">Examples</a>.</li>
-<li>Setup environment variables. See <a href="https://www.cyberciti.biz/faq/set-environment-variable-linux/">example</a>.</li>
-<li>Load software modules.</li>
+<li>You can setup short cuts of commands by <code>alias</code>. For example the command <code>alias ll=&#39;ls -h -l -t --color&#39;</code> in the <code>~/.bashrc</code> file will allow you to just type <code>ll</code> to list all files in their long listing format, show sizes as human readable, sort by time with color. 
+
+<ul>
+<li>See <a href="https://phoenixnap.com/kb/linux-alias-command">Examples</a> about setting up alias.</li>
+</ul></li>
+<li><p>Setup environment variables such as <code>$PATH</code>, to let the system know when to search for executible files/tools. For example, <code>export PATH=/nfs/yangfss2/data/shared/bin:$PATH</code> will add additional path <code>/nfs/yangfss2/data/shared/bin</code> into existing <code>$PATH</code> content. Additional paths can be added with seperation by <code>:</code>.  </p>
+
+<ul>
+<li>See <a href="https://www.baeldung.com/linux/path-variable">example</a> for setting up <code>$PATH</code> system variables. </li>
+<li>See <a href="https://www.cyberciti.biz/faq/set-environment-variable-linux/">example</a> for setting environment variables. </li>
+</ul></li>
+<li><p>Load software modules, for example, <code>spack load r@4.4.0</code> will automatically load R module. </p></li>
 </ul></li>
 </ul>
 
 <h2 id="toc_4">Mount Remote Cluster Home Directory to Local Computer</h2>
 
-<h3 id="toc_5">Use <a href="https://winscp.net/eng/index.php">WinSCP</a> for Windows system</h3>
+<h3 id="toc_5"><a href="https://code.visualstudio.com/">Visual Studio Code</a> for both Windows and MAC systems. <strong>Highly recommend</strong>.</h3>
 
-<h3 id="toc_6">Use <a href="https://github.com/macfuse/macfuse/wiki/File-Systems-%E2%80%90-SSHFS">macFUSE/SSHFS</a> for MAC</h3>
+<ol>
+<li><p>Install <a href="https://code.visualstudio.com/">Visual Studio Code</a> with <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh">Remote-SSH</a> extension.</p></li>
+<li><p>Setup configuration file under local home directory. Type <code>pwd</code> in your local shell window to show your local home directory. </p>
+
+<ul>
+<li><code>mkdir -p ~/.ssh; touch ~/.ssh/config</code></li>
+<li>Include the following chunk of text in the <code>config</code> file. Remember to update your Emory UserID.</li>
+<li>Makesure you have setup your identification file <code>~/.ssh/id_rsa</code> following the above instructions of setting up <a href="http://www.linuxproblem.org/art_9.html"><strong>SSH login without typing password</strong></a>. 
+<code>
+Host HGCC
+HostName hgcc.emory.edu
+User &lt;Emory_UserID&gt;
+IdentityFile ~/.ssh/id_rsa
+</code></li>
+</ul></li>
+<li><p>Press <code>shift + command + p</code> on mac, or type <code>&gt;</code> in the search window in the middle top of your VSCode window, to open the choice selection. </p>
+
+<ul>
+<li>Select <code>Remote-SSH: Settings</code>. Specify the config file directory as <code>~/.ssh/config</code>.</li>
+<li>Select <code>Remote-SSH: Connect to Host ...</code>, then select <code>HGCC</code> if you have the above <code>config</code> file setup. </li>
+<li>You can also click on the Remote &quot;Quick Access&quot; status bar item in the lower left corner to get a list of the most common commands. </li>
+</ul></li>
+<li><p>See more information at <a href="https://code.visualstudio.com/docs/remote/ssh">Extension Documentation</a>.</p></li>
+</ol>
+
+<p><strong>Other useful extensions on VSCode: <code>Python, Jupyter, Python Debugger, C/C++, PowerShell, Markdown All in One, vscode-pdf, Rtools, GitHub Copilot Chat</code></strong></p>
+
+<h3 id="toc_6">Other choices of mounting remote clusters</h3>
+
+<ul>
+<li><p><a href="https://winscp.net/eng/index.php">WinSCP</a> for Windows system</p></li>
+<li><p><a href="https://github.com/macfuse/macfuse/wiki/File-Systems-%E2%80%90-SSHFS">macFUSE/SSHFS</a> for MAC</p>
 
 <ol>
 <li>Install <a href="https://github.com/libfuse/sshfs">SSHFS</a></li>
 <li>Install <a href="https://osxfuse.github.io/">macFUSE</a></li>
-<li>Mount the remote HGCC home directory <code>/home/&lt;jyang51&gt;/</code> to  local directory <code>~/HGCC/</code>. Replace <code>&lt;jyang51&gt;</code> by your Emory<em>Net</em>ID.
+<li>Mount the remote HGCC home directory <code>/home/&lt;jyang51&gt;/</code> to  local directory <code>~/HGCC/</code>. Replace <code>&lt;jyang51&gt;</code> by your <code>Emory_NetID</code>.
 <code>sshfs &lt;jyang51&gt;@hgcc.emory.edu:/home/&lt;jyang51&gt;/ ~/HGCC/ -o auto_cache -ovolname=HGCC -o follow_symlinks</code></li>
-<li>Now you can access all files on HGCC through the mounted local directory.</li>
-</ol>
+</ol></li>
+</ul>
+
+<p><strong>Now you can access all files on HGCC through the mounted local directory.</strong></p>
 
 <h2 id="toc_7">Transfer Data Files to/from Cluster</h2>
 
@@ -513,11 +572,14 @@ kbd {
 <li>Delete temperary working directory, <code>rm -rf /scratch/tmp_jyang51</code>.</li>
 <li>All files in the scratch space will be deleted after 30 days.</li>
 </ol></li>
+<li><strong>Keep your working directoreis organized and cleaned.</strong> 
+
+<ol>
 <li><strong>Do not make another copy of the same data unless you need to make changes.</strong></li>
 <li><strong>Delete files that you will no longer to use.</strong></li>
-<li><strong>Keep your working directoreis organized and cleaned.</strong></li>
-<li><strong>Write <code>README.md</code> file for each data directory.</strong></li>
-<li><strong>Only request up to 7 nodes if you are submiting a large number of jobs, by specifying the requested node list <code>sbatch --nodelist node[01-07]</code></strong></li>
+</ol></li>
+<li> <strong>Write <code>README.md</code> file for each data directory.</strong></li>
+<li> <strong>Only request up to 7 nodes if you are submiting a large number of jobs, by specifying the requested node list <code>sbatch --nodelist node[01-07]</code></strong></li>
 </ol>
 
 <h2 id="toc_10">Using a Software on HGCC</h2>
@@ -556,6 +618,8 @@ ln -s [directory_to_executible_file]; # create symbolic link to the software</co
 <ol>
 <li>Install software under user home directory, e.g., <code>~/.local/</code>. Include <code>~/.local/bin/</code> in the <code>$PATH</code> environment variable. Create a symbolic link to software executible file under <code>~/.local/bin/</code>.</li>
 <li>Create a virtual python environment by <code>conda</code> to install python libraries under your virtual python environment. </li>
+<li><strong>It is recommended to create python environment on your lab data drive and install software to your lab data drive.</strong> </li>
+<li>The total number of files is limited to <code>1,000,000</code> per group. Python libraries, environment files, and R library files can easily exceed the limit for a group. Once the limit is reached, the logins of all members might fail and experience lags.<br></li>
 <li>Submit a ticket through the HGCC website to request a software to be installed by IT.</li>
 </ol>
 
@@ -669,6 +733,7 @@ R</code></pre></div>
 <ol>
 <li>Check storage space for all data drives on HGCC by <code>df -h</code></li>
 <li>Check space used by current working directory by <code>du -h -d1</code></li>
+<li>Check number of files of a directory by <code>find [directory_path] --type f | wc -l</code>.</li>
 </ol>
 
 <h2 id="toc_18">Additional Resources</h2>
@@ -677,6 +742,7 @@ R</code></pre></div>
 <li><a href="https://hgcc.emory.edu/#help">New HGCC Website</a>. Need to be in Emory network or Emory VPN to access.</li>
 <li><a href="https://spack.io/">Spack website</a>.</li>
 <li><a href="https://linuxcommand.org/tlcl.php">The Linux Command Line</a> book.</li>
+<li><a href="https://code.visualstudio.com/docs/getstarted/getting-started">Tutorial: Get started with Visual Studio Code</a>.</li>
 </ul>
 
 

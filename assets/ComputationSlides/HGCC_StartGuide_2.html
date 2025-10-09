@@ -340,16 +340,34 @@ kbd {
 <li>Load required software modules by <code>spack load [software]</code>.</li>
 <li>Mount remote HGCC directory to your local computer.</li>
 <li>Write scripts using local text editors like <strong><a href="https://code.visualstudio.com/"><code>Visual Studio Code</code></a>, <a href="https://www.sublimetext.com/"><code>Sublime</code></a></strong>.</li>
-<li>Copy and paste to the interactive bash session.</li>
+<li>Copy and paste to the interactive bash session, or open the terminal in the bottom of your VSCode window. </li>
 </ol>
 
 <h3 id="toc_2">R</h3>
 
 <ul>
 <li>Load R module by <code>spack load r@4.4.0</code>.</li>
-<li>Type <strong><code>R</code></strong> in the interactive session to initiate an R session.</li>
+<li>Type <strong><code>R</code></strong> in the interactive session to initiate an R session.
+
+<ul>
 <li><strong>Copy R commands</strong> from your R script and <strong>Paste into the R session</strong>.</li>
 <li>Simple parallel computation can be enabled by using R packages <strong><code>parallel</code></strong> and <strong><code>foreach</code></strong>, see <strong><a href="https://nceas.github.io/oss-lessons/parallel-computing-in-r/parallel-computing-in-r.html">Quick Instructions of Parallel Computation</a></strong>.</li>
+<li>Or open remote Rscript on VSCode after connect to HGCC on VSCode; Open terminal in the bottom of VScode window; 
+
+<ul>
+<li>Have extension <code>Rtools</code> installed on VSCode</li>
+<li>Now you can attach an R session in the bottom of your VSCode</li>
+<li><code>command + return</code> on mac will send your R command line to the terminal to run </li>
+</ul></li>
+<li>Recommend to set default R library path to your lab directory. The R library path can be used by all lab members.
+
+<ul>
+<li>Either use <code>.libPaths()</code> function commands in R session</li>
+<li>Or add <code>.libPaths()</code> commands in your <code>~/.Rprofile</code> file</li>
+<li>Or add setup command <code>export R_LIBS=/nfs/yangfss2/data/shared/Rlibs</code> to your <code>~/.bashrc</code> file. </li>
+<li>Or add <code>R_LIBS_USER=/nfs/yangfss2/data/shared/Rlibs:/beegfs/nvme/hpc/software/spack/opt/spack/linux-rhel8-sapphirerapids/gcc-13.2.0/r-4.4.0-3qdtah7ohyy5fcynygnvrlxyfx462lpy/rlib/R/library:/nfs/yaofss2/data/shared/Software/R_libs/4.4</code> to your <code>~/.Renviron</code> file to setup multiple R library paths that are seperated by <code>:</code>.</li>
+</ul></li>
+</ul></li>
 <li>Tips
 
 <ul>
