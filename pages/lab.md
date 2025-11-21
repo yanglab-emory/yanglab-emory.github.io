@@ -18,9 +18,15 @@ title: "Lab members"
 | | | | 
 | **Conglin Bao** <br> Biostat MS Student  | Predicting AD pathologies using deep learning model. |2024-Present| 
 | | | |
+| **Arpit Ramani** <br> Wheeler High School Student | BGW-TWAS/PWAS study of AD dementia.|2024-Present| 
+| | | |
 | **Ruilong Chen** <br> Biostat MS Student   | Studying omics data by tensor regression model.|2025-Present| 
 | | | |
-| **Arpit Ramani** <br> Wheeler High School Student | BGW-TWAS/PWAS study of AD dementia.|2024-Present| 
+| **Lauren Ngo** <br> Biostat MS Student   | Predicting AD traits using deep learning model.|2025-Present| 
+| | | |
+| **Siyang Shen** <br> Research Specialist (Former Biostat MS Student)   | Predicting the risk of developing breast cancer using machine learning models and Bioinformatics analysis.|2025-Present| 
+| | | |
+| **Molly Murphy** <br> DDS Undergraduate Student  | Single cell eQTL studies.|2025-Present| 
 
 ### <a href="../assets/ComputationSlides/YangLabGuideline.html">*Lab Onboarding Guidelines*</a>
 

@@ -45,11 +45,14 @@ title: "Publication and Presentation"
 
 ## Upcoming Presentation
 
-* **Lecture at Novartis (Invited)**, virtual. _Advanced TWAS/PWAS Tools Improve Gene Mapping in Alzheimer's Disease Dementia._
+* **(Invited) 2026 ICSA China Conference, Southern University of Science and Technology, Shenzhen. June 27–29, 2026.**
+
 
 ## Past Presentation
 
 ### Oral Presentation
+
+* **Lecture at Novartis (Invited)**, virtual. _Advanced TWAS/PWAS Tools Improve Gene Mapping in Alzheimer's Disease Dementia._
 
 * **The 10th Workshop on Biostatistics and Bioinformatics (Invited), May 2025**, Atlanta, Georgia. _x.	Unveiling Cell-type-specific Risk Genes for Alzheimer’s Disease Dementia by Integrating Large-scale snRNA-Seq Data from Prefrontal Cortex Tissue with GWAS Summary Data._
 
