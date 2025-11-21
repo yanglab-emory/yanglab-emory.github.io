@@ -410,24 +410,21 @@ kbd {
 <li><p><a href="http://www.linuxproblem.org/art_9.html"><strong>Setup SSH login without typing password</strong></a> : repeat this setup for each of your local computer. Highly recomend to set this up first. It will save you tons of effort.</p>
 
 <ol>
-<li><p>Generate a pair of authentication key under the home directory on your local computer: <code>ssh-keygen -t rsa</code>. </p>
+<li>Generate a pair of authentication key under the home directory on your local computer. Press enter to accept the default path if you are asked about where to save the rsa key file, and presee enter to use none if you are asked about Passphrase. 
 
 <ul>
 <li> Your identification has been saved in <code>~/.ssh/id_rsa</code>.</li>
 <li> Your public key has been saved in <code>~/.ssh/id_rsa.pub</code>. </li>
 </ul></li>
-<li><p>Run the following command on remote HGCC create a directory <code>~/.ssh</code> under your HGCC home directory </p>
+</ol>
 
-<ul>
-<li><code>makdir -p ~/.ssh</code></li>
-</ul></li>
-<li><p>Now run the following command on your local computer to append your local authentication key to HGCC <code>~/.ssh/authorized_keys</code> :</p>
+<div><pre><code class="language-none">mkdir -p ~/.ssh
+ssh-keygen -t rsa</code></pre></div>
 
-<ul>
-<li><code>ssh-copy-id &lt;Emory_NetID&gt;@hgcc.emory.edu</code></li>
-<li>If <code>ssh-copy-id</code> dose not work, just run the following command on your local computer: <code>cat ~/.ssh/id_rsa.pub | ssh &lt;Emory_NetID&gt;@hgcc.emory.edu &#39;cat &gt;&gt; ~/.ssh/authorized_keys</code>. </li>
-<li>Input your Emory password if you are prompted for.</li>
-</ul></li>
+<ol>
+<li>Run the following command on remote HGCC create a directory <code>~/.ssh</code> under your HGCC home directory:  <code>makdir -p ~/.ssh</code></li>
+<li>Now run the following command on your local computer to append your local. Input your Emory password if you are prompted for. 
+<code>cat ~/.ssh/id_rsa.pub | ssh &lt;Emory_NetID&gt;@hgcc.emory.edu &#39;cat &gt;&gt; ~/.ssh/authorized_keys&#39;</code></li>
 </ol></li>
 </ol>
 
@@ -464,13 +461,12 @@ kbd {
 <ul>
 <li><code>mkdir -p ~/.ssh; touch ~/.ssh/config</code></li>
 <li>Include the following chunk of text in the <code>config</code> file. Remember to update your Emory UserID.</li>
-<li>Makesure you have setup your identification file <code>~/.ssh/id_rsa</code> following the above instructions of setting up <a href="http://www.linuxproblem.org/art_9.html"><strong>SSH login without typing password</strong></a>. 
-<code>
-Host HGCC
-HostName hgcc.emory.edu
-User &lt;Emory_UserID&gt;
-IdentityFile ~/.ssh/id_rsa
-</code></li>
+<li><p>Makesure you have setup your identification file <code>~/.ssh/id_rsa</code> following the above instructions of setting up <a href="http://www.linuxproblem.org/art_9.html"><strong>SSH login without typing password</strong></a>. </p>
+
+<div><pre><code class="language-none">Host HGCC
+    HostName hgcc.emory.edu
+    User &lt;Emory_UserID&gt;
+    IdentityFile ~/.ssh/id_rsa</code></pre></div></li>
 </ul></li>
 <li><p>Press <code>shift + command + p</code> on mac, or type <code>&gt;</code> in the search window in the middle top of your VSCode window, to open the choice selection. </p>
 
@@ -589,13 +585,13 @@ IdentityFile ~/.ssh/id_rsa
 <li>Use command <code>spack find -x</code> to list all installed software modules on HGCC.</li>
 <li>Use command <code>spack find --loaded</code> to list all loaded software modules.</li>
 <li>Check if an executible file of an installed or loaded software is available under <code>${PATH}</code> by <code>which [software_name]</code>.</li>
-<li>Add a symbolic link of the executible file under <code>${PATH}</code> to avoid typing full directory of the executible file. </li>
-</ol>
+<li><p>Add a symbolic link of the executible file under <code>${PATH}</code> to avoid typing full directory of the executible file. </p>
 
 <div><pre><code class="language-none">export PATH=&quot;~/.local/bin:$PATH&quot; # add local directory to PATH. add this to ~/.bashrc file to avoid running this for each session.
 echo $PATH; # show current PATH directories
 cd ~/.local/bin; #
-ln -s [directory_to_executible_file]; # create symbolic link to the software</code></pre></div>
+ln -s [directory_to_executible_file]; # create symbolic link to the software</code></pre></div></li>
+</ol>
 
 <h3 id="toc_12">Using a software installed on the cluster by <code>spack</code></h3>
 
@@ -631,14 +627,11 @@ ln -s [directory_to_executible_file]; # create symbolic link to the software</co
 <h3 id="toc_14">Share installed software with the lab</h3>
 
 <ul>
-<li>Make a soft link of the executible tool under <code>/nfs/yangfss2/data/shared/bin</code> by the following commands:</li>
-</ul>
+<li><p>Make a soft link of the executible tool under <code>/nfs/yangfss2/data/shared/bin</code> by the following commands:</p>
 
 <div><pre><code class="language-none">cd /nfs/yangfss2/data/shared/bin
-ln -s [tool_directory]</code></pre></div>
-
-<ul>
-<li> Include the following command in your <code>~/.bashrc</code> file to automatically run this for each bash session, so that the system can find the executible file: <code>export PATH=&quot;/nfs/yangfss2/data/shared/bin:$PATH&quot;</code></li>
+ln -s [tool_directory]</code></pre></div></li>
+<li><p>Include the following command in your <code>~/.bashrc</code> file to automatically run this for each bash session, so that the system can find the executible file: <code>export PATH=&quot;/nfs/yangfss2/data/shared/bin:$PATH&quot;</code></p></li>
 </ul>
 
 <h2 id="toc_15">Monitoring storage usage</h2>
