@@ -462,16 +462,12 @@ ssh-keygen -t rsa</code></pre></div>
 <li>Install the newest version of <a href="https://osxfuse.github.io/">macFUSE</a></li>
 <li>Setup MAC security as follows. You will need to restart your MAC after the security setup.
 <img src="./MAC_security_setup.png" alt="drawing" width="400"/></li>
-<li>If you do not see the allow bottom shown, please refer to <a href="https://support.apple.com/guide/mac-help/change-security-settings-startup-disk-a-mac-mchl768f7291/mac">this help page</a>. Select Reduced Security and both options under the Reduced Security as shown below.</li>
-</ol></li>
-</ul>
-
-<p><img src="./MACsecurity.png" alt="drawing" width="400"/></p>
-
-<ol>
+<li>If you do not see the allow bottom shown, please refer to <a href="https://support.apple.com/guide/mac-help/change-security-settings-startup-disk-a-mac-mchl768f7291/mac">this help page</a>. Select Reduced Security and both options under the Reduced Security as shown below.
+<img src="./MACsecurity.png" alt="drawing" width="400"/></li>
 <li><p>Mount the remote HGCC home directory <code>/home/&lt;jyang51&gt;/</code> to  local directory <code>~/Desktop/HGCC/</code>. Replace <code>&lt;jyang51&gt;</code> by your <code>Emory_NetID</code> by the following command. Please do not create an actual <code>~/Desktop/HGCC/</code> directory on your local computer. <code>sshfs &lt;jyang51&gt;@hgcc.emory.edu:/home/&lt;jyang51&gt;/ ~/Desktop/HGCC/ -o auto_cache -ovolname=HGCC -o follow_symlinks</code></p></li>
 <li><p>Unmount the directory by <code>umount -f ~/Desktop/HGCC/</code>.</p></li>
-</ol>
+</ol></li>
+</ul>
 
 <h3 id="toc_6"><a href="https://code.visualstudio.com/">Visual Studio Code</a> for both Windows and MAC systems. <strong>Not Allowed by HGCC</strong>.</h3>
 
