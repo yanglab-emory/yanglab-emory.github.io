@@ -51,6 +51,8 @@ Dr. Yang accepts PhD students from graduate programs of [Genetics Molecular Biol
 My PhD work was about developing scalable nonparametric Bayesian model for functional data analysis. Since my postdoc training, I have been working on developing statistical tools and efficient computational algorithms for genetic association studies, integrative multi-omics data analysis, with the goal of illustrating underlying genomic etiology of complex diseases.
 
 ### Research/Job Opportunities
+- We are always looking for motivated Emory students and researchers to join the lab.
+- Please email PI Dr. Jingjing Yang <jingjing.yang@emory.edu> with your updated CV and graduate/undergraduate transcripts to inqury. 
 
 <!--- 
 #### Research Assistant for Emory Students
