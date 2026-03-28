@@ -35,21 +35,21 @@ title: "Lab members"
 ### Lab Alumni
 
 
-* Qile Dai (Biostat PhD Studen, 2020-2025), TWAS using summary-level QTL data and Cell-cell Communication. Currently Advisor Statistician at Eli Lilly.
+* Qile Dai (Biostat PhD Student, 2020-2025), TWAS using summary-level QTL data and Cell-cell Communication. Currently Advisor Statistician at Eli Lilly.
 
-* Coco Wu (QTM Undergradudate Student, 2024-2025), Sex-specific TWAS of PTSD. Currently Master Student at Stanford.
+* Coco Wu (QTM Undergraduate Student, 2024-2025), Sex-specific TWAS of PTSD. Currently Master Student at Stanford.
 
 * Siyang Shen (Biostat MS Student, 2024-2025), Predict breast cancer risk from benign biopsy transcriptomic data. Currently Research Specialist at Emory.
 
 * Yingte Liu (Biostat Master Student, 2023-2024), RNAseq data analysis and AD pathology imputation. Currently Biostatistician at Grady Health System.
 
-* Rebecca Yu (High School Intern, 2021-2023), develop TIGAR Web Tool on AWS. Currently college student at Columnbia University.
+* Rebecca Yu (High School Intern, 2021-2023), develop TIGAR Web Tool on AWS. Currently college student at Columbia University.
 
-* Shuyi Guo (Biosat Master Student, 2022-2023), Apply BGW-TWAS to study AD dementia and extend BGW-TWAS to using only summary eQTL data. Currently PhD student at UTHealth Houston School of Public Health.
+* Shuyi Guo (Biostat Master Student, 2022-2023), Apply BGW-TWAS to study AD dementia and extend BGW-TWAS to using only summary eQTL data. Currently PhD student at UTHealth Houston School of Public Health.
 
-* Tingyang Hu (Biosat Master Student, 2021-2023), PWAS of AD dementia. Currently PhD student at Pennsylvania State University College of Medicine.
+* Tingyang Hu (Biostat Master Student, 2021-2023), PWAS of AD dementia. Currently PhD student at Pennsylvania State University College of Medicine.
 
-* Lei Wang (Biosat Master Student, 2021-2022), Develop BFGWAS for using summary GWAS data. Currently PhD student at  University of Colorado Anschutz Medical Campus. 
+* Lei Wang (Biostat Master Student, 2021-2022), Develop BFGWAS for using summary GWAS data. Currently PhD student at  University of Colorado Anschutz Medical Campus. 
 
 * Kevin Johnson (Epidemiology Master Student, 2021-2022), Develop webtool for clinical sequence data analysis. Currently Epidemiologist at CDC.
 

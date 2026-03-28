@@ -5,11 +5,11 @@ title: "Teaching and Resources"
 
 ## Recently Taught Courses
 
-### SISG 2025 - Gene Regulation Moduls: TWAS, ChiP-seq Analysis, Functional Noncoding Variants
+### SISG 2025 - Gene Regulation Modules
 1. <a href="../assets/CourseSlides/SISG/TWAS_Lecture_1.pdf"> Introduction to TWAS </a> 
 2. <a href="../assets/CourseSlides/SISG/TWAS_Lecture_2.pdf"> TWAS with Summary xQTL Data and Finemapping</a>  
 3. <a href="../assets/CourseSlides/SISG/TWAS_Lecture_3.pdf"> TWAS and Mendelian Randomization</a> 
-4. <a href="../assets/CourseSlides/SISG/ChiP-Seq_Analysis_Lecture_4.pdf"> ChiP-seq Analysis Pipeline</a>  
+4. <a href="../assets/CourseSlides/SISG/ChiP-Seq_Analysis_Lecture_4.pdf"> ChIP-seq Analysis Pipeline</a>  
 5. <a href="../assets/CourseSlides/SISG/Non_coding_func_Lecture_5.pdf">Analysis with Functions of Noncoding Variants</a>  
 
 ### BIOS-770 - Advanced Statistical Genetics: GWAS
@@ -31,15 +31,15 @@ title: "Teaching and Resources"
 
 ## High Performance and Cloud Computing Cluster 
 ### [HGCC](https://hgcc.emory.edu/)
-* <a href="../assets/ComputationSlides/HGCC_StartGuide_1.html">Introductions to New HGCC</a>
+* <a href="../assets/ComputationSlides/HGCC_StartGuide_1.html">Introduction to New HGCC</a>
 * <a href="../assets/ComputationSlides/HGCC_StartGuide_2.html">Run Computation Tools and Submit Jobs on HGCC</a>
 	* [**Slurm User Guide from University of Michigan**](https://documentation.its.umich.edu/arc-hpc/slurm-user-guide)
-* <a href="../assets/ComputationSlides/Introduction_to_BASH_2024.pdf">Introductions to BASH</a>. 
+* <a href="../assets/ComputationSlides/Introduction_to_BASH_2024.pdf">Introduction to BASH</a>. 
 	* [**Bash Scripting Tutorial**](https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/)
 
 
 ### [RHPC](https://github.com/RSPH-HPC)
-* <a href="../assets/ComputationSlides/RSPH_HPC_StartGuide.html" target="_self"> Introductions to RHPC</a>
+* <a href="../assets/ComputationSlides/RSPH_HPC_StartGuide.html" target="_self"> Introduction to RHPC</a>
 * [RSPH High Performance Computing Github](https://github.com/RSPH-HPC) : [Starting guides](https://github.com/RSPH-HPC/Documentation/blob/master/HPC%20Getting%20Started%20Guide%20V.2.0.pdf) are provided. 
 * [Helpful tips from Dr. Hao Wu](https://www.haowulab.org//pages/computing.html)
 
@@ -48,7 +48,7 @@ title: "Teaching and Resources"
 
 
 ### [Emory Amazon Web Service (AWS)](https://aws.emory.edu/)
-* <a href="../assets/ComputationSlides/EmoryAWS_StartGuide_Yang.html">Introductions to Emory AWS</a>
+* <a href="../assets/ComputationSlides/EmoryAWS_StartGuide_Yang.html">Introduction to Emory AWS</a>
 * [AWS Documentation](https://docs.aws.amazon.com/index.html)
 
 
@@ -84,7 +84,7 @@ title: "Teaching and Resources"
 	* **[Learn VIM](https://github.com/iggredible/Learn-Vim)** : Vim is a useful text editor tool in Linux.
 
 * [**Visual Studio Code**](https://code.visualstudio.com/) is recommend for connecting to clusters and editing scripts on clusters.
-	* [**YouTub Instructions about Connecting VS Code to HPC**](https://www.youtube.com/watch?v=1B0hiWaVcHY)
+	* [**YouTube Instructions about Connecting VS Code to HPC**](https://www.youtube.com/watch?v=1B0hiWaVcHY)
 	* [**VS Code Instructions by NYU**](https://sites.google.com/nyu.edu/nyu-hpc/training-support/general-hpc-topics/vs-code)
 
 	
@@ -119,6 +119,6 @@ title: "Teaching and Resources"
 * [How to Make An Effective Poster](https://urc.ucdavis.edu/sites/g/files/dgvnsk3561/files/local_resources/documents/pdf_documents/How_To_Make_an_Effective_Poster2.pdf)
 
 #### Oral Scientific Presentations
-* [Scientific Presetnations 101](https://www.med.upenn.edu/mdresearchopps/assets/user-content/Resources/Howtogivepresentations2014.pdf)
+* [Scientific Presentations 101](https://www.med.upenn.edu/mdresearchopps/assets/user-content/Resources/Howtogivepresentations2014.pdf)
 * [Structure of a 10-minute Oral Scientific Presentation](https://dornsife.usc.edu/assets/sites/605/docs/Tips_10_minute_Scientific_PowerPoint_Presentation_Meds_490.pdf)
 * [The Art of Great Talks](https://www.med.upenn.edu/mdresearchopps/assets/user-content/Resources/Howtogivepresentations2014.pdf)
