@@ -45,18 +45,20 @@ title: "Publication and Presentation"
 
 ## Upcoming Presentation
 
-* **(Invited) 2026 ICSA China Conference, Southern University of Science and Technology, Shenzhen. June 27–29, 2026.**
+* **(Invited) 2026 ASA-STATGEN Conference, Emory University School of Public Health, Atlanta, GA, USA. May 18-20, 2026.**
+  
+* **(Invited) 2026 ICSA China Conference, Southern University of Science and Technology, Shenzhen, China. June 27–29, 2026.**
 
 
 ## Past Presentation
 
 ### Oral Presentation
 
-* **Lecture at Novartis (Invited)**, virtual. _Advanced TWAS/PWAS Tools Improve Gene Mapping in Alzheimer's Disease Dementia._
+* **Lecture at Novartis (Invited), May, 2025**, virtual. _Advanced TWAS/PWAS Tools Improve Gene Mapping in Alzheimer's Disease Dementia._
 
 * **The 10th Workshop on Biostatistics and Bioinformatics (Invited), May 2025**, Atlanta, Georgia. _x.	Unveiling Cell-type-specific Risk Genes for Alzheimer’s Disease Dementia by Integrating Large-scale snRNA-Seq Data from Prefrontal Cortex Tissue with GWAS Summary Data._
 
-* **FunGen-xQTL Sympothium (Invited), May 2025**, virtual. _Cell-type-specific Transcriptomic-wid eAssociation Studies Detected 80 Independent Risk Genes for Alzheimer’s Disease Dimentia._
+* **FunGen-xQTL Symposium (Invited), May 2025**, virtual. _Cell-type-specific Transcriptomic-wide Association Studies Detected 80 Independent Risk Genes for Alzheimer's Disease Dementia._
 
 * **MCBIOS (Invited), March 2025**, Salt Lake City, Utah. _Integrating Spatial Transcriptomics and snRNA-seq Data Enhances Studies of Alzheimer’s Disease._
 
