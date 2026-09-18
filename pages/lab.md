@@ -8,19 +8,13 @@ title: "Lab members"
 
 | Name |Research Topics|Years in Lab|
 |:------|:----------|:------|
-| **Shizhen Tang** <br> Biostat PhD Student  |  Integrating spatial transcriptomics and snRNA-seq data. |2021-Present| 
-| | | |
-| **Randy Parrish** <br> Biostat PhD Student  |Applying Bayesian genome-wide method to PWAS. |2022-Present| 
+| **Randy Parrish** <br> Biostat PhD Student  |Applying Bayesian genome-wide method to PWAS and develop TIGAR in R library. |2022-Present| 
 | | | |
 | **Leo Liu** <br> Biostat PhD Student  | Integrating multi-omics with GWAS summary stat.  |2025-Present| 
 | | | |
-| **Bo Shen** <br> Biostat MS Student  | TWAS method for correcting bias due to imputed gene expression. |2024-Present|
-| | | | 
-| **Conglin Bao** <br> Biostat MS Student  | Predicting AD pathologies using deep learning model. |2024-Present| 
+| **Ruilong Chen** <br> Biostat PhD Student   | Studying omics data by tensor regression model.|2026-Present| 
 | | | |
-| **Arpit Ramani** <br> Wheeler High School Student | BGW-TWAS/PWAS study of AD dementia.|2024-Present| 
-| | | |
-| **Ruilong Chen** <br> Biostat MS Student   | Studying omics data by tensor regression model.|2025-Present| 
+| **Peng Zhang** <br> Biostat MS Student   | TWAS of PD using reference transcriptomics data of multiple tissues.|2025-Present| 
 | | | |
 | **Lauren Ngo** <br> Biostat MS Student   | Predicting AD traits using deep learning model.|2025-Present| 
 | | | |
@@ -34,39 +28,51 @@ title: "Lab members"
 
 ### Lab Alumni
 
+* Arpit Ramani (Highschool Intern, 2024-2026), BGW-TWAS/PWAS study of AD dementia. College student at Georgia Institute of Techonology.
 
-* Qile Dai (Biostat PhD Student, 2020-2025), TWAS using summary-level QTL data and Cell-cell Communication. Currently Advisor Statistician at Eli Lilly.
+* Conglin Bao (Biostat MS Student, 2024-2026), Develop novel LSTM-RNN model for predicting AD pathology from longitudinal clinic data. PhD student at South Carolina University.
 
-* Coco Wu (QTM Undergraduate Student, 2024-2025), Sex-specific TWAS of PTSD. Currently Master Student at Stanford.
+* Bo Shen (Biostat MS Student, 2024-2026), Develop novel TWAS method for correcting bias in using machine-learning imputed gene expressions. PhD student at Westlake University.
 
-* Siyang Shen (Biostat MS Student, 2024-2025), Predict breast cancer risk from benign biopsy transcriptomic data. Currently Research Specialist at Emory.
+* Shizhen Tang (Biostat PhD Student, 2021-2026), Integrating spatial transcriptomics data with snRNAseq data for differntial gene expression analysis. Research Faculty at Department of Statistics, Radiation Effects Research Foundation, Hiroshima, Japan.
 
-* Yingte Liu (Biostat Master Student, 2023-2024), RNAseq data analysis and AD pathology imputation. Currently Biostatistician at Grady Health System.
+* Qile Dai (Biostat PhD Student, 2020-2025), TWAS using summary-level QTL data and Cell-cell Communication. Advisor Statistician at Eli Lilly.
 
-* Rebecca Yu (High School Intern, 2021-2023), develop TIGAR Web Tool on AWS. Currently college student at Columbia University.
+* Coco Wu (QTM Undergraduate Student, 2024-2025), Sex-specific TWAS of PTSD. Master Student at Stanford.
 
-* Shuyi Guo (Biostat Master Student, 2022-2023), Apply BGW-TWAS to study AD dementia and extend BGW-TWAS to using only summary eQTL data. Currently PhD student at UTHealth Houston School of Public Health.
+* Siyang Shen (Biostat MS Student, 2024-2025), Predict breast cancer risk from benign biopsy transcriptomic data. Research Specialist at Emory.
 
-* Tingyang Hu (Biostat Master Student, 2021-2023), PWAS of AD dementia. Currently PhD student at Pennsylvania State University College of Medicine.
+* Yingte Liu (Biostat Master Student, 2023-2024), RNAseq data analysis and AD pathology imputation. Biostatistician at Grady Health System.
 
-* Lei Wang (Biostat Master Student, 2021-2022), Develop BFGWAS for using summary GWAS data. Currently PhD student at  University of Colorado Anschutz Medical Campus. 
+* Rebecca Yu (High School Intern, 2021-2023), develop TIGAR Web Tool on AWS. College student at Columbia University (Egleston Scholar).
 
-* Kevin Johnson (Epidemiology Master Student, 2021-2022), Develop webtool for clinical sequence data analysis. Currently Epidemiologist at CDC.
+* Shuyi Guo (Biostat Master Student, 2022-2023), Apply BGW-TWAS to study AD dementia and extend BGW-TWAS to using only summary eQTL data. PhD student at UTHealth Houston School of Public Health.
 
-* Emilia (Xizhu) Liu (QTM Undergraduate Student, 2021-2022), Impute brain pathology using clinical data. Currently Senior Computational Statistician at Eli Lilly. 
+* Tingyang Hu (Biostat Master Student, 2021-2023), PWAS of AD dementia. PhD student at Pennsylvania State University College of Medicine.
 
-* Junyu Chen (Research Specialist, 2018-2020), Derive functional Bayesian GWAS with multiple quantitative annotations. Currently PhD student at Emory.
+* Lei Wang (Biostat Master Student, 2021-2022), Develop BFGWAS for using summary GWAS data. PhD student at  University of Colorado Anschutz Medical Campus. 
 
-* Justin Luningham (Postdoc, 2018-2020), Novel Bayesian TWAS method by leveraging both cis- and trans- eQTL information. Currently Assistant Professor at University of North Texas Health Science Center. 
+* Kevin Johnson (Epidemiology Master Student, 2021-2022), Develop webtool for clinical sequence data analysis. Epidemiologist at CDC.
 
-* Tianhui Mao (QTM Undergraduate Student, 2018-2019), Derive a risk prediction model for Alzheimer's disease. Currently data scientist at McKinsey. 
+* Emilia (Xizhu) Liu (QTM Undergraduate Student, 2021-2022), Impute brain pathology using clinical data. Master student at Yale University. Senior Computational Statistician at Eli Lilly. 
 
-* Xiaoran Meng (Master Student, 2018-2019), GTEx data analysis and tool development of [TIGAR](https://github.com/yanglab-emory/TIGAR). Currently data scientist.
+* Junyu Chen (Research Specialist, 2018-2020), Derive functional Bayesian GWAS with multiple quantitative annotations. PhD student at Emory.
 
-* Sini Nagpal, MS (Summer Intern, 2018). Nonparametric Bayesian method for TWAS. Currently PostDoc at Georgia Tech.
+* Justin Luningham (Postdoc, 2018-2020), Novel Bayesian TWAS method by leveraging both cis- and trans- eQTL information. Assistant Professor at Texas Christian University. 
+
+* Tianhui Mao (QTM Undergraduate Student, 2018-2019), Derive a risk prediction model for Alzheimer's disease. Master student at MIT. Data scientist at McKinsey. 
+
+* Xiaoran Meng (Master Student, 2018-2019), GTEx data analysis and tool development of [TIGAR](https://github.com/yanglab-emory/TIGAR). Data scientist in China.
+
+* Sini Nagpal, MS (Summer Intern, 2018). Nonparametric Bayesian method for TWAS. PhD student at Georgia Tech. Assistant Professor at IIT Bombay, India.
 
 
 ### Lab Photos
+
+* May, 2026 (End-of-Semester Group Lunch)
+<a href="default.asp" title="Lab photo Summer 2026" alt="Lab photo Summer 2026">
+<img style="float: center;" src="../assets/Pictures/LabLunch_May_2026.jpg" width = "700" height = "500">
+</a>
 
 * May, 2025 (End-of-Semester Group Lunch)
 <a href="default.asp" title="Lab photo Summer 2025" alt="Lab photo Summer 2025">

@@ -4,6 +4,19 @@ title: "Teaching and Resources"
 ---
 
 ## Recently Taught Courses
+### Instat 2026 - [Advanced Statistical Methods for Genetic Association Studies](https://instats.org/seminar/advanced-statistical-methods-for-genetic)
+This seminar presents advanced statistical methods for genetic association research, synthesizing theoretical foundations with applied workflows. It addresses the analytical challenges that arise in large-scale genome-wide association studies (GWAS), molecular QTL mapping, co-localization, Mendelian Randomization (MR), and transcriptome-wide association studies (TWAS), and it explains why rigorous statistical treatment for reliable inference is essential in genetics.
+
+- Session 1: GWAS Fundamentals and Data Preparation
+- Session 2: Advanced Association Models and Fine-Mapping
+- Session 3: Polygenic Risk Scores
+- Session 4: Molecular QTL Mapping and Covariate Control
+- Session 5: Co-Localization Theory and Practice
+- Session 6: Integrating Molecular QTL with GWAS Results by Mendelian Randomization
+- Session 7: TWAS/PWAS and Integrative Reproducible Pipelines
+- Session 8: TWAS/PWAS Using Summary-Level xQTL and GWAS Data
+- Session 9: Fine-Mapping TWAS/PWAS Results
+
 
 ### SISG 2025 - Gene Regulation Modules
 1. <a href="../assets/CourseSlides/SISG/TWAS_Lecture_1.pdf"> Introduction to TWAS </a> 

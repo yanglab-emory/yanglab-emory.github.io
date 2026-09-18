@@ -23,7 +23,7 @@ Email: <jingjing.yang@emory.edu> <br>
 [Google Scholar](https://scholar.google.com/citations?user=ANXPW-UAAAAJ&hl=en)
 
 ### Research
-The Yang Lab is interested in developing statistical and computational methods/tools for quantitative genomics data analysis and biomedical data analysis, using programming languages R, Python, C++, Perl, etc., Linux/Unix high-performance computing cluster, and Amazon Web Services.
+The Yang Lab is interested in developing statistical and computational methods/tools for quantitative genomics data analysis and biomedical data analysis, using programming languages R, Python, C++, etc., Linux/Unix high-performance computing cluster, and Amazon Web Services.
 
 <ins>Current Research Topics</ins>
 
@@ -33,9 +33,11 @@ The Yang Lab is interested in developing statistical and computational methods/t
 	* Applications for studying Alzheimer's dementia related phenotypes, Parkinson disease, motor functions
 * Machine learning, Deep learning, and Artificial Intelligent Models
 	* Biomedical signal/image analysis
-	* Phenotype prediction using longitudinal clinical data and omics data
+	* Disease risk prediction using longitudinal clinical data and omics data
+	* Developing AI tools for clinical whole genome/exome sequencing data analyses
 * Genome-wide Association Studies (GWAS) 
 	* Method/tool development to account for functional annotations
+	* Integrating omics data with GWAS data for prioritizing causal risk genes
 	* Applications for studying Alzheimer's dementia related phenotypes, and post chemotherapy skin toxicity of Breast cancer patients
 * Bioinformatics analysis
 	* WGS/WES
@@ -51,8 +53,11 @@ Dr. Yang accepts PhD students from graduate programs of [Genetics Molecular Biol
 My PhD work was about developing scalable nonparametric Bayesian model for functional data analysis. Since my postdoc training, I have been working on developing statistical tools and efficient computational algorithms for genetic association studies, integrative multi-omics data analysis, with the goal of illustrating underlying genomic etiology of complex diseases.
 
 ### Research/Job Opportunities
-- We are always looking for motivated Emory students and researchers to join the lab.
-- Please email PI Dr. Jingjing Yang <jingjing.yang@emory.edu> with your updated CV and graduate/undergraduate transcripts to inqury. 
+- **We are always looking for motivated Emory students and researchers to join the lab.**
+	- Undergraduate students are encouraged to contact in the end of your sophomore year.
+	- Master students are encouraged to contact in your first year.
+	- Average 10-20 working hours per week during regular semesters and 20-40 working hours per week during summer are required.
+- Please email **PI Dr. Jingjing Yang <jingjing.yang@emory.edu>** with your **updated CV and graduate/undergraduate transcripts** to inqury. 
 
 <!--- 
 #### Research Assistant for Emory Students
@@ -78,15 +83,15 @@ Yang lab currently has an opening for Research Specialist. Please email applicat
 * Interested candidate should submit CV, Brief Statement of Research Interest (one page), and Contacts for 3 references.
 -->
 
-<!--- 
+
 #### Postdoctoral Research Fellow
-Yang lab currently has an opening for Postdoctoral Research Fellow. Please email application directly to PI Dr. Jingjing Yang <jingjing.yang@emory.edu>. Applications will be reviewed immediately after submission.
+Yang lab currently has openings for Postdoctoral Research Fellow. Please email application directly to **PI Dr. Jingjing Yang <jingjing.yang@emory.edu>**. Applications will be reviewed immediately after submission.
 
 * The candidate is required to have a Ph.D. degree in Statistics/Biostatistics, Bioinformatics, Computer Science or other relevant disciplines with research interests in statistical genetics and genomics data analysis.
 * The candidate is required to have proficiency in one or multiple of the popular programming languages, R, Python, C++, etc.
 * Experience working with large genomics data and high-performance computing clusters are desirable.
-* Interested candidate should submit a Cover Letter, CV, Brief Statement of Research Interest (less than 2 pages), one Sample Publication, and Contacts for 3 references.
--->
+* Interested candidate should submit **CV with contacts for 3 references, Brief Statement of Research Interest (less than 2 pages), and one Sample Publication or preprint (if applicable)**.
+
 
 ### Lab Location - Whitehead Biomedical Research Building
 <img style="float: center;" src="assets/Pictures/Whitehead.png">

@@ -6,6 +6,10 @@ title: "Publication and Presentation"
 ## Selected Publication
 
 ### 2023 - Present
+* **Liu Q, Parrish RL, Tang S**, Tasaki S, Bennett DA, Seyfried NT, De Jager PL, Menon V, Buchman AS, **Yang J\***. Cell-type-aware transcriptome-wide association studies identify 91 independent risk genes for Alzheimer’s disease dementia. Communications Biology. 2026 Apr 22. DOI: [https://doi.org/10.1038/s42003-026-10030-4](https://doi.org/10.1038/s42003-026-10030-4)
+
+* **Dai Q**, **Yang J\***, Epstein MP\*. Identifying condition-related cell-cell communication events using supervised tensor analysis. The American Journal of Human Genetics. 2026 Jul 2;113(7):1495-508. DOI: [https://doi.org/10.1016/j.ajhg.2026.05.005](https://doi.org/10.1016/j.ajhg.2026.05.005)
+
 * **Hu T\+, Liu Q\+, Dai Q, Parrish RL,** Buchman AS, Tasaki S, Seyfried NT, Wang Y, Bennett DA, De Jager PL, Epstein MP, **Yang J.\***. Proteome-wide association studies using summary pQTL data of brain, CSF, and plasma identify 30 risk genes of Alzheimer’s disease dementia. Alz Res Therapy 17, 135 (2025). DOI: <https://doi.org/10.1186/s13195-025-01774-y>
 
 * **Tang S**, Liu S, Buchman AS, Bennett DA, De Jager PL, **Yang J.\*** , Hu J.\* Integrating spatial transcriptomics and snRNA-seq data enhances differential gene expression analysis results of AD-related phenotypes. Human Genetics and Genomics Advances. 2025 Jul 10;6(3). DOI:<https://doi.org/10.1016/j.xhgg.2025.100447>
