@@ -30,7 +30,7 @@ title: "Lab members"
 
 * Arpit Ramani (Highschool Intern, 2024-2026), BGW-TWAS/PWAS study of AD dementia. College student at Georgia Institute of Techonology.
 
-* Conglin Bao (Biostat MS Student, 2024-2026), Develop novel LSTM-RNN model for predicting AD pathology from longitudinal clinic data. PhD student at South Carolina University.
+* Conglin Bao (Biostat MS Student, 2024-2026), Develop novel LSTM-RNN model for predicting AD pathology from longitudinal clinic data.
 
 * Bo Shen (Biostat MS Student, 2024-2026), Develop novel TWAS method for correcting bias in using machine-learning imputed gene expressions. PhD student at Westlake University.
 
